@@ -72,8 +72,8 @@ h2.h2::after{content:"";position:absolute;left:0;bottom:0;width:44px;height:3px;
 /* Header */
 .site-header{background:var(--white);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:50}
 .header-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:72px}
-.logo{display:flex;align-items:center;gap:8px;font-family:var(--font-display);font-weight:800;font-size:20px;text-decoration:none;color:var(--ink)}
-.logo .tag{background:var(--orange);color:#fff;font-size:10px;font-weight:800;padding:2px 5px;border-radius:8px;letter-spacing:.02em}
+.logo{display:flex;align-items:center;text-decoration:none}
+.logo img{height:36px;width:auto;display:block}
 .main-nav{display:none}
 .main-nav ul{list-style:none;display:flex;gap:28px;margin:0;padding:0}
 .main-nav a{text-decoration:none;font-weight:600;font-size:15px}
