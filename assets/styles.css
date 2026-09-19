@@ -41,7 +41,7 @@ button{font-family:inherit}
 .eyebrow.on-dark::before{background:var(--forange)}
 
 h2.h2{font-size:28px;line-height:1.2;position:relative;padding-bottom:14px}
-h2.h2::after{content:"";position:absolute;left:0;bottom:0;width:44px;height:3px;background:var(--ink)}
+h2.h2::after{content:"";position:absolute;left:0;bottom:0;width:44px;height:3px;background-image:url(./img/acc-maze_ink.png);background-size:120px 120px;background-position:0 0;background-repeat:no-repeat}
 @media(min-width:900px){h2.h2{font-size:36px}}
 .h2-sub{margin-top:12px;font-size:16px;color:var(--muted);max-width:640px}
 @media(min-width:900px){.h2-sub{font-size:18px}}
