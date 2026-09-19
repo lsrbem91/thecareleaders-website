@@ -221,3 +221,6 @@ h2.h2::after{content:"";position:absolute;left:0;bottom:0;width:44px;height:3px;
 
 .fyi-box{font-size:14px;color:var(--muted);padding:14px 16px;border:1px dashed var(--inline);background:var(--bg);border-radius:8px}
 .fyi-box strong{color:var(--ink)}
+
+.h2-row{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+.h2-row img{width:100px;height:100px;flex-shrink:0}
