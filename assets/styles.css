@@ -138,7 +138,8 @@ h2.h2::after{content:"";position:absolute;left:0;bottom:0;width:44px;height:3px;
 .marquee-track{animation:tcl-left 60s linear infinite}
 .marquee:hover .marquee-track,.marquee:focus-within .marquee-track{animation-play-state:paused}
 @media(prefers-reduced-motion:reduce){.marquee-track{animation:none}}
-.org-tile{width:150px;height:76px;flex-shrink:0;background:#fff;border:1px solid var(--line);border-radius:8px;display:flex;align-items:center;justify-content:center;text-align:center;padding:8px;font-size:12px;color:var(--muted)}
+.org-tile.logo{padding:14px;background:#fff}.org-tile.logo img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;display:block}
+.org-tile{width:180px;height:96px;flex-shrink:0;background:#fff;border:1px solid var(--line);border-radius:8px;display:flex;align-items:center;justify-content:center;text-align:center;padding:8px;font-size:12px;color:var(--muted)}
 
 .quote-block{position:relative;background:var(--ink);color:var(--bg);border-radius:20px;padding:32px 28px;display:flex;flex-direction:column;gap:16px}
 .quote-block blockquote{font-family:var(--font-display);font-size:20px;line-height:1.4;font-weight:500;margin:0}
