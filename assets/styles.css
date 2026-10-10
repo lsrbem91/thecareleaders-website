@@ -279,3 +279,10 @@ h2.h2::after{content:"";position:absolute;left:0;bottom:0;width:44px;height:3px;
 .award-item img{width:150px;height:84px;padding:8px;flex-shrink:0}
 .who-block img{aspect-ratio:auto;object-fit:contain;height:auto}
 @media(min-width:1000px){.awards{flex-wrap:nowrap}}
+.awards{gap:28px}
+.award-item{gap:18px}
+.award-item img{width:260px;height:140px;padding:12px;border-radius:12px}
+.award-item .t{font-size:17px}.award-item .d{font-size:14px}
+@media(min-width:1000px){.awards{justify-content:space-between}}
+@media(max-width:640px){.award-item{flex-direction:column;align-items:flex-start}.award-item img{width:100%;max-width:300px;height:auto}}
+.awards .eyebrow{white-space:nowrap}
