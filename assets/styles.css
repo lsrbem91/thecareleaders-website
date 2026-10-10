@@ -315,3 +315,72 @@ h2.h2::after{content:"";position:absolute;left:0;bottom:0;width:44px;height:3px;
 @media(min-width:900px){.page-hero-media::before{content:"";position:absolute;right:-24px;bottom:-24px;width:62%;height:62%;border-radius:40px;background:url(./img/brand/maze-purple.png) center/180px;opacity:.35}}
 /* headings get the odd hand-drawn squiggle */
 .section:nth-of-type(3n) h2.h2::after{width:120px;height:14px;bottom:-6px;background:url(./img/brand/squiggle-orange.png) left center/contain no-repeat}
+
+/* ===== Our work: cards, slider, filters ===== */
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px}
+.chip{font:inherit;font-size:14px;font-weight:600;padding:8px 16px;border:1.5px solid var(--ink);border-radius:999px;background:transparent;color:var(--ink);cursor:pointer}
+.chip.on{background:var(--ink);color:#fff}
+.chip:focus-visible,.slider-ctl button:focus-visible{outline:3px solid var(--forange);outline-offset:2px}
+.work-card{background:var(--white);border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;text-decoration:none;color:var(--ink);transition:transform .2s,box-shadow .2s}
+.work-card:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(14,37,69,.14)}
+.work-card[hidden]{display:none}
+.wc-img{display:block;aspect-ratio:16/10;background:var(--ink);overflow:hidden}
+.wc-img img{width:100%;height:100%;object-fit:cover;display:block}
+.wc-img.ill{background:var(--bg) url(./img/brand/maze-cream.png) center/200px}
+.wc-img.ill img{object-fit:contain;padding:14px}
+.wc-body{padding:18px 20px 20px;display:flex;flex-direction:column;gap:8px;flex:1}
+.wc-tags{font-size:13px;font-weight:700;color:var(--teal)}
+.wc-body h3{font-size:18px;line-height:1.3;margin:0}
+.wc-body p{font-size:14px;line-height:1.5;color:var(--muted);margin:0}
+.wc-more{margin-top:auto;padding-top:8px;font-weight:700;font-size:14px;text-decoration:underline;text-underline-offset:3px}
+.work-grid{display:grid;gap:20px;margin-top:28px;grid-template-columns:repeat(auto-fill,minmax(270px,1fr))}
+.slider-head{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap}
+.slider-head .chips{margin-top:0}
+.slider-ctl{display:flex;gap:10px}
+.slider-ctl button{width:48px;height:48px;border-radius:50%;border:1.5px solid var(--ink);background:var(--white);font-size:20px;cursor:pointer;color:var(--ink)}
+.slider-ctl button:hover{background:var(--ink);color:#fff}
+.slider{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(260px,320px);gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;padding:20px 4px 16px;margin-top:4px;scrollbar-width:thin}
+.slider>.work-card{scroll-snap-align:start}
+/* case study pages */
+.cs-hero .tags{display:flex;gap:8px;flex-wrap:wrap}
+.cs-hero .tag{font-size:13px;font-weight:600;padding:6px 12px;border:1px solid var(--ink);border-radius:16px}
+.cs-hero h1{font-size:32px;line-height:1.12;margin:18px 0 14px;max-width:1000px}
+.cs-hero .lead{font-size:18px;line-height:1.5;color:var(--muted);max-width:860px}
+@media(min-width:900px){.cs-hero h1{font-size:48px}.cs-hero .lead{font-size:21px}}
+.cs-meta{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;border-top:1px solid var(--line);padding-top:22px;margin:28px 0 0}
+@media(min-width:900px){.cs-meta{grid-template-columns:1.5fr 1fr 1.2fr 1fr}}
+.cs-meta dt{color:var(--muted);font-size:14px}.cs-meta dd{margin:4px 0 0;font-weight:700;line-height:1.4}
+.cs-figure{margin:0;background:var(--ink);border-radius:16px;padding:24px;display:flex;justify-content:center;position:relative;overflow:hidden}
+.cs-figure::before{content:"";position:absolute;inset:0;background:url(./img/brand/maze-navy.png) center/200px;opacity:.35}
+.cs-figure img{position:relative;max-width:100%;max-height:520px;box-shadow:0 18px 44px rgba(0,0,0,.45);background:#fff}
+.cs-layout{display:grid;gap:32px}
+@media(min-width:960px){.cs-layout{grid-template-columns:230px minmax(0,1fr);gap:72px;align-items:start}.cs-toc{position:sticky;top:110px}}
+.cs-toc{display:flex;flex-direction:column;gap:2px}
+.cs-toc .eyebrow{margin-bottom:8px}
+.cs-toc a:not(.btn){display:block;padding:9px 0 9px 14px;border-left:2px solid var(--line);color:var(--ink);text-decoration:none;font-size:15px}
+.cs-toc a:not(.btn):hover{border-left-color:var(--orange)}
+.cs-toc .btn{margin-top:18px;align-self:flex-start}
+@media(max-width:959px){.cs-toc{display:none}}
+.cs-body h2.h2{margin:48px 0 18px;scroll-margin-top:100px}
+.cs-body h2.h2:first-child{margin-top:0}
+.cs-body>p{font-size:17px;line-height:1.7;color:var(--muted);max-width:760px;margin:0 0 14px}
+.cs-quote{margin:24px 0}
+.tl{list-style:none;padding:0;margin:8px 0 0;border-left:3px solid var(--forange);max-width:760px}
+.tl li{position:relative;padding:0 0 22px 26px;display:flex;flex-direction:column;gap:2px}
+.tl li::before{content:"";position:absolute;left:-9px;top:3px;width:15px;height:15px;border-radius:50%;background:var(--teal);border:3px solid var(--bg)}
+.tl .when{font-size:13px;font-weight:700;color:var(--teal)}
+.tl .what{font-weight:700;font-size:17px}
+.tl .detail{color:var(--muted);font-size:15px;line-height:1.5}
+.stw{margin-top:8px}
+.cs-list{max-width:760px;color:var(--muted);line-height:1.6}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;margin-top:28px}
+.gallery figure{margin:0}
+.gallery img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:top;border-radius:12px;background:#fff;display:block}
+.gallery figcaption{font-size:13px;color:var(--muted);margin-top:8px;line-height:1.4}
+.pn{display:grid;grid-template-columns:1fr;gap:16px}
+@media(min-width:768px){.pn{grid-template-columns:1fr 1fr}}
+.pn a{display:flex;flex-direction:column;gap:6px;padding:20px 22px;border:1px solid var(--line);border-radius:14px;background:var(--surf);color:var(--ink);text-decoration:none}
+.pn a.next{text-align:right}
+.pn a span{font-size:13px;color:var(--muted)}
+.pn a:hover{border-color:var(--ink)}
+.card h3 a{color:var(--ink)}
