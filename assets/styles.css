@@ -276,3 +276,5 @@ h2.h2::after{content:"";position:absolute;left:0;bottom:0;width:44px;height:3px;
 .award-item .crown-img{width:44px;height:auto}
 .tile-icon{width:76px;height:76px;object-fit:contain;display:block}
 .hero-shapes .deco{z-index:2}
+.award-item img{width:150px;height:84px;padding:8px;flex-shrink:0}
+.who-block img{aspect-ratio:auto;object-fit:contain;height:auto}
