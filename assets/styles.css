@@ -35,8 +35,8 @@ button{font-family:inherit}
 .section.no-border{border-bottom:none}
 @media(min-width:900px){.section{padding:80px 0}}
 
-.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--ink)}
-.eyebrow::before{content:"";display:inline-block;width:16px;height:2px;background:var(--ink)}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:15px;letter-spacing:0;font-weight:700;color:var(--teal)}
+.eyebrow::before{content:none}
 .eyebrow.on-dark{color:var(--forange)}
 .eyebrow.on-dark::before{background:var(--forange)}
 
@@ -154,7 +154,7 @@ h2.h2::after{content:"";position:absolute;left:0;bottom:0;width:44px;height:3px;
 .site-footer{background:var(--ink);color:var(--bg);padding:48px 0 24px}
 .footer-top{display:flex;flex-direction:column;gap:40px}
 .footer-cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px}
-.footer-cols h4{font-size:14px;text-transform:uppercase;letter-spacing:.06em;color:var(--forange);margin:0 0 12px}
+.footer-cols h4{font-size:16px;letter-spacing:0;color:var(--forange);margin:0 0 12px}
 .footer-cols ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
 .footer-cols a{color:var(--bg);text-decoration:none;font-size:15px}
 .footer-cols a:hover{color:var(--forange)}
