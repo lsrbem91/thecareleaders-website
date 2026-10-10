@@ -391,3 +391,7 @@ h2.h2::after{content:"";position:absolute;left:0;bottom:0;width:44px;height:3px;
 @media(min-width:900px){.who-block .lead{font-size:30px}.who-block .body p{font-size:18px}}
 .wc-img img{object-position:center 12%}
 @media(min-width:900px){.who-block::before{content:none}}
+/* show brochures and documents in full */
+.gallery img{object-fit:contain;aspect-ratio:3/4;background:var(--white);padding:10px;border:1px solid var(--line)}
+.gallery{grid-template-columns:repeat(auto-fill,minmax(200px,260px))}
+.cs-figure img{max-height:440px}
