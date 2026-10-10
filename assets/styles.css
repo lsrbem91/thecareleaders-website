@@ -286,3 +286,32 @@ h2.h2::after{content:"";position:absolute;left:0;bottom:0;width:44px;height:3px;
 @media(min-width:1000px){.awards{justify-content:space-between}}
 @media(max-width:640px){.award-item{flex-direction:column;align-items:flex-start}.award-item img{width:100%;max-width:300px;height:auto}}
 .awards .eyebrow{white-space:nowrap}
+
+/* ===== Scatter pass: less uniform, more brand ===== */
+.deco{display:block;opacity:1}
+@media(max-width:899px){.deco{scale:.6;transform-origin:top right}.deco-b{display:none}}
+.page-hero-media{position:relative}
+.page-hero-media img.hug{position:absolute;z-index:2;pointer-events:none;height:auto;border-radius:0}
+.page-hero-media img.hug-a{width:20%;max-width:90px;top:-4%;left:-4%;transform:rotate(-14deg)}
+.page-hero-media img.hug-b{width:16%;max-width:80px;bottom:-3%;right:-2%;transform:rotate(12deg)}
+/* illustration panels: rotate pattern colours */
+.card-ill{position:relative;background:var(--bg)}
+.card-ill::before{content:"";position:absolute;inset:0;background:url(./img/brand/maze-orange.png) center/200px;opacity:.22}
+.card-ill img{position:relative}
+.grid>*:nth-child(4n+2) .card-ill::before{background-image:url(./img/brand/maze-teal.png);opacity:.25}
+.grid>*:nth-child(4n+3) .card-ill::before{background-image:url(./img/brand/maze-purple.png);opacity:.2}
+.grid>*:nth-child(4n+4) .card-ill::before{background-image:url(./img/brand/maze-navy.png);opacity:.15}
+/* break the grid rhythm: varied corners and a slight tilt on illustrations */
+.grid>*:nth-child(3n+1).card,.grid>*:nth-child(3n+1).offer-card{border-radius:12px 40px 12px 12px}
+.grid>*:nth-child(3n+2).card,.grid>*:nth-child(3n+2).offer-card{border-radius:12px 12px 40px 12px}
+.grid>*:nth-child(3n+1) .card-ill{border-radius:12px 40px 0 0}
+.grid>*:nth-child(odd) .card-ill img{transform:rotate(-3deg) scale(1.04)}
+.grid>*:nth-child(even) .card-ill img{transform:rotate(2deg)}
+/* pattern blob behind feature images */
+.who-block{position:relative}
+.who-block>img{position:relative;z-index:1}
+@media(min-width:900px){.who-block::before{content:"";position:absolute;left:-30px;top:8%;width:300px;height:300px;border-radius:50%;background:url(./img/brand/maze-teal.png) center/160px;opacity:.9}}
+.page-hero-media>img:not(.hug){position:relative;z-index:1}
+@media(min-width:900px){.page-hero-media::before{content:"";position:absolute;right:-24px;bottom:-24px;width:62%;height:62%;border-radius:40px;background:url(./img/brand/maze-purple.png) center/180px;opacity:.35}}
+/* headings get the odd hand-drawn squiggle */
+.section:nth-of-type(3n) h2.h2::after{width:120px;height:14px;bottom:-6px;background:url(./img/brand/squiggle-orange.png) left center/contain no-repeat}
