@@ -231,3 +231,48 @@ h2.h2::after{content:"";position:absolute;left:0;bottom:0;width:44px;height:3px;
 .accent img{display:block}
 .maze-bg{position:absolute;inset:0;background-image:url(./img/acc-maze_teal.png);background-repeat:repeat;background-size:160px 160px;opacity:.1;pointer-events:none;display:none}
 @media(min-width:900px){.accent{display:block}.maze-bg{display:block}}
+
+/* ===== Brand pass, Oct 2026: assets from the TCL Website design kit ===== */
+.section{position:relative;overflow:hidden}
+.section>.wrap,.section>nav.crumbs{position:relative;z-index:1}
+.deco{position:absolute;pointer-events:none;z-index:0;display:none;height:auto}
+@media(min-width:900px){.deco{display:block}}
+.maze-band{height:20px;background-repeat:repeat-x;background-size:auto 40px;background-position:left center}
+@media(min-width:900px){.maze-band{height:28px;background-size:auto 56px}}
+.maze-band.teal{background-image:url(./img/brand/maze-teal.png)}
+.maze-band.orange{background-image:url(./img/brand/maze-orange.png)}
+.maze-band.purple{background-image:url(./img/brand/maze-purple.png)}
+.maze-band.navy{background-image:url(./img/brand/maze-navy.png)}
+
+.card-ill{margin:-24px -24px 4px;height:190px;border-radius:12px 12px 0 0;overflow:hidden;display:flex;align-items:center;justify-content:center;background:var(--bg) url(./img/brand/maze-cream.png) center/220px}
+.card-ill img{max-height:170px;max-width:88%;object-fit:contain;display:block}
+.card-ill.photo{background:var(--ink)}
+.card-ill.photo img{max-height:none;max-width:none;width:100%;height:100%;object-fit:cover}
+
+.photo-frame{position:relative;max-width:420px;margin:0 auto}
+.photo-frame img.main{position:relative;z-index:1;width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:50%;display:block}
+.photo-frame::before{content:"";position:absolute;inset:6% -6% -6% 6%;border-radius:50%;background:url(./img/brand/maze-orange.png) center/180px}
+.photo-frame .crown{position:absolute;z-index:2;width:30%;top:-12%;left:8%;transform:rotate(-14deg)}
+.photo-frame .bolt{position:absolute;z-index:2;width:12%;bottom:4%;right:-2%;transform:rotate(10deg)}
+
+.photo-strip{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:32px}
+@media(min-width:900px){.photo-strip{grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}}
+.photo-strip figure{margin:0}
+.photo-strip img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:16px;display:block}
+.photo-strip figure:nth-child(odd) img{border-radius:16px 64px 16px 16px}
+.photo-strip figcaption{font-size:13px;color:var(--muted);margin-top:8px}
+
+.quote-block::after{content:"";position:absolute;width:58px;height:62px;right:22px;top:-26px;background:url(./img/brand/bubble-orange.png) center/contain no-repeat}
+
+.cta-band{position:relative;overflow:hidden;background:var(--teal) url(./img/brand/maze-teal.png) center/220px}
+.cta-band::before{content:"";position:absolute;inset:0;background:rgba(0,104,122,.86)}
+.cta-band .wrap{position:relative;z-index:1}
+.cta-band .cta-crown{width:64px;height:auto;display:none}
+@media(min-width:768px){.cta-band .cta-crown{display:block;margin-right:auto;margin-left:-8px;order:-1}}
+
+.site-footer{position:relative}
+.site-footer::before{content:"";position:absolute;left:0;right:0;top:0;height:10px;background:url(./img/brand/maze-orange.png) left center/auto 40px repeat-x}
+
+.award-item .crown-img{width:44px;height:auto}
+.tile-icon{width:76px;height:76px;object-fit:contain;display:block}
+.hero-shapes .deco{z-index:2}
