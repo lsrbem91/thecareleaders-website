@@ -390,3 +390,4 @@ h2.h2::after{content:"";position:absolute;left:0;bottom:0;width:44px;height:3px;
 .who-block .strapline{font-size:21px}
 @media(min-width:900px){.who-block .lead{font-size:30px}.who-block .body p{font-size:18px}}
 .wc-img img{object-position:center 12%}
+@media(min-width:900px){.who-block::before{content:none}}
