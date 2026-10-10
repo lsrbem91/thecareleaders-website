@@ -278,3 +278,4 @@ h2.h2::after{content:"";position:absolute;left:0;bottom:0;width:44px;height:3px;
 .hero-shapes .deco{z-index:2}
 .award-item img{width:150px;height:84px;padding:8px;flex-shrink:0}
 .who-block img{aspect-ratio:auto;object-fit:contain;height:auto}
+@media(min-width:1000px){.awards{flex-wrap:nowrap}}
