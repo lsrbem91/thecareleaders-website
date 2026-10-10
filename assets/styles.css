@@ -384,3 +384,8 @@ h2.h2::after{content:"";position:absolute;left:0;bottom:0;width:44px;height:3px;
 .pn a span{font-size:13px;color:var(--muted)}
 .pn a:hover{border-color:var(--ink)}
 .card h3 a{color:var(--ink)}
+/* Who we are: heading and body at the same scale as What we do */
+.who-block .lead{font-size:24px}
+.who-block .body p{font-size:17px;line-height:1.65}
+.who-block .strapline{font-size:21px}
+@media(min-width:900px){.who-block .lead{font-size:30px}.who-block .body p{font-size:18px}}
