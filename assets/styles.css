@@ -1194,3 +1194,5 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible{o
 .th-fel .br-card .eyebrow{color:#f3b94a}
 .th-fel .xp-tabs button[aria-selected=true] .xp-n{background:#f3b94a;color:#1d2340}
 .yt-link,a[href*="youtube"]{display:inline-block;padding:4px 0}
+main img[width][height]{height:auto}
+.cs-figure img{width:auto;height:auto;max-width:100%}
