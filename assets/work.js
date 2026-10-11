@@ -21,3 +21,13 @@ document.querySelectorAll('[data-filter-scope]').forEach(function(scope){
     if(n)n.addEventListener('click',function(){sl.scrollBy({left:step(),behavior:'smooth'});});
   }
 });
+
+// Tabs: the "What do you need to change?" selector
+document.querySelectorAll('[data-tabs]').forEach(function(box){
+  var tabs=[].slice.call(box.querySelectorAll('[role="tab"]'));
+  function show(t){tabs.forEach(function(x){var on=x===t;x.setAttribute('aria-selected',on?'true':'false');x.tabIndex=on?0:-1;var p=document.getElementById(x.getAttribute('aria-controls'));if(p)p.hidden=!on;});}
+  tabs.forEach(function(t,i){
+    t.addEventListener('click',function(){show(t);});
+    t.addEventListener('keydown',function(e){var k=e.key,n=null;if(k==='ArrowDown'||k==='ArrowRight')n=tabs[(i+1)%tabs.length];if(k==='ArrowUp'||k==='ArrowLeft')n=tabs[(i-1+tabs.length)%tabs.length];if(n){e.preventDefault();show(n);n.focus();}});
+  });
+});
