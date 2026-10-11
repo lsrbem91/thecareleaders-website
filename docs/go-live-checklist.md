@@ -33,3 +33,10 @@ Things that must exist or be decided before the site goes live. Kept here so the
 ## Partnerships page (added 11 Oct)
 - Frontline wording is drawn from the Oct 2023 collaboration notes and the May 2025 room hire at Frontline's office. Luke to confirm Frontline are happy to be named as a partner and that the Frontline logo can be used (it was taken from the Fellowship x Frontline co-branded template).
 - PwC logo use: confirm with PwC contact.
+
+## Things to make (added 11 Oct from the website process audit, alongside the keynote automation list)
+- Mailchimp: audience, the gated brochure flow (one landing page with a hidden "brochure" field, or one per programme), and the nine PDFs it delivers.
+- Keynote brochures: seven PDFs, one per keynote, then wire the keynote thank-you page buttons to the gated download.
+- Cookie banner and privacy notice update, the day Mailchimp, analytics or YouTube embeds go live.
+- Accessibility statement page.
+- Decide on a newsletter sign-up.
