@@ -617,3 +617,46 @@ h2.h2::after{content:"";position:absolute;left:0;bottom:0;width:44px;height:3px;
 .card-btns a{display:inline-flex;align-items:center;padding:8px 14px;border-radius:99px;background:var(--ink);color:#fff;font-weight:700;font-size:14px;text-decoration:none}
 .card-btns a:hover{background:var(--teal)}
 /* === end components v4 === */
+
+/* === components v6 (Why Care fusion: Why Care's own type, gradient, dots and stickers on its side) === */
+.wcp .wc-font,.wcp-side.wc h3,.wcp-svc .top strong,.wcp-flow .rm-card strong{font-family:"Bricolage Grotesque",var(--font-display);font-weight:800;letter-spacing:-.01em}
+.wcp-side.wc li,.wcp-svc .body,.wcp-flow .rm-card p,.wcp-stat .vs{font-family:"Atkinson Hyperlegible",var(--font-body)}
+.wcp-hero{text-align:left;background:linear-gradient(100deg,var(--ink) 0 58%,#023047 58% 100%)}
+.wcp-hero .wrap{text-align:left}
+.wcp-hero-grid{display:grid;grid-template-columns:1fr;gap:34px;align-items:center}
+@media(min-width:960px){.wcp-hero-grid{grid-template-columns:1.1fr .9fr}}
+.wcp-hero .wcp-lock{justify-content:flex-start;margin:0 0 26px;flex-wrap:nowrap;gap:18px}.wcp-hero .wcp-lock .tcl{padding:12px 18px;border-radius:18px}.wcp-hero .wcp-lock .tcl img,.wcp-hero .wcp-lock .wc img{width:clamp(130px,16vw,210px)}.wcp-hero .wcp-lock .x{font-size:clamp(32px,4vw,52px)}
+.wcp-hero h1{margin-left:0;font-size:clamp(34px,4.6vw,58px)}
+.wcp-hero h1 .wc-font{color:#f57af5}
+.wcp-hero .lead{margin-left:0}
+.wcp-hero .hero-actions{justify-content:flex-start}
+.wcp-world{position:relative;border-radius:34px;background:url(./img/whycare/wc-gradient.jpg) center/cover;min-height:420px;overflow:hidden;box-shadow:0 24px 50px rgba(0,0,0,.3)}
+.wcp-world .fam{position:absolute;left:50%;bottom:0;transform:translateX(-50%);width:92%;max-width:520px}
+.wcp-world .dots{position:absolute;width:46%}
+.wcp-world .d1{left:-4%;top:6%;transform:rotate(-8deg)}
+.wcp-world .d2{right:-6%;top:2%;width:38%;transform:scaleX(-1) rotate(-12deg)}
+.wcp-world .st{position:absolute;width:86px;animation:wcp-float 8s ease-in-out infinite}
+.wcp-world .s1{left:3%;bottom:4%;width:72px}
+.wcp-world .s2{right:5%;top:30%;animation-delay:-3s}
+.wcp-world .s3{right:24%;top:6%;width:70px;animation-delay:-5s}
+@media(max-width:700px){.wcp-hero{background:linear-gradient(180deg,var(--ink) 0 62%,#023047 62% 100%)}.wcp-world{min-height:300px}.wcp-world .st{width:60px}.wcp-hero .wcp-lock{flex-direction:row;flex-wrap:wrap}}
+.wcp-side.wc{background:url(./img/whycare/wc-gradient.jpg) center/cover;color:#023047;border:3px solid #023047}
+.wcp-side.wc h3{color:#023047;font-size:28px}
+.wcp-side.wc li::before{background:#f57af5;box-shadow:0 0 0 3px #fff}
+.wcp-side.wc li strong{color:#023047}
+.wcp-side.wc .who{justify-content:space-between}
+.wcp-side.wc .who img{width:150px}
+.wcp-side.wc .who .who-st{width:74px}
+.wcp-side .side-dots{position:absolute;right:-30px;bottom:-24px;width:220px;opacity:.9;pointer-events:none}
+.wcp-side.wc ul,.wcp-side.wc h3,.wcp-side.wc .who{position:relative;z-index:1}
+.wcp-offer{position:relative;background:linear-gradient(180deg,#fff 0%,#f3f0fb 100%)}
+.wcp-sec-logo{width:130px;margin-bottom:10px}
+.wcp-sq{position:absolute;opacity:.9;pointer-events:none}
+@media(max-width:700px){.wcp-sq{display:none}}
+.wcp-svc .top{position:relative;padding-right:96px}
+.wcp-svc .top img{position:absolute;right:14px;top:50%;transform:translateY(-50%);width:68px;height:68px;object-fit:contain;background:#fff;border-radius:50%;padding:8px}
+.wcp-flow-head{display:grid;grid-template-columns:1fr;gap:20px;align-items:center}
+@media(min-width:900px){.wcp-flow-head{grid-template-columns:1fr 220px}}
+.wcp-flow-head img{width:200px;justify-self:center}
+.section.wcp-flow{background:url(./img/whycare/wc-gradient.jpg) center/cover}
+/* === end components v6 === */
