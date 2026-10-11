@@ -1,12 +1,10 @@
 /* Programme pages: tools library (filter + popup) and flip-book workbooks */
 (function () {
-  // ---- tools library
+  // ---- tools library: filter + side panel
   var dataEl = document.getElementById('tl-data');
   if (dataEl) {
     var data = JSON.parse(dataEl.textContent);
-    var dlg = document.getElementById('tl-dialog');
-    var grid = document.querySelector('.tl-grid');
-    var last = null;
+    var grid = document.querySelector('.tl-grid'), panel = document.querySelector('.tl-panel');
     document.querySelectorAll('.tl-filter button').forEach(function (b) {
       b.addEventListener('click', function () {
         document.querySelectorAll('.tl-filter button').forEach(function (x) { x.classList.toggle('on', x === b); x.setAttribute('aria-pressed', x === b); });
@@ -14,22 +12,20 @@
         grid.querySelectorAll('.tl-tool').forEach(function (t) { t.hidden = !(g === 'all' || t.dataset.g === g); });
       });
     });
-    function open(id, btn) {
+    function show(id, btn) {
       var t = data[id]; if (!t) return;
-      last = btn;
-      dlg.querySelector('#tl-d-title').innerHTML = t.t;
-      var g = dlg.querySelector('.tl-d-g'); g.textContent = t.g; g.className = 'tl-d-g g-' + t.g.toLowerCase();
-      dlg.querySelector('.tl-d-d').innerHTML = t.d;
-      dlg.querySelector('.tl-d-f').textContent = t.f;
-      dlg.querySelector('.tl-d-a').textContent = t.a;
-      dlg.querySelector('.tl-d-r').innerHTML = t.r;
-      dlg.querySelector('.tl-d-rw').hidden = !t.r;
-      if (dlg.showModal) dlg.showModal(); else dlg.setAttribute('open', '');
+      grid.querySelectorAll('.tl-tool').forEach(function (x) { x.setAttribute('aria-pressed', x === btn); });
+      var g = panel.querySelector('.tl-p-g'); g.textContent = t.g; g.className = 'tl-p-g g-' + t.g.toLowerCase();
+      panel.querySelector('.tl-p-t').innerHTML = t.t;
+      panel.querySelector('.tl-p-d').innerHTML = t.d;
+      panel.querySelector('.tl-p-f').textContent = t.f;
+      panel.querySelector('.tl-p-a').textContent = t.a;
+      panel.querySelector('.tl-p-r').innerHTML = t.r;
+      panel.querySelector('.tl-p-rw').hidden = !t.r;
+      panel.classList.remove('flash'); void panel.offsetWidth; panel.classList.add('flash');
+      if (window.matchMedia('(max-width:1000px)').matches) panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     }
-    function close() { if (dlg.close) dlg.close(); else dlg.removeAttribute('open'); if (last) last.focus(); }
-    grid.addEventListener('click', function (e) { var b = e.target.closest('.tl-tool'); if (b) open(b.dataset.id, b); });
-    dlg.querySelector('.tl-close').addEventListener('click', close);
-    dlg.addEventListener('click', function (e) { if (e.target === dlg) close(); });
+    grid.addEventListener('click', function (e) { var b = e.target.closest('.tl-tool'); if (b) show(b.dataset.id, b); });
   }
 
   // ---- flip books
