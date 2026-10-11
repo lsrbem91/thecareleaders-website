@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /keynote-thank-you.html
+Sitemap: https://www.thecareleaders.com/sitemap.xml
