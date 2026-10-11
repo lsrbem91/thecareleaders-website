@@ -1040,3 +1040,4 @@ h2.h2::after{content:"";position:absolute;left:0;bottom:0;width:44px;height:3px;
 .card-btns a{display:inline-flex;align-items:center;padding:8px 14px;border-radius:99px;background:var(--ink);color:#fff;font-weight:700;font-size:14px;text-decoration:none}
 .card-btns a:hover{background:var(--teal)}
 /* === end components v4 === */
+.svc-media img.ill.full{width:100%;height:100%;object-fit:cover}.svc-media:has(img.full)::before{display:none}
