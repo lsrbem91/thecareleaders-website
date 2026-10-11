@@ -977,6 +977,30 @@ h2.h2::after{content:"";position:absolute;left:0;bottom:0;width:44px;height:3px;
 
 @media(max-width:860px){.svc{grid-template-columns:minmax(0,1fr)}.svc-body{min-width:0}.svc-proof.sm{grid-template-columns:repeat(2,minmax(0,1fr))!important}.svc-cta{white-space:normal;text-align:left}}
 
+/* symmetrical What we do cards: numbered cards share rows, example boxes line up */
+@supports (grid-template-rows:subgrid){
+.num-grid{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.num-grid .num-card{display:grid;grid-template-rows:subgrid;grid-row:span 4;gap:8px;align-content:start}
+.num-grid .num-card>p:not(.nc-ex){align-self:start}
+.num-grid .num-card .nc-ex{align-self:stretch;margin-top:4px!important}
+}
+/* simpler footer */
+.footer-simple{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:36px;align-items:start;padding-bottom:28px;border-bottom:1px solid rgba(255,255,255,.15)}
+.fs-brand img{display:block;width:200px;height:auto;margin-bottom:16px}
+.footer-simple .footer-strap{margin:0;font-size:15px;border:0;padding:0;color:#d9dde6;max-width:420px}
+.fs-links,.fs-contact{display:flex;flex-direction:column;gap:10px}
+.fs-links a,.fs-contact a{color:#fff;text-decoration:none;font-weight:600;font-size:15px}
+.fs-links a:hover,.fs-contact a:hover{color:var(--forange)}
+.footer-bottom a{color:#fff}
+@media(max-width:860px){.footer-simple{grid-template-columns:1fr}.fs-links{flex-direction:row;flex-wrap:wrap;gap:8px 18px}}
+/* family logos on About */
+.fam-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-top:26px}
+.fam-grid>div{background:#fff;border-radius:20px;padding:22px 20px;border:1px solid var(--line)}
+.fam-logo{display:flex;align-items:center;height:56px;margin-bottom:14px}.fam-logo img{max-height:52px;max-width:180px;width:auto;height:auto}
+.fam-grid h3{font-size:18px;margin:0 0 6px}.fam-grid p{margin:0;font-size:14.5px;line-height:1.5;color:var(--muted)}
+/* motto subheads */
+.dl-motto span small{display:block;font-family:Poppins,sans-serif;font-weight:500;font-size:14px;line-height:1.35;color:#c9d4dd;margin:4px 0 10px}
+
 /* === components v4 (selector, offer groups) === */
 .cc-img.cover{background:var(--ink)}.cc-img.cover img{object-fit:cover;padding:0}
 .needs{display:grid;grid-template-columns:320px 1fr;gap:32px;margin-top:32px;align-items:start}
