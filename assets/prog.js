@@ -1,3 +1,5 @@
+/* Programme pages: tools library, flip-books, brochure gate, explorers. Guarded so it runs once. */
+if (!window.__tclProg) { window.__tclProg = true;
 /* Programme pages: tools library (filter + popup) and flip-book workbooks */
 (function () {
   // ---- tools library: filter + side panel
@@ -63,3 +65,26 @@ document.querySelectorAll('form[data-mailchimp=pending]').forEach(function (f) {
     m.textContent = 'Thank you. The brochure download is being set up. Email hello@thecareleaders.com and we will send it to you.';
   });
 });
+/* explorers (tabs + panel) and strand switches */
+document.querySelectorAll('[data-xp]').forEach(function (x) {
+  var tabs = x.querySelectorAll('[data-xp-tab]');
+  function pick(t, focus) {
+    tabs.forEach(function (b) { var on = b === t; b.setAttribute('aria-selected', on); b.tabIndex = on ? 0 : -1; });
+    x.querySelectorAll('[data-xp-panel]').forEach(function (p) {
+      var on = p.dataset.xpPanel === t.dataset.xpTab; p.hidden = !on;
+      if (on) { p.classList.remove('flash'); void p.offsetWidth; p.classList.add('flash'); }
+    });
+    if (focus) t.focus();
+  }
+  tabs.forEach(function (t, i) {
+    t.addEventListener('click', function () { pick(t); });
+    t.addEventListener('keydown', function (e) {
+      var k = e.key, j = -1;
+      if (k === 'ArrowDown' || k === 'ArrowRight') j = (i + 1) % tabs.length;
+      if (k === 'ArrowUp' || k === 'ArrowLeft') j = (i - 1 + tabs.length) % tabs.length;
+      if (j > -1) { e.preventDefault(); pick(tabs[j], true); }
+    });
+  });
+});
+
+}
