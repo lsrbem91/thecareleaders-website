@@ -29,3 +29,7 @@ Things that must exist or be decided before the site goes live. Kept here so the
 - Google Search Console: submit sitemap.xml.
 - Microsoft enquiry form on the Contact page.
 - Remove the old Wix site redirects or map old URLs.
+
+## Partnerships page (added 11 Oct)
+- Frontline wording is drawn from the Oct 2023 collaboration notes and the May 2025 room hire at Frontline's office. Luke to confirm Frontline are happy to be named as a partner and that the Frontline logo can be used (it was taken from the Fellowship x Frontline co-branded template).
+- PwC logo use: confirm with PwC contact.

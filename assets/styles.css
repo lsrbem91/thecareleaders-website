@@ -82,7 +82,7 @@ h2.h2::after{content:"";position:absolute;left:0;bottom:0;width:44px;height:3px;
 .main-nav a[aria-current="page"]{color:var(--teal)}
 .header-cta{display:none}
 .nav-toggle{min-height:44px;min-width:44px;border:2px solid var(--ink);border-radius:8px;background:transparent;font-size:20px}
-@media(min-width:1000px){
+@media(min-width:1080px){
   .main-nav{display:block}
   .header-cta{display:inline-flex}
   .nav-toggle{display:none}
@@ -91,7 +91,7 @@ h2.h2::after{content:"";position:absolute;left:0;bottom:0;width:44px;height:3px;
 .mobile-menu.open{display:flex}
 .mobile-menu a{padding:12px 4px;text-decoration:none;font-weight:600;font-size:16px;color:var(--ink);border-bottom:1px solid var(--line)}
 .mobile-menu .btn{margin-top:8px}
-@media(min-width:1000px){.mobile-menu{display:none!important}}
+@media(min-width:1080px){.mobile-menu{display:none!important}}
 
 .crumbs{font-size:14px;color:var(--muted);padding:16px 0}
 .crumbs a{text-decoration:none;color:var(--muted)}
@@ -1041,3 +1041,76 @@ h2.h2::after{content:"";position:absolute;left:0;bottom:0;width:44px;height:3px;
 .card-btns a:hover{background:var(--teal)}
 /* === end components v4 === */
 .svc-media img.ill.full{width:100%;height:100%;object-fit:cover}.svc-media:has(img.full)::before{display:none}
+/* === brand in full force: Academy and Care to Work === */
+.prog.th-academy{--pbg:#fbf8fb;--pstripe:linear-gradient(90deg,#4a2b52 0 34%,#e5432d 34% 67%,#d2b3da 67%);--pmotif:url(./img/brand/th/hi-academy-crown-red.png)}
+.prog.th-ctw{--pbg:#f5f8f9;--pstripe:linear-gradient(90deg,#0e2545 0 34%,#008196 34% 67%,#fbab1e 67%);--pmotif:url(./img/brand/th/hi-ctw-arrow-teal.png)}
+.prog.th-academy .section,.prog.th-ctw .section{background:var(--pbg);border-bottom-color:var(--pl2)}
+.prog.th-academy .section.bg-fill,.prog.th-ctw .section.bg-fill{background:var(--pl2)}
+.prog.th-academy .section.dl-mission,.prog.th-ctw .section.dl-mission,.prog.th-academy .section.dl-brochure,.prog.th-ctw .section.dl-brochure{background:var(--pd)}
+.prog.th-academy .section.dl-hero,.prog.th-ctw .section.dl-hero{background:var(--pd);color:#fff;padding-top:68px;padding-bottom:64px;border-bottom:0}
+.prog.th-academy .dl-hero::before,.prog.th-ctw .dl-hero::before{content:"";position:absolute;left:0;right:0;top:0;height:12px;background:var(--pstripe);z-index:2}
+.prog.th-academy .dl-hero::after,.prog.th-ctw .dl-hero::after{content:"";position:absolute;right:-15%;top:-32%;width:min(58vw,720px);aspect-ratio:1;background:var(--pmotif) center/contain no-repeat;transform:rotate(12deg);opacity:.95;pointer-events:none}
+.prog.th-ctw .dl-hero::after{right:-12%;top:auto;bottom:-22%;transform:rotate(-8deg);width:min(52vw,640px)}
+.prog.th-academy .dl-hero-in,.prog.th-ctw .dl-hero-in{position:relative;z-index:1}
+.prog.th-academy .dl-hero h1,.prog.th-ctw .dl-hero h1{color:#fff}
+.prog.th-academy .dl-hero h1 span{color:#f6b5aa}.prog.th-ctw .dl-hero h1 span{color:#fbab1e}
+.prog.th-academy .dl-hero .lead,.prog.th-ctw .dl-hero .lead{color:#fff}
+.prog.th-academy .dl-hero .exp-line,.prog.th-ctw .dl-hero .exp-line{color:#fff}
+.prog.th-academy .exp-line span,.prog.th-ctw .exp-line span{background:var(--pa)}
+.prog.th-academy .dl-eyebrow,.prog.th-ctw .dl-eyebrow{color:var(--pa)}
+.prog.th-academy .dl-hero .btn,.prog.th-ctw .dl-hero .btn{background:var(--pa);border-color:var(--pa);color:#fff}
+.prog.th-academy .dl-hero .btn.secondary,.prog.th-ctw .dl-hero .btn.secondary{background:transparent;border-color:#fff;color:#fff}
+.prog.th-academy .dl-hero-art img,.prog.th-ctw .dl-hero-art img{box-shadow:0 30px 60px rgba(0,0,0,.35)}
+.prog.th-academy .hug,.prog.th-ctw .hug{display:none}
+/* headings, eyebrows, rules */
+.prog.th-academy h2.h2,.prog.th-ctw h2.h2,.prog.th-academy h3,.prog.th-ctw h3{color:var(--pd)}
+.prog.th-academy .section h2.h2::after,.prog.th-ctw .section h2.h2::after{width:56px;height:6px;bottom:-4px;border-radius:3px;background:var(--pa)}
+.prog.th-academy .eyebrow,.prog.th-ctw .eyebrow{color:var(--pad)}
+.prog.th-academy .dl-mission .eyebrow,.prog.th-ctw .dl-mission .eyebrow{color:var(--pa)}
+.prog.th-academy .dl-mission h2.h2,.prog.th-ctw .dl-mission h2.h2{color:#fff}
+.prog.th-academy .dl-mission,.prog.th-ctw .dl-mission{border-top:12px solid;border-image:var(--pstripe) 1}
+/* buttons */
+.prog.th-academy .btn,.prog.th-ctw .btn{background:var(--pd);border-color:var(--pd);color:#fff}
+.prog.th-academy .btn.secondary,.prog.th-ctw .btn.secondary{background:transparent;color:var(--pd)}
+/* numbers and markers */
+.prog.th-academy .cm-n,.prog.th-ctw .cm-n{background:var(--pa);color:#fff}
+.prog.th-ctw .cm-n{color:#0e2545}
+.prog.th-academy .cm-step:nth-child(2) .cm-n,.prog.th-ctw .cm-step:nth-child(2) .cm-n,.prog.th-academy .cm-step:nth-child(5) .cm-n,.prog.th-ctw .cm-step:nth-child(5) .cm-n{background:var(--pd);color:#fff}
+.prog.th-academy .cm-step:nth-child(3) .cm-n,.prog.th-ctw .cm-step:nth-child(3) .cm-n{background:var(--pl2);color:var(--pd)}
+.prog.th-academy .pe,.prog.th-ctw .pe,.prog.th-academy .obj,.prog.th-ctw .obj{border-top:6px solid var(--pd)}
+.prog.th-academy .pe:nth-child(2),.prog.th-ctw .pe:nth-child(2),.prog.th-academy .obj:nth-child(2),.prog.th-ctw .obj:nth-child(2){border-top-color:var(--pa)}
+.prog.th-academy .pe:nth-child(3),.prog.th-ctw .pe:nth-child(3),.prog.th-academy .obj:nth-child(3),.prog.th-ctw .obj:nth-child(3){border-top-color:var(--pm3)}
+.prog.th-academy .pe:nth-child(4),.prog.th-ctw .pe:nth-child(4){border-top-color:var(--pd)}
+.prog.th-academy .faq-item,.prog.th-ctw .faq-item{background:#fff;border-left:5px solid var(--pa)}
+.prog.th-academy .dl-card,.prog.th-ctw .dl-card{border:1px solid var(--pl2)}
+/* dark bands */
+.prog.th-academy .cta-band,.prog.th-ctw .cta-band{background:var(--pa)}
+.prog.th-academy .cta-band::before,.prog.th-ctw .cta-band::before{background:transparent}
+.prog.th-ctw .cta-band h2{color:#fff}
+.prog.th-academy .cta-band .btn,.prog.th-ctw .cta-band .btn{background:var(--pd);border-color:var(--pd);color:#fff}
+.prog.th-academy .dl-brochure,.prog.th-ctw .dl-brochure{border-top:12px solid;border-image:var(--pstripe) 1}
+.prog.th-academy .br-form .btn,.prog.th-ctw .br-form .btn{background:var(--pa);border-color:var(--pa);color:#fff}
+.prog.th-ctw .br-form .btn{color:#0e2545}
+.prog.th-academy .br-card .eyebrow,.prog.th-ctw .br-card .eyebrow{color:var(--pa)}
+.prog.th-academy .br-card h2.h2,.prog.th-ctw .br-card h2.h2{color:#fff}
+/* crumbs on dark hero */
+.prog.th-academy .dl-hero .crumbs,.prog.th-ctw .dl-hero .crumbs{color:#fff}
+.prog.th-academy .dl-hero .crumbs a,.prog.th-ctw .dl-hero .crumbs a{color:#fff}
+@media(max-width:899px){.prog.th-academy .dl-hero::after,.prog.th-ctw .dl-hero::after{width:70vw;right:-20%;top:auto;bottom:-10%;opacity:.5}}
+/* partnerships page */
+.pt-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:28px}
+.pt-card{background:#fff;border-radius:22px;padding:26px 24px;border:1px solid var(--line);display:flex;flex-direction:column;gap:10px;box-shadow:0 10px 24px rgba(14,37,69,.06)}
+.pt-logo{height:72px;display:flex;align-items:center;margin-bottom:6px}.pt-logo img{max-height:56px;max-width:200px;width:auto;height:auto}
+.pt-card h3{font-size:24px;margin:0}.pt-card p{margin:0;font-size:15.5px;line-height:1.55}
+.pt-links{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:auto!important;padding-top:8px}.pt-links a{font-weight:700;color:var(--teal)}
+@media(max-width:1000px){.pt-grid{grid-template-columns:1fr}.pe-grid[style]{grid-template-columns:1fr!important}}
+.pb-wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center}
+.pb-wrap .btn{margin-top:18px}
+.pb-logos{display:flex;flex-wrap:wrap;gap:28px;align-items:center;justify-content:center}.pb-logos img{max-height:54px;max-width:170px;width:auto;height:auto}
+@media(max-width:1000px){.pb-wrap{grid-template-columns:1fr}}
+/* eight menu items */
+.main-nav a{white-space:nowrap}.main-nav ul{gap:16px}.main-nav a{font-size:14px}
+@media(min-width:1100px){.main-nav ul{gap:20px}.main-nav a{font-size:14.5px}}
+@media(min-width:1240px){.main-nav ul{gap:24px}.main-nav a{font-size:15px}}
+.logo{flex:0 0 auto}
+@media(min-width:1080px) and (max-width:1239px){.logo img{width:150px}.header-cta{padding:0 16px;font-size:14px;min-height:42px}.main-nav ul{gap:14px}}
