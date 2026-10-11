@@ -402,3 +402,4 @@ h2.h2::after{content:"";position:absolute;left:0;bottom:0;width:44px;height:3px;
 .video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 .video-grid figcaption{font-size:14px;color:var(--muted);margin-top:8px}
 .gallery{align-items:start}.gallery img{aspect-ratio:auto;height:auto;max-height:340px}
+.dl-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}
