@@ -1222,3 +1222,9 @@ main .kn-slide img[width][height]{height:100%;width:auto;max-width:none;border-r
 .kn-btn{width:48px;height:44px;border-radius:10px;border:2px solid var(--ink);background:#fff;color:var(--ink);font-size:20px;cursor:pointer}
 .kn-btn:hover{background:var(--ink);color:#fff}
 @media(max-width:800px){.kn-slide{height:300px}}
+
+/* Header: more room for the menu */
+.site-header .header-inner{max-width:1400px}
+.main-nav ul{gap:28px}.main-nav a{font-size:15px;letter-spacing:.01em}
+@media(min-width:1080px) and (max-width:1239px){.main-nav ul{gap:18px}.main-nav a{font-size:14.5px}}
+@media(min-width:1240px){.main-nav ul{gap:28px}.main-nav a{font-size:15px}}
