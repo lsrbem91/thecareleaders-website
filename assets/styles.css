@@ -1466,3 +1466,5 @@ a.con-offer:hover .co-name,a.con-offer:focus-visible .co-name{text-decoration:un
 .th-con .wcp-hero .con-offer.wc{font-size:30px;margin-left:-.4em}
 /* consultancy call-to-action band in The Care Leaders dark blue, to sit with the footer (Luke, 12 Oct) */
 .th-con .cta-band{background:#0e2545}
+/* white art panels: no outline, a clean white square (Luke, 12 Oct) */
+.con-art.con-g-white{box-shadow:none}
