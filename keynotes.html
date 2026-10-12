@@ -7,7 +7,7 @@
 <meta name="description" content="Book Luke Rodgers BEM, care-experienced keynote speaker and children&#8217;s social care consultant, for your conference, leadership event or staff day.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="./assets/styles.css?v=44"><!-- brand-pass -->
+<link rel="stylesheet" href="./assets/styles.css?v=45"><!-- brand-pass -->
 
 
 
@@ -110,11 +110,22 @@
     <div class="wrap">
       <h2 class="h2">On stage</h2>
       <p class="h2-sub">From national conferences to staff days, in person and online.</p>
-      <div class="photo-strip">
-        <figure><img src="./assets/img/brand/luke-lga-wide.jpg" alt="Luke speaking at a podium at the LGA conference" loading="lazy" width="1000" height="666"></figure>
-        <figure><img src="./assets/img/brand/conference-hall.jpg" alt="A full conference hall during one of Luke's keynotes" loading="lazy" width="800" height="1000"></figure>
-        <figure><img src="./assets/img/brand/luke-stage.jpg" alt="Luke presenting on a conference stage" loading="lazy" width="480" height="720"></figure>
-        <figure><img src="./assets/img/brand/luke-room.jpg" alt="Luke speaking to a room of practitioners" loading="lazy" width="1100" height="768"></figure>
+      <div class="kn-carousel" data-carousel>
+        <ul class="kn-track" tabindex="0" aria-label="Photos of Luke on stage">
+          <li class="kn-slide"><img src="./assets/img/brand/navsh-stage-3.jpg" alt="Luke on the main stage at the NAVSH annual conference 2025" loading="lazy" decoding="async" width="1400" height="933"></li>
+          <li class="kn-slide"><img src="./assets/img/brand/luke-lga-wide.jpg" alt="Luke speaking at a podium at the LGA conference" loading="lazy" decoding="async" width="1000" height="666"></li>
+          <li class="kn-slide"><img src="./assets/img/brand/navsh-stage-1.jpg" alt="Luke presenting at the NAVSH annual conference 2025" loading="lazy" decoding="async" width="933" height="1400"></li>
+          <li class="kn-slide"><img src="./assets/img/brand/luke-speaking.jpg" alt="Luke mid-talk, speaking to a room of practitioners" loading="lazy" decoding="async" width="900" height="900"></li>
+          <li class="kn-slide"><img src="./assets/img/brand/navsh-room.jpg" alt="A full conference room during Luke's NAVSH session" loading="lazy" decoding="async" width="1400" height="933"></li>
+          <li class="kn-slide"><img src="./assets/img/brand/luke-room.jpg" alt="Luke speaking to a room of practitioners" loading="lazy" decoding="async" width="1100" height="768"></li>
+          <li class="kn-slide"><img src="./assets/img/brand/navsh-stage-2.jpg" alt="Luke on stage at the NAVSH annual conference 2025" loading="lazy" decoding="async" width="933" height="1400"></li>
+          <li class="kn-slide"><img src="./assets/img/brand/luke-lga-podium.jpg" alt="Luke at the LGA conference podium" loading="lazy" decoding="async" width="1100" height="889"></li>
+          <li class="kn-slide"><img src="./assets/img/brand/luke-stage.jpg" alt="Luke presenting on a conference stage" loading="lazy" decoding="async" width="480" height="720"></li>
+        </ul>
+        <div class="kn-nav">
+          <button type="button" class="kn-btn" data-dir="-1" aria-label="Previous photo">&#8592;</button>
+          <button type="button" class="kn-btn" data-dir="1" aria-label="Next photo">&#8594;</button>
+        </div>
       </div>
     </div>
   </section>
@@ -201,5 +212,6 @@
 
 <script src="./assets/nav.js?v=2"></script>
 <script src="./assets/prog.js?v=2" defer></script>
+<script>(function(){var c=document.querySelector('[data-carousel]');if(!c)return;var t=c.querySelector('.kn-track');c.querySelectorAll('.kn-btn').forEach(function(b){b.addEventListener('click',function(){var s=t.querySelector('.kn-slide');var w=s?s.getBoundingClientRect().width+20:400;t.scrollBy({left:w*Number(b.dataset.dir),behavior:'smooth'})})})})();</script>
 </body>
 </html>

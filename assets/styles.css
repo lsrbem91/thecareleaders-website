@@ -1211,3 +1211,14 @@ main img[width][height]{height:auto}
 .photo-frame-wide::before{border-radius:24px;inset:8% -6% -8% 6%}
 .photo-frame-wide .crown{top:-14%;left:-4%}
 .photo-frame-wide .bolt{bottom:-8%;right:-4%}
+
+/* Keynotes: On stage carousel, whole photos, no crop */
+.kn-carousel{position:relative;margin-top:32px}
+.kn-track{list-style:none;margin:0;padding:0 0 8px;display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:thin}
+.kn-slide{flex:0 0 auto;scroll-snap-align:start;height:440px}
+main .kn-slide img[width][height]{height:100%;width:auto;max-width:none;border-radius:16px;display:block}
+.kn-slide:nth-child(odd) img{border-radius:16px 48px 16px 16px}
+.kn-nav{display:flex;gap:10px;justify-content:flex-end;margin-top:12px}
+.kn-btn{width:48px;height:44px;border-radius:10px;border:2px solid var(--ink);background:#fff;color:var(--ink);font-size:20px;cursor:pointer}
+.kn-btn:hover{background:var(--ink);color:#fff}
+@media(max-width:800px){.kn-slide{height:300px}}
