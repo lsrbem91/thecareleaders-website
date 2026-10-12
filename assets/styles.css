@@ -1199,3 +1199,9 @@ main img[width][height]{height:auto}
 .btn{padding:0 26px;line-height:1.25}
 .btn.svc-cta{white-space:normal;text-align:left;padding:12px 22px;min-height:48px}
 @media(max-width:480px){.btn{white-space:normal;text-align:center;padding:12px 22px;max-width:100%}}
+
+.award-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:24px}
+.award-card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:22px 24px;display:grid;grid-template-columns:150px 1fr;gap:22px;align-items:center}
+.award-card img{width:150px;height:auto;display:block}
+.award-card h3{font-size:19px;margin:0 0 6px}.award-card p{margin:0;font-size:15.5px}
+@media(max-width:900px){.award-grid{grid-template-columns:1fr}}@media(max-width:520px){.award-card{grid-template-columns:1fr}}
