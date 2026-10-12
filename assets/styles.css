@@ -1337,3 +1337,4 @@ main .kn-slide img[width][height]{height:100%;width:auto;max-width:none;border-r
 .card-btns a:hover{background:var(--teal)}
 /* === end components v4 === */
 .prog.th-ctw .dl-hero h1 .ctw-lock .ctw-pass,.prog.th-ctw .ctw-lock .ctw-pass{color:#241b40}
+main .wcp-svc .top img[width][height],main .wcp-svc .top img{width:68px;height:68px;aspect-ratio:1/1}
