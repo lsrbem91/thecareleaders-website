@@ -1189,10 +1189,13 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible{o
 .tt-r small{opacity:1}
 .th-fel .dl-mission .eyebrow{color:#f3b94a}
 .th-fel .xp-tabs button[aria-selected=true] .xp-n{color:#1d2340}
-.privacy main a,.about-grid a,.section p a{display:inline-block;padding:3px 0}
+.privacy main a:not(.btn),.about-grid a:not(.btn),.section p a:not(.btn){display:inline-block;padding:3px 0}
 .ex-live{color:var(--ink)}
 .th-fel .br-card .eyebrow{color:#f3b94a}
 .th-fel .xp-tabs button[aria-selected=true] .xp-n{background:#f3b94a;color:#1d2340}
 .yt-link,a[href*="youtube"]{display:inline-block;padding:4px 0}
 main img[width][height]{height:auto}
 .cs-figure img{width:auto;height:auto;max-width:100%}
+.btn{padding:0 26px;line-height:1.25}
+.btn.svc-cta{white-space:normal;text-align:left;padding:12px 22px;min-height:48px}
+@media(max-width:480px){.btn{white-space:normal;text-align:center;padding:12px 22px;max-width:100%}}
