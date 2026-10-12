@@ -1317,6 +1317,91 @@ main .kn-slide img[width][height]{height:100%;width:auto;max-width:none;border-r
 /* Designated Leaders: no sticker pattern behind text */
 .prog.th-dlp .section.dl-mission,.prog.th-dlp .section.dl-brochure,.prog.th-dlp .cta-band{background:#312b6c}
 
+.prog.th-ctw .dl-hero h1 .ctw-lock .ctw-pass,.prog.th-ctw .ctw-lock .ctw-pass{color:#241b40}
+main .wcp-svc .top img[width][height],main .wcp-svc .top img{width:68px;height:68px;aspect-ratio:1/1}
+
+/* === The Care Leaders Consultancy: brand kit v1 (Fellowship orange, midnight, green bed, the two-people bulb, pendant, frame, panel) === */
+.th-con{--co:#f59c00;--cm:#241b40;--cbed:#f0f1df;--camb:#d47a00}
+.th-con .section:not([class*="wcp-"]){background:#fff;border-bottom-color:#e4e2c9}
+.th-con .section.bg-fill:not([class*="wcp-"]){background:#f0f1df}
+.th-con .maze-band{display:none}
+.th-con .section:not([class*="wcp-"]) h1,.th-con .section:not([class*="wcp-"]) h2,.th-con .section:not([class*="wcp-"]) h3,.th-con .section:not([class*="wcp-"]) .h2{color:#241b40}
+.th-con .section:not([class*="wcp-"]) h2.h2::after{background:#f59c00;background-image:none;width:56px;height:6px;bottom:-4px;border-radius:0}
+.th-con .section:not([class*="wcp-"]) .eyebrow{color:#241b40}
+.th-con .section:not([class*="wcp-"]) .lead{color:#241b40}
+.th-con .exp-line span{background:#f59c00;border-radius:0;transform:rotate(45deg) scale(.85)}
+.th-con .section:not([class*="wcp-"]) .btn,.th-con .cta-band .btn{background:#f59c00;border-color:#f59c00;color:#241b40}
+.th-con .section:not([class*="wcp-"]) .btn.secondary{background:transparent;border-color:#241b40;color:#241b40}
+.th-con .section:not([class*="wcp-"]) .btn:hover{background:#241b40;border-color:#241b40;color:#fff}
+/* lockup: The CareLeaders / C(bulb)nsultancy inside the corner frame */
+.con-lock{display:inline-flex;flex-direction:column;padding:12px 18px 12px 16px;line-height:1;color:#241b40;background:url(./img/brand/cons/corner-tl.svg) left top/14px no-repeat,url(./img/brand/cons/corner-tr.svg) right top/14px no-repeat,url(./img/brand/cons/corner-bl.svg) left bottom/14px no-repeat,url(./img/brand/cons/corner-br.svg) right bottom/14px no-repeat}
+.con-lock.rev{color:#fff;background:url(./img/brand/cons/corner-tl.svg) left top/14px no-repeat,url(./img/brand/cons/corner-tr.svg) right top/14px no-repeat,url(./img/brand/cons/corner-bl-w.svg) left bottom/14px no-repeat,url(./img/brand/cons/corner-br-w.svg) right bottom/14px no-repeat}
+.con-tcl{font-family:Crossten,Poppins,sans-serif;font-weight:300;font-size:.42em}.con-tcl b{font-weight:900}
+.con-word{font-family:Crossten,Poppins,sans-serif;font-weight:900;font-size:1em;letter-spacing:-.01em;display:inline-flex;align-items:flex-end;margin-top:.12em}
+.con-word img{height:.86em;width:auto;margin:0 .02em .02em}
+.con-lock.hero{font-size:34px;margin-bottom:18px}
+/* area marker: kit icon + area name on the area's ground */
+.con-area{display:inline-flex;align-items:center;gap:10px;font-family:Crossten,Poppins,sans-serif;font-weight:600;font-size:14px;line-height:1.2;padding:6px 14px 6px 8px;clip-path:polygon(0.5% 0,100% 0.9%,99.3% 100%,0 98.9%);text-decoration:none}
+.con-area img{width:28px;height:28px;flex:0 0 auto}
+.con-g-mid{background:#241b40;color:#fff}.con-g-orange{background:#f59c00;color:#241b40}.con-g-bed{background:#f0f1df;color:#241b40;box-shadow:inset 0 0 0 2px #241b40}.con-g-white{background:#fff;color:#241b40;box-shadow:inset 0 0 0 2px #241b40}
+/* hero art: the pendant panel */
+.con-art{position:relative;aspect-ratio:4/5;max-width:420px;width:100%;margin-left:auto;overflow:hidden;clip-path:polygon(0 0.7%,99.6% 0,99.2% 99.2%,0.4% 100%)}
+.con-art .con-pend{position:absolute;left:56%;top:0;height:62%;width:auto;transform:translateX(-50%)}
+.con-art .con-art-icon{position:absolute;right:22px;top:22px;width:72px;height:72px}
+.con-art .con-art-txt{position:absolute;left:28px;right:28px;bottom:26px;display:flex;flex-direction:column;line-height:1}
+.con-art .con-art-txt .con-tcl{font-size:18px}
+.con-art .con-art-txt .con-word{font-size:44px}
+.con-art .con-art-txt .con-art-area{font-family:Crossten,Poppins,sans-serif;font-weight:600;font-size:17px;margin-top:12px;line-height:1.25}
+.con-art.con-g-mid,.con-art.con-g-orange{box-shadow:none}
+/* hero section */
+.th-con .section.con-hero{background:#f0f1df}
+.th-con .con-hero .page-hero h1{font-size:clamp(34px,4.4vw,52px)}
+/* hub area cards */
+.th-con .svc-media{background:transparent;border:0;box-shadow:none;border-radius:0}
+.th-con .svc-media .con-art{max-width:none;aspect-ratio:1/1}
+.th-con .svc-num{color:#241b40;text-shadow:none;z-index:3}
+.th-con .con-g-mid ~ .svc-num,.th-con .svc-media .con-g-mid+.svc-num{color:#fff}
+.th-con .svc-prob{border-left-color:#f59c00;border-radius:0}
+.th-con .svc-prob small{color:#241b40}
+.th-con .svc-do li{border-radius:0}
+.th-con .svc-do li::before{background:#f59c00;color:#241b40;border-radius:0}
+.th-con .pillnav a{border-radius:0;border-color:#241b40}.th-con .pillnav a span{background:#f59c00;color:#241b40;border-radius:0}
+/* cards and steps: hand-cut, square */
+.th-con .ae-card,.th-con .cm-step,.th-con .pe,.th-con .eq>div,.th-con .faq-item,.th-con .offer-card,.th-con .card,.th-con .svc-proof a,.th-con .work-card,.th-con .ex-card,.th-con .is-item,.th-con .wd-card,.th-con .cs-how>div{border-radius:0}
+.th-con .ae-card{border-left:6px solid #f59c00;box-shadow:none;background:#fff}
+.th-con .cm-n{background:#f59c00;color:#241b40;border-radius:0;clip-path:polygon(0.5% 0,100% 0.9%,99.3% 100%,0 98.9%)}
+.th-con .cm-step:nth-child(even) .cm-n{background:#241b40;color:#fff}
+.th-con .cm-get{border-radius:0;background:#f0f1df}
+.th-con .cm-get li::before{color:#d47a00}
+.th-con .faq-item{border:0;border-left:5px solid #f59c00;background:#fff}
+/* case studies */
+.th-con .section.cs-hero{background:#f0f1df}
+.th-con .cs-hero .con-area{margin-bottom:16px}
+.th-con .cs-stat,.th-con .cs-stats>div{border-top-color:#f59c00}
+.th-con .cs-stats strong,.th-con .cs-stat strong{color:#241b40}
+.th-con .tl-line,.th-con .cs-tl::before{background:#f59c00}
+.th-con .cs-quote{border-radius:0;background:#fff url(./img/brand/cons/corner-tl.svg) 14px 14px/18px no-repeat;border:0;box-shadow:none}
+.th-con .cs-toc a[aria-current],.th-con .cs-toc .on{color:#241b40;font-weight:900}
+/* closing band: midnight with the pendant */
+.th-con .cta-band{background:#241b40;position:relative;overflow:hidden}.th-con .cta-band::before{display:none}
+.th-con .cta-band h2{color:#fff}
+.th-con .cta-band .btn{background:#f59c00;border-color:#f59c00;color:#241b40}
+.th-con .cta-band::after{content:"";position:absolute;right:8%;top:0;width:60px;height:100%;background:url(./img/brand/cons/pendant-orange.svg) center top/contain no-repeat}
+/* one kit icon per block, top right */
+.th-con img.deco{transform:none!important}
+/* fostering: Why Care sections keep Why Care */
+.th-con .wcp-hero .con-lock{font-size:26px}
+@media(max-width:900px){.con-art{max-width:340px;margin:24px auto 0}.th-con .cta-band::after{display:none}}
+.th-con .stat::before{background:#f59c00;background-image:none;height:6px}
+.th-con .stat .num{color:#241b40;font-weight:900}
+.th-con .tl{border-left-color:#f59c00}
+.th-con .tl li::before{border-radius:0;background:#241b40;clip-path:polygon(0.5% 0,100% 0.9%,99.3% 100%,0 98.9%);border:0}
+.th-con .tl .when{color:#241b40}
+.th-con .cs-hero .tags{display:none}
+.th-con .stw-box,.th-con .card{border-radius:0}
+.th-con .cs-toc a{color:#241b40}
+.th-con .svc-media.num-light .svc-num{color:#fff}
+
 /* === components v4 (selector, offer groups) === */
 .cc-img.cover{background:var(--ink)}.cc-img.cover img{object-fit:cover;padding:0}
 .needs{display:grid;grid-template-columns:320px 1fr;gap:32px;margin-top:32px;align-items:start}
@@ -1336,5 +1421,21 @@ main .kn-slide img[width][height]{height:100%;width:auto;max-width:none;border-r
 .card-btns a{display:inline-flex;align-items:center;padding:8px 14px;border-radius:99px;background:var(--ink);color:#fff;font-weight:700;font-size:14px;text-decoration:none}
 .card-btns a:hover{background:var(--teal)}
 /* === end components v4 === */
-.prog.th-ctw .dl-hero h1 .ctw-lock .ctw-pass,.prog.th-ctw .ctw-lock .ctw-pass{color:#241b40}
-main .wcp-svc .top img[width][height],main .wcp-svc .top img{width:68px;height:68px;aspect-ratio:1/1}
+
+.con-word img,.con-word img[width][height]{height:.86em!important;width:auto!important;max-width:none}
+.th-con .svc-media::before,.th-con .svc-media::after{display:none}
+.th-con .num-card{border-radius:0;clip-path:polygon(0 1.2%,99.4% 0,100% 98.6%,0.6% 100%);background:#fff}
+.th-con .num-card .nc-n,.th-con .num-card:nth-child(n) .nc-n{color:#241b40;background:#f59c00;display:inline-flex;align-items:center;justify-content:center;width:52px;height:52px;font-size:30px;clip-path:polygon(0.5% 0,100% 0.9%,99.3% 100%,0 98.9%)}
+.th-con .num-card:nth-child(even) .nc-n{background:#241b40;color:#fff}
+.th-con .nc-ex{background:#f0f1df;border-radius:0}.th-con .nc-ex span{background:#241b40;color:#fff;border-radius:0}
+.th-con .sign-card{background:#fff;border:0;border-left:5px solid #f59c00;border-radius:0}
+.th-con .sign-card .dot{background-color:#241b40;border-radius:0;clip-path:polygon(0.5% 0,100% 0.9%,99.3% 100%,0 98.9%)}
+.th-con .card{background:#fff;border:0;border-top:5px solid #f59c00;border-radius:0}
+.th-con .bg-fill .card{background:#fff}
+.th-con .cm-step:nth-child(odd) .cm-n{background:#f59c00;color:#241b40}
+.th-con .cm-get li::before{border-left-color:#241b40;border-bottom-color:#241b40}
+.th-con .svc-label{color:#241b40}
+.th-con .wcp-hero .exp-line{color:#fff}
+.th-con .cm-arrow,.th-con .cm-step+.cm-step::before{color:#241b40}
+.th-con .cm-get>span{color:#241b40}
+.th-con .nc-ex{font-size:15px!important}
