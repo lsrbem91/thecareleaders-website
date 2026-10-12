@@ -1439,3 +1439,28 @@ main .wcp-svc .top img[width][height],main .wcp-svc .top img{width:68px;height:6
 .th-con .cm-arrow,.th-con .cm-step+.cm-step::before{color:#241b40}
 .th-con .cm-get>span{color:#241b40}
 .th-con .nc-ex{font-size:15px!important}
+
+/* === Consultancy brand v2: offer wordmarks and icon suites (12 Oct) === */
+.con-offer{display:inline-flex;flex-direction:column;padding:.62em .7em;line-height:1;color:#241b40;text-decoration:none;font-family:Crossten,Poppins,sans-serif;--c:.56em;background:url(./img/brand/cons/corner-tl.svg) left top/var(--c) no-repeat,url(./img/brand/cons/corner-tr.svg) right top/var(--c) no-repeat,url(./img/brand/cons/corner-bl.svg) left bottom/var(--c) no-repeat,url(./img/brand/cons/corner-br.svg) right bottom/var(--c) no-repeat}
+.con-offer .co-in{display:flex;flex-direction:column;gap:.15em}
+.con-offer.co-on-mid{color:#fff;background:url(./img/brand/cons/corner-tl.svg) left top/var(--c) no-repeat,url(./img/brand/cons/corner-tr.svg) right top/var(--c) no-repeat,url(./img/brand/cons/corner-bl-w.svg) left bottom/var(--c) no-repeat,url(./img/brand/cons/corner-br-w.svg) right bottom/var(--c) no-repeat}
+.con-offer.co-on-orange{background:url(./img/brand/cons/corner-tl-w.svg) left top/var(--c) no-repeat,url(./img/brand/cons/corner-tr-w.svg) right top/var(--c) no-repeat,url(./img/brand/cons/corner-bl.svg) left bottom/var(--c) no-repeat,url(./img/brand/cons/corner-br.svg) right bottom/var(--c) no-repeat}
+.con-offer .co-tcl{font-size:.32em;font-weight:300;white-space:nowrap}.con-offer .co-tcl b{font-weight:900}.con-offer .co-tcl i{font-style:normal;font-weight:600}
+.con-offer .co-name{font-weight:900;font-size:1em;letter-spacing:-.015em;white-space:nowrap}
+.con-offer .co-name img,.con-offer .co-name img[width][height]{display:inline-block;vertical-align:0;margin:0 .02em;max-width:none}
+.con-offer .co-sub{font-weight:600;font-size:.35em;white-space:nowrap}
+.con-offer.hero{font-size:46px;margin:0 0 20px -.7em}
+.con-offer.mark{font-size:26px;margin:0 0 16px -.7em}
+a.con-offer:hover .co-name,a.con-offer:focus-visible .co-name{text-decoration:underline;text-decoration-thickness:3px;text-underline-offset:4px}
+.con-art .con-art-txt .con-offer.art{font-size:40px;margin-left:-.5em;align-self:flex-start}
+.th-con .svc-media .con-art .con-offer.art{font-size:42px}
+.offer-parts{list-style:none;margin:28px 0 0;padding:0;display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
+.offer-parts li{background:#fff;display:flex;flex-direction:column;align-items:center;gap:10px;padding:18px 10px 14px;text-align:center;font-family:Crossten,Poppins,sans-serif;font-weight:600;font-size:15px;line-height:1.25;color:#241b40;clip-path:polygon(0 1.2%,99.4% 0,100% 98.6%,0.6% 100%)}
+.offer-parts li:nth-child(even){clip-path:polygon(0.6% 0,100% 1%,99.4% 100%,0 98.8%)}
+.offer-parts img,.offer-parts img[width][height]{width:64px!important;height:64px!important}
+.ae-card .offer-parts li{background:#f0f1df}
+.th-con .num-card{position:relative}
+.th-con .num-card .nc-ic,.th-con .num-card .nc-ic[width][height]{position:absolute;right:20px;top:20px;width:56px!important;height:56px!important}
+@media(max-width:900px){.offer-parts{grid-template-columns:repeat(3,1fr)}.con-offer.hero{font-size:34px}.con-art .con-art-txt .con-offer.art{font-size:30px}}
+@media(max-width:480px){.con-offer.hero{font-size:28px}.con-offer.mark{font-size:22px}.offer-parts li{font-size:13px}}
+.th-con .wcp-hero .con-offer.wc{font-size:30px;margin-left:-.4em}
