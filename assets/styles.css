@@ -1295,6 +1295,28 @@ main .kn-slide img[width][height]{height:100%;width:auto;max-width:none;border-r
 .prog.th-dlp .dl-src{color:#5f3c90}
 @media(max-width:900px){.dlp-burst{width:60vw;right:-20%;top:-6%;opacity:.5}.prog.th-dlp .dl-hero .dl-eyebrow{font-size:24px}.prog.th-dlp .dl-step:not(:last-child)::after{display:none}}
 
+.prog.th-dlp .dl-hero .exp-line{color:#fff}.prog.th-dlp .dl-hero .exp-line span{background:#acc90b;border-radius:0;transform:rotate(45deg) scale(.9)}
+.prog.th-dlp .g-connect{--g:#008196}.prog.th-dlp .g-calm{--g:#78ae5d}.prog.th-dlp .g-understand{--g:#7c05ca}.prog.th-dlp .g-repair{--g:#312b6c}.prog.th-dlp .g-plan{--g:#acc90b}
+.prog.th-dlp .tl-p-g.g-plan,.prog.th-dlp .tl-p-g.g-calm{color:#241b40}.prog.th-dlp .tl-p-g.g-repair{color:#fff}
+.prog.th-dlp .fb-ctl button{border-radius:0;clip-path:polygon(0.5% 0,100% 0.9%,99.3% 100%,0 98.9%)}
+.prog.th-dlp .tl-p-g,.prog.th-dlp .ses-mode{border-radius:0}
+.dlp-burst{display:none}
+@media(max-width:900px){.prog.th-dlp .section.dl-hero{padding-top:40px}}
+
+/* Covers never sit on their own colour: a hand-cut mount in a contrasting kit colour (12 Oct) */
+.prog.th-dlp .dl-hero-art img,.prog.th-dlp .br-img img,
+.prog.th-academy .dl-hero-art img,
+.prog.th-ctw .dl-hero-art img,.prog.th-ctw .br-img img,
+.prog.th-nvr .br-img img,.prog.th-jtc .br-img img,
+.prog.th-fel .dl-hero-art img{box-sizing:border-box;padding:18px;border-radius:0;clip-path:polygon(0 0.7%,99.6% 0,99.2% 99.2%,0.4% 100%);box-shadow:none}
+.prog.th-dlp .dl-hero-art img,.prog.th-dlp .br-img img{background:#e0d8df}
+.prog.th-academy .dl-hero-art img{background:#5f3c90}
+.prog.th-ctw .dl-hero-art img,.prog.th-ctw .br-img img{background:#acc90b}
+.prog.th-nvr .br-img img,.prog.th-jtc .br-img img{background:var(--pa)}
+.prog.th-fel .dl-hero-art img{background:var(--pd)}
+/* Designated Leaders: no sticker pattern behind text */
+.prog.th-dlp .section.dl-mission,.prog.th-dlp .section.dl-brochure,.prog.th-dlp .cta-band{background:#312b6c}
+
 /* === components v4 (selector, offer groups) === */
 .cc-img.cover{background:var(--ink)}.cc-img.cover img{object-fit:cover;padding:0}
 .needs{display:grid;grid-template-columns:320px 1fr;gap:32px;margin-top:32px;align-items:start}
@@ -1314,10 +1336,4 @@ main .kn-slide img[width][height]{height:100%;width:auto;max-width:none;border-r
 .card-btns a{display:inline-flex;align-items:center;padding:8px 14px;border-radius:99px;background:var(--ink);color:#fff;font-weight:700;font-size:14px;text-decoration:none}
 .card-btns a:hover{background:var(--teal)}
 /* === end components v4 === */
-.prog.th-dlp .dl-hero .exp-line{color:#fff}.prog.th-dlp .dl-hero .exp-line span{background:#acc90b;border-radius:0;transform:rotate(45deg) scale(.9)}
-.prog.th-dlp .g-connect{--g:#008196}.prog.th-dlp .g-calm{--g:#78ae5d}.prog.th-dlp .g-understand{--g:#7c05ca}.prog.th-dlp .g-repair{--g:#312b6c}.prog.th-dlp .g-plan{--g:#acc90b}
-.prog.th-dlp .tl-p-g.g-plan,.prog.th-dlp .tl-p-g.g-calm{color:#241b40}.prog.th-dlp .tl-p-g.g-repair{color:#fff}
-.prog.th-dlp .fb-ctl button{border-radius:0;clip-path:polygon(0.5% 0,100% 0.9%,99.3% 100%,0 98.9%)}
-.prog.th-dlp .tl-p-g,.prog.th-dlp .ses-mode{border-radius:0}
-.dlp-burst{display:none}
-@media(max-width:900px){.prog.th-dlp .section.dl-hero{padding-top:40px}}
+.prog.th-ctw .dl-hero h1 .ctw-lock .ctw-pass,.prog.th-ctw .ctw-lock .ctw-pass{color:#241b40}
