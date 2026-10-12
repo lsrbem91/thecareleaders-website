@@ -1205,3 +1205,9 @@ main img[width][height]{height:auto}
 .award-card img{width:150px;height:auto;display:block}
 .award-card h3{font-size:19px;margin:0 0 6px}.award-card p{margin:0;font-size:15.5px}
 @media(max-width:900px){.award-grid{grid-template-columns:1fr}}@media(max-width:520px){.award-card{grid-template-columns:1fr}}
+
+/* Keynotes hero: whole image, original rectangle */
+.photo-frame-wide img.main{aspect-ratio:auto;object-fit:contain;height:auto;border-radius:16px}
+.photo-frame-wide::before{border-radius:24px;inset:8% -6% -8% 6%}
+.photo-frame-wide .crown{top:-14%;left:-4%}
+.photo-frame-wide .bolt{bottom:-8%;right:-4%}
