@@ -1468,3 +1468,4 @@ a.con-offer:hover .co-name,a.con-offer:focus-visible .co-name{text-decoration:un
 .th-con .cta-band{background:#0e2545}
 /* white art panels: no outline, a clean white square (Luke, 12 Oct) */
 .con-art.con-g-white{box-shadow:none}
+.con-art.con-g-bed{background:#fff;box-shadow:none}
