@@ -1850,3 +1850,15 @@ body.tc-has-bar{padding-bottom:72px}
 @media(max-width:800px){.sm-wsg{grid-template-columns:1fr}.sm-row details p{padding-left:18px}.sm-t{width:48px;font-size:15px}}
 @media (prefers-reduced-motion:reduce){.sm-hit details{animation:none}}
 .ab-wc,.ab-wc:hover,.ab-wc-t,.ab-wc em{color:#fff!important}.ab-wc-t strong{color:#f57af5!important}
+/* tcllmat:start Luke's Learning materials (13 Oct 2026): image blocks, bold patterns, tonal lattice. Learning pages only. */
+.tc-hero,.tcll-train .bg-fill.tl-page-hero{position:relative}
+.tc-hero::after,.tcll-train .bg-fill.tl-page-hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:22px;background:url(./img/tcll/patterns/bold-hex.jpg) center/600px auto repeat-x}
+.tc-hero{padding-bottom:78px}
+.tc-art{min-height:420px}.tc-ill{max-height:480px;filter:none}
+.tcll-train .tl-block img{max-height:480px;width:100%;height:auto;object-fit:contain;border-radius:0}
+.tcll-train .page-hero-media.tl-block::before,.tcll-train .page-hero-media.tl-block::after{display:none!important}
+.tc-cta{position:relative;background:#241b40 url(./img/tcll/patterns/bold-triangles.jpg) center/900px auto}
+.tc-cta-in{background:#241b40;padding:40px 44px;clip-path:var(--cut2);max-width:860px}
+.tk-gh{position:relative}
+@media(max-width:640px){.tc-cta-in{padding:28px 22px}.tc-hero::after{height:14px}}
+/* tcllmat:end */
