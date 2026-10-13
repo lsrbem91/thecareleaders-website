@@ -1510,3 +1510,51 @@ a.con-offer:hover .co-name,a.con-offer:focus-visible .co-name{text-decoration:un
 @media(min-width:1080px) and (max-width:1199px){.main-nav,.header-cta{display:none}.nav-toggle{display:inline-flex;align-items:center;justify-content:center}.mobile-menu.open{display:flex!important}}
 .mobile-menu a.btn{color:#fff;justify-content:center;border-bottom:0}
 .mobile-menu a[aria-current="page"]{color:var(--teal)}
+
+/* === Training catalogue (13 Oct) === */
+.tf-finder{background:#fff;border-radius:20px;padding:22px 24px;margin:22px 0 30px;display:flex;flex-direction:column;gap:14px;box-shadow:0 8px 30px rgba(14,37,69,.06)}
+.tf-row{display:grid;grid-template-columns:170px 1fr;gap:12px;align-items:start}
+.tf-lab{font-weight:700;font-size:15px;padding-top:9px;color:var(--ink)}
+.tf-chips{display:flex;flex-wrap:wrap;gap:8px}
+.tf-chip{min-height:40px;padding:8px 16px;border-radius:999px;border:2px solid var(--ink);background:#fff;color:var(--ink);font:600 14.5px/1.2 Poppins,sans-serif;cursor:pointer}
+.tf-chip:hover{background:var(--fill)}
+.tf-chip[aria-pressed="true"]{background:var(--ink);color:#fff}
+.tf-chip:focus-visible,.tf-reset:focus-visible{outline:3px solid var(--teal);outline-offset:2px}
+.tf-count{margin:2px 0 0;font-weight:600;font-size:15px;display:flex;gap:14px;align-items:center}
+.tf-reset{border:0;background:none;text-decoration:underline;font:500 14.5px Poppins,sans-serif;color:var(--ink);cursor:pointer;padding:6px 2px}
+@media(max-width:720px){.tf-row{grid-template-columns:1fr;gap:6px}.tf-lab{padding-top:0}}
+.tl-cols{display:flex;flex-direction:column;gap:42px}
+.tl-col-head{border-left:8px solid var(--pa);padding:4px 0 4px 16px;margin-bottom:18px}
+.tl-col-head h3{font-size:26px;margin:0}
+.tl-col-head p{margin:6px 0 0;color:var(--muted);max-width:680px}
+.tl-card .cc-body{display:flex;flex-direction:column;gap:8px}
+.tl-card .cc-kind{align-self:flex-start;font-size:12.5px;font-weight:700;background:var(--pa);color:#fff;padding:3px 10px;border-radius:999px}
+.cc-fmt{display:flex;flex-wrap:wrap;gap:6px}
+.cc-fmt i{font-style:normal;font-size:12.5px;font-weight:600;padding:3px 9px;border-radius:999px;background:var(--pl,#eef2f4);color:var(--ink)}
+.cc-len{font-size:13.5px;color:var(--muted)}
+.tf-empty{background:#fff;border-radius:16px;padding:20px 22px;font-weight:600}
+.tl-progs{margin-top:40px;padding:20px 24px;border-radius:16px;background:#fff;line-height:1.7}
+.tl-progs a{font-weight:600;margin-right:4px}
+.tl-progs a:not(:last-child)::after{content:","}
+/* course pages */
+.prog.th-tl{--pr:#0e2545;--pt:#0e2545;--pd:#0e2545;--pad:var(--pa);--pbt:#0e2545}
+.prog.th-tl .section.tl-hero{background:var(--pl);border-bottom:8px solid var(--pa)}
+.tl-eyebrow a{display:inline-block;font-weight:700;font-size:14.5px;color:#fff;background:var(--pa);padding:6px 14px;border-radius:999px;text-decoration:none}
+.prog.th-tl h1{margin-top:16px}
+.prog.th-tl h1 span{color:var(--pa)}
+.prog.tl-schools h1 span{color:#b56c00}
+.tl-art{position:relative;display:flex;justify-content:center;align-items:center}
+.tl-art::before{content:"";position:absolute;width:88%;aspect-ratio:1;border-radius:50%;background:var(--pa);opacity:.16}
+.tl-art img{position:relative;max-width:440px;width:100%;height:auto}
+.prog.th-tl .num-card .nc-n{background:var(--pa);color:#fff}
+.prog.tl-schools .num-card .nc-n{color:#0e2545}
+.tl-ways{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:22px}
+.tl-way{background:var(--pl);border-radius:18px;padding:20px 22px;border-top:6px solid var(--pa)}
+.tl-way strong{font-size:18px}.tl-way p{margin:8px 0 0}
+.tl-note{margin-top:22px;max-width:760px;font-size:17px}
+.prog.th-tl .cta-band{background:var(--ink)}.prog.th-tl .cta-band::before{display:none}
+.prog.th-tl .num-card .nc-n{display:inline-flex;align-items:center;justify-content:center;width:46px;height:46px;border-radius:12px;font-size:24px;padding:0}
+.tl-schools .tl-eyebrow a,.tl-col#c-schools .cc-kind{color:#0e2545}
+#c-schools .tl-card .cc-kind{color:#0e2545}
+.tl-progs a{display:inline-block;padding:6px 2px}
+.tl-schools .cc-kind{color:#0e2545}

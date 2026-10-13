@@ -99,5 +99,7 @@ Media
 ## Website: training review (to do)
 - [ ] List every training course and programme with how it can be delivered: online, face to face, blended, workshop, keynote, or several
 - Known so far: The Journey Through Care is online (6 sessions over 6 weeks); NVR Essentials is one day face to face; the NVR Programme is blended and will be renamed NVR Advanced; Tools for Schools runs as a full-day workshop or as a keynote; many courses can run online, face to face or as a workshop
-- [ ] Move the NVR Programme from Programmes to Training (it is already out of the Programmes menu)
-- [ ] Rebuild the Training page as one page with a short "find the right training" filter (a few buttons that narrow the list)
+
+- [x] Rebuild the Training page as one page with a "find the right training" filter (13 Oct): 26 courses in six collections, 19 new course pages; full list in docs/training-inventory.md
+- [x] NVR Programme renamed NVR Advanced and moved to Training
+- Build: scratchpad build/training_data.py (content) and build/training.py (pages, finder, thumbnails with --thumbs), run before nav.py
