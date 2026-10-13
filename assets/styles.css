@@ -1562,3 +1562,8 @@ a.con-offer:hover .co-name,a.con-offer:focus-visible .co-name{text-decoration:un
 .tl-bespoke h3{color:#fff;font-size:26px;margin:0}
 .tl-bespoke p{margin:8px 0 0;max-width:620px;color:#fff;opacity:.92}
 .tl-bespoke .btn{background:#fbab1e;border-color:#fbab1e;color:#0e2545}
+.tl-usps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:24px}
+.tl-u{background:var(--fill);border-radius:18px;padding:22px 22px 20px;border-top:6px solid var(--teal)}
+.tl-u:nth-child(6n+2){border-top-color:#fbab1e}.tl-u:nth-child(6n+3){border-top-color:#c0392b}.tl-u:nth-child(6n+4){border-top-color:#5f3c90}.tl-u:nth-child(6n+5){border-top-color:#2e7a3b}.tl-u:nth-child(6n+6){border-top-color:#0e2545}
+.tl-u strong{font-size:19px;display:block}.tl-u p{margin:8px 0 0}
+@media(max-width:900px){.tl-usps{grid-template-columns:1fr 1fr}}@media(max-width:600px){.tl-usps{grid-template-columns:1fr}}
