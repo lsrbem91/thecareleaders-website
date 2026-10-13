@@ -72,6 +72,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
   /* shortlist */
   var tray = document.querySelector('[data-tk-tray]');
+  var sl = document.querySelector('[data-tk-sl]');
+  var sc = document.querySelector('[data-tk-sc]');
   var short = [];
   try { short = JSON.parse(load('tk-short') || '[]') || []; } catch (e) { short = []; }
   var bySlug = {};
@@ -80,15 +82,18 @@ document.addEventListener('DOMContentLoaded', function () {
   short = short.filter(function (s) { return bySlug[s]; });
   function draw() {
     items.forEach(function (it) { it.querySelector('[data-add]').setAttribute('aria-pressed', short.indexOf(it.getAttribute('data-slug')) > -1 ? 'true' : 'false'); });
-    tray.hidden = short.length === 0;
+    tray.hidden = short.length === 0 || (sl && sl.open);
     document.body.classList.toggle('tk-has-tray', short.length > 0);
+    if (sc) sc.textContent = short.length;
+    drawList();
     if (!short.length) return;
     var names = short.map(function (s) { return bySlug[s].getAttribute('data-title'); });
     tray.querySelector('[data-tk-n]').textContent = short.length === 1 ? '1 course on your shortlist' : short.length + ' courses on your shortlist';
     tray.querySelector('[data-tk-names]').textContent = names.join(', ');
     var body = 'Hello,\n\nI would like to talk about this training:\n' + names.map(function (n) { return '- ' + n; }).join('\n') +
       '\n\nWho it is for:\nRoughly how many people:\nWhen:\nWhere, or online:\n\nMy name, role and organisation:\n';
-    tray.querySelector('[data-tk-send]').href = 'mailto:hello@thecareleaders.com?subject=' + encodeURIComponent('Training enquiry') + '&body=' + encodeURIComponent(body);
+    var href = 'mailto:hello@thecareleaders.com?subject=' + encodeURIComponent('Training enquiry') + '&body=' + encodeURIComponent(body);
+    Array.prototype.forEach.call(document.querySelectorAll('[data-tk-send]'), function (a) { a.href = href; });
   }
   list.addEventListener('click', function (e) {
     var b = e.target.closest('[data-add]'); if (!b) return;
@@ -99,7 +104,49 @@ document.addEventListener('DOMContentLoaded', function () {
     titles[s] = bySlug[s].getAttribute('data-title'); store('tk-titles', JSON.stringify(titles));
     draw();
   });
-  tray.querySelector('[data-tk-clear]').addEventListener('click', function () { short = []; store('tk-short', null); draw(); });
+  Array.prototype.forEach.call(document.querySelectorAll('[data-tk-clear]'), function (b) {
+    b.addEventListener('click', function () { short = []; store('tk-short', null); draw(); });
+  });
+
+  /* the shortlist itself: a dialog listing each course, with a link and a remove button */
+  function drawList() {
+    if (!sl) return;
+    var ol = sl.querySelector('[data-tk-sl-list]');
+    ol.innerHTML = '';
+    short.forEach(function (s) {
+      var it = bySlug[s], a = it.querySelector('a[href]');
+      var li = document.createElement('li');
+      var link = document.createElement('a'); link.href = a ? a.getAttribute('href') : '#'; link.textContent = it.getAttribute('data-title');
+      var rm = document.createElement('button'); rm.type = 'button'; rm.className = 'tk-link'; rm.textContent = 'Remove';
+      rm.setAttribute('aria-label', 'Remove ' + it.getAttribute('data-title') + ' from your shortlist');
+      rm.addEventListener('click', function () {
+        var i = short.indexOf(s); if (i > -1) short.splice(i, 1);
+        store('tk-short', JSON.stringify(short)); draw();
+        var next = ol.querySelector('button'); (next || sl.querySelector('[data-tk-close]')).focus();
+      });
+      li.appendChild(link); li.appendChild(rm); ol.appendChild(li);
+    });
+    sl.querySelector('[data-tk-sl-empty]').hidden = short.length > 0;
+    sl.querySelector('[data-tk-sl-act]').hidden = short.length === 0;
+  }
+  function openList() {
+    if (!sl) return;
+    drawList();
+    if (typeof sl.showModal === 'function') { if (!sl.open) sl.showModal(); } else sl.setAttribute('open', '');
+    tray.hidden = true;
+    sl.querySelector('[data-tk-close]').focus();
+  }
+  function closeList() {
+    if (!sl) return;
+    if (typeof sl.close === 'function' && sl.open) sl.close(); else sl.removeAttribute('open');
+  }
+  if (sl) {
+    Array.prototype.forEach.call(document.querySelectorAll('[data-tk-open]'), function (b) { b.addEventListener('click', openList); });
+    sl.querySelector('[data-tk-close]').addEventListener('click', closeList);
+    sl.addEventListener('click', function (e) { if (e.target === sl) closeList(); });
+    sl.addEventListener('close', function () { draw(); var b = document.querySelector('[data-tk-open]'); if (b) b.focus(); });
+    if (location.hash === '#shortlist') setTimeout(openList, 50);
+  }
 
   apply(false); draw();
 });

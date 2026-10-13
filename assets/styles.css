@@ -1866,3 +1866,23 @@ body.tc-has-bar{padding-bottom:72px}
 @media(min-width:1100px){.grid.cols-4.cols-5{grid-template-columns:repeat(5,minmax(0,1fr));gap:18px}}
 @media(min-width:640px) and (max-width:1099px){.grid.cols-4.cols-5{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(min-width:1100px){.grid.cols-5 .card-btns a{font-size:14px;padding-left:16px;padding-right:16px;white-space:nowrap}.grid.cols-5 .svc-card{padding-left:0;padding-right:0}}
+/*tksl:start shortlist button and dialog*/
+.tk-sl-btn{font:inherit;font-size:14px;font-weight:700;display:inline-flex;align-items:center;gap:8px;min-height:42px;padding:8px 16px;border:2px solid var(--tcll-midnight,#241b40);background:#fff;color:var(--tcll-midnight,#241b40);cursor:pointer;clip-path:var(--cut1)}
+.tk-sl-btn b{display:inline-grid;place-items:center;min-width:24px;height:24px;padding:0 6px;background:var(--tcll-midnight,#241b40);color:#fff;font-size:13px}
+.tk-sl-btn:hover{background:#ede3ed}
+.tk-sl{border:0;padding:0;max-width:560px;width:calc(100% - 32px);background:#fff;color:var(--tcll-midnight,#241b40)}
+.tk-sl::backdrop{background:rgba(36,27,64,.6)}
+.tk-sl-in{padding:28px}
+.tk-sl-top{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:12px}
+.tk-sl-top h2{margin:0;font-size:24px}
+.tk-sl-x{font:inherit;font-weight:700;background:none;border:0;text-decoration:underline;cursor:pointer;color:inherit;min-height:42px}
+.tk-sl-list{list-style:none;margin:0 0 20px;padding:0}
+.tk-sl-list li{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:12px 0;border-bottom:1px solid #ede3ed}
+.tk-sl-list a{font-weight:700;color:inherit}
+.tk-sl-act{display:flex;flex-wrap:wrap;align-items:center;gap:16px}
+.tk-sl-act .btn{background:var(--tcll-mid-green,#78ae5d);border-color:var(--tcll-mid-green,#78ae5d);color:var(--tcll-midnight,#241b40);border-radius:0;clip-path:var(--cut1)}
+.tk-sl-note{font-size:14px;margin:16px 0 0;opacity:.85}
+.tk-sl-empty{margin:0 0 8px}
+.tc-view{margin:12px 0 0}.tc-view a{color:#fff;font-weight:700}
+a.tc-bar-n{color:inherit;font-weight:700}
+/*tksl:end*/

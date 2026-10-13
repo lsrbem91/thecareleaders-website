@@ -37,6 +37,7 @@ document.addEventListener('DOMContentLoaded', function () {
   /* shortlist, shared with the Training page */
   var adds = Array.prototype.slice.call(page.querySelectorAll('[data-tc-add]'));
   var count = page.querySelector('[data-tc-count]');
+  var view = page.querySelector('[data-tc-view]');
   var send = page.querySelector('[data-tc-send]');
   var askHref = send ? send.getAttribute('href') : '';
   function getShort() { try { return JSON.parse(load('tk-short') || '[]') || []; } catch (e) { return []; } }
@@ -44,7 +45,9 @@ document.addEventListener('DOMContentLoaded', function () {
   function draw() {
     var short = getShort(), on = short.indexOf(slug) > -1;
     adds.forEach(function (b) { b.setAttribute('aria-pressed', on ? 'true' : 'false'); });
-    if (count) count.textContent = short.length ? (short.length === 1 ? '1 course on your shortlist' : short.length + ' courses on your shortlist') : '';
+    var label = short.length ? (short.length === 1 ? 'View your shortlist (1 course)' : 'View your shortlist (' + short.length + ' courses)') : '';
+    if (count) { count.textContent = label; count.hidden = !short.length; }
+    if (view) { view.hidden = !short.length; view.querySelector('a').textContent = label; }
     if (send) {
       if (short.length > 1) {
         var t = getTitles();
