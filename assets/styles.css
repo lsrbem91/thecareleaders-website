@@ -1886,3 +1886,26 @@ body.tc-has-bar{padding-bottom:72px}
 .tc-view{margin:12px 0 0}.tc-view a{color:#fff;font-weight:700}
 a.tc-bar-n{color:inherit;font-weight:700}
 /*tksl:end*/
+/*cmt13:start example boxes with room, footer call to action*/
+.th-con .nc-ex{padding:18px 20px 20px;line-height:1.55;margin-top:20px!important}
+.th-con .nc-ex span{display:table;margin:0 0 10px;padding:3px 10px;font-size:12px}
+.fs-cta{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px 32px;padding:0 0 36px;margin-bottom:40px;border-bottom:1px solid rgba(255,255,255,.18)}
+.fs-cta p{margin:0;max-width:560px;color:#dae2e6}.fs-cta p strong{display:block;color:#fff;font-size:20px;margin-bottom:4px}
+.fs-cta-btns{display:flex;flex-wrap:wrap;gap:12px}
+.fs-cta .btn{background:#fbab1e;border-color:#fbab1e;color:#0e2545}
+.fs-cta .btn.secondary{background:transparent;color:#fff;border-color:#fff}
+@media (max-width:640px){.fs-cta-btns{width:100%}.fs-cta-btns .btn{flex:1 1 100%;justify-content:center}}
+/*cmt13:end*/
+/*covbed:start brochure covers sit on a contrasting hand-cut panel, never on their own colour*/
+.prog .dl-hero-art{position:relative;isolation:isolate}
+.prog .dl-hero-art::before{content:"";position:absolute;z-index:-1;top:-32px;bottom:-32px;right:-36px;width:min(500px,calc(100% + 36px));background:var(--covbed,#fff);clip-path:polygon(2% 0,100% 1.5%,98.5% 100%,0 98%)}
+.prog .dl-hero-art img{position:relative;z-index:1}
+.prog.th-dlp{--covbed:#acc90b}
+.prog.th-ctw{--covbed:#008196}
+.prog.th-academy{--covbed:#e6dcf0}
+.prog.th-fel{--covbed:#f3b94a}
+@media(max-width:1000px){.prog .dl-hero-art::before{right:50%;transform:translateX(50%);width:344px;top:-24px;bottom:-24px}}
+/*covbed:end*/
+/*covbed2: brochure-section covers on the same ground get a wide contrasting mount*/
+.prog.th-dlp .br-img img{background:#acc90b!important;padding:28px!important}
+.prog.th-ctw .br-img img{background:#008196!important;padding:28px!important}
