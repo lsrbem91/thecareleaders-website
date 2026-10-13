@@ -1928,3 +1928,16 @@ a.tc-bar-n{color:inherit;font-weight:700}
 .enq-form{background:#fff;padding:8px;box-shadow:0 20px 40px rgba(14,37,69,.12)}
 .enq-form iframe{display:block;width:100%;height:1180px;border:0}
 @media(max-width:900px){.enq-in{grid-template-columns:1fr;gap:20px}.enq-form iframe{height:1320px}}
+/*enqf: custom enquiry form*/
+.enq-form{padding:28px}
+.enq-f label{display:block;font-weight:700;font-size:15px;margin:0 0 16px;color:var(--ink,#0e2545)}
+.enq-f label span{font-weight:400}
+.enq-f input:not([type=hidden]):not(.enq-hp),.enq-f select,.enq-f textarea{display:block;width:100%;box-sizing:border-box;margin-top:6px;font:inherit;font-weight:400;font-size:16px;padding:12px 14px;border:2px solid #c9d4dd;background:#fff;color:#0e2545;border-radius:0}
+.enq-f input:focus,.enq-f select:focus,.enq-f textarea:focus{outline:3px solid #fbab1e;outline-offset:1px;border-color:#0e2545}
+.enq-f textarea{resize:vertical;min-height:140px}
+.enq-2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.enq-hp{position:absolute!important;left:-9999px!important;width:1px;height:1px;opacity:0}
+.enq-f .btn{margin-top:6px}
+.enq-status{margin:12px 0 0;font-size:15px}.enq-err{color:#b4401c}
+.enq-done h3{font-size:26px;margin:0 0 8px}.enq-done:focus{outline:none}
+@media(max-width:640px){.enq-2{grid-template-columns:1fr;gap:0}.enq-form{padding:18px}}
