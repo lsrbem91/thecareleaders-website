@@ -16,3 +16,23 @@ document.addEventListener('DOMContentLoaded', function () {
     toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
   });
 });
+/* Drop-down menus: hover or keyboard focus opens them (CSS); the arrow button toggles them for click and touch. */
+document.addEventListener('DOMContentLoaded', function () {
+  var items = Array.prototype.slice.call(document.querySelectorAll('.main-nav .has-dd'));
+  function closeAll(except) { items.forEach(function (li) { if (li !== except) { li.classList.remove('open'); var b = li.querySelector('.dd-btn'); if (b) b.setAttribute('aria-expanded', 'false'); } }); }
+  items.forEach(function (li) {
+    var btn = li.querySelector('.dd-btn');
+    btn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      var open = !li.classList.contains('open');
+      closeAll(li); li.classList.toggle('open', open); btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      if (open) { var first = li.querySelector('.dd a'); if (first) first.focus(); }
+    });
+    li.addEventListener('focusout', function (e) { if (!li.contains(e.relatedTarget)) { li.classList.remove('open'); btn.setAttribute('aria-expanded', 'false'); } });
+    li.addEventListener('mouseleave', function () { li.classList.remove('open'); btn.setAttribute('aria-expanded', 'false'); });
+  });
+  document.addEventListener('click', function () { closeAll(null); });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') { var openLi = items.filter(function (li) { return li.classList.contains('open') || li.contains(document.activeElement); })[0]; closeAll(null); if (openLi) openLi.querySelector('.dd-btn').focus(); }
+  });
+});

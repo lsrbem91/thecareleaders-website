@@ -86,3 +86,18 @@ Permissions and facts
 Media
 - [ ] Case study photos: Durham Cares, Buckinghamshire, PROCLAIM, Summit, House Project
 - [ ] Care Leavers National Movement film: confirm the link
+
+## Website: navigation (agreed 13 October)
+- Top bar: Consultancy ▾, Fostering ▾, Programmes ▾, Training, Keynotes, Our work, About ▾, Talk to us
+- Consultancy ▾: Overview, Transformation and service design, Participation and co-production, Employment and pathways
+- Fostering ▾ (TCL x Why Care, never Consultancy branding): Why Care Diagnostic, Why Care Assessment, Why Care First Year Support, Putting the new standards into practice
+- Programmes ▾: Overview, Designated Leaders Programme, The Care Leaders Academy, Care to Work, The Care Leaders Fellowship
+- About ▾: About us, Partnerships, Contact
+- Training stays a single link until the training review below
+- Build: scratchpad build/nav.py runs after site.py
+
+## Website: training review (to do)
+- [ ] List every training course and programme with how it can be delivered: online, face to face, blended, workshop, keynote, or several
+- Known so far: The Journey Through Care is online (6 sessions over 6 weeks); NVR Essentials is one day face to face; the NVR Programme is blended and will be renamed NVR Advanced; Tools for Schools runs as a full-day workshop or as a keynote; many courses can run online, face to face or as a workshop
+- [ ] Move the NVR Programme from Programmes to Training (it is already out of the Programmes menu)
+- [ ] Rebuild the Training page as one page with a short "find the right training" filter (a few buttons that narrow the list)
