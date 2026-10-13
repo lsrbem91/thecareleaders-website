@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Page not found | The Care Leaders</title>
+<script>
+/* Old WordPress addresses (thecareleaders.com before October 2026) go to their nearest new page. */
+(function () {
+  var base = location.pathname.indexOf('/thecareleaders-website/') === 0 ? '/thecareleaders-website/' : '/';
+  var p = location.pathname.slice(base.length - 1).toLowerCase().replace(/\/+$/, '') || '/';
+  var M = {
+    '/contact': 'contact.html', '/book-now': 'contact.html',
+    '/cookie-policy': 'privacy.html', '/privacy-policy': 'privacy.html',
+    '/about-us-training-for-childrens-social-care': 'about.html', '/team': 'about.html',
+    '/upcoming-courses': 'training.html', '/courses': 'training.html', '/training': 'training.html',
+    '/training/face-to-face': 'training.html', '/membership-overview': 'training.html',
+    '/6-week-online-memberships': 'training.html', '/6-week-online-memberships-2': 'training.html',
+    '/training/teachers': 'training.html?for=schools#courses',
+    '/training/social-workers': 'training.html?for=social#courses',
+    '/training/foster-carers': 'training.html?for=social#courses',
+    '/training/leaving-care-personal-assistants': 'training.html?for=social#courses',
+    '/training/childrens-residential-care': 'training.html?for=resi#courses',
+    '/consultancy': 'consultancy.html',
+    '/consultancy/foster-care-recruitment': 'consultancy-fostering.html',
+    '/consultancy/transformation-innovation': 'consultancy-transformation.html',
+    '/consultancy/vision-development': 'consultancy-transformation.html',
+    '/consultancy/youth-participation': 'consultancy-participation.html',
+    '/consultancy/staff-training-and-development': 'training.html',
+    '/consultancy/branding-and-graphic-design': 'consultancy.html',
+    '/consultancy/digital-marketing': 'consultancy.html',
+    '/consultancy/web-development': 'consultancy.html',
+    '/keynotes': 'keynotes.html', '/attend-an-event': 'index.html',
+    '/checkout': 'index.html', '/basket': 'index.html', '/my-account': 'index.html', '/recordings-testing': 'index.html'
+  };
+  if (p === '/newsletter') { location.replace('https://mailchi.mp/thecareleaders.com/newsletter'); return; }
+  var to = M[p] || (p.indexOf('/keynotes/') === 0 ? 'keynotes.html' : p.indexOf('/training/') === 0 ? 'training.html' : p.indexOf('/consultancy/') === 0 ? 'consultancy.html' : null);
+  if (to) location.replace(base + to);
+})();
+</script>
+<style>
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;background:#0e2545;color:#fff;min-height:100vh;display:grid;place-items:center;padding:16px;box-sizing:border-box}
+main{max-width:560px}h1{font-size:36px;margin:0 0 12px}p{color:#dae2e6;font-size:18px;line-height:1.5}
+a{color:#fbab1e;font-weight:700}ul{padding-left:20px;line-height:2}
+</style>
+</head>
+<body>
+<main>
+<h1>We can&#8217;t find that page</h1>
+<p>Our website has moved to a new home, so some old links no longer work. These will get you where you need to go:</p>
+<ul><li><a href="/">Home</a></li><li><a href="/consultancy.html">Consultancy</a></li><li><a href="/training.html">Training</a></li><li><a href="/programmes.html">Programmes</a></li><li><a href="/keynotes.html">Keynotes</a></li><li><a href="/contact.html">Contact us</a></li></ul>
+</main>
+</body>
+</html>

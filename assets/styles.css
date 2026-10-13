@@ -1914,3 +1914,11 @@ a.tc-bar-n{color:inherit;font-weight:700}
 .tk-aud span{font-weight:700;margin-right:2px}
 .tk-aud b{font-weight:600;background:#ede3ed;color:var(--tcll-midnight,#241b40);padding:3px 9px}
 .tk-g-all{margin-top:8px}
+/*yt: click-to-play video with cookie note*/
+.yt-ph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;background:#0e2545;color:#fff;padding:24px;text-align:center}
+.video .yt-ph{position:absolute}
+.yt-play{width:84px;height:84px;border:0;background:#fbab1e;cursor:pointer;display:grid;place-items:center;clip-path:polygon(4% 0,100% 3%,96% 100%,0 97%)}
+.yt-play:hover,.yt-play:focus-visible{background:#fff}
+.yt-tri{width:0;height:0;border-left:26px solid #0e2545;border-top:16px solid transparent;border-bottom:16px solid transparent;margin-left:6px}
+.yt-note{margin:0;font-size:14px;max-width:420px;color:#dae2e6}.yt-note strong{display:block;color:#fff;font-size:17px;margin-bottom:4px}
+.yt-note a{color:#fff}
