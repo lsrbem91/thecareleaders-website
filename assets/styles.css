@@ -1909,3 +1909,8 @@ a.tc-bar-n{color:inherit;font-weight:700}
 /*covbed2: brochure-section covers on the same ground get a wide contrasting mount*/
 .prog.th-dlp .br-img img{background:#acc90b!important;padding:28px!important}
 .prog.th-ctw .br-img img{background:#008196!important;padding:28px!important}
+/*tkaud: who each course is for*/
+.tk-aud{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:10px 0 0!important;font-size:13px!important}
+.tk-aud span{font-weight:700;margin-right:2px}
+.tk-aud b{font-weight:600;background:#ede3ed;color:var(--tcll-midnight,#241b40);padding:3px 9px}
+.tk-g-all{margin-top:8px}
