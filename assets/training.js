@@ -76,6 +76,7 @@ document.addEventListener('DOMContentLoaded', function () {
   try { short = JSON.parse(load('tk-short') || '[]') || []; } catch (e) { short = []; }
   var bySlug = {};
   items.forEach(function (it) { bySlug[it.getAttribute('data-slug')] = it; });
+  /* the shortlist is shared with course pages; keep slugs we know, and titles saved by course pages */
   short = short.filter(function (s) { return bySlug[s]; });
   function draw() {
     items.forEach(function (it) { it.querySelector('[data-add]').setAttribute('aria-pressed', short.indexOf(it.getAttribute('data-slug')) > -1 ? 'true' : 'false'); });
@@ -93,7 +94,10 @@ document.addEventListener('DOMContentLoaded', function () {
     var b = e.target.closest('[data-add]'); if (!b) return;
     var s = b.closest('.tk-i').getAttribute('data-slug'), i = short.indexOf(s);
     if (i > -1) short.splice(i, 1); else short.push(s);
-    store('tk-short', JSON.stringify(short)); draw();
+    store('tk-short', JSON.stringify(short));
+    var titles = {}; try { titles = JSON.parse(load('tk-titles') || '{}') || {}; } catch (er) {}
+    titles[s] = bySlug[s].getAttribute('data-title'); store('tk-titles', JSON.stringify(titles));
+    draw();
   });
   tray.querySelector('[data-tk-clear]').addEventListener('click', function () { short = []; store('tk-short', null); draw(); });
 
