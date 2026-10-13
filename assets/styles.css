@@ -1480,3 +1480,5 @@ a.con-offer:hover .co-name,a.con-offer:focus-visible .co-name{text-decoration:un
 .con-art .con-art-txt .con-offer.art{font-size:36px}
 .th-con .svc-media .con-art .con-offer.art{font-size:34px}
 @media(max-width:900px){.con-art .con-art-txt .con-offer.art,.th-con .svc-media .con-art .con-offer.art{font-size:27px}}
+.fam-logo .con-lock.fam{font-size:22px;padding:8px 12px}
+@media(min-width:900px){.fam-grid{grid-template-columns:repeat(3,1fr)}}
