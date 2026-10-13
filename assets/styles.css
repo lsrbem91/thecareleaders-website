@@ -1862,3 +1862,7 @@ body.tc-has-bar{padding-bottom:72px}
 .tk-gh{position:relative}
 @media(max-width:640px){.tc-cta-in{padding:28px 22px}.tc-hero::after{height:14px}}
 /* tcllmat:end */
+/* home: five offers in What we do (Fostering added, 13 Oct 2026) */
+@media(min-width:1100px){.grid.cols-4.cols-5{grid-template-columns:repeat(5,minmax(0,1fr));gap:18px}}
+@media(min-width:640px) and (max-width:1099px){.grid.cols-4.cols-5{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(min-width:1100px){.grid.cols-5 .card-btns a{font-size:14px;padding-left:16px;padding-right:16px;white-space:nowrap}.grid.cols-5 .svc-card{padding-left:0;padding-right:0}}
