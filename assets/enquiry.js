@@ -12,7 +12,8 @@ document.addEventListener('DOMContentLoaded', function () {
       e.preventDefault();
       if (!f.reportValidity()) return;
       var data = new FormData(f);
-      data.set('subject', 'Website enquiry: ' + (data.get('topic') || 'General') + ' (' + (data.get('name') || '') + ')');
+      /* the subject carries topic, name and email so the Power Automate flow on hello@ can send the right auto-reply */
+      data.set('subject', 'Website enquiry | ' + (data.get('topic') || 'Something else') + ' | ' + (data.get('name') || '').replace(/\|/g, '') + ' | ' + (data.get('email') || '').trim());
       data.set('page', location.pathname.split('/').pop() || 'index.html');
       btn.disabled = true; btn.textContent = 'Sending…'; status.textContent = ''; status.className = 'enq-status';
       fetch('https://api.web3forms.com/submit', { method: 'POST', body: data, headers: { Accept: 'application/json' } })
