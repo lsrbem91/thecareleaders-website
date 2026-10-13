@@ -102,4 +102,5 @@ Media
 
 - [x] Rebuild the Training page as one page with a "find the right training" filter (13 Oct): 26 courses in six collections, 19 new course pages; full list in docs/training-inventory.md
 - [x] NVR Programme renamed NVR Advanced and moved to Training
-- Build: scratchpad build/training_data.py (content) and build/training.py (pages, finder, thumbnails with --thumbs), run before nav.py
+- Build: scratchpad build/training_data.py (content) and build/training.py (pages, finder, thumbnails with --thumbs), then build/positioning.py (the "Both sides of the file" line on home and Training), then nav.py
+- [x] Audit agreed 13 Oct: line "Both sides of the file", three new courses (Care Not Custody, Co-producing your Care Leaver Local Offer, Ready for Inspection), three courses sharpened
