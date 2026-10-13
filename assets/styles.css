@@ -1470,3 +1470,13 @@ a.con-offer:hover .co-name,a.con-offer:focus-visible .co-name{text-decoration:un
 .con-art.con-g-white{box-shadow:none}
 .con-art.con-g-bed{background:#fff;box-shadow:none}
 .con-art .con-art-glyph{width:96px;height:90px;right:28px;top:28px}
+/* light art panels: an orange hand-cut block behind the icon, more room for the wordmark (Luke, 13 Oct) */
+.con-art.con-g-white,.con-art.con-g-bed{background:#fff}
+.con-art.con-g-white::before,.con-art.con-g-bed::before{content:"";position:absolute;right:0;top:0;width:46%;height:40%;background:#f59c00;clip-path:polygon(0 0,100% 0,100% 100%,3% 96%)}
+.con-art .con-art-glyph{z-index:1}
+.con-art .con-art-txt{left:48px;right:40px;bottom:44px}
+.con-art .con-art-txt .con-offer.art,.th-con .svc-media .con-art .con-offer.art{margin-left:0}
+@media(max-width:900px){.con-art .con-art-txt{left:32px;bottom:32px}}
+.con-art .con-art-txt .con-offer.art{font-size:36px}
+.th-con .svc-media .con-art .con-offer.art{font-size:34px}
+@media(max-width:900px){.con-art .con-art-txt .con-offer.art,.th-con .svc-media .con-art .con-offer.art{font-size:27px}}
