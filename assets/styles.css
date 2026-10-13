@@ -1799,3 +1799,11 @@ body.tc-has-bar{padding-bottom:72px}
 .tc-problem,.tc-faq{max-width:none}.tc-problem>*{max-width:900px}.tc-faq .tc-qs{max-width:900px}
 .tcll-train .tl-page-hero .page-hero-media img{max-height:460px}
 /* tcll:end */
+/* fel:start The Care Leaders Fellowship: its own tile motif instead of TCL shapes (Luke, 13 Oct 2026) */
+.prog.th-fel h2::after,.prog.th-fel .section h2.h2::after{width:84px;height:12px;bottom:-8px;border-radius:0;background:url(./img/brand/fellowship/pixels-b.svg) left center/contain no-repeat}
+.prog.th-fel .bg-fill{background:#f6e3b8}
+.prog.th-fel .exp-line span{border-radius:2px;background:#f01878}
+/* fel:end */
+/* No all-caps labels anywhere (Luke): sentence case for every small label */
+.cm-get span,.nc-ex span,.ses-n,.tl-dialog dt,.gl-k,.tl-panel dt,.tt .ses::before,.xp-panel .xp-k,.xp-box h3.h4,.nine-g h3.h4{text-transform:none;letter-spacing:0}
+.exp-line span{border-radius:2px}
