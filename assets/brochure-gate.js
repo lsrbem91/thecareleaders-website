@@ -29,7 +29,7 @@
       if (tag) q.push('tags=' + encodeURIComponent(tag));
       btn.disabled = true; msg.hidden = false; msg.textContent = 'Getting your brochure…';
       jsonp(MC + '&' + q.join('&'), function (r) {
-        var ok = r.result === 'success' || /already subscribed|too many recent signup/i.test(r.msg || '');
+        var ok = r.result === 'success' || r.result === 'redirect' || /already subscribed|too many recent signup/i.test(r.msg || '');
         btn.disabled = false;
         if (!ok && r.msg !== 'network' && r.msg !== 'timeout') {
           msg.textContent = (r.msg || 'Something went wrong.').replace(/^\d+ - /, '').replace(/<[^>]+>/g, '');
