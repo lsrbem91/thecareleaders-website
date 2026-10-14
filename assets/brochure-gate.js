@@ -3,6 +3,12 @@
    the visitor stays on the page. */
 (function () {
   var MC = 'https://thecareleaders.us20.list-manage.com/subscribe/post-json?u=59c462198d19ae06ac1668f73&id=59f81c6487&f_id=00a201eef0';
+  /* Mailchimp embedded forms apply tags by ID, not name. IDs from Audience > Tags. */
+  var TAGS = {
+    'brochure-fellowship': '4229739', 'brochure-academy': '4229740',
+    'brochure-designated-leaders': '4229741', 'brochure-care-to-work': '4229742',
+    'brochure-care-to-work-we': '4229743', 'brochure-care-to-work-aj': '4229744'
+  };
   var n = 0;
   function jsonp(url, cb) {
     var name = 'mcgate' + (++n) + Date.now(), s = document.createElement('script'), done = false;
@@ -26,7 +32,7 @@
         if (!i.name || i.name === 'brochure' || ((i.type === 'checkbox' || i.type === 'radio') && !i.checked)) return;
         q.push(encodeURIComponent(i.name) + '=' + encodeURIComponent(i.value));
       });
-      if (tag) q.push('tags=' + encodeURIComponent(tag));
+      if (tag) q.push('tags=' + encodeURIComponent(TAGS[tag] || tag));
       btn.disabled = true; msg.hidden = false; msg.textContent = 'Getting your brochure…';
       jsonp(MC + '&' + q.join('&'), function (r) {
         var ok = r.result === 'success' || r.result === 'redirect' || /already subscribed|too many recent signup/i.test(r.msg || '');
