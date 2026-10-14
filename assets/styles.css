@@ -1942,3 +1942,18 @@ a.tc-bar-n{color:inherit;font-weight:700}
 .enq-done h3{font-size:26px;margin:0 0 8px}.enq-done:focus{outline:none}
 @media(max-width:640px){.enq-2{grid-template-columns:1fr;gap:0}.enq-form{padding:18px}}
 .enq-f label[hidden]{display:none}
+/*qa14: fixes from the independent pre-launch review*/
+@media(min-width:1100px){.grid.cols-5 .svc-card{padding-left:18px!important;padding-right:18px!important}.grid.cols-5 .svc-card .card-thumb{margin:-24px -18px 6px}}
+@media(max-width:640px){.grid.cols-5{grid-template-columns:1fr!important}}
+.org-tile,.org-tile.logo{background:transparent;border:0}.org-tile.logo img{mix-blend-mode:multiply}
+.th-con .cs-quote blockquote{color:var(--ink)}.th-con .cs-quote figcaption{color:#b4401c}
+.cs-quote{margin-bottom:40px!important}
+.prog.th-dlp .obj{padding-top:96px}
+.page-hero h1+.lead,.page-hero h1+p,.hero h1+p,.hero h1+.hero-sub,section h1+p.lead{margin-top:16px}
+.enq-copy .h2,#enquire .h2,.fel-orgs .h2{margin-bottom:22px}
+.footer-bottom{color:#b9c6d3}
+.prog.th-ctw .dl-mission-in>div:first-child{background:#0e2545;padding:20px 24px 24px;margin:-20px -24px;box-shadow:0 0 0 1px rgba(255,255,255,.04)}
+.prog.th-ctw .dl-mission-in>.dl-motto{background:#0e2545;padding:12px 16px}
+@media(max-width:640px){.prog.th-ctw .dl-mission-in>div:first-child{margin:-12px -12px;padding:12px}}
+.prog.th-academy .two-out>div{align-self:start}.prog.th-academy .two-out h3{margin-top:0}
+.tl-progs a{margin-right:0}.tl-progs a:not(:last-child)::after{content:none}
