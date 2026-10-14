@@ -39,7 +39,8 @@
           dl.querySelector('a').href = pdf;
           f.hidden = true; dl.hidden = false; dl.focus();
         }
-        window.open(pdf, '_blank', 'noopener');
+        var a = document.createElement('a'); a.href = pdf; a.download = pdf.split('/').pop();
+        document.body.appendChild(a); a.click(); a.remove();
       });
     });
   });
