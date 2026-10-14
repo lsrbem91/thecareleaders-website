@@ -1981,3 +1981,14 @@ a.tc-bar-n{color:inherit;font-weight:700}
 .br-done{margin-top:20px}.br-done h3{color:#fff;margin:0 0 6px}.br-done a{color:#fff;text-decoration:underline}
 .prog .br-img img{max-width:480px}
 @media(max-width:620px){.br-gate .br-2{grid-template-columns:1fr}}
+/* brochure gate: brand tweaks */
+.prog.th-ctw .section.dl-brochure{background:#0e2545}
+.prog.th-ctw .dl-brochure .br-img img{background:#008196!important;padding:20px!important}
+.prog.th-dlp .dl-brochure{position:relative;padding-bottom:0}
+.prog.th-dlp .dl-brochure .wrap{padding-bottom:56px}
+.prog.th-dlp .dl-brochure .dlp-bands{margin-top:0}
+.prog.th-dlp .dl-brochure h2.h2 .dlp-thin{font-size:.9em}
+.prog.th-dlp .dl-brochure .br-img img{background:none!important;padding:0!important;clip-path:none;transform:rotate(-2deg);box-shadow:0 0 0 10px #acc90b,0 24px 48px rgba(0,0,0,.35)}
+.prog.th-dlp .br-strap{display:block;text-align:center;margin-bottom:22px;color:#fff;font-size:14px}
+.prog.th-dlp .br-strap b{color:#acc90b}
+.prog.th-dlp .br-gate .btn{background:#acc90b;color:#241b40;border-color:#acc90b}
