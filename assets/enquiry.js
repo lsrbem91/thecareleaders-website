@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function () {
         .catch(function () {
           btn.disabled = false; btn.textContent = 'Send enquiry';
           status.className = 'enq-status enq-err';
-          status.innerHTML = 'Sorry, that didn&#8217;t send. Please email <a href="mailto:hello@thecareleaders.com">hello@thecareleaders.com</a> or call 0800 233 5597.';
+          status.innerHTML = 'Sorry, that didn&#8217;t send. Please email <a href="mailto:hello@thecareleaders.com">hello@thecareleaders.com</a>.';
         });
     });
   });
