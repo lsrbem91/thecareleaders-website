@@ -1,6 +1,7 @@
 User-agent: *
 Allow: /
 Disallow: /keynote-thank-you.html
+Disallow: /event-details.html
 Disallow: /living-a-careless-life-workbook.html
 Disallow: /assets/docs/keynote-booking-terms.pdf
 Sitemap: https://www.thecareleaders.com/sitemap.xml
