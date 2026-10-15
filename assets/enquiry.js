@@ -1,13 +1,13 @@
 /* One enquiry form for the whole site. Posts to Web3Forms, which emails hello@thecareleaders.com.
    The topic choice shows that topic's questions. The subject line and the JSON block at the end of the
    email are what the Power Automate flow on hello@ reads to send the right automatic reply. */
-var ENQ_OPTIONS = {"Consultancy": ["Transformation and service design", "Participation and co-production", "Employment and pathways", "Not sure yet"], "Fostering, with Why Care": [], "A programme": ["The Designated Leaders Programme", "The Care Leaders Academy", "Care to Work", "The Care Leaders Fellowship", "The NVR Programme"], "Training for my team": ["The Journey Through Care", "Behind the Behaviour", "Trauma, Attachment and Transitions", "Living a Careless Life", "Supporting Boys in Care", "Tools for Schools", "Two Timetables: When School Meets Social Care", "Raising Aspirations", "NVR Essentials", "NVR Advanced", "The Practice Toolkit", "Care Not Custody", "A guide to good recording", "From Case Note to Letter", "Language that Lifts", "Profiles that Find the Right Home", "Participation that Changes Decisions", "Working Alongside Lived Experience", "How to be a Mentor", "Power to Lead", "Story, Theory, Action: The Facilitator Programme", "Ready for Inspection: Hearing Children’s Lived Experience", "Corporate Parenting in Practice", "Leading Care Leavers at Work", "Be the First Yes", "The Person Behind the File", "Co-producing your Care Leaver Local Offer", "Not sure yet, help me choose"], "A keynote or conference workshop": ["Living a Careless Life", "Just Say Yes", "The Power of the Profile", "Tools for Schools", "Lived Experience Leadership", "From Care Leaver to Care Leader", "Be the First Yes", "Not sure yet, help me choose"], "Something else": []};
-var KEYNOTE = 'A keynote or conference workshop';
+var ENQ_OPTIONS = {"Consultancy": ["Transformation and service design", "Participation and co-production", "Employment and pathways", "Not sure yet"], "Fostering, with Why Care": [], "A programme": ["The Designated Leaders Programme", "The Care Leaders Academy", "Care to Work", "The Care Leaders Fellowship", "The NVR Programme", "The Journey Through Care", "How to be a Mentor", "Story, Theory, Action: The Facilitator Programme"], "Training for my team": ["Behind the Behaviour", "Trauma, Attachment and Transitions", "Living a Careless Life", "Supporting Boys in Care", "Tools for Schools", "Two Timetables: When School Meets Social Care", "Raising Aspirations", "NVR Essentials", "The Practice Toolkit", "Care Not Custody", "A guide to good recording", "From Case Note to Letter", "Language that Lifts", "Profiles that Find the Right Home", "Participation that Changes Decisions", "Working Alongside Lived Experience", "Power to Lead", "Ready for Inspection: Hearing Children’s Lived Experience", "Corporate Parenting in Practice", "Leading Care Leavers at Work", "Be the First Yes", "The Person Behind the File", "Co-producing your Care Leaver Local Offer", "Not sure yet, help me choose"], "A keynote or conference workshop": ["Living a Careless Life", "Just Say Yes", "The Power of the Profile", "Tools for Schools", "Lived Experience Leadership", "From Care Leaver to Care Leader", "Be the First Yes", "Not sure yet, help me choose"], "Something else": []};
+var KEYNOTE = 'A keynote or conference workshop', TRAINING = 'Training for my team';
 var DONE = {
   'Consultancy': 'Luke or one of our consultants will be in touch to suggest a first conversation about your service.',
   'Fostering, with Why Care': 'We&#8217;ll be in touch to suggest a first conversation with the Why Care team.',
   'A programme': 'We&#8217;ll send you the programme details and suggest a short call.',
-  'Training for my team': 'We&#8217;ll check availability for your dates and send you options.',
+  'Training for my team': 'We&#8217;ll check Luke&#8217;s diary for your date and email you his availability, the fee and what&#8217;s included.',
   'A keynote or conference workshop': 'We&#8217;ll check Luke&#8217;s diary for your date and email you his availability, the fee and the talk we&#8217;d recommend for your audience.',
   'Something else': 'We&#8217;ll read your message and get back to you.'
 };
@@ -22,10 +22,13 @@ document.addEventListener('DOMContentLoaded', function () {
     function show(sec, on) { var el = f.querySelector('[data-sec=' + sec + ']'); if (!el) return; el.hidden = !on; el.disabled = !on; }
     function sync() {
       var t = topic.value, it = item.value;
-      show('keynote', t === KEYNOTE);
+      var ev = t === KEYNOTE || t === TRAINING;
+      show('keynote', ev);
+      var ses = f.querySelector('[name=session]'); if (ses) { var sl = ses.closest('label'); sl.hidden = t !== KEYNOTE; ses.disabled = t !== KEYNOTE; }
+      var leg = f.querySelector('[data-sec=keynote] legend'); if (leg) leg.textContent = t === TRAINING ? 'About your training' : 'About your event';
       show('fellowship', it === 'The Care Leaders Fellowship');
-      itemLabel.textContent = t === KEYNOTE ? 'Which talk are you interested in?' : 'Which one?';
-      msgLabel.textContent = t === KEYNOTE ? 'Tell us about your event and what you want people to leave with' : 'Tell us what you need';
+      itemLabel.textContent = t === KEYNOTE ? 'Which talk are you interested in?' : t === TRAINING ? 'Which course?' : 'Which one?';
+      msgLabel.textContent = t === KEYNOTE ? 'Tell us about your event and what you want people to leave with' : t === TRAINING ? 'Tell us about your team and what you want them to leave with' : 'Tell us what you need';
     }
     function fillItems(keep) {
       var list = ENQ_OPTIONS[topic.value] || [];
@@ -37,7 +40,8 @@ document.addEventListener('DOMContentLoaded', function () {
     topic.addEventListener('change', function () { fillItems(''); });
     item.addEventListener('change', sync);
     if (qs.topic === 'keynote') topic.value = KEYNOTE;
-    fillItems(qs.talk || f.getAttribute('data-item') || '');
+    if (qs.topic === 'training' || f.getAttribute('data-topic') === 'training') topic.value = TRAINING;
+    fillItems(qs.talk || qs.course || f.getAttribute('data-item') || '');
     if (qs.about && msg && !msg.value) { msg.value = 'About: ' + qs.about + '\n\n'; if (!topic.value) { topic.value = 'Training for my team'; fillItems(qs.about); } }
     document.addEventListener('enq:talk', function (e) { topic.value = KEYNOTE; fillItems(e.detail || ''); });
     var status = f.querySelector('[data-status]'), btn = f.querySelector('button[type=submit]');
