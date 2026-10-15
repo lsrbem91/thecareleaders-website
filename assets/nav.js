@@ -115,6 +115,4 @@ document.addEventListener('DOMContentLoaded', function () {
   document.addEventListener('keydown', function (e) {
     if (e.key === '/' && ov.hidden && !/^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement.tagName)) { e.preventDefault(); open(); }
   });
-  var mm = document.querySelector('.mobile-menu');
-  if (mm) { var ml = document.createElement('a'); ml.href = '#'; ml.textContent = 'Search the site'; ml.addEventListener('click', function (e) { e.preventDefault(); mm.classList.remove('open'); open(); }); mm.insertBefore(ml, mm.firstChild); }
 });
