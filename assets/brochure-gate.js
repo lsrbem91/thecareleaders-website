@@ -7,7 +7,8 @@
   var TAGS = {
     'brochure-fellowship': '4229739', 'brochure-academy': '4229740',
     'brochure-designated-leaders': '4229741', 'brochure-care-to-work': '4229742',
-    'brochure-care-to-work-we': '4229743', 'brochure-care-to-work-aj': '4229744'
+    'brochure-care-to-work-we': '4229743', 'brochure-care-to-work-aj': '4229744',
+    'keynote-living-a-careless-life': '4229745'
   };
   var n = 0;
   function jsonp(url, cb) {

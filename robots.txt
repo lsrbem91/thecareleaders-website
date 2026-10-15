@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 Disallow: /keynote-thank-you.html
+Disallow: /living-a-careless-life-workbook.html
 Sitemap: https://www.thecareleaders.com/sitemap.xml
