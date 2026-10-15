@@ -174,7 +174,22 @@
     </div>
   </section>
 
-  <section class="section">
+  <section class="section dl-brochure" id="brochure">
+    <div class="wrap"><div class="br-card"><div class="br-copy"><span class="eyebrow">Free download</span><h2 class="h2">Download the keynote brochure</h2><p>All seven talks, what every booking includes and how booking works, in one PDF to share with your event team.</p>
+      <form class="br-form br-gate" data-gate data-pdf="./assets/docs/brochures/keynotes.pdf" data-tag="brochure-keynotes" novalidate>
+        <div class="br-2"><label>First name<input name="FNAME" autocomplete="given-name" required></label><label>Work email<input type="email" name="EMAIL" autocomplete="email" required></label></div>
+        <label>Organisation<input name="MMERGE6" autocomplete="organization"></label>
+        <div class="br-2"><label>Which best describes you?<select name="group[296961]" required><option value="">Choose one</option><option value="1">Senior leader (DCS / AD / Head of Service)</option><option value="8">Manager (team / service / registered manager / RI)</option><option value="64">Social worker or personal adviser</option><option value="128">Foster or kinship carer</option><option value="268435456">Residential or support worker</option><option value="536870912">Education and Virtual School</option><option value="1073741824">Commissioner or elected member</option><option value="2147483648">Trainer or workforce development</option><option value="2">Employer or business</option><option value="4">Care leaver or care experienced young person</option><option value="9007199254740992">Probation or youth justice</option><option value="4294967296">Other</option></select></label><label>Organisation type<select name="group[296964]" required><option value="">Choose one</option><option value="35184372088832">Local authority</option><option value="70368744177664">Independent or private provider</option><option value="140737488355328">Charity or voluntary organisation</option><option value="281474976710656">School or college</option><option value="562949953421312">NHS or health</option><option value="1125899906842624">Employer or business</option><option value="2251799813685248">Individual (not with an organisation)</option><option value="4503599627370496">Other</option></select></label></div>
+        <label class="br-tick"><input type="checkbox" name="gdpr[68380]" value="Y"> Send me occasional updates from The Care Leaders. You can unsubscribe at any time.</label>
+        <div aria-hidden="true" style="position:absolute;left:-5000px"><input type="text" name="b_59c462198d19ae06ac1668f73_59f81c6487" tabindex="-1" value=""></div>
+        <button class="btn" type="submit">Get the brochure</button>
+        <p class="br-small">We use Mailchimp to send emails. Your details go into our mailing list so we can send you the brochure and, if you tick the box, occasional updates. <a href="./privacy.html">Privacy notice</a></p>
+        <p class="br-msg" role="status" hidden></p>
+      </form>
+      <div class="br-done" hidden tabindex="-1"><h3>Thank you. Your brochure is downloading.</h3><p>If it didn&#8217;t start, <a href="#" target="_blank" rel="noopener">open the brochure here</a>.</p></div></div>
+      <div class="br-img"><img src="./assets/img/prog/br-keynotes.jpg" alt="Keynotes with Luke Rodgers BEM brochure cover" width="900" height="506"></div></div></div>
+  </section>
+<section class="section">
     <img class="deco deco-t" src="./assets/img/brand/arrow-navy.png" alt="" style="width:85px;right:5%;top:20px;transform:rotate(4deg)" width="231" height="180">
     <div class="wrap">
       <h2 class="h2">How booking works</h2>
@@ -219,5 +234,6 @@
 <script src="./assets/prog.js?v=2" defer></script>
 <script>(function(){var c=document.querySelector('[data-carousel]');if(!c)return;var t=c.querySelector('.kn-track');c.querySelectorAll('.kn-btn').forEach(function(b){b.addEventListener('click',function(){var s=t.querySelector('.kn-slide');var w=s?s.getBoundingClientRect().width+20:400;t.scrollBy({left:w*Number(b.dataset.dir),behavior:'smooth'})})})})();</script>
 <script src="./assets/enquiry.js?v=2" defer></script>
+<script src="./assets/brochure-gate.js?v=5" defer></script>
 </body>
 </html>

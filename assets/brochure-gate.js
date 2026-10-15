@@ -8,7 +8,10 @@
     'brochure-fellowship': '4229739', 'brochure-academy': '4229740',
     'brochure-designated-leaders': '4229741', 'brochure-care-to-work': '4229742',
     'brochure-care-to-work-we': '4229743', 'brochure-care-to-work-aj': '4229744',
-    'keynote-living-a-careless-life': '4229745'
+    'keynote-living-a-careless-life': '4229745',
+    'brochure-the-journey-through-care': '4229748', 'brochure-nvr-advanced': '4229749',
+    'brochure-nvr-essentials': '4229750', 'brochure-good-recording': '4229751',
+    'brochure-tools-for-schools': '4229752', 'brochure-keynotes': '4229753'
   };
   var n = 0;
   function jsonp(url, cb) {
