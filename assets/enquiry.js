@@ -41,6 +41,8 @@ document.addEventListener('DOMContentLoaded', function () {
     item.addEventListener('change', sync);
     if (qs.topic === 'keynote') topic.value = KEYNOTE;
     if (qs.topic === 'training' || f.getAttribute('data-topic') === 'training') topic.value = TRAINING;
+    if (qs.topic === 'programme') topic.value = 'A programme';
+    if (qs.topic === 'programme' && qs.course === 'NVR Advanced') qs.course = 'The NVR Programme';
     fillItems(qs.talk || qs.course || f.getAttribute('data-item') || '');
     if (qs.about && msg && !msg.value) { msg.value = 'About: ' + qs.about + '\n\n'; if (!topic.value) { topic.value = 'Training for my team'; fillItems(qs.about); } }
     document.addEventListener('enq:talk', function (e) { topic.value = KEYNOTE; fillItems(e.detail || ''); });

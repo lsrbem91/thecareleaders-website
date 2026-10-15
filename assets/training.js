@@ -90,9 +90,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var names = short.map(function (s) { return bySlug[s].getAttribute('data-title'); });
     tray.querySelector('[data-tk-n]').textContent = short.length === 1 ? '1 course on your shortlist' : short.length + ' courses on your shortlist';
     tray.querySelector('[data-tk-names]').textContent = names.join(', ');
-    var body = 'Hello,\n\nI would like to talk about this training:\n' + names.map(function (n) { return '- ' + n; }).join('\n') +
-      '\n\nWho it is for:\nRoughly how many people:\nWhen:\nWhere, or online:\n\nMy name, role and organisation:\n';
-    var href = 'mailto:hello@thecareleaders.com?subject=' + encodeURIComponent('Training enquiry') + '&body=' + encodeURIComponent(body);
+    var href = './contact.html?topic=training&about=' + encodeURIComponent(names.join(', ')) + '#enquire';
     Array.prototype.forEach.call(document.querySelectorAll('[data-tk-send]'), function (a) { a.href = href; });
   }
   list.addEventListener('click', function (e) {

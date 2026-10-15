@@ -52,9 +52,7 @@ document.addEventListener('DOMContentLoaded', function () {
       if (short.length > 1) {
         var t = getTitles();
         var names = short.map(function (s) { return t[s] || s.replace(/-/g, ' '); });
-        var body = 'Hello,\n\nI would like to talk about this training:\n' + names.map(function (n) { return '- ' + n; }).join('\n') +
-          '\n\nWho it is for:\nRoughly how many people:\nWhen:\nWhere, or online:\n\nMy name, role and organisation:\n';
-        send.href = 'mailto:hello@thecareleaders.com?subject=' + encodeURIComponent('Training enquiry') + '&body=' + encodeURIComponent(body);
+        send.href = './contact.html?topic=training&about=' + encodeURIComponent(names.join(', ')) + '#enquire';
         send.textContent = 'Send one enquiry';
       } else { send.href = askHref; send.textContent = 'Ask about this course'; }
     }
