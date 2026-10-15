@@ -1992,3 +1992,5 @@ a.tc-bar-n{color:inherit;font-weight:700}
 .prog.th-dlp .br-strap{display:block;text-align:center;margin-bottom:22px;color:#fff;font-size:14px}
 .prog.th-dlp .br-strap b{color:#acc90b}
 .prog.th-dlp .br-gate .btn{background:#acc90b;color:#241b40;border-color:#acc90b}
+/* Home "What we do" cards: let button labels wrap inside narrow five-column cards instead of spilling out */
+@media(min-width:1100px){.grid.cols-5 .card-btns a{white-space:normal;max-width:100%;line-height:1.25}}
