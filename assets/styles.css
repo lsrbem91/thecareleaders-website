@@ -2126,3 +2126,71 @@ a.tc-bar-n{color:inherit;font-weight:700}
 .svc-card .card-btns{margin-top:auto}
 .svc-card .card-btns a{white-space:nowrap!important;max-width:none!important;line-height:1.2!important;font-size:14px;padding:10px 16px!important}
 @media(min-width:1100px) and (max-width:1279px){.svc-card .card-btns a{font-size:13px;padding:9px 13px!important}}
+/* NVR sub-brand (kit v1, Oct 2026): navy ink, white and midnight grounds, mid green stop, teal second voice, blue bed. Clean edges, nothing hand-cut, no red or orange. */
+.nv-stop{display:inline-block;width:.34em;height:.34em;margin-left:.04em;background:url(./img/brand/nvr/stop-green.svg) center/contain no-repeat;vertical-align:baseline}
+.th-nvr{--pl:#dae2e6;--pa:#008196;--pr:#008196;--pad:#008196;--pt:#0e2545;--pd:#0e2545;--pl2:#dae2e6;--pl3:#eef2f4;--pm2:#78ae5d;--pm3:#dae2e6;--pbt:#fff;--pbg:#fff}
+.th-nvr .section{background:#fff;border-bottom-color:#dae2e6}
+.th-nvr .section.bg-fill{background:#dae2e6}
+.th-nvr .section.dl-mission{background:#241b40 url(./img/brand/nvr/pattern-stops.svg) center/100px}
+.th-nvr .hug{display:none}
+.th-nvr .section.dl-hero{background:#241b40;color:#fff;padding:70px 0 70px;border-bottom:0;position:relative;overflow:hidden}
+.th-nvr .dl-hero::after{content:"";position:absolute;right:-90px;top:-120px;width:420px;height:420px;background:url(./img/brand/nvr/stop-green.svg) center/contain no-repeat;transform:rotate(-20deg);pointer-events:none}
+.th-nvr .dl-hero-in{position:relative;z-index:1}
+.th-nvr .dl-hero .dl-eyebrow{color:#78ae5d;font-weight:600}
+.prog.th-nvr .dl-hero h1{color:#fff}
+.prog.th-nvr .dl-hero h1 span{display:block;color:inherit}
+.nv-h1{display:flex;flex-direction:column;gap:6px;margin:14px 0 18px}
+.prog.th-nvr .nv-word{font-family:Crossten,Poppins,sans-serif;font-weight:900;font-size:clamp(84px,11vw,150px);line-height:.9;letter-spacing:-.04em;color:#fff}
+.prog.th-nvr .nv-full{font-family:Crossten,Poppins,sans-serif;font-weight:300;font-size:clamp(22px,2.6vw,32px);line-height:1.1}
+.prog.th-nvr .nv-full b{font-weight:900}
+.prog.th-nvr .nv-tag{font-family:Crossten,Poppins,sans-serif;font-weight:300;font-size:clamp(20px,2.2vw,28px);line-height:1.2;color:#dae2e6;margin-top:10px}
+.th-nvr .dl-hero .lead{color:#fff}
+.th-nvr .dl-hero .btn{background:#78ae5d;border-color:#78ae5d;color:#241b40}
+.th-nvr .dl-hero .btn.secondary{background:transparent;border-color:#fff;color:#fff}
+.th-nvr .dl-hero-art img{transform:none;border-radius:0;box-shadow:0 30px 60px rgba(0,0,0,.45);background:transparent!important;padding:0!important}
+.th-nvr h2.h2,.prog.th-nvr h3{color:#0e2545}
+.th-nvr .section h2.h2::after{width:56px;height:6px;bottom:-4px;border-radius:0;background:#008196}
+.th-nvr .eyebrow{color:#008196}
+.th-nvr .dl-mission .eyebrow{color:#78ae5d}
+.th-nvr .dl-mission h2.h2{color:#fff}
+.th-nvr .dl-mission h2.h2::after{background:#78ae5d}
+.th-nvr .dl-mission-in>div:first-child{background:#241b40;padding:20px 24px 24px;margin:-20px -24px}
+.th-nvr .dl-mission-in>.dl-motto{background:#241b40;padding:12px 16px}
+.th-nvr .dl-motto span:nth-child(1){color:#fff}.th-nvr .dl-motto span:nth-child(2){color:#dae2e6}.th-nvr .dl-motto span:nth-child(3){color:#78ae5d}
+.th-nvr .btn{background:#0e2545;border-color:#0e2545;color:#fff}
+.th-nvr .btn.secondary{background:transparent;color:#0e2545;border-color:#0e2545}
+.th-nvr .dl-n{border-radius:0;background:#0e2545;color:#fff;border:0}
+.th-nvr .dl-step:nth-child(2) .dl-n{background:#008196}
+.th-nvr .dl-step:nth-child(3) .dl-n{background:#78ae5d;color:#241b40}
+.th-nvr .dl-step:nth-child(4) .dl-n{background:#008196}
+.th-nvr .dl-step:nth-child(3) .dl-card{outline-color:#008196}
+.th-nvr .dl-card,.th-nvr .nine-g,.th-nvr .jr li,.th-nvr .sw-tabs button,.th-nvr .eq>div,.th-nvr .nine-s,.th-nvr .sw-meta span,.th-nvr .faq-item,.th-nvr .work-card{border-radius:0}
+.th-nvr .dl-card li::before{background:#78ae5d;transform:none;border-radius:0}
+.th-nvr .pe,.th-nvr .obj{border-top:6px solid #0e2545;border-radius:0}
+.th-nvr .pe:nth-child(2),.th-nvr .obj:nth-child(2){border-top-color:#008196}
+.th-nvr .pe:nth-child(3),.th-nvr .obj:nth-child(3){border-top-color:#78ae5d}
+.th-nvr .pe:nth-child(4){border-top-color:#dae2e6}
+.th-nvr .pe-i,.th-nvr .obj-i,.th-nvr .gl-i{border-radius:0;background:#dae2e6;color:#008196}
+.th-nvr .gl-k,.th-nvr .nine-g h3.h4{text-transform:none;letter-spacing:.04em}
+.th-nvr .jr li{background:#241b40}
+.th-nvr .jr b{border-radius:0;background:#78ae5d;color:#241b40}
+.th-nvr .jr li:not(:last-child)::after{border-color:#78ae5d}
+.th-nvr .jr span{color:#dae2e6}
+.th-nvr .sw-tabs button[aria-selected=true]{background:#241b40;border-color:#241b40}
+.th-nvr .sw-meta span{background:#dae2e6;color:#0e2545}
+.th-nvr .nine-s{background:#eef2f4}
+.th-nvr .nine-s strong i{color:#008196}
+.th-nvr .eq b{background:#dae2e6;color:#008196;border-radius:0}
+.th-nvr .faq-item{background:#fff;border-left:5px solid #008196}
+.prog.th-nvr .cta-band{background:#008196}
+.prog.th-nvr .cta-band::before{background:transparent}
+.prog.th-nvr .cta-band h2{color:#fff}
+.prog.th-nvr .cta-band .btn{background:#78ae5d;border-color:#78ae5d;color:#241b40}
+.prog.th-nvr .section.dl-brochure{background:#241b40 url(./img/brand/nvr/pattern-stops.svg) center/100px}
+.prog.th-nvr .br-card{background:#241b40;padding:28px;margin:-28px}
+.prog.th-nvr .br-card .eyebrow{color:#78ae5d}
+.prog.th-nvr .br-card h2.h2{color:#fff}
+.prog.th-nvr .br-card h2.h2::after{background:#78ae5d}
+.prog.th-nvr .br-form .btn{background:#78ae5d;border-color:#78ae5d;color:#241b40}
+.prog.th-nvr .br-img img{border-radius:0;transform:none;background:#008196!important;padding:20px!important}
+@media(max-width:640px){.th-nvr .dl-hero::after{width:220px;height:220px;right:-60px;top:-60px}.prog.th-nvr .br-card{padding:16px;margin:-16px}.th-nvr .dl-mission-in>div:first-child{margin:-12px;padding:12px}}
