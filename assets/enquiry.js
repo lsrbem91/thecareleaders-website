@@ -26,6 +26,13 @@ document.addEventListener('DOMContentLoaded', function () {
       show('keynote', ev);
       var ses = f.querySelector('[name=session]'); if (ses) { var sl = ses.closest('label'); sl.hidden = t !== KEYNOTE; ses.disabled = t !== KEYNOTE; }
       var leg = f.querySelector('[data-sec=keynote] legend'); if (leg) leg.textContent = t === TRAINING ? 'About your training' : 'About your event';
+      var tod = f.querySelector('[name=time_of_day]');
+      if (tod) {
+        var tl = tod.closest('label'), hint = f.querySelector('[data-tr-hint]');
+        if (!hint) { hint = document.createElement('p'); hint.setAttribute('data-tr-hint', ''); hint.className = 'enq-hint'; hint.style.cssText = 'margin:0 0 14px;font-size:15px;line-height:1.5'; hint.textContent = 'Every course runs for 6 hours, usually 10am to 4pm, for up to 60 people. Online, it can be one day or two 3-hour sessions.'; tl.parentNode.parentNode.insertBefore(hint, tl.parentNode.nextSibling); }
+        if (t === TRAINING) { tl.hidden = true; tod.value = 'Full day'; hint.hidden = false; }
+        else { tl.hidden = false; hint.hidden = true; }
+      }
       show('fellowship', it === 'The Care Leaders Fellowship');
       itemLabel.textContent = t === KEYNOTE ? 'Which talk are you interested in?' : t === TRAINING ? 'Which course?' : 'Which one?';
       msgLabel.textContent = t === KEYNOTE ? 'Tell us about your event and what you want people to leave with' : t === TRAINING ? 'Tell us about your team and what you want them to leave with' : 'Tell us what you need';
