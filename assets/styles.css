@@ -2194,3 +2194,6 @@ a.tc-bar-n{color:inherit;font-weight:700}
 .prog.th-nvr .br-form .btn{background:#78ae5d;border-color:#78ae5d;color:#241b40}
 .prog.th-nvr .br-img img{border-radius:0;transform:none;background:#008196!important;padding:20px!important}
 @media(max-width:640px){.th-nvr .dl-hero::after{width:220px;height:220px;right:-60px;top:-60px}.prog.th-nvr .br-card{padding:16px;margin:-16px}.th-nvr .dl-mission-in>div:first-child{margin:-12px;padding:12px}}
+/* SEO keyword line inside H1: reads like an eyebrow, keeps the voice line as the headline */
+h1 .h1-k{display:block!important;font-family:Poppins,sans-serif!important;font-weight:700!important;font-size:clamp(14px,1.3vw,17px)!important;line-height:1.35!important;letter-spacing:0!important;text-transform:none!important;margin:0 0 12px!important;color:inherit!important;opacity:.85;max-width:640px}
+.prog.th-nvr .dl-hero h1 .h1-k,.prog.th-mwc .dl-hero h1 .h1-k{color:#dae2e6!important;opacity:1}
