@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
       var tod = f.querySelector('[name=time_of_day]');
       if (tod) {
         var tl = tod.closest('label'), hint = f.querySelector('[data-tr-hint]');
-        if (!hint) { hint = document.createElement('p'); hint.setAttribute('data-tr-hint', ''); hint.className = 'enq-hint'; hint.style.cssText = 'margin:0 0 14px;font-size:15px;line-height:1.5'; hint.textContent = 'Every course runs for 6 hours, usually 10am to 4pm, for up to 60 people. Online, it can be one day or two 3-hour sessions.'; tl.parentNode.parentNode.insertBefore(hint, tl.parentNode.nextSibling); }
+        if (!hint) { hint = document.createElement('p'); hint.setAttribute('data-tr-hint', ''); hint.className = 'enq-hint'; hint.style.cssText = 'margin:0 0 14px;font-size:15px;line-height:1.5'; hint.textContent = 'Face to face, every course runs for 6 hours, usually 10am to 4pm. Online, it is a 2-hour live session. Up to 60 people.'; tl.parentNode.parentNode.insertBefore(hint, tl.parentNode.nextSibling); }
         if (t === TRAINING) { tl.hidden = true; tod.value = 'Full day'; hint.hidden = false; }
         else { tl.hidden = false; hint.hidden = true; }
       }
