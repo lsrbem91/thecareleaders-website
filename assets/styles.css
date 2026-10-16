@@ -2113,3 +2113,11 @@ a.tc-bar-n{color:inherit;font-weight:700}
 .prog.th-mwc .dl-hero h1 .mwc-tag{display:block;color:#ede3ed}
 .prog.th-mwc .dl-hero-art img{background:transparent!important;padding:0!important;border:0}
 .prog.th-mwc .mwc-lock,.mwc-lock.hero{overflow:visible;padding:0 0 .12em .16em;margin-left:-.02em}
+.prog.th-mwc .section.dl-brochure{background:#241b40 url(./img/brand/mwc/pattern-beads.svg) center/150px}
+.prog.th-mwc .br-card{background:#241b40;padding:28px;margin:-28px;clip-path:polygon(0 0.7%,99.6% 0,99.2% 99.2%,0.4% 100%)}
+.prog.th-mwc .br-card .eyebrow{color:#acc90b}
+.prog.th-mwc .br-card h2.h2{color:#fff}
+.prog.th-mwc .br-card h2.h2::after{background:#acc90b}
+.prog.th-mwc .br-form .btn{background:#acc90b;border-color:#acc90b;color:#241b40}
+.prog.th-mwc .br-img img{clip-path:polygon(0 0.7%,99.6% 0,99.2% 99.2%,0.4% 100%);border-radius:0;transform:none;background:#5f3c90!important;padding:20px!important}
+@media(max-width:640px){.prog.th-mwc .br-card{padding:16px;margin:-16px}}
