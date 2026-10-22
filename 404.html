@@ -55,7 +55,7 @@
     '/in-conversation-with-ric-flo': 'index.html',
     '/checkout': 'index.html', '/basket': 'index.html', '/my-account': 'index.html', '/recordings-testing': 'index.html'
   };
-  if (p === '/newsletter') { location.replace('https://mailchi.mp/thecareleaders.com/newsletter'); return; }
+  if (p === '/newsletter') { location.replace('https://mailchi.mp/thecareleaders.com/join'); return; }
   var to = M[p] || (p.indexOf('/keynotes/') === 0 ? 'keynotes.html' : p.indexOf('/training/') === 0 ? 'training.html' : p.indexOf('/consultancy/') === 0 ? 'consultancy.html' : p.indexOf('/courses/') === 0 ? 'training.html' : p.indexOf('/events/') === 0 ? 'our-work.html' : p.indexOf('/product') === 0 ? 'training.html' : null);
   if (to) location.replace(base + to);
 })();
