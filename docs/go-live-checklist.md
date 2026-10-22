@@ -18,10 +18,11 @@ Created 22 October 2026. There was no checklist in the repo before this, so this
 
 - [x] Tag brochure-mentors-who-care created (ID 4229774) and wired into the brochure form.
 - [x] Tag guide-attachment-trauma created (ID 4229775) and wired into the resources form.
-- [ ] Brochure delivery automation for The NVR Programme.
-- [ ] Brochure delivery automation for Mentors Who Care.
+- [x] Undated PDFs uploaded to Mailchimp files: designated_leaders.01.pdf, mentors_who_care.pdf, nvr_programme.pdf.
+- [ ] Brochure delivery automation for The NVR Programme (replicate Designated Leaders; trigger tag brochure-nvr-advanced; link nvr_programme.pdf).
+- [ ] Brochure delivery automation for Mentors Who Care (trigger tag brochure-mentors-who-care; link mentors_who_care.pdf).
 - [ ] Guide delivery automation for the Attachment and Trauma mini guide (needs the PDF).
-- [ ] Designated Leaders email: point the download at the undated PDF.
+- [ ] Designated Leaders email: point the download button at designated_leaders.01.pdf (undated).
 - [ ] Welcome email delayed by one day so new contacts don't get two emails at once.
 - [ ] Popup: the "Website popup | Free mini-guide" form is still a draft. Connect www.thecareleaders.com as a site in Mailchimp (Integrations > Manually connect site), add the mc.js snippet to every page, then publish the popup. Do this at the domain switch: the connection checks the live domain.
 - [ ] Add "Being a podcast guest" to the Power Automate auto-reply flow on hello@ (optional).
