@@ -2549,3 +2549,29 @@ h1 .h1-k{display:block!important;font-family:Poppins,sans-serif!important;font-w
 .cs-callout p{margin:0}
 .cs-callout .cs-callout-h{font-family:var(--font-display);font-weight:700;font-size:24px;line-height:1.25;color:var(--ink);margin-bottom:8px}
 .seypc-sec{--exa:#a3195b;--exb:#2f4357;--exl:#15b19f}
+/* More of our work: headline cards (22 Oct 2026) */
+.mw-grid{display:grid;gap:16px;margin-top:28px;align-items:start}
+@media(min-width:860px){.mw-grid{grid-template-columns:1fr 1fr}}
+.mw{background:#fff;border:1px solid #dfe3e6;border-radius:4px}
+.mw[open]{box-shadow:0 6px 18px rgba(13,27,62,.08)}
+.mw summary{list-style:none;cursor:pointer;display:grid;gap:6px;padding:20px 56px 20px 22px;position:relative}
+.mw summary::-webkit-details-marker{display:none}
+.mw summary:focus-visible{outline:3px solid #f59c00;outline-offset:2px}
+.mw-top{display:flex;justify-content:space-between;gap:12px;font-size:13px;font-weight:700}
+.mw-tags{color:#a65e00}.mw-y{color:var(--muted,#5b6470);font-weight:600;text-align:right}
+.mw-t{font-family:var(--font-display);font-weight:700;font-size:19px;line-height:1.25;color:var(--ink)}
+.mw-d{font-size:15px;line-height:1.5;color:var(--muted,#5b6470)}
+.mw-open{position:absolute;right:20px;top:24px;width:24px;height:24px;border-radius:50%;background:#f59c00}
+.mw-open::before,.mw-open::after{content:"";position:absolute;left:6px;right:6px;top:11px;height:2px;background:#241b40}
+.mw-open::after{transform:rotate(90deg);transition:transform .2s}
+.mw[open] .mw-open::after{transform:rotate(0)}
+.mw-b{padding:0 22px 22px;border-top:1px solid #eef0f2;padding-top:16px;font-size:15px;line-height:1.6}
+.mw-b p{margin:0 0 14px}
+.mw-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:12px;margin:0 0 14px}
+.mw-stats div{border-top:3px solid #f59c00;padding-top:8px}
+.mw-stats b{display:block;font-family:var(--font-display);font-size:24px;line-height:1.1;color:var(--ink)}
+.mw-stats span{font-size:13px;line-height:1.4;color:var(--muted,#5b6470)}
+.mw-meta{display:grid;gap:8px;margin:0}
+.mw-meta div{display:grid;grid-template-columns:110px 1fr;gap:10px}
+.mw-meta dt{font-size:13px;font-weight:700;color:var(--muted,#5b6470)}
+.mw-meta dd{margin:0;font-size:14px}
