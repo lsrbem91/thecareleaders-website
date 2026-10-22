@@ -30,7 +30,8 @@ Created 22 October 2026. There was no checklist in the repo before this, so this
 
 - [x] Brochure links: all six programmes (DLP, Academy, Care to Work, Fellowship, NVR Programme, Mentors Who Care) now get the brochure in the auto-reply. NVR points to the undated nvr-programme.pdf. Training entries removed.
 - [x] Auto-replies (keynote, holding, general) now send from hello@, with no Reply To pointing at luke@.
-- [x] "Copy to Luke" now goes to hello@, not luke@.
+- [x] "Copy to Luke" now goes to hello@, not luke@, and only for keynote and training enquiries (the ones that check the diary). Other enquiries get the Web3Forms notification only.
+- [x] First names are capitalised before they reach the auto-reply and the brochure emails.
 - [x] "Website enquiry: forward to Luke" flow is off.
 - [x] Web3Forms already sends to hello@ and the flow trigger already watches hello@. The emails in luke@ came from "Copy to Luke", now fixed.
 - [ ] At the domain switch: change the github.io links in BrochureLine and the booking terms links in Keynote reply (and check the other reply steps) to https://www.thecareleaders.com/.
