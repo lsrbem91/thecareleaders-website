@@ -2264,7 +2264,7 @@ h1 .h1-k{display:block!important;font-family:Poppins,sans-serif!important;font-w
 .tl-fac-note{margin:22px 0 0;font-size:16px;color:#fff;max-width:900px}.tl-fac-note a{color:#fff;font-weight:700}
 @media(max-width:900px){.tl-fac-in{grid-template-columns:1fr}}
 /* Course pages (22 Oct 2026): visual who it's for, framework section */
-.tc-whos{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:22px}
+.tc-whos{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:22px}
 .tc-wc{background:#fff;padding:22px 20px 24px;clip-path:polygon(0 1%,100% 0,98.5% 100%,1% 98%)}
 .tc-wi{display:grid;place-items:center;width:64px;height:64px;margin-bottom:14px;clip-path:polygon(0 6%,100% 0,94% 100%,4% 94%)}
 .tc-wc:nth-child(4n+1) .tc-wi{background:var(--tcll-apple)}.tc-wc:nth-child(4n+2) .tc-wi{background:var(--tcll-teal)}.tc-wc:nth-child(4n+3) .tc-wi{background:var(--tcll-fuchsia)}.tc-wc:nth-child(4n+4) .tc-wi{background:var(--tcll-purple)}
