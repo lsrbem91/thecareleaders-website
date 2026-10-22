@@ -2671,3 +2671,8 @@ h1 .h1-k{display:block!important;font-family:Poppins,sans-serif!important;font-w
 .lel-guest .btn{background:#b4ae4b;color:#062e2f;border-color:#b4ae4b;margin-top:8px}.lel-guest .btn:hover{background:#cdc65e}
 .lel-guest-in{margin:0 auto}
 .blog-body p{margin:0 0 18px}
+.ctc{background:#fff}.ctc-in{display:grid;grid-template-columns:1fr 1.1fr;gap:40px;align-items:start}
+.ctc-copy p{font-size:17px;line-height:1.7;margin:0 0 14px}.ctc-copy .h2{margin:10px 0 16px}
+.ctc-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.ctc-player{min-height:200px;border-radius:14px;overflow:hidden}
+@media(max-width:860px){.ctc-in{grid-template-columns:1fr;gap:24px}}
