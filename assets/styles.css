@@ -2575,3 +2575,4 @@ h1 .h1-k{display:block!important;font-family:Poppins,sans-serif!important;font-w
 .mw-meta div{display:grid;grid-template-columns:110px 1fr;gap:10px}
 .mw-meta dt{font-size:13px;font-weight:700;color:var(--muted,#5b6470)}
 .mw-meta dd{margin:0;font-size:14px}
+.summit-sec{--exa:#00828f;--exb:#112548;--exl:#dde44f}
