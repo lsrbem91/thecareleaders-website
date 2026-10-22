@@ -20,7 +20,8 @@ Created 22 October 2026. There was no checklist in the repo before this, so this
 - [x] Undated PDFs uploaded to Mailchimp files: designated_leaders.01.pdf, mentors_who_care.pdf, nvr_programme.pdf.
 - [ ] Brochure delivery - NVR Programme: built as a draft (trigger brochure-nvr-advanced, NVR email, undated PDF and cover). Luke to check and click Continue > Turn flow on.
 - [ ] Brochure delivery - Mentors Who Care: built as a draft (trigger brochure-mentors-who-care, Mentors email, undated PDF and cover). Luke to check and click Continue > Turn flow on.
-- [ ] Designated Leaders email (live flow): Pause & edit, then swap the header image for br-designated-leaders.01.jpg and the download link for designated_leaders.01.pdf, both in Content Studio. Turn back on.
+- [ ] Designated Leaders email (live flow): Pause & edit, then swap the header image for br-designated-leaders.01.jpg and the download link for designated-leaders.02.pdf (no phone number), both in Content Studio. Turn back on.
+- [ ] Phone number removed from brochures. In Content Studio, swap the download link in each live brochure email for the new file: Academy > care-leaders-academy.01.pdf, Fellowship > care-leaders-fellowship.01.pdf, Care to Work > care-to-work.01.pdf (and the .01 versions of the two Care to Work sub-brochures if any email uses them). NVR and Mentors files were already clean.
 - [ ] Welcome email delayed by one day so new contacts don't get two emails at once.
 - [ ] Popup: the "Website popup | Free mini-guide" form is still a draft. Connect www.thecareleaders.com as a site in Mailchimp (Integrations > Manually connect site), add the mc.js snippet to every page, then publish the popup. Do this at the domain switch: the connection checks the live domain.
 - [ ] Add "Being a podcast guest" to the Power Automate auto-reply flow (optional).
@@ -31,7 +32,7 @@ Created 22 October 2026. There was no checklist in the repo before this, so this
 - [x] Auto-replies (keynote, holding, general) now send from hello@, with no Reply To pointing at luke@.
 - [x] "Copy to Luke" now goes to hello@, not luke@.
 - [x] "Website enquiry: forward to Luke" flow is off.
-- [ ] Web3Forms notifications still land in luke@ (the access key is registered to luke@), and the flow trigger watches luke@'s inbox. To move both to hello@: create a new Web3Forms access key for hello@, swap it into every form, then change the flow trigger connection to hello@.
+- [ ] Web3Forms notifications still land in luke@ (the access key is registered to luke@), and the flow trigger watches luke@'s inbox. To move both to hello@: Luke creates a new Web3Forms access key for hello@ at web3forms.com (Claude can't: it's account sign-up behind a bot check), swap it into every form, then change the flow trigger connection to hello@.
 - [ ] At the domain switch: change the github.io links in BrochureLine and the booking terms links in Keynote reply (and check the other reply steps) to https://www.thecareleaders.com/.
 
 ## Tests before the switch
