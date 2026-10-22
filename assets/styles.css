@@ -2576,3 +2576,5 @@ h1 .h1-k{display:block!important;font-family:Poppins,sans-serif!important;font-w
 .mw-meta dt{font-size:13px;font-weight:700;color:var(--muted,#5b6470)}
 .mw-meta dd{margin:0;font-size:14px}
 .summit-sec{--exa:#00828f;--exb:#112548;--exl:#dde44f}
+.suffolk-sec{--exa:#b5520f;--exb:#16182d;--exl:#f47322}
+.dw-wrap.dw-1{grid-template-columns:minmax(0,.8fr) minmax(0,2.1fr)}@media(max-width:980px){.dw-wrap.dw-1{grid-template-columns:1fr}}
