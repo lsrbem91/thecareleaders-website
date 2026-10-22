@@ -2199,3 +2199,6 @@ h1 .h1-k{display:block!important;font-family:Poppins,sans-serif!important;font-w
 .prog.th-nvr .dl-hero h1 .h1-k,.prog.th-mwc .dl-hero h1 .h1-k{color:#dae2e6!important;opacity:1}
 /* How it works: no step is singled out with a border (22 Oct 2026) */
 .dl-step .dl-card,.cm-step .cm-card{outline:none!important}
+/* Care to Work hero: no lanyard over the cover (22 Oct 2026) */
+.ctw-strap-hero,.ctw-strap-pass{display:none!important}
+.ctw-art{padding-top:0!important}
