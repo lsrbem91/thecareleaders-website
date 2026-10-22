@@ -2224,3 +2224,42 @@ h1 .h1-k{display:block!important;font-family:Poppins,sans-serif!important;font-w
 .th-mwc .faq-item:nth-child(5n+1){border-left-color:#5f3c90}.th-mwc .faq-item:nth-child(5n+2){border-left-color:#acc90b}.th-mwc .faq-item:nth-child(5n+3){border-left-color:#008196}.th-mwc .faq-item:nth-child(5n+4){border-left-color:#cf0f55}.th-mwc .faq-item:nth-child(5n){border-left-color:#f59c00}
 .th-mwc .dl-motto span:nth-child(2){color:#f59c00}
 .th-mwc .dl-card li::before{background:#cf0f55}
+/* Course pages restructure (22 Oct 2026): who it's for, learning outcomes, what you get */
+.tc-who{list-style:none;margin:22px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+.tc-who li{background:#fff;padding:18px 20px 18px 50px;position:relative;font-size:16.5px;line-height:1.45;clip-path:polygon(0 0,100% 2%,99% 100%,1% 97%)}
+.tc-who li::before{content:"";position:absolute;left:18px;top:21px;width:18px;height:18px;background:var(--cat,var(--tcll-purple));clip-path:polygon(0 0,100% 12%,88% 100%,8% 90%)}
+.tc-outs{list-style:none;margin:20px 0 0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 22px;counter-reset:o}
+.tc-o{position:relative;background:var(--tcll-purple-bed);padding:20px 22px 20px 74px;min-height:96px}
+.tc-o:nth-child(4n+2),.tc-o:nth-child(4n+3){background:var(--tcll-green-bed)}
+.tc-o-n{position:absolute;left:20px;top:18px;width:38px;height:38px;display:grid;place-items:center;background:var(--tcll-midnight);color:#fff;font-family:var(--font-head,inherit);font-weight:800;font-size:19px;clip-path:polygon(0 4%,100% 0,96% 100%,4% 96%)}
+.tc-o-k{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:700;color:var(--tcll-navy);margin-bottom:6px}
+.tc-o-k img{width:24px;height:24px}
+.tc-o p{margin:0;font-size:16.5px;line-height:1.45}
+.tc-h3{font-size:clamp(22px,2.4vw,28px);margin:52px 0 6px;scroll-margin-top:90px}
+.tc-get{background:linear-gradient(rgba(80,20,150,.8),rgba(80,20,150,.8)),url(./img/tcll/patterns/tonal-purple.webp) center/900px;color:#fff}
+.tc-get h2,.tc-get h3{color:#fff}.tc-get .tc-sub{color:rgba(255,255,255,.92)}
+.tc-gets{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:22px}
+.tc-g{background:#fff;color:var(--tcll-navy);padding:22px 20px 24px;clip-path:polygon(0 1%,100% 0,98.5% 100%,1% 98%)}
+.tc-g:nth-child(4n+1){border-top:6px solid var(--tcll-apple)}.tc-g:nth-child(4n+2){border-top:6px solid var(--tcll-teal)}.tc-g:nth-child(4n+3){border-top:6px solid var(--tcll-fuchsia)}.tc-g:nth-child(4n+4){border-top:6px solid var(--tcll-red)}
+.tc-g svg{width:34px;height:34px;fill:none;stroke:var(--tcll-midnight);stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.tc-g h3{color:var(--tcll-navy)!important;font-size:18px;margin:10px 0 6px}.tc-g p{margin:0;font-size:15px;line-height:1.45}
+@media(max-width:900px){.tc-outs{grid-template-columns:1fr}.tc-gets{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.tc-gets{grid-template-columns:1fr}}
+/* Training page (22 Oct 2026): hero always dark, How we facilitate training */
+.section.tl-page-hero{background:var(--tcll-midnight) url(./img/tcll/tcll-pattern.jpg) center/cover!important;color:#fff}
+.section.tl-page-hero p{color:rgba(255,255,255,.9)}.section.tl-page-hero p a{color:#fff}
+.tl-fac{background:linear-gradient(rgba(0,110,128,.86),rgba(0,110,128,.86)),url(./img/tcll/patterns/tonal-teal.webp) center/900px;color:#fff}
+.tl-fac .h2,.tl-fac h3{color:#fff}.tl-fac .h2-sub{color:rgba(255,255,255,.92)}
+.tl-fac-in{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:22px;margin-top:26px;align-items:stretch}
+.tl-fmts{display:grid;gap:16px}
+.tl-fmt{background:#fff;color:var(--tcll-navy);padding:24px 26px;clip-path:polygon(0 2%,100% 0,98.5% 100%,1% 97%)}
+.tl-fmt:first-child{border-left:8px solid var(--tcll-apple)}.tl-fmt:last-child{border-left:8px solid var(--tcll-fuchsia)}
+.tl-fmt-n{display:inline-block;background:var(--tcll-midnight);color:#fff;font-weight:800;font-size:15px;padding:6px 12px;clip-path:polygon(0 6%,100% 0,97% 100%,2% 94%)}
+.tl-fmt h3{color:var(--tcll-navy)!important;font-size:24px;margin:12px 0 6px}.tl-fmt p{margin:0;font-size:16.5px;line-height:1.5;color:var(--tcll-navy)}
+.tl-sta{background:var(--tcll-midnight);padding:26px 28px;clip-path:polygon(1% 0,100% 2%,99% 100%,0 98%)}
+.tl-sta h3{font-size:22px;margin:0 0 14px}
+.tl-sta ol{list-style:none;margin:0;padding:0;display:grid;gap:16px}
+.tl-sta li{display:grid;grid-template-columns:48px 1fr;gap:16px;align-items:start}
+.tl-sta strong{display:block;font-size:19px;color:#fff}.tl-sta p{margin:4px 0 0;color:rgba(255,255,255,.9);font-size:16px;line-height:1.5}
+.tl-fac-note{margin:22px 0 0;font-size:16px;color:#fff;max-width:900px}.tl-fac-note a{color:#fff;font-weight:700}
+@media(max-width:900px){.tl-fac-in{grid-template-columns:1fr}}
