@@ -2631,3 +2631,43 @@ h1 .h1-k{display:block!important;font-family:Poppins,sans-serif!important;font-w
 /* Header spacing: breathing room between logo, menu and button (22 Oct 2026) */
 @media(min-width:1080px){.header-inner{gap:24px}.main-nav{margin-left:auto;margin-right:auto}}
 @media(min-width:1080px) and (max-width:1360px){.main-nav ul{gap:18px}}
+/* blog */
+.blog-hero h1{margin:14px 0 12px;max-width:760px}.blog-hero .lead{max-width:680px;color:var(--muted)}
+.blog-group-lead{max-width:680px;color:var(--muted);margin:6px 0 28px}
+.blog-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.blog-card{display:flex;flex-direction:column;gap:10px;background:#fff;border:1px solid var(--line);border-top:6px solid #f59c00;border-radius:14px;padding:22px 22px 18px;color:var(--ink);text-decoration:none;transition:transform .15s,box-shadow .15s}
+.blog-card:nth-child(3n+2){border-top-color:var(--teal)}.blog-card:nth-child(3n+3){border-top-color:#241b40}
+.blog-card:hover,.blog-card:focus-visible{transform:translateY(-3px);box-shadow:0 10px 24px rgba(14,37,69,.12)}
+.blog-card h3{font-family:var(--font-display);font-size:20px;line-height:1.25;margin:0}
+.blog-card p{font-size:15px;line-height:1.55;color:var(--muted);margin:0;flex:1}
+.blog-card-tag{font-size:13px;font-weight:700;color:var(--teal-text)}.blog-card-date{font-size:13px;color:var(--muted)}
+.blog-wrap{max-width:760px}.blog-post h1{margin:14px 0 10px;font-size:clamp(30px,4.4vw,44px);line-height:1.15}
+.blog-meta{color:var(--muted);font-size:15px;margin:0 0 30px}
+.blog-body p,.blog-body li{font-size:18px;line-height:1.7}.blog-body h2{font-family:var(--font-display);font-size:24px;margin:36px 0 10px}
+.blog-body ul{padding-left:22px;margin:0 0 20px}.blog-body li{margin-bottom:8px}
+.blog-body blockquote{border-left:4px solid #f59c00;margin:24px 0;padding:4px 0 4px 20px;font-style:italic}
+.blog-sign{margin:40px 0 28px;padding:22px 24px;background:#f0f1df;border-radius:14px;display:flex;gap:18px;align-items:center;justify-content:space-between;flex-wrap:wrap}.blog-sign p{margin:0;max-width:440px}
+.blog-pn{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:18px}
+.blog-pn a{display:block;border:1px solid var(--line);border-radius:12px;padding:14px 16px;color:var(--ink);text-decoration:none;font-weight:600;line-height:1.35}
+.blog-pn a span{display:block;font-size:13px;font-weight:700;color:var(--teal-text);margin-bottom:4px}.blog-pn-next{text-align:right}
+.blog-pn a:hover{border-color:var(--teal)}.blog-back{font-weight:600}
+@media(max-width:900px){.blog-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.blog-grid,.blog-pn{grid-template-columns:1fr}.blog-pn-next{text-align:left}.blog-body p,.blog-body li{font-size:17px}}
+/* podcast: The Lived Experience Lounge sub-brand */
+.lel-hero{background:#062e2f;color:#fff;padding:56px 0 0;overflow:hidden}
+.lel-hero-in{text-align:center;padding-bottom:40px}
+.lel-h1{margin:0 auto;max-width:760px}.lel-h1 img{width:100%;height:auto;display:block}
+.lel-badge{display:inline-block;margin:22px 0 0;padding:8px 18px;border-radius:999px;background:#f59c00;color:#062e2f;font-weight:800;font-size:16px}
+.lel-lead{max-width:640px;margin:18px auto 0;font-size:19px;line-height:1.6;color:#e8eadf}
+.lel-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:26px}
+.lel-btn{background:#b4ae4b;color:#062e2f;border-color:#b4ae4b}.lel-btn:hover{background:#cdc65e}
+.lel-btn-2{background:transparent;color:#fff;border:2px solid #fff}.lel-btn-2:hover{background:#fff;color:#062e2f}
+.lel-strip{height:clamp(140px,22vw,300px);background:url(img/podcast/lel-strip.webp) center/cover repeat-x}
+.lel-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.lel-sec p,.lel-guest p{font-size:17px;line-height:1.7}
+.lel-guest{background:#062e2f;color:#fff}.lel-guest .h2{color:#fff}.lel-guest-in{max-width:760px}.lel-guest p{color:#e8eadf}
+@media(max-width:800px){.lel-grid{grid-template-columns:1fr;gap:20px}.lel-hero{padding-top:36px}}
+.lel-sec p,.lel-guest p{margin:0 0 14px}.lel-sec .h2{margin-bottom:16px}.lel-guest .h2{margin-bottom:16px}
+.lel-guest .btn{background:#b4ae4b;color:#062e2f;border-color:#b4ae4b;margin-top:8px}.lel-guest .btn:hover{background:#cdc65e}
+.lel-guest-in{margin:0 auto}
+.blog-body p{margin:0 0 18px}
