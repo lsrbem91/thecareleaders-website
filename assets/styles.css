@@ -2202,3 +2202,25 @@ h1 .h1-k{display:block!important;font-family:Poppins,sans-serif!important;font-w
 /* Care to Work hero: no lanyard over the cover (22 Oct 2026) */
 .ctw-strap-hero,.ctw-strap-pass{display:none!important}
 .ctw-art{padding-top:0!important}
+/* Mentors Who Care, 22 Oct 2026: the full-colour ring is the primary logo, and the page carries the five bead colours more boldly */
+.th-mwc .dl-hero::before{background:linear-gradient(90deg,#5f3c90 0 19%,transparent 19% 20.25%,#acc90b 20.25% 39.25%,transparent 39.25% 40.5%,#008196 40.5% 59.5%,transparent 59.5% 60.75%,#cf0f55 60.75% 79.75%,transparent 79.75% 81%,#f59c00 81% 100%)!important}
+.th-mwc .section.bg-fill,.th-mwc .section.dl-mission,.prog.th-mwc .section.dl-brochure{position:relative}
+.th-mwc .section.bg-fill::before,.th-mwc .section.dl-mission::before,.prog.th-mwc .section.dl-brochure::before{content:"";position:absolute;left:0;right:0;top:0;height:8px;background:linear-gradient(90deg,#5f3c90 0 20%,#acc90b 20% 40%,#008196 40% 60%,#cf0f55 60% 80%,#f59c00 80% 100%)}
+.th-mwc .pe:nth-child(1) .pe-i,.th-mwc .obj:nth-child(1) .obj-i{background:#5f3c90;color:#fff}
+.th-mwc .pe:nth-child(2) .pe-i,.th-mwc .obj:nth-child(2) .obj-i{background:#acc90b;color:#241b40}
+.th-mwc .pe:nth-child(3) .pe-i,.th-mwc .obj:nth-child(3) .obj-i{background:#008196;color:#fff}
+.th-mwc .pe:nth-child(4) .pe-i{background:#cf0f55;color:#fff}
+.th-mwc .gl-list li:nth-child(5n+1) .gl-i{background:#5f3c90;color:#fff}
+.th-mwc .gl-list li:nth-child(5n+2) .gl-i{background:#acc90b;color:#241b40}
+.th-mwc .gl-list li:nth-child(5n+3) .gl-i{background:#008196;color:#fff}
+.th-mwc .gl-list li:nth-child(5n+4) .gl-i{background:#cf0f55;color:#fff}
+.th-mwc .gl-list li:nth-child(5n) .gl-i{background:#f59c00;color:#241b40}
+.th-mwc .eq>div{border-top:6px solid #5f3c90}
+.th-mwc .eq>div:nth-child(5n+2){border-top-color:#acc90b}.th-mwc .eq>div:nth-child(5n+3){border-top-color:#008196}.th-mwc .eq>div:nth-child(5n+4){border-top-color:#cf0f55}.th-mwc .eq>div:nth-child(5n){border-top-color:#f59c00}
+.th-mwc .eq>div:nth-child(5n+1) b{background:#5f3c90;color:#fff}.th-mwc .eq>div:nth-child(5n+2) b{background:#acc90b;color:#241b40}.th-mwc .eq>div:nth-child(5n+3) b{background:#008196;color:#fff}.th-mwc .eq>div:nth-child(5n+4) b{background:#cf0f55;color:#fff}.th-mwc .eq>div:nth-child(5n) b{background:#f59c00;color:#241b40}
+.th-mwc .sw-meta span:nth-child(1){background:#5f3c90;color:#fff}.th-mwc .sw-meta span:nth-child(2){background:#acc90b;color:#241b40}.th-mwc .sw-meta span:nth-child(3){background:#008196;color:#fff}.th-mwc .sw-meta span:nth-child(4){background:#cf0f55;color:#fff}
+.th-mwc .nine-g{border-top:6px solid #5f3c90}.th-mwc .nine-g:nth-child(2){border-top-color:#008196}.th-mwc .nine-g:nth-child(3){border-top-color:#cf0f55}
+.th-mwc .nine-g:nth-child(1) h3.h4{color:#5f3c90}.th-mwc .nine-g:nth-child(2) h3.h4{color:#008196}.th-mwc .nine-g:nth-child(3) h3.h4{color:#cf0f55}
+.th-mwc .faq-item:nth-child(5n+1){border-left-color:#5f3c90}.th-mwc .faq-item:nth-child(5n+2){border-left-color:#acc90b}.th-mwc .faq-item:nth-child(5n+3){border-left-color:#008196}.th-mwc .faq-item:nth-child(5n+4){border-left-color:#cf0f55}.th-mwc .faq-item:nth-child(5n){border-left-color:#f59c00}
+.th-mwc .dl-motto span:nth-child(2){color:#f59c00}
+.th-mwc .dl-card li::before{background:#cf0f55}
