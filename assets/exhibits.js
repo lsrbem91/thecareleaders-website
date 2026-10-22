@@ -20,6 +20,8 @@
     function open(key, page, from) {
       var t = document.getElementById('ex-' + key); if (!t) return;
       id = key; opener = from || null;
+      var sec = (from && from.closest('.ex-sec')) || document.querySelector('.ex-sec');
+      if (sec) { var cs = getComputedStyle(sec); ['--exa', '--exb', '--exl'].forEach(function (v) { var x = cs.getPropertyValue(v); if (x) dlg.style.setProperty(v, x.trim()); }); }
       slides = [].slice.call(t.content.querySelectorAll('.ex-s'));
       dlg.querySelector('.ex-dt').textContent = t.getAttribute('data-type') || '';
       dlg.querySelector('.ex-dn').textContent = t.getAttribute('data-title') || '';
@@ -54,6 +56,12 @@
       t.addEventListener('click', function () { sel(t); });
       t.addEventListener('keydown', function (e) { var d = { ArrowRight: 1, ArrowLeft: -1 }[e.key]; if (d) { e.preventDefault(); var n = tabs[(i + d + tabs.length) % tabs.length]; sel(n); n.focus(); } });
     });
+  });
+  /* shuffle a commitment */
+  [].forEach.call(document.querySelectorAll('[data-shuffle]'), function (box) {
+    var items = [].slice.call(box.querySelectorAll('li')), out = box.querySelector('.cm-out'), btn = box.querySelector('.cm-btn'), k = 0;
+    function show() { out.classList.remove('in'); void out.offsetWidth; out.textContent = items[k].textContent; out.classList.add('in'); box.querySelector('.cm-n').textContent = (k + 1) + ' of ' + items.length; }
+    btn.addEventListener('click', function () { k = (k + 1) % items.length; show(); }); show();
   });
   /* feedback bars grow when seen */
   var fb = document.querySelector('[data-fbc]');
