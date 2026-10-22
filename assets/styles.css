@@ -2338,3 +2338,22 @@ h1 .h1-k{display:block!important;font-family:Poppins,sans-serif!important;font-w
 .kv-chips{list-style:none;margin:22px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:10px}
 .kv-chips li{display:flex;align-items:center;gap:8px;background:var(--kc);color:var(--kt);font-weight:700;font-size:14.5px;padding:9px 14px;clip-path:polygon(0 4%,100% 0,98% 100%,1% 96%)}
 .kv-chips svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+/* About page, more visual (22 Oct 2026). TCL colours: orange, teal, navy, purple, amber. Cut shapes only. */
+.ab-c1{--kc:#f59c00;--kt:#0e2545}.ab-c2{--kc:#008196;--kt:#fff}.ab-c3{--kc:#0e2545;--kt:#fff}.ab-c4{--kc:#5f3c90;--kt:#fff}.ab-c5{--kc:#fbab1e;--kt:#0e2545}
+.ab-chips{margin:18px 0 20px}
+.ab-creds{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:34px}
+.ab-creds .kv-cred{background:#fff}
+.ab-how{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:22px}
+.ab-hw{background:#fff;border:2px solid var(--kc)}
+.ab-hw-h{background:var(--kc);color:var(--kt);padding:20px 22px;display:flex;align-items:center;gap:14px}
+.ab-hw-h svg{width:42px;height:42px;flex:none;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.ab-hw-h h3{margin:0;color:inherit!important;font-size:22px}
+.ab-hw p{margin:0;padding:18px 22px 22px;font-size:16px;line-height:1.5}
+.ab-vals{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px;margin-top:22px}
+.ab-v{background:var(--kc);color:var(--kt);padding:22px 18px 24px;clip-path:polygon(0 2%,100% 0,97% 100%,2% 97%)}
+.ab-vi{display:grid;place-items:center;width:54px;height:54px;background:#fff;margin-bottom:14px;clip-path:polygon(0 6%,100% 0,94% 100%,4% 94%)}
+.ab-vi svg{width:32px;height:32px;fill:none;stroke:#0e2545;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.ab-v h3{color:inherit!important;font-size:19px;line-height:1.2;margin:0 0 6px}.ab-v p{margin:0;font-size:15px;line-height:1.45}
+.ab-fam{border-top:6px solid var(--kc)!important}
+@media(max-width:1000px){.ab-creds{grid-template-columns:1fr 1fr}.ab-how{grid-template-columns:1fr}.ab-vals{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.ab-creds,.ab-vals{grid-template-columns:1fr}}
