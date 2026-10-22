@@ -1950,7 +1950,7 @@ a.tc-bar-n{color:inherit;font-weight:700}
 @media(min-width:1100px){.grid.cols-5 .svc-card{padding-left:18px!important;padding-right:18px!important}.grid.cols-5 .svc-card .card-thumb{margin:-24px -18px 6px}}
 @media(max-width:640px){.grid.cols-5{grid-template-columns:1fr!important}}
 .org-tile,.org-tile.logo{background:transparent;border:0}.org-tile.logo img{mix-blend-mode:multiply}
-.th-con .cs-quote blockquote{color:var(--ink)}.th-con .cs-quote figcaption{color:#b4401c}
+.th-con .cs-quote blockquote{color:var(--ink)}.th-con .cs-quote figcaption{color:#a65e00}
 .cs-quote{margin-bottom:40px!important}
 .prog.th-dlp .obj{padding-top:96px}
 .page-hero h1+.lead,.page-hero h1+p,.hero h1+p,.hero h1+.hero-sub,section h1+p.lead{margin-top:16px}
@@ -2544,3 +2544,7 @@ h1 .h1-k{display:block!important;font-family:Poppins,sans-serif!important;font-w
 .ex-care5{grid-template-columns:repeat(5,minmax(0,1fr))}
 @media(max-width:640px){.ex-qs,.ex-care5{grid-template-columns:1fr}}
 .ex-sec .dw-intro h3{color:#fff!important}.cm .cm-n{background:none!important;color:#fff;padding:0;font-weight:600}
+/* Case study outcome callout (Durham Cares, 22 Oct 2026) */
+.cs-callout{background:#f0f1df;border-left:6px solid var(--forange);padding:22px 26px;margin:20px 0 28px;box-shadow:0 2px 0 rgba(13,27,62,.06)}
+.cs-callout p{margin:0}
+.cs-callout .cs-callout-h{font-family:var(--font-display);font-weight:700;font-size:24px;line-height:1.25;color:var(--ink);margin-bottom:8px}
