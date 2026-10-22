@@ -117,3 +117,15 @@ document.addEventListener('DOMContentLoaded', function () {
     if (e.key === '/' && ov.hidden && !/^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement.tagName)) { e.preventDefault(); open(); }
   });
 });
+/* On a course or programme page, every general "contact us" button carries that product,
+   so the enquiry form opens with it already chosen. Menu links stay general. */
+document.addEventListener('DOMContentLoaded', function () {
+  var page = location.pathname.split('/').pop() || 'index.html';
+  var src = document.querySelector('main a[href*="contact.html?topic="]');
+  var q = src ? src.getAttribute('href').split('contact.html')[1] : page === 'programmes.html' ? '?topic=programme#enquire' : '';
+  if (!q) return;
+  document.querySelectorAll('a[href="./contact.html"], a[href="contact.html"]').forEach(function (a) {
+    if (a.closest('.main-nav, .mobile-menu ul, .mm-sub, .fs-links')) return;
+    a.setAttribute('href', './contact.html' + q);
+  });
+});

@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function () {
       var list = ENQ_OPTIONS[topic.value] || [];
       item.innerHTML = '<option value="">Choose one</option>' + list.map(function (o) { return '<option>' + o.replace(/</g, '&lt;') + '</option>'; }).join('');
       itemWrap.hidden = !list.length; item.required = !!list.length; item.disabled = !list.length;
-      if (keep && list.indexOf(keep) > -1) item.value = keep;
+      if (keep) { var k = keep.toLowerCase(), hit = list.filter(function (o) { return o.toLowerCase() === k || o.toLowerCase().indexOf(k + ':') === 0; })[0]; if (hit) item.value = hit; }
       sync();
     }
     topic.addEventListener('change', function () { fillItems(''); });
