@@ -32,7 +32,7 @@ Created 22 October 2026. There was no checklist in the repo before this, so this
 - [x] "Copy to Luke" now goes to hello@, not luke@.
 - [x] "Website enquiry: forward to Luke" flow is off.
 - [ ] Web3Forms notifications still land in luke@ (the access key is registered to luke@), and the flow trigger watches luke@'s inbox. To move both to hello@: create a new Web3Forms access key for hello@, swap it into every form, then change the flow trigger connection to hello@.
-- [ ] At the domain switch: change the github.io links in BrochureLine and the booking terms links (Keynote reply, Holding reply) to https://www.thecareleaders.com/.
+- [ ] At the domain switch: change the github.io links in BrochureLine and the booking terms links in Keynote reply (and check the other reply steps) to https://www.thecareleaders.com/.
 
 ## Tests before the switch
 
