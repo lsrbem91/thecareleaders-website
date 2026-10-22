@@ -2585,5 +2585,6 @@ h1 .h1-k{display:block!important;font-family:Poppins,sans-serif!important;font-w
 .ffp-sec{--exa:#007a85;--exb:#14294b;--exl:#45c1c9}
 .proclaim-sec{--exa:#5b2a86;--exb:#1d1a3a;--exl:#f7a823}
 .bucks-sec{--exa:#2b2a8c;--exb:#1c1b4d;--exl:#38c3e6}
+.wsx-sec{--exa:#0089c8;--exb:#0b3a55;--exl:#a2c037}
 .clnm-sec{--exa:#5b2876;--exb:#2a1838;--exl:#cddc29}
 .dw-wrap.dw-1{grid-template-columns:minmax(0,.8fr) minmax(0,2.1fr)}@media(max-width:980px){.dw-wrap.dw-1{grid-template-columns:1fr}}
