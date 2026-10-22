@@ -32,7 +32,7 @@ Created 22 October 2026. There was no checklist in the repo before this, so this
 - [x] Auto-replies (keynote, holding, general) now send from hello@, with no Reply To pointing at luke@.
 - [x] "Copy to Luke" now goes to hello@, not luke@.
 - [x] "Website enquiry: forward to Luke" flow is off.
-- [ ] Web3Forms notifications still land in luke@ (the access key is registered to luke@), and the flow trigger watches luke@'s inbox. To move both to hello@: Luke creates a new Web3Forms access key for hello@ at web3forms.com (Claude can't: it's account sign-up behind a bot check), swap it into every form, then change the flow trigger connection to hello@.
+- [x] Web3Forms already sends to hello@ and the flow trigger already watches hello@. The emails in luke@ came from "Copy to Luke", now fixed.
 - [ ] At the domain switch: change the github.io links in BrochureLine and the booking terms links in Keynote reply (and check the other reply steps) to https://www.thecareleaders.com/.
 
 ## Tests before the switch
