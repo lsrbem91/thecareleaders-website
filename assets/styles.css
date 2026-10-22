@@ -2407,3 +2407,12 @@ h1 .h1-k{display:block!important;font-family:Poppins,sans-serif!important;font-w
 .st-img figcaption{position:absolute;left:0;bottom:0;max-width:90%;background:var(--sc);color:var(--st);font-size:12.5px;font-weight:700;line-height:1.3;padding:5px 10px;clip-path:polygon(0 0,100% 6%,98% 100%,0 100%)}
 @media(max-width:900px){.st-filter{grid-template-columns:1fr 1fr}}
 .st-img img{object-position:center 30%}
+/* Our story: designed panels and year strip (22 Oct 2026) */
+.st-img.st-panel{aspect-ratio:16/9;display:flex;flex-direction:column;justify-content:center;gap:6px;padding:22px 26px;box-sizing:border-box;background:var(--sc);color:var(--st);background-image:linear-gradient(135deg,rgba(255,255,255,.12) 0 22%,transparent 22% 100%),linear-gradient(315deg,rgba(0,0,0,.12) 0 18%,transparent 18% 100%)}
+.st-panel svg{width:40px;height:40px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;margin-bottom:6px}
+.st-panel b{font-size:21px;line-height:1.2;font-weight:800}
+.st-panel span{font-size:14px;line-height:1.35;opacity:.9}
+.st-years{display:flex;flex-wrap:wrap;gap:6px;margin:-20px 0 40px}
+.st-years a{font-weight:700;font-size:14px;padding:6px 12px;background:#f3eef4;color:#0e2545;text-decoration:none;clip-path:polygon(0 0,100% 4%,97% 100%,2% 96%)}
+.st-years a:hover,.st-years a:focus-visible{background:#0e2545;color:#fff}
+.st-i{scroll-margin-top:110px}

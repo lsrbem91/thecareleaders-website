@@ -20,6 +20,16 @@
       fill();
     });
   });
+  /* jump to a year */
+  Array.prototype.slice.call(document.querySelectorAll('.st-years a')).forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      var t = document.getElementById(a.getAttribute('href').slice(1)); if (!t) return;
+      e.preventDefault();
+      if (t.hidden && fb[0]) fb[0].click();
+      t.classList.add('st-in'); t.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      if (history.replaceState) history.replaceState(null, '', '#' + t.id);
+    });
+  });
   /* progress rail */
   var wrap = document.querySelector('.st-wrap'), bar = document.querySelector('.st-fill');
   function fill() {
