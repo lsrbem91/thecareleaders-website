@@ -2283,3 +2283,17 @@ h1 .h1-k{display:block!important;font-family:Poppins,sans-serif!important;font-w
 .tc-fwl{font-weight:700;margin:0 0 8px;font-size:16.5px}.tc-fwc p{margin:0;font-size:15.5px;line-height:1.5}
 @media(max-width:1000px){.tc-whos{grid-template-columns:1fr 1fr}.tc-fws{grid-template-columns:1fr}}
 @media(max-width:560px){.tc-whos{grid-template-columns:1fr}}
+/* Course pages (22 Oct 2026): formats as two visual cards */
+.tc-fms{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin-top:8px}
+.tc-fm{background:#fff;border:2px solid var(--tcll-midnight);display:flex;flex-direction:column}
+.tc-fm-h{display:flex;align-items:center;gap:16px;padding:20px 24px;background:var(--tcll-apple);color:var(--tcll-midnight)}
+.tc-fm-live .tc-fm-h{background:var(--tcll-teal);color:#fff}
+.tc-fm-h>svg{width:52px;height:52px;flex:none;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.tc-fm-t{display:inline-block;background:var(--tcll-midnight);color:#fff;font-weight:800;font-size:14px;padding:4px 10px;clip-path:polygon(0 6%,100% 0,97% 100%,2% 94%)}
+.tc-fm-h h3{margin:6px 0 0;font-size:28px;color:inherit!important}
+.tc-fm-d{margin:0;padding:20px 24px 6px;font-size:16.5px;line-height:1.5}
+.tc-fm-l{list-style:none;margin:0;padding:8px 24px 24px;display:grid;gap:12px}
+.tc-fm-l li{display:grid;grid-template-columns:30px 1fr;gap:12px;align-items:start;font-size:15.5px;line-height:1.45;padding-top:12px;border-top:1px dashed #c9bfd0}
+.tc-fm-l svg{width:26px;height:26px;fill:none;stroke:var(--tcll-purple);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.tc-fm-l b{display:block;font-size:13px;color:var(--tcll-indigo)}
+@media(max-width:900px){.tc-fms{grid-template-columns:1fr}}
