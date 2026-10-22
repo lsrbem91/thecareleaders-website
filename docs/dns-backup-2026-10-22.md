@@ -19,3 +19,10 @@ Rollback: set the two website records back to these values (Proxied).
 | thecareleaders.com | TXT | v=spf1 include:spf.protection.outlook.com include:relay.mailchannels.net ip4:185.53.56.85 ip4:185.53.56.86 ip4:185.53.56.90 include:mailgun.org -all | DNS only |
 
 Nameservers: colette.ns.cloudflare.com, marty.ns.cloudflare.com (registrar 20i).
+
+## careleadersfellowship.com (Cloudflare zone), original Wix records, replaced 22 Oct 2026
+- A @ 185.230.63.107 (proxied)
+- A @ 185.230.63.171 (proxied)
+- A @ 185.230.63.186 (proxied)
+- CNAME www cdn3.wixdns.net (proxied)
+Replaced with A @ 192.0.2.1 and A www 192.0.2.1 (proxied) so the redirect rule to /fellowship.html fires. Wix answered first while the records pointed at it.
