@@ -45,6 +45,9 @@ Created 22 October 2026. There was no checklist in the repo before this, so this
 - [x] Download one programme brochure with a fresh email address; check the email arrives (passed 22 October).
 - [x] Client quotes approved by text (Adrian Dyke, Emmy O'Shaughnessy, Paul Rudd); NAVSH wording approved. Confirmed by Luke 22 October.
 
+- [x] Full site test, 96 pages at 1280 and 390 (22 October): no JS errors, broken links or overflow.
+- [x] Safari: card images no longer cropped (confirmed by Luke 22 October).
+
 ## Domain switch (do together)
 
 1. Sign in to GitHub in Chrome. Repo Settings > Pages > custom domain www.thecareleaders.com. Add the CNAME file to the repo at the same time.
