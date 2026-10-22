@@ -10,18 +10,16 @@ Created 22 October 2026. There was no checklist in the repo before this, so this
 - [x] Programmes page: "what it costs to commission" changed to "how to commission it".
 - [x] Consultancy word marks (bulb and glyph letters): proper words added as screen-reader text. Pages: consultancy, consultancy-transformation, consultancy-participation, consultancy-employment, about.
 - [x] Programme brochures: "2026 to 27" removed from the covers of Designated Leaders, Mentors Who Care and The NVR Programme (PDFs and cover images).
-- [x] Free resources page (resources.html) with a gated download for the Attachment Aware and Trauma Informed mini guide. Linked from the main menu and footer on every page.
-- [ ] Add the mini guide PDF at assets/docs/guides/attachment-aware-trauma-informed.pdf (Luke to supply). Check it has no "CPD accredited" wording.
+- [x] Free resources page built, then removed on 22 October at Luke's request (can be rebuilt from git history).
 - [x] Blog kept (Luke decided 22 October).
 
 ## Mailchimp
 
 - [x] Tag brochure-mentors-who-care created (ID 4229774) and wired into the brochure form.
-- [x] Tag guide-attachment-trauma created (ID 4229775) and wired into the resources form.
+- [x] Tag guide-attachment-trauma created (ID 4229775), kept for when free resources return.
 - [x] Undated PDFs uploaded to Mailchimp files: designated_leaders.01.pdf, mentors_who_care.pdf, nvr_programme.pdf.
 - [ ] Brochure delivery - NVR Programme: built as a draft (trigger brochure-nvr-advanced, NVR email, undated PDF and cover). Luke to check and click Continue > Turn flow on.
 - [ ] Brochure delivery - Mentors Who Care: built as a draft (trigger brochure-mentors-who-care, Mentors email, undated PDF and cover). Luke to check and click Continue > Turn flow on.
-- [ ] Guide delivery automation for the Attachment and Trauma mini guide (needs the PDF).
 - [ ] Designated Leaders email (live flow): Pause & edit, then swap the header image for br-designated-leaders.01.jpg and the download link for designated_leaders.01.pdf, both in Content Studio. Turn back on.
 - [ ] Welcome email delayed by one day so new contacts don't get two emails at once.
 - [ ] Popup: the "Website popup | Free mini-guide" form is still a draft. Connect www.thecareleaders.com as a site in Mailchimp (Integrations > Manually connect site), add the mc.js snippet to every page, then publish the popup. Do this at the domain switch: the connection checks the live domain.
