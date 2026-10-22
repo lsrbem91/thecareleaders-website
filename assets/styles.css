@@ -2582,4 +2582,5 @@ h1 .h1-k{display:block!important;font-family:Poppins,sans-serif!important;font-w
 .navsh-sec{--exa:#0b6b70;--exb:#0f3b46;--exl:#f2c230}
 .staffs-sec{--exa:#b4520c;--exb:#2b2350;--exl:#f5a524}
 .pwc-sec{--exa:#b8470f;--exb:#2d2d2d;--exl:#ffb600}
+.ffp-sec{--exa:#007a85;--exb:#14294b;--exl:#45c1c9}
 .dw-wrap.dw-1{grid-template-columns:minmax(0,.8fr) minmax(0,2.1fr)}@media(max-width:980px){.dw-wrap.dw-1{grid-template-columns:1fr}}
