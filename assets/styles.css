@@ -2676,3 +2676,7 @@ h1 .h1-k{display:block!important;font-family:Poppins,sans-serif!important;font-w
 .ctc-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
 .ctc-player{min-height:200px;border-radius:14px;overflow:hidden}
 @media(max-width:860px){.ctc-in{grid-template-columns:1fr;gap:24px}}
+.lel-guest-in{max-width:none;display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:40px;align-items:start}
+.lel-form{border-radius:14px;color:var(--ink)}.lel-form .btn{background:#062e2f;color:#fff;border-color:#062e2f}
+@media(max-width:860px){.lel-guest-in{grid-template-columns:1fr;gap:20px}}
+.lel-guest .lel-form p.enq-small{color:var(--muted);font-size:14px}.lel-guest .lel-form a{color:var(--ink)}.lel-guest .enq-done h3,.lel-guest .enq-done p{color:var(--ink)}

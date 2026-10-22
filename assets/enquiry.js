@@ -1,7 +1,7 @@
 /* One enquiry form for the whole site. Posts to Web3Forms, which emails hello@thecareleaders.com.
    The topic choice shows that topic's questions. The subject line and the JSON block at the end of the
    email are what the Power Automate flow on hello@ reads to send the right automatic reply. */
-var ENQ_OPTIONS = {"Consultancy": ["Transformation and service design", "Participation and co-production", "Employment and pathways", "Not sure yet"], "Fostering, with Why Care": [], "A programme": ["The Designated Leaders Programme", "The Care Leaders Academy", "Care to Work", "The Care Leaders Fellowship", "The NVR Programme", "Mentors Who Care"], "Training for my team": ["Behind the Behaviour", "Trauma, Attachment and Transitions", "Living a Careless Life", "Supporting Boys in Care", "Tools for Schools", "Two Timetables: When School Meets Social Care", "Raising Aspirations", "NVR Essentials", "The Practice Toolkit", "Care Not Custody", "A Guide to Good Recording", "Language that Lifts", "The Five S Framework: Leading with Lived Experience", "Power to Lead", "Corporate Parenting in Practice", "Supporting Care Leavers at Work: For Managers", "Be the First Yes", "The Person Behind the File", "Co-producing your Care Leaver Local Offer", "Not sure yet, help me choose"], "A keynote or conference workshop": ["Living a Careless Life", "Just Say Yes", "The Power of the Profile", "Tools for Schools", "Lived Experience Leadership", "From Care Leaver to Care Leader", "Be the First Yes", "Not sure yet, help me choose"], "Something else": []};
+var ENQ_OPTIONS = {"Consultancy": ["Transformation and service design", "Participation and co-production", "Employment and pathways", "Not sure yet"], "Fostering, with Why Care": [], "A programme": ["The Designated Leaders Programme", "The Care Leaders Academy", "Care to Work", "The Care Leaders Fellowship", "The NVR Programme", "Mentors Who Care"], "Training for my team": ["Behind the Behaviour", "Trauma, Attachment and Transitions", "Living a Careless Life", "Supporting Boys in Care", "Tools for Schools", "Two Timetables: When School Meets Social Care", "Raising Aspirations", "NVR Essentials", "The Practice Toolkit", "Care Not Custody", "A Guide to Good Recording", "Language that Lifts", "The Five S Framework: Leading with Lived Experience", "Power to Lead", "Corporate Parenting in Practice", "Supporting Care Leavers at Work: For Managers", "Be the First Yes", "The Person Behind the File", "Co-producing your Care Leaver Local Offer", "Not sure yet, help me choose"], "A keynote or conference workshop": ["Living a Careless Life", "Just Say Yes", "The Power of the Profile", "Tools for Schools", "Lived Experience Leadership", "From Care Leaver to Care Leader", "Be the First Yes", "Not sure yet, help me choose"], "Something else": [], "Being a podcast guest": []};
 var KEYNOTE = 'A keynote or conference workshop', TRAINING = 'Training for my team';
 var DONE = {
   'Consultancy': 'Luke or one of our consultants will be in touch to suggest a first conversation about your service.',
@@ -9,7 +9,8 @@ var DONE = {
   'A programme': 'We&#8217;ll send you the programme details and suggest a short call.',
   'Training for my team': 'We&#8217;ll check Luke&#8217;s diary for your date and email you his availability, the fee and what&#8217;s included.',
   'A keynote or conference workshop': 'We&#8217;ll check Luke&#8217;s diary for your date and email you his availability, the fee and the talk we&#8217;d recommend for your audience.',
-  'Something else': 'We&#8217;ll read your message and get back to you.'
+  'Something else': 'We&#8217;ll read your message and get back to you.',
+  'Being a podcast guest': 'We&#8217;ll read your answers and get in touch about next steps for The Lived Experience Lounge.'
 };
 document.addEventListener('DOMContentLoaded', function () {
   var forms = document.querySelectorAll('form[data-enquiry]');
@@ -35,6 +36,7 @@ document.addEventListener('DOMContentLoaded', function () {
       }
       show('fellowship', it === 'The Care Leaders Fellowship');
       itemLabel.textContent = t === KEYNOTE ? 'Which talk are you interested in?' : t === TRAINING ? 'Which course?' : 'Which one?';
+      if (t === 'Being a podcast guest') return;
       msgLabel.textContent = t === KEYNOTE ? 'Tell us about your event and what you want people to leave with' : t === TRAINING ? 'Tell us about your team and what you want them to leave with' : 'Tell us what you need';
     }
     function fillItems(keep) {
@@ -62,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function () {
       var name = (data.get('name') || '').trim();
       var rec = { topic: t, item: data.get('item') || '', first_name: name.split(/\s+/)[0], name: name, role: data.get('role') || '',
         organisation: data.get('organisation') || '', email: (data.get('email') || '').trim(), phone: data.get('phone') || '', page: page };
-      ['event_date', 'time_of_day', 'format', 'venue', 'session', 'audience', 'numbers', 'mobile', 'fel_ask'].forEach(function (k) { if (data.has(k)) rec[k] = data.get(k); });
+      ['event_date', 'time_of_day', 'format', 'venue', 'session', 'audience', 'numbers', 'mobile', 'fel_ask', 'guest_type', 'podcast_before'].forEach(function (k) { if (data.has(k)) rec[k] = data.get(k); });
       data.set('subject', 'Website enquiry | ' + t + ' | ' + (rec.item || '-') + ' | ' + name.replace(/\|/g, '') + ' | ' + rec.email);
       data.set('page', page);
       data.set('zz_flow_data', 'FLOWDATA' + btoa(unescape(encodeURIComponent(JSON.stringify(rec)))) + 'ENDFLOWDATA');

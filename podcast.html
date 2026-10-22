@@ -7,7 +7,7 @@
 <link rel="icon" href="./favicon.ico" sizes="any"><link rel="icon" type="image/png" href="./assets/img/favicon-32.png"><link rel="apple-touch-icon" href="./assets/img/apple-touch-icon.png">
 <meta name="description" content="The Lived Experience Lounge, a podcast from The Care Leaders hosted by Luke Rodgers BEM, launches in January 2027. Conversations on how lived experience shapes leadership, service design and system change.">
 
-<link rel="stylesheet" href="./assets/styles.css?v=124"><!-- brand-pass -->
+<link rel="stylesheet" href="./assets/styles.css?v=126"><!-- brand-pass -->
 
 
 
@@ -109,9 +109,24 @@
 
   <section class="section lel-guest" id="guest">
     <div class="wrap lel-guest-in">
-      <h2 class="h2">Be a guest</h2>
-      <p>We&#8217;re looking for people who blend lived experience and leadership, design services with people who use them, or commission this way of working. Interviews are recorded online for audio and video, at a time that suits you, and usually last 45 to 60 minutes.</p>
-      <p><a class="btn" href="https://form.asana.com/?k=ms25upkQdvB60S2Fuo8ewQ&d=1169618923107915" target="_blank" rel="noopener">Express your interest</a></p>
+      <div class="lel-guest-copy">
+        <h2 class="h2">Be a guest</h2>
+        <p>We&#8217;re looking for people who blend lived experience and leadership, design services with people who use them, or commission this way of working. Interviews are recorded online for audio and video, at a time that suits you, and usually last 45 to 60 minutes.</p>
+        <p>Tell us a little about you. We&#8217;ll read every answer and get in touch about next steps.</p>
+      </div>
+      <div class="enq-form lel-form"><form class="enq-f" data-enquiry novalidate>
+        <input type="hidden" name="access_key" value="7ee01f2e-929b-4b80-a44e-5eec781802ca"><input type="hidden" name="from_name" value="thecareleaders.com"><input type="checkbox" name="botcheck" class="enq-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <select name="topic" hidden style="display:none" aria-hidden="true" tabindex="-1"><option selected>Being a podcast guest</option></select>
+        <label data-item-wrap hidden><span data-item-label>Which one?</span><select name="item"></select></label>
+        <div class="enq-2"><label>Your name<input type="text" name="name" autocomplete="name" required></label><label>Email<input type="email" name="email" autocomplete="email" required></label></div>
+        <div class="enq-2"><label>Your role (optional)<input type="text" name="role" autocomplete="organization-title"></label><label>Organisation (optional)<input type="text" name="organisation" autocomplete="organization"></label></div>
+        <label>Which best describes you?<select name="guest_type" required><option value="">Choose one</option><option>I have lived experience relevant to the podcast</option><option>I work with people with lived experience</option><option>I commission or lead services that include lived experience</option><option>I work in research or policy on lived experience</option><option>Something else</option></select></label>
+        <label><span data-msg-label>Tell us who you are, what you do and what you&#8217;d like to talk about</span><textarea name="message" rows="5" required></textarea></label>
+        <label>Have you been a guest on a podcast or recorded interview before?<select name="podcast_before"><option value="">Choose one</option><option>Yes, regularly</option><option>Yes, a few times</option><option>No, this would be new for me</option><option>Prefer not to say</option></select></label>
+        <label>Is there anything that would help you feel comfortable or supported, including any access needs? (optional)<textarea name="support_needs" rows="3"></textarea></label>
+        <p class="enq-small">Please don&#8217;t include personal details about children or families. <a href="./privacy.html#enquiries">Privacy notice</a></p>
+        <button class="btn" type="submit">Send</button><p class="enq-status" data-status role="alert"></p>
+      </form><div class="enq-done" data-done hidden tabindex="-1"><h3>Thank you. We&#8217;ve got your details.</h3><p data-done-line>We&#8217;ll be in touch about next steps.</p></div></div>
     </div>
   </section>
 </main>
@@ -133,5 +148,6 @@
 </footer>
 
 <script src="./assets/nav.js?v=6"></script>
+<script src="./assets/enquiry.js?v=14" defer></script>
 </body>
 </html>
