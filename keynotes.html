@@ -235,6 +235,6 @@
 <script src="./assets/prog.js?v=2" defer></script>
 <script>(function(){var c=document.querySelector('[data-carousel]');if(!c)return;var t=c.querySelector('.kn-track');c.querySelectorAll('.kn-btn').forEach(function(b){b.addEventListener('click',function(){var s=t.querySelector('.kn-slide');var w=s?s.getBoundingClientRect().width+20:400;t.scrollBy({left:w*Number(b.dataset.dir),behavior:'smooth'})})})})();</script>
 <script>(function(){var k=document.querySelector('[data-kp]');if(!k)return;var tabs=[].slice.call(k.querySelectorAll('[role=tab]'));function go(t,f){tabs.forEach(function(b){var on=b===t;b.setAttribute('aria-selected',on);b.tabIndex=on?0:-1;document.getElementById(b.getAttribute('aria-controls')).hidden=!on});if(f)t.focus()}tabs.forEach(function(t,i){t.addEventListener('click',function(){go(t)});t.addEventListener('keydown',function(e){var n=e.key==='ArrowRight'||e.key==='ArrowDown'?1:e.key==='ArrowLeft'||e.key==='ArrowUp'?-1:0;if(e.key==='Home'){go(tabs[0],1);e.preventDefault()}else if(e.key==='End'){go(tabs[tabs.length-1],1);e.preventDefault()}else if(n){go(tabs[(i+n+tabs.length)%tabs.length],1);e.preventDefault()}})});k.addEventListener('click',function(e){var a=e.target.closest('[data-book-talk]');if(!a)return;document.dispatchEvent(new CustomEvent('enq:talk',{detail:a.getAttribute('data-book-talk')}))})})();</script>
-<script src="./assets/enquiry.js?v=16" defer></script>
+<script src="./assets/enquiry.js?v=17" defer></script>
 </body>
 </html>

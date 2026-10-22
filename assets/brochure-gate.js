@@ -35,7 +35,8 @@
       var q = [];
       f.querySelectorAll('input,select').forEach(function (i) {
         if (!i.name || i.name === 'brochure' || ((i.type === 'checkbox' || i.type === 'radio') && !i.checked)) return;
-        q.push(encodeURIComponent(i.name) + '=' + encodeURIComponent(i.value));
+        var v = i.value; if (i.name === 'FNAME' || i.name === 'LNAME') { v = v.trim(); v = v.charAt(0).toUpperCase() + v.slice(1); }
+        q.push(encodeURIComponent(i.name) + '=' + encodeURIComponent(v));
       });
       if (tag) q.push('tags=' + encodeURIComponent(TAGS[tag] || tag));
       btn.disabled = true; msg.hidden = false; msg.textContent = 'Getting your brochure…';
