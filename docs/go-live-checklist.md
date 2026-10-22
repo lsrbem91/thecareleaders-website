@@ -41,9 +41,9 @@ Created 22 October 2026. There was no checklist in the repo before this, so this
 
 ## Tests before the switch
 
-- [ ] Send one enquiry through the contact form and one podcast guest form; check both reach hello@.
-- [ ] Download one programme brochure with a fresh email address; check the email arrives.
-- [ ] Get written OK for client quotes: Adrian Dyke, Emmy O'Shaughnessy, Paul Rudd, NAVSH framing.
+- [x] Send one enquiry through the contact form and one podcast guest form; check both reach hello@ (passed 22 October).
+- [x] Download one programme brochure with a fresh email address; check the email arrives (passed 22 October).
+- [x] Client quotes approved by text (Adrian Dyke, Emmy O'Shaughnessy, Paul Rudd); NAVSH wording approved. Confirmed by Luke 22 October.
 
 ## Domain switch (do together)
 
