@@ -48,7 +48,15 @@ Created 22 October 2026. There was no checklist in the repo before this, so this
 - [x] Full site test, 96 pages at 1280 and 390 (22 October): no JS errors, broken links or overflow.
 - [x] Safari: card images no longer cropped (confirmed by Luke 22 October).
 
-## Domain switch (do together)
+## Domain switch (done 22 October 2026, about 22:20)
+
+- [x] DNS is in Cloudflare (registrar 20i). Root A records set to the four GitHub IPs and www CNAME to lsrbem91.github.io, all DNS only. Email records untouched. Backup in docs/dns-backup-2026-10-22.md.
+- [x] CNAME file added; GitHub DNS check passed; Enforce HTTPS on.
+- [x] Live check: 69 pages and 657 files return 200; root, preview and old WordPress links redirect.
+- [ ] Cancel the old WordPress hosting (185.53.56.90) after a few days live. SPF still lists that server's IPs; leave SPF alone unless that server sends no mail.
+- [ ] Redirect careleadersfellowship.com (Wix DNS), thecareleaders.co.uk (20i DNS) and the Luke Speaks domain (Canva).
+
+Original plan:
 
 1. Sign in to GitHub in Chrome. Repo Settings > Pages > custom domain www.thecareleaders.com. Add the CNAME file to the repo at the same time.
 2. DNS: www CNAME to lsrbem91.github.io. Apex A records 185.199.108.153, 185.199.109.153, 185.199.110.153, 185.199.111.153.
