@@ -36,7 +36,7 @@ Created 22 October 2026. There was no checklist in the repo before this, so this
 - [x] Web3Forms already sends to hello@ and the flow trigger already watches hello@. The emails in luke@ came from "Copy to Luke", now fixed.
 - [ ] At the domain switch: change the github.io links in BrochureLine and the booking terms links in Keynote reply (and check the other reply steps) to https://www.thecareleaders.com/.
 
-- [ ] DfE Fostering Quality Standards case study built (case-study-dfe-fostering-standards.html) but HIDDEN until DfE approves: not linked anywhere, noindex, out of sitemap and search. On approval: add the Our work card, the Fostering page button, sitemap, search, and the Summit > NMS > NAVSH previous/next chain, and remove the noindex tag.
+- [ ] DfE Fostering Quality Standards case study built (case-study-dfe-fostering-standards.html) but hidden until DfE approves: not linked anywhere, noindex, out of sitemap and search. On approval: add the Our work card, the Fostering page button, sitemap, search, and the Summit > NMS > NAVSH previous/next chain, and remove the noindex tag.
 - [ ] Get DfE (Aisling Nuttall / Ola Wojnowska) OK to publish the case study before the domain switch: the engagement report was written for the Department and the standards are not yet published.
 
 ## Tests before the switch
