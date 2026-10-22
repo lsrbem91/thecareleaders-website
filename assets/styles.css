@@ -2399,3 +2399,11 @@ h1 .h1-k{display:block!important;font-family:Poppins,sans-serif!important;font-w
 .st-anim .st-i.st-in{opacity:1;transform:none}
 @media(max-width:900px){.st-hero-in{grid-template-columns:1fr}.st-filter{grid-template-columns:1fr 1fr}
  .st-rail{left:24px}.st-i,.st-r{width:auto;margin-left:0;padding:0 0 26px 64px}.st-dot,.st-r .st-dot{left:0;right:auto}}
+/* Our story photos (22 Oct 2026) */
+.st-filter{grid-template-columns:repeat(4,minmax(0,1fr))}
+.st-img{margin:0;position:relative;background:#0e2545}
+.st-img img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover}
+.st-img.st-doc{background:#fff;border-bottom:1px solid #e3dbe6}.st-img.st-doc img{object-fit:contain;padding:10px 14px;box-sizing:border-box}
+.st-img figcaption{position:absolute;left:0;bottom:0;max-width:90%;background:var(--sc);color:var(--st);font-size:12.5px;font-weight:700;line-height:1.3;padding:5px 10px;clip-path:polygon(0 0,100% 6%,98% 100%,0 100%)}
+@media(max-width:900px){.st-filter{grid-template-columns:1fr 1fr}}
+.st-img img{object-position:center 30%}
