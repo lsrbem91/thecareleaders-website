@@ -2680,3 +2680,7 @@ h1 .h1-k{display:block!important;font-family:Poppins,sans-serif!important;font-w
 .lel-form{border-radius:14px;color:var(--ink)}.lel-form .btn{background:#062e2f;color:#fff;border-color:#062e2f}
 @media(max-width:860px){.lel-guest-in{grid-template-columns:1fr;gap:20px}}
 .lel-guest .lel-form p.enq-small{color:var(--muted);font-size:14px}.lel-guest .lel-form a{color:var(--ink)}.lel-guest .enq-done h3,.lel-guest .enq-done p{color:var(--ink)}
+/* Safari: stop service-card thumbnails shrinking inside the flex card and cropping */
+.svc-card .card-thumb{flex:0 0 auto;aspect-ratio:auto;height:auto}
+.svc-card .card-thumb img{height:auto;object-fit:contain;aspect-ratio:16/10}
+.prog-card .pc-img{flex:0 0 auto}
