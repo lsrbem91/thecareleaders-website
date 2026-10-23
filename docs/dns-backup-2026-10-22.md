@@ -25,4 +25,4 @@ Nameservers: colette.ns.cloudflare.com, marty.ns.cloudflare.com (registrar 20i).
 - A @ 185.230.63.171 (proxied)
 - A @ 185.230.63.186 (proxied)
 - CNAME www cdn3.wixdns.net (proxied)
-Replaced with A @ 192.0.2.1 and A www 192.0.2.1 (proxied) so the redirect rule to /fellowship.html fires. Wix answered first while the records pointed at it.
+Replaced with A @ 192.0.2.0 (proxied) and CNAME www to the apex (proxied). 192.0.2.1 caused Cloudflare error 1034; 192.0.2.0 is the documented placeholder so the redirect rule to /fellowship.html fires. Wix answered first while the records pointed at it.
