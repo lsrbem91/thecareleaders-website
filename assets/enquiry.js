@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function () {
       e.preventDefault();
       if (!f.reportValidity()) return;
       var data = new FormData(f), t = data.get('topic') || 'Something else';
-      var page = location.pathname.split('/').pop() || 'index.html';
+      var page = location.pathname.split('/').pop() || 'index'; if (page.indexOf('.') < 0) page += '.html';
       var name = (data.get('name') || '').trim();
       var rec = { topic: t, item: data.get('item') || '', first_name: (function (w) { return w.charAt(0).toUpperCase() + w.slice(1); })(name.split(/\s+/)[0]), name: name, role: data.get('role') || '',
         organisation: data.get('organisation') || '', email: (data.get('email') || '').trim(), phone: data.get('phone') || '', page: page };

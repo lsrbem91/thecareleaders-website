@@ -93,10 +93,10 @@ document.addEventListener('DOMContentLoaded', function () {
       if (p._t.indexOf(q) > -1) sc += 15;
       return { p: p, sc: all ? sc : 0 };
     }).filter(function (h) { return h.sc > 0; }).sort(function (a, b) { return b.sc - a.sc; }).slice(0, 12);
-    if (!hits.length) { res.innerHTML = '<p class="ss-msg">Nothing found for &#8220;' + esc(input.value.trim()) + '&#8221;. Try a shorter word, or <a href="./contact.html">tell us what you&#8217;re looking for</a>.</p>'; return; }
+    if (!hits.length) { res.innerHTML = '<p class="ss-msg">Nothing found for &#8220;' + esc(input.value.trim()) + '&#8221;. Try a shorter word, or <a href="./contact">tell us what you&#8217;re looking for</a>.</p>'; return; }
     res.innerHTML = hits.map(function (h) {
       var p = h.p;
-      return '<a role="option" href="./' + p.u + '"><b>' + esc(p.t || p.h1) + '</b>' + (p.s ? '<small>' + esc(p.s) + '</small>' : '') + '<span>' + snip(p, terms) + '</span></a>';
+      return '<a role="option" href="./' + p.u.replace(/\.html$/, '').replace(/^index$/, '') + '"><b>' + esc(p.t || p.h1) + '</b>' + (p.s ? '<small>' + esc(p.s) + '</small>' : '') + '<span>' + snip(p, terms) + '</span></a>';
     }).join('');
   }
   var timer;
@@ -120,12 +120,12 @@ document.addEventListener('DOMContentLoaded', function () {
 /* On a course or programme page, every general "contact us" button carries that product,
    so the enquiry form opens with it already chosen. Menu links stay general. */
 document.addEventListener('DOMContentLoaded', function () {
-  var page = location.pathname.split('/').pop() || 'index.html';
-  var src = document.querySelector('main a[href*="contact.html?topic="]');
-  var q = src ? src.getAttribute('href').split('contact.html')[1] : page === 'programmes.html' ? '?topic=programme#enquire' : '';
+  var page = location.pathname.split('/').pop() || 'index'; if (page.indexOf('.') < 0) page += '.html';
+  var src = document.querySelector('main a[href*="contact?topic="]');
+  var q = src ? src.getAttribute('href').split('contact')[1] : page === 'programmes.html' ? '?topic=programme#enquire' : '';
   if (!q) return;
-  document.querySelectorAll('a[href="./contact.html"], a[href="contact.html"]').forEach(function (a) {
+  document.querySelectorAll('a[href="./contact"], a[href="contact"]').forEach(function (a) {
     if (a.closest('.main-nav, .mobile-menu ul, .mm-sub, .fs-links')) return;
-    a.setAttribute('href', './contact.html' + q);
+    a.setAttribute('href', './contact' + q);
   });
 });

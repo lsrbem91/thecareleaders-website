@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var names = short.map(function (s) { return bySlug[s].getAttribute('data-title'); });
     tray.querySelector('[data-tk-n]').textContent = short.length === 1 ? '1 course on your shortlist' : short.length + ' courses on your shortlist';
     tray.querySelector('[data-tk-names]').textContent = names.join(', ');
-    var href = './contact.html?topic=training&about=' + encodeURIComponent(names.join(', ')) + '#enquire';
+    var href = './contact?topic=training&about=' + encodeURIComponent(names.join(', ')) + '#enquire';
     Array.prototype.forEach.call(document.querySelectorAll('[data-tk-send]'), function (a) { a.href = href; });
   }
   list.addEventListener('click', function (e) {

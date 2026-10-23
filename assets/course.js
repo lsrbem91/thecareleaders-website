@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function () {
       if (short.length > 1) {
         var t = getTitles();
         var names = short.map(function (s) { return t[s] || s.replace(/-/g, ' '); });
-        send.href = './contact.html?topic=training&about=' + encodeURIComponent(names.join(', ')) + '#enquire';
+        send.href = './contact?topic=training&about=' + encodeURIComponent(names.join(', ')) + '#enquire';
         send.textContent = 'Send one enquiry';
       } else { send.href = askHref; send.textContent = 'Ask about this course'; }
     }
