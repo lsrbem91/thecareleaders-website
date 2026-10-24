@@ -1417,7 +1417,7 @@ main .wcp-svc .top img[width][height],main .wcp-svc .top img{width:68px;height:6
 .needs-list button:focus-visible{outline:3px solid var(--forange);outline-offset:2px}
 .needs-panels .course-grid{margin-top:14px}
 .needs-intro{margin:0;font-size:18px}
-@media(max-width:860px){.needs{grid-template-columns:1fr}.needs-list{flex-direction:row;overflow-x:auto;padding-bottom:6px}.needs-list button{flex:0 0 auto;white-space:nowrap}}
+@media(max-width:860px){.needs{grid-template-columns:1fr}.needs-list{flex-direction:row;overflow-x:auto;padding-bottom:6px}.needs-list button{flex:0 0 250px;width:250px;min-height:76px;white-space:normal;font-size:15px;line-height:1.3}}
 .offer-group{margin-top:44px}
 .offer-group>h3{font-family:Crossten,Poppins,sans-serif;font-weight:900;font-size:28px;margin:0}
 .offer-group>p{margin:6px 0 0;color:var(--muted)}
