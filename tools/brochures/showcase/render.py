@@ -135,7 +135,7 @@ def wb_page(c, w):
 
 async def shoot(pg, doc, w, h, path):
     await pg.set_viewport_size({'width': w, 'height': h})
-    f = OUT / '_tmp.html'; f.write_text(doc)
+    f = path.with_suffix('.html'); f.write_text(doc)
     await pg.goto(f'file://{f}'); await pg.evaluate('document.fonts.ready'); await pg.wait_for_timeout(400)
     await pg.screenshot(path=str(path)); f.unlink()
 
@@ -144,7 +144,7 @@ def rr(size, r, fill):
 
 def frames(slug):
     mid, navy = (36, 27, 64, 255), (14, 37, 69, 255)
-    scr = Image.open(OUT / '_laptop.png').convert('RGBA')
+    scr = Image.open(TMP / '_laptop.png').convert('RGBA')
     bz = 34; W, H = scr.width + bz * 2, scr.height + bz * 2 + 10
     lap = Image.new('RGBA', (W + 160, H + 60), (0, 0, 0, 0))
     lid = rr((W, H), 36, mid); lid.paste(scr, (bz, bz + 6)); lap.alpha_composite(lid, (80, 0))
@@ -153,16 +153,17 @@ def frames(slug):
     d.rectangle([80, H, W + 80, H + 12], fill=(49, 43, 108, 255))
     d.rectangle([(W + 160) // 2 - 110, H + 12, (W + 160) // 2 + 110, H + 22], fill=mid)
     lap.thumbnail((1400, 1400)); lap.save(OUT / f'{slug}-laptop.png', optimize=True)
-    ps = Image.open(OUT / '_phone.png').convert('RGBA')
+    ps = Image.open(TMP / '_phone.png').convert('RGBA')
     pb = 26; ph = rr((ps.width + pb * 2, ps.height + pb * 2), 110, mid)
     m = rr(ps.size, 84, (255, 255, 255, 255)); scr2 = Image.new('RGBA', ps.size, (0, 0, 0, 0)); scr2.paste(ps, (0, 0), m)
     ph.alpha_composite(scr2, (pb, pb))
     ImageDraw.Draw(ph).rounded_rectangle([ph.width // 2 - 110, pb + 26, ph.width // 2 + 110, pb + 86], 30, fill=(0, 0, 0, 255))
     ph.thumbnail((1400, 1400)); ph.save(OUT / f'{slug}-phone.png', optimize=True)
     for n in ('workbook-cover', 'workbook-page'):
-        Image.open(OUT / f'_{n}.png').convert('RGB').save(OUT / f'{slug}-{n}.jpg', quality=90)
+        Image.open(TMP / f'_{n}.png').convert('RGB').save(OUT / f'{slug}-{n}.jpg', quality=90)
     for n in ('_laptop', '_phone', '_workbook-cover', '_workbook-page'):
-        (OUT / f'{n}.png').unlink()
+        (TMP / f'{n}.png').unlink()
+    TMP.rmdir()
 
 async def main(c):
     s, w = c['screens'], c['workbook']
@@ -171,10 +172,11 @@ async def main(c):
         for name, doc, wd, ht, sc in [('_laptop', laptop(s), 1440, 810, 1), ('_phone', phone(s), 390, 844, 2),
                                       ('_workbook-cover', wb_cover(c, w), 794, 1123, 1), ('_workbook-page', wb_page(c, w), 794, 1123, 1)]:
             pg = await b.new_page(device_scale_factor=sc)
-            await shoot(pg, doc, wd, ht, OUT / f'{name}.png'); await pg.close()
+            await shoot(pg, doc, wd, ht, TMP / f'{name}.png'); await pg.close()
         await b.close()
 
 if __name__ == '__main__':
     src = pathlib.Path(sys.argv[1]); src = src if src.exists() else BRO / src
     c = json.loads(src.read_text())
+    TMP = OUT / f"_tmp-{c['slug']}"; TMP.mkdir(exist_ok=True)
     asyncio.run(main(c)); frames(c['slug']); print(sorted(p.name for p in OUT.glob(c['slug'] + '-*')))
