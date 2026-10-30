@@ -2,11 +2,10 @@
 
 Usage: python3 tools/brochures/build.py courses/nvr-essentials.json [out_dir]
 
-One template for every training course. Page order:
- 1 Cover  2 The problem it solves  3 Who it's for  4 Learning outcomes
- 5-6 The course in detail  7 How you can run it (with fees)
- 8 What every delegate gets  9 The online course and toolkit (if the course has one)
- 10 Who delivers it and how to book
+One template for every training course. Show, don't tell: each page leads with
+a graphic, a big number or a short headline, with detail underneath.
+Sections (shown in the navigation strip on every inner page):
+ Problem · Who · Outcomes · The day · Formats and fees · Included · Online course · Book
 
 Design rule: no CSS shadows, filters, masks or opacity. They export as soft masks
 that the iPhone PDF viewer draws as dark boxes.
@@ -18,121 +17,140 @@ SITE = HERE.parent.parent
 A = SITE / 'assets'
 e = lambda s: html.escape(s, quote=True)
 
-def page(inner, cls='', n=None, name=''):
-    foot = f'<div class="foot"><span>{e(name)} · Course brochure</span><span>{n}</span></div>' if n else ''
-    return f'<section class="pg {cls}">{inner}{foot}<div class="bar"><i></i><i></i><i></i><i></i></div></section>'
+ICONS = {
+ 'clock': '<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',
+ 'group': '<path d="M9 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM3 20c0-3.3 2.7-6 6-6s6 2.7 6 6M16 11a3 3 0 1 0 0-6M18 14c2 .8 3 3 3 6"/>',
+ 'pound': '<path d="M16 6.5A3.5 3.5 0 0 0 9.5 8v4.5c0 3-1 5.5-3 7.5h11M6.5 12.5h7"/>',
+ 'gift': '<path d="M4 11h16v9H4zM3 7h18v4H3zM12 7v13M12 7c-1.5-3-5-3.5-5-1s3 1 5 1c2 0 5 1.5 5-1s-3.5-2-5 1"/>',
+ 'home': '<path d="M3 11l9-7 9 7M5 9.5V20h5v-6h4v6h5V9.5"/>',
+ 'heart': '<path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/>',
+ 'hands': '<path d="M7 11a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zM2.5 20c0-2.8 2-5 4.5-5s4.5 2.2 4.5 5M16.5 13a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM13 20c0-2.2 1.6-4 3.5-4s3.5 1.8 3.5 4"/>',
+ 'clipboard': '<path d="M8 4h8v3H8zM6 5.5H5v15h14v-15h-1M8.5 12l2 2 4-4.5"/>',
+ 'room': '<path d="M3 4h18v11H3zM12 15v5M8 20h8M7 8h6M7 11h9"/>',
+ 'laptop': '<path d="M5 5h14v10H5zM2 19h20l-2-4H4z"/>',
+ 'book': '<path d="M4 4.5h6a2 2 0 0 1 2 2V20a2 2 0 0 0-2-2H4zM20 4.5h-6a2 2 0 0 0-2 2V20a2 2 0 0 1 2-2h6z"/>',
+ 'play': '<path d="M3 5h18v14H3zM10 9v6l5-3z"/>',
+ 'award': '<path d="M12 14a5 5 0 1 0 0-10 5 5 0 0 0 0 10zM8.5 13l-1.5 8 5-3 5 3-1.5-8"/>',
+ 'tag': '<path d="M3 3h8l10 10-8 8L3 11zM7.5 7.5h.01M10 16l6-6"/>',
+ 'cross': '<path d="M6 6l12 12M18 6L6 18"/>',
+ 'tick': '<path d="M4 12.5l5 5L20 6.5"/>',
+}
+def ico(name, cls='ic'):
+    return f'<svg class="{cls}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">{ICONS[name]}</svg>'
+
+NAV = [('problem', 'Problem'), ('who', "Who it's for"), ('outcomes', 'Outcomes'), ('day', 'The course'),
+       ('formats', 'Formats and fees'), ('included', 'Included'), ('online', 'Online course'), ('book', 'Book')]
+
+def nav(cur, has_online):
+    items = [n for n in NAV if has_online or n[0] != 'online']
+    return '<nav class="nav">' + ''.join(f'<span class="{"on" if k == cur else ""}">{e(t)}</span>' for k, t in items) + '</nav>'
+
+def page(inner, cls='', sec=None, c=None, n=None):
+    top = nav(sec, bool(c.get('toolkit'))) if sec else ''
+    foot = f'<div class="foot"><span>{e(c["name"])} · Course brochure</span><span>{n}</span></div>' if n else ''
+    return f'<section class="pg {cls}">{top}{inner}{foot}<div class="bar"><i></i><i></i><i></i><i></i></div></section>'
 
 def build(c):
     acc = c['accent']; name = c['name']; P = []
-    eyebrow = lambda t: f'<p class="eb"><b></b>{e(t)}</p>'
+    num = lambda: len(P) + 1
     hs = c['headline'].split('. ', 1)
-    head = f'{e(hs[0])}.<span class="lime"> {e(hs[1])}</span>' if len(hs) == 2 else e(c['headline'])
+    head = f'{e(hs[0])}.<br><span class="lime">{e(hs[1])}</span>' if len(hs) == 2 else e(c['headline'])
 
-    # 1 Cover
-    facts = ''.join(f'<div><dt>{e(k)}</dt><dd>{e(v)}</dd></div>' for k, v in c['facts'])
+    # 1 Cover: the whole offer at a glance
+    glance = ''.join(f'<div class="gl">{ico(i)}<b>{e(big)}</b><span>{e(lab)}</span><small>{e(sm)}</small></div>' for i, big, lab, sm in c['glance'])
     P.append(page(f'''
       <img class="logo" src="{A}/img/tcll/tcll-logo-white.png" alt="The Care Leaders Learning">
       <p class="tagr">Course brochure</p>
-      <div class="cov">
-        <span class="cat">{e(c['category'])}</span>
-        <h2 class="cname">{e(name)}</h2>
-        <h1>{head}</h1>
-        <p class="intro">{e(c['intro'])}</p>
-      </div>
+      <div class="cov"><span class="cat">{e(c['category'])}</span>
+        <h1 class="cname">{e(name)}</h1><p class="hl">{head}</p><p class="intro">{e(c['intro'])}</p></div>
       <img class="covimg" src="{A}/img/tcll/{c['cover_image']}" alt="">
-      <dl class="facts">{facts}</dl>''', 'dark cover'))
+      <div class="glance">{glance}</div>''', 'dark cover', c=c))
 
-    # 2 Problem
+    # 2 Problem: before and after
     pr = c['problem']
-    tags = ''.join(f'<span class="tag">{e(t)}</span>' for t in pr['helps_with'])
-    body = ''.join(f'<p>{e(b)}</p>' for b in pr['body'])
+    wo = ''.join(f'<li>{ico("cross", "mk")}{e(x)}</li>' for x in pr['without'])
+    wi = ''.join(f'<li>{ico("tick", "mk")}{e(x)}</li>' for x in pr['with'])
     P.append(page(f'''
-      <div class="col2">
-        <div>{eyebrow('The problem it solves')}
-          <p class="big">{e(pr['lead'])}</p>{body}
-          <p class="lbl">Helps with</p><div class="tags">{tags}</div>
-        </div>
-        <aside class="evid"><img src="{A}/img/tcll/icon-theory-triangle.png" alt="">
-          <h3>{e(pr['evidence_title'])}</h3><p>{e(pr['evidence'])}</p></aside>
-      </div>''', 'light', 2, name))
+      <div class="scene"><p class="s1">{e(pr['scene'])}</p><p class="s2">{e(pr['question'])}</p></div>
+      <div class="ba"><div class="b bad"><p class="bh">Without a shared approach</p><ul>{wo}</ul></div>
+        <div class="arrow"></div>
+        <div class="b good"><p class="bh">After {e(name)}</p><ul>{wi}</ul></div></div>
+      <div class="pnotes"><p><b>Why it matters.</b> {e(pr['standards'])}</p><p><b>Evidence.</b> {e(pr['evidence'])}</p></div>''',
+      'light', 'problem', c, num()))
 
-    # 3 Who it's for
-    groups = ''.join(f'<div class="card"><h3>{e(a)}</h3><p>{e(b)}</p></div>' for a, b in c['audience']['groups'])
-    notes = ''.join(f'<li><img src="{A}/img/tcll/tick.png" alt="">{e(x)}</li>' for x in c['audience']['notes'])
-    P.append(page(f'''{eyebrow("Who it's for")}<h2>Who it's for.</h2>
-      <div class="who"><div class="cards4">{groups}</div><ul class="ticks">{notes}</ul></div>''', 'bed', 3, name))
+    # 3 Who
+    groups = ''.join(f'<div class="wt">{ico(i)}<h3>{e(t)}</h3><p>{e(d)}</p></div>' for i, t, d in c['audience']['groups'])
+    notes = ''.join(f'<span>{ico("tick", "mk")}{e(x)}</span>' for x in c['audience']['notes'])
+    P.append(page(f'''<h2 class="ph">Who it's for</h2>
+      <div class="wts">{groups}</div><div class="chips">{notes}</div>''', 'bed', 'who', c, num()))
 
     # 4 Outcomes
-    outs = ''.join(f'<li><span>{i}</span><p>{e(o)}</p></li>' for i, o in enumerate(c['outcomes'], 1))
-    P.append(page(f'''{eyebrow('Learning outcomes')}<h2>By the end of the course, people will be able to:</h2>
-      <ol class="outs">{outs}</ol>''', 'light', 4, name))
+    outs = ''.join(f'<div class="ot"><span class="on">{i}</span><h3>{e(h)}</h3><p>{e(d)}</p></div>' for i, (h, d) in enumerate(c['outcomes'], 1))
+    P.append(page(f'''<h2 class="ph">By the end of the day, people can</h2><div class="ots">{outs}</div>''', 'light', 'outcomes', c, num()))
 
-    # 5-6 Course in detail, two parts per page
-    def part(i, p):
-        return f'''<article class="part"><div class="ph"><span class="pn">{i}</span><div><h3>{e(p['title'])}</h3><p class="when">{e(p['when'])}</p></div></div>
-          <div class="sta"><img src="{A}/img/tcll/icon-story-speech.png" alt=""><p><b>Story.</b> {e(p['story'])}</p></div>
-          <div class="sta"><img src="{A}/img/tcll/icon-theory-triangle.png" alt=""><p><b>Theory.</b> {e(p['theory'])}</p></div>
-          <div class="sta"><img src="{A}/img/tcll/icon-action-chevrons.png" alt=""><p><b>Action.</b> {e(p['action'])}</p></div>
-          <p class="leave"><b>You leave with</b> {e(p['leave'])}</p></article>'''
-    parts = c['parts']
-    for k in range(0, len(parts), 2):
-        intro = f'<p class="sub">{e(c["story_line"])}</p>' if k == 0 else '<p class="sub">Every part runs Story, Theory, Action: a moment from the story, the thinking behind it, then something people practise.</p>'
-        title = 'The course in detail.' if k == 0 else 'The course in detail, continued.'
-        P.append(page(f'''{eyebrow('The course')}<h2>{title}</h2>{intro}
-          <div class="parts">{''.join(part(k + j + 1, p) for j, p in enumerate(parts[k:k + 2]))}</div>''', 'light', len(P) + 1, name))
+    # 5 The day: timeline
+    parts = c['parts']; half = len(parts) // 2
+    def blk(i, p):
+        return f'<div class="tb"><span class="tn">{i}</span><h3>{e(p["title"])}</h3><p class="ts">{e(p["theory"])}</p><p class="lv">{ico("gift", "mk")}{e(p["leave"])}</p></div>'
+    am = ''.join(blk(i + 1, p) for i, p in enumerate(parts[:half]))
+    pm = ''.join(blk(i + 1 + half, p) for i, p in enumerate(parts[half:]))
+    P.append(page(f'''<h2 class="ph">The day at a glance</h2>
+      <div class="tl"><div class="tt"><span>10am</span><span>Lunch</span><span>4pm</span></div>
+        <div class="trow"><div class="half"><p class="hl2">Morning</p><div class="tbs">{am}</div></div>
+        <div class="lunch">Lunch</div>
+        <div class="half"><p class="hl2">Afternoon</p><div class="tbs">{pm}</div></div></div></div>
+      <p class="tln">{ico("gift", "mk")} = what people leave with, ready to use on their next shift.</p>''', 'bed', 'day', c, num()))
 
-    # 7 How you can run it
+    # 6 Story, Theory, Action grid
+    rows = ''.join(f'''<div class="gr"><div class="gp"><span class="tn">{i}</span>{e(p["title"])}</div>
+        <div class="gs">{e(p["story"])}</div><div class="gt">{e(p["theory"])}</div><div class="ga">{e(p["action"])}</div></div>'''
+        for i, p in enumerate(parts, 1))
+    P.append(page(f'''<h2 class="ph">How every part works</h2>
+      <div class="grid"><div class="gh"><div></div>
+        <div><img src="{A}/img/tcll/icon-story-speech.png" alt="">Story<small>A moment from care</small></div>
+        <div><img src="{A}/img/tcll/icon-theory-triangle.png" alt="">Theory<small>The thinking behind it</small></div>
+        <div><img src="{A}/img/tcll/icon-action-chevrons.png" alt="">Action<small>What people practise</small></div></div>{rows}</div>
+      <p class="tln">{e(c['story_line'])}</p>''', 'light', 'day', c, num()))
+
+    # 7 Formats and fees
     def fmt(f):
-        rows = ''.join(f'<div><dt>{e(a)}</dt><dd>{e(b)}</dd></div>' for a, b in f['rows'])
-        return f'''<article class="fmt"><p class="fl">{e(f['label'])}</p><p class="flen">{e(f['length'])}</p>
-          <p class="fee">{e(f['fee'])} <small>{e(f['fee_note'])}</small></p><p>{e(f['desc'])}</p><dl>{rows}</dl></article>'''
-    P.append(page(f'''{eyebrow('How you can run it')}<h2>Face to face or live online.</h2>
-      <div class="fmts">{''.join(fmt(f) for f in c['formats'])}</div><p class="fnote">{e(c['fees_note'])}</p>''', 'bed', len(P) + 1, name))
+        pts = ''.join(f'<li>{ico("tick", "mk")}{e(x)}</li>' for x in f['points'])
+        return f'''<div class="fc">{ico(f['icon'], 'fic')}<p class="fl">{e(f['label'])}</p>
+          <p class="flen">{e(f['length'])}<small>{e(f['time'])}</small></p>
+          <p class="fee">{e(f['fee'])}<small>{e(f['fee_note'])}</small></p><ul>{pts}</ul></div>'''
+    P.append(page(f'''<h2 class="ph">Face to face or live online</h2>
+      <div class="fcs">{''.join(fmt(f) for f in c['formats'])}</div>
+      <p class="fnote">{ico("group", "mk")}{e(c['fees_note'])}</p>''', 'bed', 'formats', c, num()))
 
-    # 8 What every delegate gets
+    # 8 Included
+    gets = ''.join(f'<div class="gi">{ico(i)}<b>{e(t)}</b><span>{e(s)}</span><p>{e(d)}</p></div>' for i, t, s, d in c['gets'])
+    P.append(page(f'''<h2 class="ph">Every delegate gets</h2><p class="phs">Face to face or online. Included in the fee.</p>
+      <div class="gis">{gets}</div>''', 'dark inner', 'included', c, num()))
+
+    # 9 Online course and toolkit
     tk = c.get('toolkit')
-    online = f"{tk['name']}, our {tk['kind'].lower()}" if tk else 'The online course'
-    gets = [
-        ('A workbook for life', 'Every delegate gets their own workbook, with the stories, the tools and space to plan. Theirs to keep forever.'),
-        ('The recording, for 12 months', 'A recording of the session, so people can catch up or go back over a part.'),
-        (f"{tk['name']}, for 12 months" if tk else 'The online course, for 12 months', f"{online} on The Care Leaders Online, covering the same ground in more depth." ),
-        ('A certificate of completion', 'For each delegate, to keep for their own development record.'),
-        ('50% off The Care Leaders Online', "Half price on an individual annual membership for their first 12 months: on-demand courses, talks from speakers across the country and practice tools."),
-    ]
-    g = ''.join(f'<div class="get"><img src="{A}/img/tcll/tick.png" alt=""><div><h3>{e(a)}</h3><p>{e(b)}</p></div></div>' for a, b in gets)
-    P.append(page(f'''<div class="col2 w">
-        <div>{eyebrow('Included for every delegate')}<h2>Every delegate gets more than the day.</h2>
-          <p class="sub">Face to face or online, the same package comes with every course.</p>
-          <img class="sideimg" src="{A}/img/tcll/{c['side_image']}" alt=""></div>
-        <div class="gets">{g}</div></div>''', 'dark inner', len(P) + 1, name))
-
-    # 9 Toolkit
     if tk:
-        secs = ''.join(f'<li><span>{i:02d}</span>{e(s)}</li>' for i, s in enumerate(tk['sections'], 1))
-        tools = ''.join(f'<li><h3>{e(a)}</h3><p>{e(b)}</p></li>' for a, b in tk['tools'])
-        P.append(page(f'''{eyebrow(tk['kind'])}<h2>{e(tk['name'])}: the online course and its tools.</h2>
-          <p class="sub wide">{e(tk['intro'])}</p>
-          <div class="tk"><div class="secs"><p class="lbl">The course, section by section</p><ol>{secs}</ol></div>
-          <div><p class="lbl">The tools inside it</p><ul class="tools">{tools}</ul></div></div>''', 'light', len(P) + 1, name))
+        path = ''.join(f'<li><span>{i}</span>{e(s)}</li>' for i, s in enumerate(tk['sections'], 1))
+        tools = ''.join(f'<div class="tool"><span>{i:02d}</span><h3>{e(a)}</h3><p>{e(b)}</p></div>' for i, (a, b) in enumerate(tk['tools'], 1))
+        P.append(page(f'''<div class="tkh"><div><span class="cat">{e(tk['kind'])}</span><h2 class="ph">{e(tk['name'])}</h2>
+          <p class="phs">{e(tk['intro'])}</p></div>
+          <div class="screen"><div class="sbar"><i></i><i></i><i></i></div><ol class="path">{path}</ol></div></div>
+          <p class="lbl">{len(tk['tools'])} interactive tools inside</p><div class="tools">{tools}</div>''', 'light', 'online', c, num()))
 
-    # 10 Who delivers + booking
-    rel = ''.join(f'<div><h3>{e(a)}</h3><p>{e(b)}</p></div>' for a, b in c.get('related', []))
-    P.append(page(f'''
-      <div class="col2 w">
-        <div><img class="logo2" src="{A}/img/tcll/tcll-logo-white.png" alt="The Care Leaders Learning">
-          {eyebrow('Who designs and delivers it')}<h2>From care leaver to care leader.</h2>
-          <p class="bio">Every course is designed by Luke Rodgers BEM and follows the same Story, Theory, Action approach. Luke went into care at 10, and has spent his career since inside children's services as a consultant, trainer, keynote speaker and national engagement lead. He led the national engagement on England's new fostering standards, was a Knowledge Equity Fellow at Saïd Business School, University of Oxford, and was awarded the British Empire Medal in 2018.</p>
-          <p class="bio">Courses are delivered by people with lived experience of care and professional experience of children's services.</p>
-        </div>
-        <div>{eyebrow('How to book')}<h2>Bring {e(name)} to your team.</h2>
-          <ol class="steps"><li><b>Get in touch</b> with your date, format and roughly how many people.</li>
-            <li><b>We send your fee and hold the date</b> for 14 days.</li>
-            <li><b>Confirm by email</b> to secure the booking.</li>
-            <li><b>We plan it with you</b> on a short call, shaped around your service.</li></ol>
-          <p class="mail">hello@thecareleaders.com</p>
-          {f'<div class="rel"><p class="lbl">Often booked with</p>{rel}</div>' if rel else ''}
-        </div></div>
-      <p class="legal">Gold, Dual Perspective Leadership Award, iESE Public Sector Transformation Awards 2026 · Children &amp; Young People Now Workforce Development Award 2023 · The Care Leaders Ltd, company number 10782615 · thecareleaders.com</p>''', 'dark back'))
+    # 10 Book
+    rel = ''.join(f'<div><b>{e(a)}</b> {e(b)}</div>' for a, b in c.get('related', []))
+    steps = [('Get in touch', 'Your date, format and numbers'), ('Get your fee', 'We hold the date for 14 days'),
+             ('Confirm by email', 'Your booking is secured'), ('Plan it together', 'A short call, shaped to your service')]
+    st = ''.join(f'<div class="st"><span>{i}</span><b>{e(a)}</b><p>{e(b)}</p></div>' for i, (a, b) in enumerate(steps, 1))
+    P.append(page(f'''<h2 class="ph">Book {e(name)} in four steps</h2>
+      <div class="sts">{st}</div>
+      <p class="mail">hello@thecareleaders.com</p>
+      <div class="who2"><img src="{A}/img/brand/luke-speaking.jpg" alt="Luke Rodgers BEM">
+        <div><p class="lbl">Designed and led by</p><h3>Luke Rodgers BEM</h3>
+        <p>From care leaver to care leader. Luke went into care at 10 and has spent his career inside children's services as a consultant, trainer, keynote speaker and national engagement lead. He led the national engagement on England's new fostering standards, was a Knowledge Equity Fellow at Saïd Business School, University of Oxford, and was awarded the British Empire Medal in 2018.</p></div>
+        <div class="rel"><p class="lbl">Often booked with</p>{rel}</div></div>
+      <p class="legal">Gold, Dual Perspective Leadership Award, iESE Public Sector Transformation Awards 2026 · Children &amp; Young People Now Workforce Development Award 2023 · The Care Leaders Ltd, company number 10782615 · thecareleaders.com</p>''',
+      'dark back', 'book', c))
 
     css = (HERE / 'brochure.css').read_text().replace('{ACC}', acc).replace('{A}', str(A))
     return f'<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><title>{e(name)}: course brochure</title><style>{css}</style></head><body>{"".join(P)}</body></html>'
