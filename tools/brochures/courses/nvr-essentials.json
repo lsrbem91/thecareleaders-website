@@ -50,6 +50,18 @@
     {"title": "Leading it in your team", "when": "Afternoon", "story": "Six weeks on, every shift responds the same way.", "theory": "Adults are stronger together.", "action": "Map supporters. Plan your first team session.", "leave": "A plan for your first team session"}
   ],
 
+  "online_session": {
+    "ruler": ["Start", "30 min", "Break", "90 min", "2 hours"],
+    "break": "5 min break",
+    "parts": [
+      {"time": "About 25 minutes", "focus": "From control to presence: the seven pillars.", "practise": "In breakout rooms: map the escalation cycle"},
+      {"time": "About 25 minutes", "focus": "Strike when the iron is cold.", "practise": "In breakout rooms: write your cold-iron line"},
+      {"time": "About 25 minutes", "focus": "Resist the behaviour, never the child.", "practise": "In breakout rooms: draft a gesture menu"},
+      {"time": "About 25 minutes", "focus": "Adults are stronger together.", "practise": "On your own: plan your first team session"}
+    ],
+    "after": "The workbook, the recording and the NVR Toolkit take each part further after the session."
+  },
+
   "formats": [
     {"icon": "room", "label": "Face to face", "length": "6 hours", "time": "Usually 10am to 4pm", "fee": "£3,950", "fee_note": "+ VAT + expenses", "points": ["In your building or a venue you choose", "Practice in pairs and small groups", "You provide a room and a screen"]},
     {"icon": "laptop", "label": "Live online", "length": "2 hours", "time": "One live session", "fee": "£1,950", "fee_note": "+ VAT", "points": ["On Teams or Zoom", "The key story, theory and tool from each part", "Breakout rooms for practice in pairs"]}

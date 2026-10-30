@@ -99,10 +99,25 @@ def build(c):
           <p class="ts">{e(p["theory"])}</p>{strip(p["leave"], "ribbon", "apple", "lv")}</div>'''
     am = ''.join(blk(i + 1, p) for i, p in enumerate(parts[:half]))
     pm = ''.join(blk(i + 1 + half, p) for i, p in enumerate(parts[half:]))
-    P.append(page(f'''<h2>The day: {len(parts)} parts, 10am to 4pm</h2>
+    P.append(page(f'''<h2>The face to face day: {len(parts)} parts, 10am to 4pm</h2>
       <div class="ruler" style="background-image:url({K}/strips/arrowlong-navy.png)"><span>10am</span><span>Morning</span><span>Lunch</span><span>Afternoon</span><span>4pm</span></div>
       <div class="trow"><div class="tbs">{am}</div><div class="lunch" style="{box('midgreen')}">Lunch</div><div class="tbs">{pm}</div></div>
       <p class="tln">{strip('You leave with', 'ribbon', 'apple', 'mini')} a tool ready to use on your next shift.</p>''', 'light', 'course', c, num()))
+
+    # 5b The live online session
+    on = c.get('online_session')
+    if on:
+        def oblk(i, p, o):
+            return f'''<div class="tb" style="{box(pcols[(i - 1) % 4])}"><span class="tn">{i}</span><h3>{e(p["title"])}</h3>
+              <p class="ts">{e(o["focus"])}</p><p class="ot2">{e(o["practise"])}</p>{strip(o["time"], "ribbon", "apple", "lv")}</div>'''
+        op = on['parts']
+        oam = ''.join(oblk(i + 1, parts[i], op[i]) for i in range(half))
+        opm = ''.join(oblk(i + 1 + half, parts[i + half], op[i + half]) for i in range(len(op) - half))
+        ru = ''.join(f'<span>{e(x)}</span>' for x in on['ruler'])
+        P.append(page(f'''<h2>The live online session: {len(op)} parts in 2 hours</h2>
+          <div class="ruler" style="background-image:url({K}/strips/arrowlong-navy.png)">{ru}</div>
+          <div class="trow"><div class="tbs">{oam}</div><div class="lunch" style="{box('midgreen')}">{e(on['break'])}</div><div class="tbs">{opm}</div></div>
+          <p class="tln">{strip('After the session', 'ribbon', 'apple', 'mini')} {e(on['after'])}</p>''', 'bed-green', 'course', c, num()))
 
     # 6 Story, Theory, Action
     rows = ''.join(f'''<div class="gr"><div class="gp" style="{box(pcols[(i - 1) % 4])}"><span class="tn">{i}</span>{e(p["title"])}</div>
