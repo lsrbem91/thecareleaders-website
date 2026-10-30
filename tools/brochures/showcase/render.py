@@ -143,7 +143,7 @@ def wb_page():
   <h1 style="font:400 38px CB">Your hot-moment protocol</h1>
   <p style="font-size:17px;line-height:1.45;margin-top:8px;max-width:560px">Keep your young person in mind. Plan this now, while you are calm, so you are not deciding in the moment.</p></div>
 <div style="background:#fff;margin:26px 48px 0;padding:28px 30px 10px">{body}</div>
-<div style="position:absolute;left:56px;right:56px;bottom:36px;display:flex;justify-content:space-between;font:400 13px CS"><span>careleaderslearning.com</span><span>14</span></div>
+<div style="position:absolute;left:56px;right:56px;bottom:36px;display:flex;justify-content:space-between;font:400 13px CS"><span>thecareleaders.com</span><span>14</span></div>
 </body></html>'''
 
 async def shoot(pg, html, w, h, path, scale):

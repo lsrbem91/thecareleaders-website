@@ -47,7 +47,7 @@ def nav(cur, has_online, dark):
 def page(inner, cls, sec=None, c=None, n=None, t=None):
     dark = 'dark' in cls
     top = nav(sec, bool(c.get('toolkit')), dark) if sec else ''
-    foot = f'<div class="foot"><span>{e(c["name"])} · Course brochure · careleaderslearning.com</span><span>{n}</span></div>' if n else ''
+    foot = f'<div class="foot"><span>{e(c["name"])} · Course brochure · thecareleaders.com</span><span>{n}</span></div>' if n else ''
     toc = f' data-toc="{e(t)}" data-n="{n}"' if t else ''
     return f'<section class="pg {cls}"{toc}>{top}{inner}{foot}</section>'
 
