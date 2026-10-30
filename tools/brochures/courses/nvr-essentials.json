@@ -168,7 +168,7 @@
       ]
     },
     "after": "Practise each tool afterwards in the NVR Toolkit, with the workbook and the recording.",
-    "compare": "Try it online first: book the face to face day within 12 months of your online session and get 25% off."
+    "compare": "Try it online first and get 25% off the face to face day. See page 9."
   },
   "formats": [
     {
@@ -195,10 +195,6 @@
         "On Teams or Zoom",
         "Questions in the chat throughout",
         "Live Q&A at the end"
-      ],
-      "offer": [
-        "25% off the face to face day",
-        "Book it within 12 months of your online session. That's £2,962.50 + VAT instead of £3,950."
       ]
     }
   ],
@@ -322,5 +318,28 @@
       "Behind the Behaviour",
       "Reading behaviour as communication."
     ]
-  ]
+  ],
+  "offer": {
+    "tag": "Try it online first",
+    "big": "25% off",
+    "line": "the face to face day when you book it within 12 months of your online session.",
+    "steps": [
+      [
+        "1",
+        "Live online keynote",
+        "£1,950",
+        "+ VAT",
+        ""
+      ],
+      [
+        "2",
+        "Face to face day",
+        "£2,962.50",
+        "+ VAT + expenses",
+        "£3,950"
+      ]
+    ],
+    "save": "You save £987.50",
+    "terms": "For the same organisation that booked the online session. One discounted face to face day per online session, booked within 12 months of the online date."
+  }
 }

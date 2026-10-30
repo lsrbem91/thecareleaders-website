@@ -38,7 +38,7 @@ h2{font-size:50px;line-height:1.05;margin-bottom:24px}
 .cov{position:absolute;left:60px;top:120px;width:680px}
 .cat{font-size:16px;margin-bottom:16px;padding:8px 40px 9px 14px;color:#241b40}
 .cover h1{font-size:96px;line-height:.95;margin-bottom:14px}
-.hl{font-family:CB;font-size:38px;line-height:1.05;margin-bottom:18px}
+.hl{white-space:nowrap;font-family:CB;font-size:36px;line-height:1.05;margin-bottom:18px}
 .intro{font-size:21px;line-height:1.45;max-width:620px}
 .covimg{position:absolute;right:46px;top:84px;width:480px}
 .glance{position:absolute;left:60px;right:60px;bottom:40px;display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
@@ -99,7 +99,7 @@ h2{font-size:50px;line-height:1.05;margin-bottom:24px}
 .fnote{margin-top:20px;font:400 18px CS;display:flex;align-items:center}
 /* included */
 .gis{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
-.gi{background-size:100% 100%;padding:24px 22px 26px;min-height:380px;display:flex;flex-direction:column;align-items:flex-start}
+.gi{color:#fff;background-size:100% 100%;padding:24px 22px 26px;min-height:380px;display:flex;flex-direction:column;align-items:flex-start}
 .gi .pic{width:84px;height:84px;margin-bottom:22px}
 .gi b{font:400 32px/1.05 CB}
 .gs2{margin:10px 0 16px;font-size:15px}
@@ -148,3 +148,15 @@ h2{font-size:50px;line-height:1.05;margin-bottom:24px}
 .onal{margin-top:14px;display:flex;flex-direction:column;gap:10px}.onal li{display:flex;gap:10px;align-items:center;font:400 17px/1.25 CS}.onal img{width:18px}
 .foff{background-size:100% 100%;color:#241b40;padding:12px 16px 14px;margin-top:14px}.foff b{font:400 21px CB;display:block}.foff p{font-size:15px;line-height:1.35;margin-top:2px}
 .osub{max-width:1000px}
+/* offer page */
+.ofl{position:absolute;left:60px;top:130px;width:580px}
+.ofb{font:400 150px/1 CB;color:#acc90b;margin:22px 0 18px;white-space:nowrap;letter-spacing:-3px}
+.ofx{font:400 30px/1.25 CS;color:#fff}
+.ofr{position:absolute;left:670px;right:50px;top:130px;display:flex;flex-direction:column;gap:22px}
+.ofs{background-size:100% 100%;display:flex;gap:22px;align-items:center;padding:22px 90px 24px 26px;color:#fff}
+.ofs.dk{color:#241b40}
+.ofn{font:400 64px/1 CB}
+.ofs b{font:400 30px/1.1 CB;display:block}
+.ofp{font:400 44px/1.1 CB;margin-top:4px}.ofp span{display:block;font:400 16px CS;margin-top:4px}.ofp s{font:400 28px CS;opacity:1;color:#5f3c90}
+.ofv{font-size:26px;padding:12px 60px 13px 18px;align-self:flex-start}
+.oft{position:absolute;left:60px;right:60px;bottom:52px;font:400 16px CS;color:#fff}

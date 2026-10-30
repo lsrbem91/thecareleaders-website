@@ -140,17 +140,28 @@ def build(c):
         return f'''<div class="fc" style="{box('white')}"><img class="fimg" src="{imgs[k % 2]}" alt="">
           {strip(f['label'], 'angled', 'teal', 'fl')}
           <p class="flen">{e(f['length'])}</p><p class="ftime">{e(f['time'])}</p>
-          <p class="fee">{e(f['fee'])} <span>{e(f['fee_note'])}</span></p><ul>{pts}</ul>{offer(f)}</div>'''
+          <p class="fee">{e(f['fee'])} <span>{e(f['fee_note'])}</span></p><ul>{pts}</ul></div>'''
     P.append(page(f'''<h2>Face to face or live online</h2>
       <div class="fcs">{''.join(fmt(k, f) for k, f in enumerate(c['formats']))}</div>
       <p class="fnote">{picto(12, 'pic xs')}{e(c['fees_note'])}</p>''', 'bed-blue', 'formats', c, num()))
+
+    # 7b Offer: try it online first
+    of = c.get('offer')
+    if of:
+        cols = [('teal', ''), ('apple', 'dk')]
+        stp = ''.join(f'''<div class="ofs {cols[k][1]}" style="background-image:url({K}/strips/arrowlong-{cols[k][0]}.png)"><span class="ofn">{e(n)}</span>
+            <div><b>{e(t)}</b><p class="ofp">{f'<s>{e(old)}</s> ' if old else ''}{e(fee)} <span>{e(note)}</span></p></div></div>'''
+            for k, (n, t, fee, note, old) in enumerate(of['steps']))
+        P.append(page(f'''<div class="ofl">{strip(of['tag'], 'ribbon', 'apple', 'cat')}<p class="ofb">{e(of['big'])}</p><p class="ofx">{e(of['line'])}</p></div>
+          <div class="ofr">{stp}{strip(of['save'], 'ribbon', 'white', 'ofv dk')}</div>
+          <p class="oft">{e(of['terms'])}</p>''', 'dark', 'formats', c, num()))
 
     # 8 Included
     gp = [20, 5, 8, 1, 16]
     gets = ''.join(f'<div class="gi" style="{box("indigo")}">{picto(gp[k % 5])}<b>{e(t)}</b>{strip(s, "angled", "apple", "gs2")}<p>{e(d)}</p></div>'
                    for k, (_, t, s, d) in enumerate(c['gets']))
     P.append(page(f'''<h2>What every delegate gets</h2><p class="sub">Face to face or online. All included in the fee.</p>
-      <div class="gis">{gets}</div>''', 'dark', 'included', c, num()))
+      <div class="gis">{gets}</div>''', 'light', 'included', c, num()))
 
     # 9 Online showcase: devices and workbook
     sh = c.get('showcase')
