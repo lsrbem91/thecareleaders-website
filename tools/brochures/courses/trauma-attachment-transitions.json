@@ -403,7 +403,8 @@
         "What do the new home and school need to know before they arrive?",
         "How will the first week go, and who will check in?"
       ]
-    }
+    },
+    "diagram": "hub"
   },
   "facilitator": {
     "name": "Luke Rodgers BEM",

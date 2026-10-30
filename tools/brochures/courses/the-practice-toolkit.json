@@ -276,7 +276,8 @@
         "What does it look like when they go up, and when they go down?",
         "What brings them back?"
       ]
-    }
+    },
+    "diagram": "hub"
   },
   "facilitator": {
     "name": "Luke Rodgers BEM",

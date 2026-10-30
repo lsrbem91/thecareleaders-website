@@ -389,7 +389,8 @@
         "What are your first three steps?",
         "Which adult will back you, and when will you check in?"
       ]
-    }
+    },
+    "diagram": "hub"
   },
   "facilitator": {
     "name": "Luke Rodgers BEM",

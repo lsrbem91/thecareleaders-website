@@ -278,7 +278,8 @@
         "What will you say instead, keeping the meaning?",
         "Where does the formal term have to stay, and how will you explain it?"
       ]
-    }
+    },
+    "diagram": "swap"
   },
   "facilitator": {
     "name": "Luke Rodgers BEM",

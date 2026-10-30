@@ -278,7 +278,8 @@
         "How would the child feel reading it at 24?",
         "Rewrite one paragraph to the child, as \"you\"."
       ]
-    }
+    },
+    "diagram": "hub"
   },
   "facilitator": {
     "name": "Luke Rodgers BEM",

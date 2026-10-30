@@ -395,7 +395,8 @@
         "Audience: which decision makers will be in the room?",
         "Influence: how will care leavers hear what changed, and what didn't?"
       ]
-    }
+    },
+    "diagram": "hub"
   },
   "facilitator": {
     "name": "Luke Rodgers BEM",

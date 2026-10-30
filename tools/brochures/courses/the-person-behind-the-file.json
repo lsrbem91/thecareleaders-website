@@ -402,7 +402,8 @@
         "Which of the six principles could you put into the next appointment?",
         "Who in the leaving care team will you contact, with the person's consent?"
       ]
-    }
+    },
+    "diagram": "roof"
   },
   "facilitator": {
     "name": "Luke Rodgers BEM",

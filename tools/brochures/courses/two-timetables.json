@@ -398,7 +398,8 @@
         "What does school need to know before a move?",
         "What will you ask the other side to do differently?"
       ]
-    }
+    },
+    "diagram": "hub"
   },
   "facilitator": {
     "name": "Luke Rodgers BEM",

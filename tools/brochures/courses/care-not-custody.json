@@ -273,7 +273,8 @@
         "Which level is it, and why?",
         "What will you do now, and what will you do once everyone is calm?"
       ]
-    }
+    },
+    "diagram": "levels"
   },
   "facilitator": {
     "name": "Luke Rodgers BEM",
