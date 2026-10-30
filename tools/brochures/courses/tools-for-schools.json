@@ -80,7 +80,7 @@
       "Describe a school day from the side of a child in care, including what adults often miss."
     ],
     [
-      "Spot attachment and trauma",
+      "Spot attachment and trauma in school",
       "Recognise how attachment difficulties and trauma show up in a classroom, a corridor and a detention."
     ],
     [
@@ -129,7 +129,7 @@
     {
       "title": "The messages in behaviour",
       "theory": "The window of tolerance.",
-      "leave": "The Window of Tolerance"
+      "leave": "A Window of Tolerance map"
     },
     {
       "title": "Attachment and trauma",
@@ -144,7 +144,7 @@
     {
       "title": "Where school and social care clash",
       "theory": "Who does what, and when to call.",
-      "leave": "Three tools, with handouts"
+      "leave": "Handouts for all three tools"
     }
   ],
   "online_session": {
@@ -188,7 +188,7 @@
       "length": "6 hours",
       "time": "Usually 10am to 4pm",
       "fee": "£3,950",
-      "fee_note": "+ VAT + expenses",
+      "fee_note": "+ VAT + travel expenses",
       "points": [
         "In your building or a venue you choose",
         "Practice in pairs and small groups",
@@ -209,7 +209,7 @@
       ]
     }
   ],
-  "fees_note": "One fee per course for up to 60 people. Examples and language from your service at no extra cost.",
+  "fees_note": "One fee covers up to 60 people. We build examples from your own service into the training at no extra cost.",
   "gets": [
     [
       "book",
@@ -221,7 +221,7 @@
       "play",
       "Recording",
       "12 months",
-      "Catch up or go back over any part."
+      "A recording of the session to watch again for 12 months."
     ],
     [
       "laptop",
@@ -257,7 +257,7 @@
       "The workbook, theirs to keep"
     ],
     "free": "Free for 12 months: this course online",
-    "half": "All our online training? 50% off a year's membership"
+    "half": "All our online training: 50% off a year on The Care Leaders Online"
   },
   "screens": {
     "title": "Tools for Schools",
@@ -417,7 +417,7 @@
         "2",
         "Face to face day",
         "£3,150",
-        "+ VAT + expenses",
+        "+ VAT + travel expenses",
         "£3,950"
       ]
     ],

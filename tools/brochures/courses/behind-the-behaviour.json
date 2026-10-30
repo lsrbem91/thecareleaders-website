@@ -70,7 +70,7 @@
     ],
     "notes": [
       "No trauma training needed first",
-      "Mixed settings work well",
+      "Staff from different roles can train together",
       "Up to 60 people"
     ]
   },
@@ -88,7 +88,7 @@
       "Use Siegel's window of tolerance and Bowlby's attachment theory to explain how trauma shapes behaviour."
     ],
     [
-      "Know the rules",
+      "Know your setting's rules on restraint",
       "Explain Regulate, Relate, Reason, and what your setting's rules require before any restrictive intervention."
     ],
     [
@@ -125,7 +125,7 @@
     {
       "title": "The message",
       "theory": "Behaviour is communication.",
-      "leave": "Separating Reason from Behaviour"
+      "leave": "A tool for separating the reason from the behaviour"
     },
     {
       "title": "The story underneath",
@@ -184,7 +184,7 @@
       "length": "6 hours",
       "time": "Usually 10am to 4pm",
       "fee": "£3,950",
-      "fee_note": "+ VAT + expenses",
+      "fee_note": "+ VAT + travel expenses",
       "points": [
         "In your building or a venue you choose",
         "Practice in pairs and small groups",
@@ -205,7 +205,7 @@
       ]
     }
   ],
-  "fees_note": "One fee per course for up to 60 people. Examples and language from your service at no extra cost.",
+  "fees_note": "One fee covers up to 60 people. We build examples from your own service into the training at no extra cost.",
   "gets": [
     [
       "book",
@@ -217,7 +217,7 @@
       "play",
       "Recording",
       "12 months",
-      "Catch up or go back over any part."
+      "A recording of the session to watch again for 12 months."
     ],
     [
       "laptop",
@@ -253,7 +253,7 @@
       "The workbook, theirs to keep"
     ],
     "free": "Free for 12 months: this course online",
-    "half": "All our online training? 50% off a year's membership"
+    "half": "All our online training: 50% off a year on The Care Leaders Online"
   },
   "screens": {
     "title": "Behind the Behaviour",
@@ -412,7 +412,7 @@
         "2",
         "Face to face day",
         "£3,150",
-        "+ VAT + expenses",
+        "+ VAT + travel expenses",
         "£3,950"
       ]
     ],

@@ -70,7 +70,7 @@
     ],
     "notes": [
       "No children's services background needed",
-      "Best with one board",
+      "Best with one board together",
       "Up to 60 people"
     ]
   },
@@ -80,15 +80,15 @@
       "Describe how a board decision, such as where a care leaver lives, feels from the young person's side."
     ],
     [
-      "Spot activity, not experience",
+      "Spot activity, not children's experience",
       "Recognise when a report shows activity rather than children's experiences, and ask the next question."
     ],
     [
       "Know the duty",
-      "Explain the seven corporate parenting principles and what the 2026 Act adds, and for whom."
+      "Explain the seven corporate parenting principles, and what the Children's Wellbeing and Schools Act 2026 adds and for whom."
     ],
     [
-      "Link it to inspection",
+      "Link it to Ofsted's ILACS inspections",
       "Use Maslow to see what each department offers, and link the board's work to the four ILACS judgements."
     ],
     [
@@ -140,7 +140,7 @@
   "parts": [
     {
       "title": "The duty",
-      "theory": "The seven principles and the 2026 Act.",
+      "theory": "The seven principles and the Children's Wellbeing and Schools Act 2026.",
       "leave": "The principles on one page"
     },
     {
@@ -155,7 +155,7 @@
     },
     {
       "title": "The board",
-      "theory": "Figures, children and ILACS.",
+      "theory": "Turning figures into questions, and Ofsted's ILACS inspections.",
       "leave": "The corporate parenting self-check"
     }
   ],
@@ -166,10 +166,10 @@
       "title": "The keynote",
       "text": "Kelsey, Jodie, Daniel and Dominic's stories run through it, each one a decision seen from the young person's side.",
       "ideas": [
-        "The duty and the 2026 Act",
+        "The duty and the Children's Wellbeing and Schools Act 2026",
         "Hearing children",
         "Every department a parent",
-        "Boards that act"
+        "Boards that act on what children say"
       ]
     },
     "chat": {
@@ -185,9 +185,9 @@
       "title": "Live Q&A",
       "text": "Questions answered live at the end. Ask about:",
       "asks": [
-        "Your board papers",
-        "The 2026 Act",
-        "Getting ready for ILACS"
+        "Your own board papers",
+        "The Children's Wellbeing and Schools Act 2026",
+        "Getting ready for Ofsted's ILACS inspection"
       ]
     },
     "after": "Use the tools afterwards in the online course, with the workbook and the recording.",
@@ -200,7 +200,7 @@
       "length": "6 hours",
       "time": "Usually 10am to 4pm",
       "fee": "£3,950",
-      "fee_note": "+ VAT + expenses",
+      "fee_note": "+ VAT + travel expenses",
       "points": [
         "In your building or a venue you choose",
         "Practice in pairs and small groups",
@@ -221,7 +221,7 @@
       ]
     }
   ],
-  "fees_note": "One fee per course for up to 60 people. Examples and language from your service at no extra cost.",
+  "fees_note": "One fee covers up to 60 people. We build examples from your own service into the training at no extra cost.",
   "gets": [
     [
       "book",
@@ -233,7 +233,7 @@
       "play",
       "Recording",
       "12 months",
-      "Catch up or go back over any part."
+      "A recording of the session to watch again for 12 months."
     ],
     [
       "laptop",
@@ -269,7 +269,7 @@
       "The workbook, theirs to keep"
     ],
     "free": "Free for 12 months: this course online",
-    "half": "All our online training? 50% off a year's membership"
+    "half": "All our online training: 50% off a year on The Care Leaders Online"
   },
   "screens": {
     "title": "Corporate Parenting in Practice",
@@ -434,7 +434,7 @@
         "2",
         "Face to face day",
         "£3,150",
-        "+ VAT + expenses",
+        "+ VAT + travel expenses",
         "£3,950"
       ]
     ],

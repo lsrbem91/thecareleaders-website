@@ -71,7 +71,7 @@
     ],
     "notes": [
       "No NVR knowledge needed",
-      "Mixed groups work well",
+      "Staff from different roles can train together",
       "Up to 60 people"
     ]
   },
@@ -115,7 +115,7 @@
       "title": "De-escalation",
       "when": "Morning",
       "story": "10:55pm. Reece waits to see what the adult does.",
-      "theory": "Strike when the iron is cold.",
+      "theory": "Strike when the iron is cold: respond once everyone is calm.",
       "action": "Practise cold-iron lines. Sort the baskets.",
       "leave": "Your hot-moment protocol"
     },
@@ -177,7 +177,7 @@
       "length": "6 hours",
       "time": "Usually 10am to 4pm",
       "fee": "£3,950",
-      "fee_note": "+ VAT + expenses",
+      "fee_note": "+ VAT + travel expenses",
       "points": [
         "In your building or a venue you choose",
         "Practice in pairs and small groups",
@@ -198,7 +198,7 @@
       ]
     }
   ],
-  "fees_note": "One fee per course for up to 60 people. Examples and language from your service at no extra cost.",
+  "fees_note": "One fee covers up to 60 people. We build examples from your own service into the training at no extra cost.",
   "gets": [
     [
       "book",
@@ -210,7 +210,7 @@
       "play",
       "Recording",
       "12 months",
-      "Catch up or go back over any part."
+      "A recording of the session to watch again for 12 months."
     ],
     [
       "laptop",
@@ -246,7 +246,7 @@
       "The workbook, theirs to keep"
     ],
     "free": "Free for 12 months: the NVR Toolkit",
-    "half": "All our online training? 50% off a year's membership"
+    "half": "All our online training: 50% off a year on The Care Leaders Online"
   },
   "toolkit": {
     "name": "The NVR Toolkit",
@@ -287,11 +287,11 @@
       ],
       [
         "Gesture menu",
-        "Reconciliation with no conditions"
+        "Ways to reconnect, offered with no conditions"
       ],
       [
         "Resistance planner",
-        "Low, medium and high-level acts"
+        "Plan acts of resistance, from low to high level"
       ],
       [
         "Supporter mapper",
@@ -337,7 +337,7 @@
         "2",
         "Face to face day",
         "£3,150",
-        "+ VAT + expenses",
+        "+ VAT + travel expenses",
         "£3,950"
       ]
     ],
