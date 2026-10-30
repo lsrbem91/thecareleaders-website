@@ -1,0 +1,132 @@
+{
+  "slug": "nvr-essentials",
+  "name": "NVR Essentials",
+  "category": "NVR and relationships",
+  "accent": "#cf0f55",
+  "cover_image": "blocks/block-6.webp",
+  "side_image": "blocks/block-2.webp",
+  "headline": "One day. A full framework.",
+  "headline_split": 8,
+  "intro": "A one-day introduction to non-violent resistance for children's homes, foster and kinship carers, and the people who support them. No prior NVR knowledge needed.",
+  "facts": [
+    ["Length", "6 hours face to face, or 2 hours live online"],
+    ["Group", "Up to 60 people"],
+    ["For", "Children's homes, fostering and early help"],
+    ["Every delegate gets", "Workbook, recording, NVR Toolkit, certificate"]
+  ],
+
+  "problem": {
+    "lead": "When a young person's behaviour escalates, adults often fall back on instinct. Some raise their voice. Some back off. Each shift and each household responds differently, and restraint can become the default.",
+    "body": [
+      "The Children's Homes Regulations 2015 expect staff to de-escalate confrontations. The Fostering National Minimum Standards expect carers to be trained in de-escalating problems and disputes. Neither tells a team what to say at 11pm when a door is being kicked. This course does."
+    ],
+    "helps_with": ["Behaviour, incidents and restraint", "Stability and matching"],
+    "evidence_title": "What the evidence shows",
+    "evidence": "NVR was developed by Haim Omer for parents facing violent or controlling behaviour. Trials with parents found reduced parental helplessness, and a 2016 review by Omer and Lebowitz describes the evidence as encouraging but still early. A trial with foster carers found carers used more monitoring and support, but no clear difference in children's behaviour. We say this plainly on the day."
+  },
+
+  "audience": {
+    "groups": [
+      ["Children's homes", "Residential support workers, team leaders and registered managers"],
+      ["Foster and kinship care", "Foster and kinship carers, supervising social workers and fostering team leaders"],
+      ["Early help", "Early help and family workers who coach parents"],
+      ["Commissioners", "People deciding whether NVR is right for their service"]
+    ],
+    "notes": [
+      "No prior NVR knowledge needed",
+      "Mixed residential and fostering groups work well",
+      "Up to 60 people, face to face or online",
+      "Service leads can go on to NVR Advanced"
+    ]
+  },
+
+  "outcomes": [
+    "Describe an escalation from the young person's side and from the adult's, including how shouting, threats or backing off can feed it.",
+    "Recognise which of a young person's behaviours they need to resist, which they can negotiate and which they can let go.",
+    "Explain the principles of non-violent resistance, developed by Haim Omer (2004), how they differ from reward and sanction approaches, and describe the seven pillars of NVR and the three dimensions of adult presence.",
+    "Explain how NVR supports the positive relationships standard in the Children's Homes Regulations and Standard 3 of the Fostering National Minimum Standards, and describe honestly what the research does and does not yet show.",
+    "Use cold-iron lines, delayed responses and baskets to de-escalate a hot moment without giving in.",
+    "Plan a reconciliation gesture and an act of resistance for a young person they care for now, and a first NVR session for their own team."
+  ],
+
+  "story_line": "Every part follows Reece, 15, through one week in a children's home. Reece is a composite: his story draws on real experiences of care but is not one person.",
+  "parts": [
+    {
+      "title": "The NVR stance",
+      "when": "Morning",
+      "story": "When staff tell Reece the Wi-Fi goes off at 11, he kicks the office door until it does not. The night staff give in. The day staff take his phone for a week.",
+      "theory": "Haim Omer's Non-Violent Resistance (2004) and his later work on the new authority (2011): the adult's aim shifts from control to presence. The seven pillars of NVR on one page.",
+      "action": "Map Reece's door-kicking cycle from both sides, find where the adults' responses fed it, and name the one habit you will drop first.",
+      "leave": "The NVR framework on one page, with the seven pillars"
+    },
+    {
+      "title": "De-escalation",
+      "when": "Morning",
+      "story": "Reece is in the kitchen at 10:55pm, phone in hand, waiting to see what the adult will do. The adult can feel their own heart racing.",
+      "theory": "Strike when the iron is cold: the adult does not have to respond in the hot moment. Dan Siegel's window of tolerance (1999) explains why nobody can think well at the peak.",
+      "action": "Practise short cold-iron lines and delayed responses in pairs, then sort one young person's behaviours into baskets: resist, negotiate, let go.",
+      "leave": "Cold-iron lines, a baskets sort and the hot-moment protocol, practised"
+    },
+    {
+      "title": "Reconciliation and resistance",
+      "when": "Afternoon",
+      "story": "The morning after, Reece comes down expecting a row. A member of staff has made his favourite toast. At 4pm, three staff tell him calmly that the door-kicking has to stop.",
+      "theory": "Resist the behaviour, never the child. Reconciliation gestures come with no conditions. Acts of resistance, such as the announcement and the sit-in, show the adults are united, without threats or punishment.",
+      "action": "Build a menu of reconciliation gestures for a young person you care for, then plan and rehearse an announcement in small groups.",
+      "leave": "A reconciliation gesture menu and a planned act of resistance"
+    },
+    {
+      "title": "Leading it in your team",
+      "when": "Afternoon",
+      "story": "Six weeks on, day and night staff respond the same way. The door-kicking has not stopped yet, but it is shorter, and Reece has started talking to one of the night staff.",
+      "theory": "NVR works when adults are not alone. Omer's support network explains why a shared response across shifts and households matters more than any one adult's skill.",
+      "action": "Map your own supporters, agree a simple record of what you tried, and plan the first NVR session you will run with your team.",
+      "leave": "A plan for your first NVR session with your team"
+    }
+  ],
+
+  "formats": [
+    {
+      "label": "Face to face",
+      "length": "6 hours",
+      "fee": "£4,950",
+      "fee_note": "+ VAT + expenses",
+      "desc": "A full day in your building or a venue you choose, usually 10am to 4pm, with practice in pairs and small groups. The morning covers the stance and de-escalation; the afternoon covers reconciliation, resistance and leading it in your team.",
+      "rows": [["Group", "Up to 60 people"], ["You provide", "A room for small-group work and a screen with an HDMI connection"]]
+    },
+    {
+      "label": "Live online",
+      "length": "2 hours",
+      "fee": "£2,490",
+      "fee_note": "+ VAT",
+      "desc": "One live session on Teams or Zoom covering the key story, theory and tool from each part, with breakout rooms for practice in pairs. The workbook and the NVR Toolkit carry the rest.",
+      "rows": [["Group", "Up to 60 people"], ["You provide", "A device with camera, microphone and internet for each delegate"]]
+    }
+  ],
+  "fees_note": "One fee per course, whatever the group size up to 60. We use examples and language from your service at no extra cost. Full booking terms are sent with every quote.",
+
+  "toolkit": {
+    "name": "The NVR Toolkit",
+    "kind": "Online course and toolkit",
+    "intro": "Our comprehensive online NVR course on The Care Leaders Online, with an interactive tool in every section. Every delegate gets 12 months' access, so they can go deeper after the day and come back to the tools when they need them.",
+    "sections": ["Foundations", "Parental presence", "De-escalation", "Baskets", "Reconciliation", "Acts of resistance", "Supporters and self-care", "Announcements", "Sit-ins", "Bringing it all together"],
+    "tools": [
+      ["Your young person", "A profile of the young person you have in mind, used throughout the course"],
+      ["Presence map", "Where your presence is strong, and where it has been lost"],
+      ["The escalation trap", "Spot complementary and symmetrical escalation in real scenarios"],
+      ["Cold-iron line and hot-moment protocol", "Write your own lines and your plan for the next hot moment"],
+      ["Baskets sort", "Decide what to resist, what to negotiate and what to let go"],
+      ["Reconciliation gesture menu", "Gestures for your young person, with no conditions attached"],
+      ["Resistance planner", "Low, medium and high-level acts of resistance, practised on scenarios"],
+      ["Supporter mapper", "The four supporter roles, and who fills them for you"],
+      ["Self-care planner", "Staying inside your window of tolerance"],
+      ["Announcement builder", "Structure, wording and delivery of an announcement"],
+      ["Sit-in script builder", "The four stages of a sit-in, scripted for your young person"]
+    ]
+  },
+
+  "related": [
+    ["NVR Advanced", "For the people who will lead NVR in your service: coaching colleagues and training teams."],
+    ["Behind the Behaviour", "Reading behaviour as communication, and responding without losing the relationship."]
+  ]
+}
