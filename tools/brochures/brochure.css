@@ -160,3 +160,30 @@ h2{font-size:50px;line-height:1.05;margin-bottom:24px}
 .ofp{font:400 44px/1.1 CB;margin-top:4px}.ofp span{display:block;font:400 16px CS;margin-top:4px}.ofp s{font:400 28px CS;opacity:1;color:#5f3c90}
 .ofv{font-size:26px;padding:12px 60px 13px 18px;align-self:flex-start}
 .oft{position:absolute;left:60px;right:60px;bottom:52px;font:400 16px CS;color:#fff}
+/* contents */
+.toc{columns:2;column-gap:60px;margin-top:6px}
+.toc li{display:flex;gap:16px;align-items:center;font:400 22px/1.2 CS;padding:9px 0;break-inside:avoid}
+.hx.cx{width:58px;height:34px;flex:0 0 58px;font-size:18px}
+/* why us */
+.usps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.usp{background-size:100% 100%;color:#0e2545;padding:24px 26px 24px;min-height:300px;position:relative}
+.usp .pic{position:absolute;right:20px;top:20px;width:62px;height:62px}
+.usp h3{font-size:27px;line-height:1.08;margin:0 74px 12px 0}.usp p{font-size:17px;line-height:1.45}
+.aw{margin-top:12px}.aw p{font:400 15px CS;margin-top:6px}
+.wsts{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:20px}
+.wst{background-size:100% 100%;display:flex;gap:20px;align-items:center;padding:14px 70px 16px 22px;color:#fff}
+.wst.dk{color:#241b40}.wst b{font:400 58px/1 CB}.wst p{font:400 17px/1.3 CS}
+/* facilitator */
+.fac{display:grid;grid-template-columns:300px 1fr 330px;gap:30px;align-items:start}
+.fph{width:300px;height:380px;object-fit:cover;display:block;clip-path:polygon(0 1.2%,99.4% 0,100% 98.6%,0.6% 100%)}
+.fl1 .cat{margin-top:16px}
+.fl2 h2{margin:10px 0 14px;font-size:44px}.fps p{font-size:16.5px;line-height:1.45;margin-bottom:10px}
+.fcourse{display:flex;align-items:center;font:400 16px/1.35 CS;margin-top:8px;color:#5f3c90}
+.pfs{display:grid;gap:10px;margin:12px 0 14px}
+.pf{background-size:100% 100%;color:#fff;display:flex;gap:16px;align-items:center;padding:12px 18px}
+.pf b{font:400 40px/1 CB;color:#acc90b;min-width:86px}.pf p{font:400 15px/1.3 CS}
+blockquote{background-size:100% 100%;color:#fff;padding:16px 20px 18px;font:400 17px/1.35 CB}
+blockquote cite{display:block;font:400 13px/1.3 CS;color:#acc90b;margin-top:8px;font-style:normal}
+.rel2{max-width:640px;margin-top:10px}
+.aw .strip{white-space:normal;display:inline-block;max-width:100%}
+.usp h3+.aw{margin-top:34px}

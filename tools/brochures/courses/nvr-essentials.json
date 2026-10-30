@@ -168,7 +168,7 @@
       ]
     },
     "after": "Practise each tool afterwards in the NVR Toolkit, with the workbook and the recording.",
-    "compare": "Try it online first and get 20% off the face to face day. See page 9."
+    "compare": "Try it online first and get 20% off the face to face day. Details are with the fees."
   },
   "formats": [
     {
@@ -341,5 +341,75 @@
     ],
     "save": "You save £800",
     "terms": "For the same organisation that booked the online session. One discounted face to face day per online session. The day must be booked and facilitated within 12 months of the online session."
+  },
+  "why": {
+    "title": "Why choose The Care Leaders Learning",
+    "sub": "Training built by people who have lived in care and people who have led services.",
+    "usps": [
+      [
+        21,
+        "Lived and professional experience",
+        "Every course is written by people who have been in care and people who have run, redesigned and inspected children's services. Your team hears both sides."
+      ],
+      [
+        19,
+        "Founded by a care experienced leader",
+        "Luke Rodgers BEM went into care at 10. He founded The Care Leaders and leads it as CEO, with consultants who have run children's services."
+      ],
+      [
+        1,
+        "Award winning",
+        "",
+        [
+          "Gold, Dual Perspective Leadership Award",
+          "iESE Public Sector Transformation Awards 2026"
+        ],
+        [
+          "Workforce Development Award",
+          "Children & Young People Now Awards 2023"
+        ]
+      ]
+    ],
+    "stats": [
+      [
+        "36",
+        "local authorities we have worked with, plus the Department for Education and the NHS"
+      ],
+      [
+        "3,000+",
+        "learners on The Care Leaders Online"
+      ]
+    ]
+  },
+  "facilitator": {
+    "name": "Luke Rodgers BEM",
+    "role": "Your facilitator",
+    "line": "From care leaver to care leader",
+    "image": "luke-speaking.jpg",
+    "paras": [
+      "Luke went into care at 10. He has spent his career inside children's services as a consultant, trainer and keynote speaker, and is CEO of The Care Leaders.",
+      "He has spent years helping children's homes put NVR into practice. With Durham County Council he brought NVR into 11 children's homes and trained 120 residential staff, online and face to face.",
+      "He led the national engagement on England's new fostering standards for the Department for Education, so he knows what the standards expect of the adults around a child, and where NVR fits.",
+      "He was a Knowledge Equity Fellow at Saïd Business School, University of Oxford, and was awarded the British Empire Medal in 2018 for commitment to children and families."
+    ],
+    "proof": [
+      [
+        "70%",
+        "less restraint in one Durham children's home"
+      ],
+      [
+        "0",
+        "placement breakdowns in Durham's homes since using NVR"
+      ],
+      [
+        "120",
+        "residential staff trained in NVR"
+      ]
+    ],
+    "quote": [
+      "Since using NVR we have had no placement breakdowns in any of our children's homes.",
+      "Paul Rudd, Strategic Manager, Children's Homes, Durham County Council"
+    ],
+    "for_course": "On the face to face day Luke leads every part. Online, he gives the keynote and answers your questions live."
   }
 }

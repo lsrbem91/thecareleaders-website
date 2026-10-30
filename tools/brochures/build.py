@@ -8,13 +8,15 @@ hand-cut strips, boxes and hexagons, and the 22 TCLL pictograms with their fixed
 No icon fonts, no drawn icons, no grey, no rounded corners.
 
 Page order (navigation strip on every inner page):
- Cover · Problem · Who it's for · Outcomes · The course (2 pages) · Formats and fees
- · Included · Online showcase and toolkit (if the course has one) · Book
+ Cover · Contents · Problem · Who it's for · Outcomes · The course (face to face day, how each part
+ works, live online session) · Included · Online showcase and toolkit (if the course has one)
+ · Why us · About your facilitator · Formats and fees · Offer (if any) · Book
+ Sales logic: problem, then value, then trust, then price, then the offer, then how to book.
 
 Design rule: no CSS shadows, filters, masks or opacity. They export as soft masks
 that the iPhone PDF viewer draws as dark boxes. Shapes are pre-tinted PNGs.
 """
-import html, json, os, sys, subprocess, pathlib
+import html, json, os, re, sys, subprocess, pathlib
 
 HERE = pathlib.Path(__file__).resolve().parent
 SITE = HERE.parent.parent
@@ -30,7 +32,7 @@ def box(col):
     return f'background-image:url({K}/strips/box-{col}.png)'
 
 NAV = [('problem', 'The problem'), ('who', "Who it's for"), ('outcomes', 'Outcomes'), ('course', 'The course'),
-       ('formats', 'Formats and fees'), ('included', 'Included'), ('online', 'Online course'), ('book', 'Book')]
+       ('included', 'Included'), ('online', 'Online course'), ('why', 'Why us'), ('formats', 'Formats and fees'), ('book', 'Book')]
 
 def nav(cur, has_online, dark):
     items = [n for n in NAV if has_online or n[0] != 'online']
@@ -42,11 +44,12 @@ def nav(cur, has_online, dark):
             out.append(f'<span class="navi">{e(t)}</span>')
     return f'<nav class="nav"><img class="bm" src="{K}/brandmark.png" alt="">{"".join(out)}</nav>'
 
-def page(inner, cls, sec=None, c=None, n=None):
+def page(inner, cls, sec=None, c=None, n=None, t=None):
     dark = 'dark' in cls
     top = nav(sec, bool(c.get('toolkit')), dark) if sec else ''
     foot = f'<div class="foot"><span>{e(c["name"])} · Course brochure · careleaderslearning.com</span><span>{n}</span></div>' if n else ''
-    return f'<section class="pg {cls}">{top}{inner}{foot}</section>'
+    toc = f' data-toc="{e(t)}" data-n="{n}"' if t else ''
+    return f'<section class="pg {cls}"{toc}>{top}{inner}{foot}</section>'
 
 def build(c):
     acc = c['accent']; name = c['name']; P = []
@@ -64,6 +67,10 @@ def build(c):
       <img class="covimg" src="{A}/img/tcll/{c['cover_image']}" alt="">
       <div class="glance">{glance}</div>''', 'dark cover', c=c))
 
+    # 2 Contents (filled in at the end, once page numbers are known)
+    P.append('')
+    CONTENTS = 1
+
     # 2 Problem
     pr = c['problem']
     wo = ''.join(f'<li>{e(x)}</li>' for x in pr['without'])
@@ -75,7 +82,7 @@ def build(c):
         {picto(22, 'pic mid')}
         <div class="b good" style="{box('white')}">{strip(f'After {name}', 'angled', 'midgreen', 'bh dk')}<ul>{wi}</ul></div></div>
       <div class="pnotes"><p><span class="k">Why it matters.</span> {e(pr['standards'])}</p><p><span class="k">The evidence.</span> {e(pr['evidence'])}</p></div>''',
-      'bed-red', 'problem', c, num()))
+      'bed-red', 'problem', c, num(), 'The problem this course solves'))
 
     # 3 Who
     pics = [19, 4, 13, 15]
@@ -104,6 +111,17 @@ def build(c):
       <div class="trow"><div class="tbs">{am}</div><div class="lunch" style="{box('midgreen')}">Lunch</div><div class="tbs">{pm}</div></div>
       <p class="tln">{strip('You leave with', 'ribbon', 'apple', 'mini')} a tool ready to use on your next shift.</p>''', 'light', 'course', c, num()))
 
+    # 6 Story, Theory, Action
+    rows = ''.join(f'''<div class="gr"><div class="gp" style="{box(pcols[(i - 1) % 4])}"><span class="tn">{i}</span>{e(p["title"])}</div>
+        <div class="gc gs">{e(p["story"])}</div><div class="gc gt">{e(p["theory"])}</div><div class="gc ga">{e(p["action"])}</div></div>'''
+        for i, p in enumerate(parts, 1))
+    P.append(page(f'''<h2>Every part: a story, the theory, then practice</h2>
+      <div class="grid"><div class="gh"><div></div>
+        <div>{picto(18, 'pic sm')}{strip('Story', 'ribbon', 'fuchsia', 'gh1')}<small>A moment from care</small></div>
+        <div>{picto(6, 'pic sm')}{strip('Theory', 'ribbon', 'purple', 'gh1')}<small>The thinking behind it</small></div>
+        <div>{picto(17, 'pic sm')}{strip('Action', 'ribbon', 'midgreen', 'gh1 dk')}<small>What people practise</small></div></div>{rows}</div>
+      <p class="tln">{e(c['story_line'])}</p>''', 'light', 'course', c, num()))
+
     # 5b The live online session: a keynote, not a shorter day
     on = c.get('online_session')
     if on:
@@ -118,43 +136,6 @@ def build(c):
             <div class="onq" style="{box('apple')}">{picto(11, 'pic onp')}<h3>{e(qa['title'])}</h3><p>{e(qa['text'])}</p><ul class="onal">{''.join(f'<li><img src="{K}/chev.png" alt="">{e(x)}</li>' for x in qa.get('asks', []))}</ul></div></div>
           <p class="tln">{strip('Afterwards', 'ribbon', 'apple', 'mini')} {e(on['after'])}</p>
           <p class="tln onx">{e(on['compare'])}</p>''', 'dark', 'course', c, num()))
-
-    # 6 Story, Theory, Action
-    rows = ''.join(f'''<div class="gr"><div class="gp" style="{box(pcols[(i - 1) % 4])}"><span class="tn">{i}</span>{e(p["title"])}</div>
-        <div class="gc gs">{e(p["story"])}</div><div class="gc gt">{e(p["theory"])}</div><div class="gc ga">{e(p["action"])}</div></div>'''
-        for i, p in enumerate(parts, 1))
-    P.append(page(f'''<h2>Every part: a story, the theory, then practice</h2>
-      <div class="grid"><div class="gh"><div></div>
-        <div>{picto(18, 'pic sm')}{strip('Story', 'ribbon', 'fuchsia', 'gh1')}<small>A moment from care</small></div>
-        <div>{picto(6, 'pic sm')}{strip('Theory', 'ribbon', 'purple', 'gh1')}<small>The thinking behind it</small></div>
-        <div>{picto(17, 'pic sm')}{strip('Action', 'ribbon', 'midgreen', 'gh1 dk')}<small>What people practise</small></div></div>{rows}</div>
-      <p class="tln">{e(c['story_line'])}</p>''', 'light', 'course', c, num()))
-
-    # 7 Formats and fees
-    imgs = [f'{A}/img/tcll/blocks/block-5.webp', f'{A}/img/tcll/blocks/block-3.webp']
-    def offer(f):
-        if not f.get('offer'): return ''
-        return f'<div class="foff" style="{box("apple")}"><b>{e(f["offer"][0])}</b><p>{e(f["offer"][1])}</p></div>'
-    def fmt(k, f):
-        pts = ''.join(f'<li><img src="{K}/tick.png" alt="">{e(x)}</li>' for x in f['points'])
-        return f'''<div class="fc" style="{box('white')}"><img class="fimg" src="{imgs[k % 2]}" alt="">
-          {strip(f['label'], 'angled', 'teal', 'fl')}
-          <p class="flen">{e(f['length'])}</p><p class="ftime">{e(f['time'])}</p>
-          <p class="fee">{e(f['fee'])} <span>{e(f['fee_note'])}</span></p><ul>{pts}</ul></div>'''
-    P.append(page(f'''<h2>Face to face or live online</h2>
-      <div class="fcs">{''.join(fmt(k, f) for k, f in enumerate(c['formats']))}</div>
-      <p class="fnote">{picto(12, 'pic xs')}{e(c['fees_note'])}</p>''', 'bed-blue', 'formats', c, num()))
-
-    # 7b Offer: try it online first
-    of = c.get('offer')
-    if of:
-        cols = [('teal', ''), ('apple', 'dk')]
-        stp = ''.join(f'''<div class="ofs {cols[k][1]}" style="background-image:url({K}/strips/arrowlong-{cols[k][0]}.png)"><span class="ofn">{e(n)}</span>
-            <div><b>{e(t)}</b><p class="ofp">{f'<s>{e(old)}</s> ' if old else ''}{e(fee)} <span>{e(note)}</span></p></div></div>'''
-            for k, (n, t, fee, note, old) in enumerate(of['steps']))
-        P.append(page(f'''<div class="ofl">{strip(of['tag'], 'ribbon', 'apple', 'cat')}<p class="ofb">{e(of['big'])}</p><p class="ofx">{e(of['line'])}</p></div>
-          <div class="ofr">{stp}{strip(of['save'], 'ribbon', 'white', 'ofv dk')}</div>
-          <p class="oft">{e(of['terms'])}</p>''', 'dark', 'formats', c, num()))
 
     # 8 Included
     gp = [20, 5, 8, 1, 16]
@@ -185,7 +166,60 @@ def build(c):
             <p class="sub">{e(tk['intro'])}</p></div><ol class="path">{path}</ol></div>
           <p class="lbl">{picto(9, 'pic xs')}{len(tk['tools'])} interactive tools inside</p><div class="tools">{tools}</div>''', 'bed-green', 'online', c, num()))
 
-    # 10 Book
+    # 11 Why choose us
+    w = c.get('why')
+    if w:
+        def usp(u):
+            body = f'<p>{e(u[2])}</p>' if u[2] else ''
+            aw = ''.join(f'<div class="aw">{strip(a, "angled", "apple", "mini")}<p>{e(b)}</p></div>' for a, b in u[3:])
+            return f'<div class="usp" style="{box("white")}">{picto(u[0])}<h3>{e(u[1])}</h3>{body}{aw}</div>'
+        cols2 = ['apple', 'teal']
+        stats = ''.join(f'<div class="wst {"dk" if cols2[i] == "apple" else ""}" style="background-image:url({K}/strips/arrowlong-{cols2[i]}.png)"><b>{e(a)}</b><p>{e(b)}</p></div>'
+                        for i, (a, b) in enumerate(w['stats']))
+        P.append(page(f'''<h2>{e(w['title'])}</h2><p class="sub">{e(w['sub'])}</p>
+          <div class="usps">{''.join(usp(u) for u in w['usps'])}</div><div class="wsts">{stats}</div>''', 'dark', 'why', c, num(), w['title']))
+
+    # 12 About your facilitator
+    f = c.get('facilitator')
+    if f:
+        paras = ''.join(f'<p>{e(x)}</p>' for x in f['paras'])
+        pcol = ['fuchsia', 'purple', 'teal']
+        proof = ''.join(f'<div class="pf" style="{box(pcol[i])}"><b>{e(a)}</b><p>{e(b)}</p></div>' for i, (a, b) in enumerate(f['proof']))
+        P.append(page(f'''<div class="fac"><div class="fl1"><img class="fph" src="{A}/img/brand/{f['image']}" alt="{e(f['name'])}">
+            {strip(f['line'], 'ribbon', 'fuchsia', 'cat')}</div>
+          <div class="fl2">{strip(f['role'], 'angled', 'purple', 'mini')}<h2>{e(f['name'])}</h2><div class="fps">{paras}</div>
+            <p class="fcourse">{picto(17, 'pic xs')}{e(f['for_course'])}</p></div>
+          <div class="fl3">{strip('NVR in practice', 'angled', 'teal', 'mini')}<div class="pfs">{proof}</div>
+            <blockquote style="{box('indigo')}">"{e(f['quote'][0])}"<cite>{e(f['quote'][1])}</cite></blockquote></div></div>''',
+          'light', 'why', c, num(), f'About your facilitator: {f["name"]}'))
+
+    # 7 Formats and fees
+    imgs = [f'{A}/img/tcll/blocks/block-5.webp', f'{A}/img/tcll/blocks/block-3.webp']
+    def offer(f):
+        if not f.get('offer'): return ''
+        return f'<div class="foff" style="{box("apple")}"><b>{e(f["offer"][0])}</b><p>{e(f["offer"][1])}</p></div>'
+    def fmt(k, f):
+        pts = ''.join(f'<li><img src="{K}/tick.png" alt="">{e(x)}</li>' for x in f['points'])
+        return f'''<div class="fc" style="{box('white')}"><img class="fimg" src="{imgs[k % 2]}" alt="">
+          {strip(f['label'], 'angled', 'teal', 'fl')}
+          <p class="flen">{e(f['length'])}</p><p class="ftime">{e(f['time'])}</p>
+          <p class="fee">{e(f['fee'])} <span>{e(f['fee_note'])}</span></p><ul>{pts}</ul></div>'''
+    P.append(page(f'''<h2>Face to face or live online</h2>
+      <div class="fcs">{''.join(fmt(k, f) for k, f in enumerate(c['formats']))}</div>
+      <p class="fnote">{picto(12, 'pic xs')}{e(c['fees_note'])}</p>''', 'bed-blue', 'formats', c, num()))
+
+    # 7b Offer: try it online first
+    of = c.get('offer')
+    if of:
+        cols = [('teal', ''), ('apple', 'dk')]
+        stp = ''.join(f'''<div class="ofs {cols[k][1]}" style="background-image:url({K}/strips/arrowlong-{cols[k][0]}.png)"><span class="ofn">{e(n)}</span>
+            <div><b>{e(t)}</b><p class="ofp">{f'<s>{e(old)}</s> ' if old else ''}{e(fee)} <span>{e(note)}</span></p></div></div>'''
+            for k, (n, t, fee, note, old) in enumerate(of['steps']))
+        P.append(page(f'''<div class="ofl">{strip(of['tag'], 'ribbon', 'apple', 'cat')}<p class="ofb">{e(of['big'])}</p><p class="ofx">{e(of['line'])}</p></div>
+          <div class="ofr">{stp}{strip(of['save'], 'ribbon', 'white', 'ofv dk')}</div>
+          <p class="oft">{e(of['terms'])}</p>''', 'dark', 'formats', c, num(), f"Try it online first: {of['big']} the face to face day"))
+
+    # 13 Book
     scol = ['apple', 'midgreen', 'teal', 'brightpurple']
     steps = [('Get in touch', 'Your date, format and numbers'), ('Get your fee', 'We hold the date for 14 days'),
              ('Confirm by email', 'Your booking is secured'), ('Plan it together', 'A short call, shaped to your service')]
@@ -195,12 +229,24 @@ def build(c):
     P.append(page(f'''<h2>Book {e(name)} in four steps</h2>
       <div class="sts">{st}</div>
       {strip('hello@thecareleaders.com', 'ribbon', 'apple', 'mail')}
-      <div class="who2"><img src="{A}/img/brand/luke-speaking.jpg" alt="Luke Rodgers BEM">
-        <div>{strip('Designed and led by', 'angled', 'purple', 'mini')}<h3>Luke Rodgers BEM</h3>
-        <p>From care leaver to care leader. Luke went into care at 10 and has spent his career inside children's services as a consultant, trainer, keynote speaker and national engagement lead. He led the national engagement on England's new fostering standards, was a Knowledge Equity Fellow at Saïd Business School, University of Oxford, and was awarded the British Empire Medal in 2018.</p></div>
-        <div class="rel">{strip('Often booked with', 'angled', 'purple', 'mini')}{rel}</div></div>
+      <div class="rel rel2">{strip('Often booked with', 'angled', 'purple', 'mini')}{rel}</div>
       <p class="legal">Gold, Dual Perspective Leadership Award, iESE Public Sector Transformation Awards 2026 · Children &amp; Young People Now Workforce Development Award 2023 · The Care Leaders Ltd, company number 10782615 · thecareleaders.com</p>''',
-      'dark', 'book', c))
+      'light', 'book', c))
+
+    # Contents: every numbered page, by its heading
+    items = []
+    for k, pg in enumerate(P):
+        if k in (0, CONTENTS): continue
+        m = re.search(r'data-toc="([^"]+)" data-n="(\d+)"', pg) or None
+        if m: t, n = html.unescape(m.group(1)), m.group(2)
+        else:
+            h = re.search(r'<h2>(.*?)</h2>', pg, re.S); n = re.search(r'<div class="foot"><span>.*?</span><span>(\d+)</span>', pg)
+            t = re.sub('<[^>]+>', '', h.group(1)) if h else ''; n = n.group(1) if n else str(k + 1)
+            t = html.unescape(t)
+        if t: items.append((n, t))
+    hc2 = ['purple', 'teal', 'fuchsia', 'indigo', 'midgreen']
+    lis = ''.join(f'<li><span class="hx cx" style="background-image:url({K}/strips/hex-{hc2[i % 5]}.png)">{n}</span>{e(t)}</li>' for i, (n, t) in enumerate(items))
+    P[CONTENTS] = page(f'<h2>Contents</h2><ol class="toc">{lis}</ol>', 'light', None, c, 2)
 
     css = (HERE / 'brochure.css').read_text().replace('{ACC}', acc).replace('{A}', str(A)).replace('{K}', str(K))
     return f'<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><title>{e(name)}: course brochure</title><style>{css}</style></head><body>{"".join(P)}</body></html>'
