@@ -72,7 +72,7 @@ def build(c):
     P.append(page(f'''
       <img class="logo" src="{A}/img/tcll/tcll-logo-white.png" alt="The Care Leaders Learning">
       <div class="cov">{strip(c['category'], 'ribbon', 'apple', 'cat')}
-        <h1>{e(name)}</h1><p class="hl">{head}</p><p class="intro">{e(c['intro'])}</p></div>
+        <h1{' class="long"' if len(name) > 20 else ''}>{e(name)}</h1><p class="hl">{head}</p><p class="intro">{e(c['intro'])}</p></div>
       <img class="covimg" src="{opt(A / 'img/tcll' / c['cover_image'], 960)}" alt="">
       <div class="glance">{glance}</div>''', 'dark cover', c=c))
 
@@ -114,7 +114,7 @@ def build(c):
         cols_ = ''.join(f'<div class="pil" style="{box(pc[i])}"><span class="tn">{i + 1}</span><h3>{e(a)}</h3><p>{e(t)}</p></div>' for i, (a, t) in enumerate(pl['items']))
         P.append(page(f'''<h2>{e(pl['title'])}</h2>
           <div class="roof" style="{box('midnight')}"><b>{e(pl['stance'])}</b><p>{e(pl['stance_line'])}</p></div>
-          <div class="pils">{cols_}</div>
+          <div class="pils{' wide' if len(pl['items']) <= 4 else ''}" style="grid-template-columns:repeat({len(pl['items'])},1fr)">{cols_}</div>
           <div class="pbase" style="{box('white')}">{picto(6, 'pic xs')}{e(pl['base'])}</div>''', 'bed-blue', 'course', c, num()))
 
     # 5 Option 1: the face to face day
@@ -169,7 +169,8 @@ def build(c):
           <img class="shl" src="{opt(K / 'showcase' / sh['laptop'], 1300)}" alt=""><img class="shp" src="{opt(K / 'showcase' / sh['phone'], 800)}" alt="">
           <img class="shw1" src="{S}/{sh['workbook'][0]}" alt=""><img class="shw2" src="{S}/{sh['workbook'][1]}" alt="">
           <div class="shlb s1">{strip(lb[0], 'angled', 'purple')}</div><div class="shlb s2">{strip(lb[1], 'angled', 'teal')}</div>
-          <div class="shlb s3">{strip(lb[2], 'angled', 'fuchsia')}</div>''', 'bed-purple', 'online', c, num()))
+          <div class="shlb s3">{strip(lb[2], 'angled', 'fuchsia')}</div>
+          {f'<div class="shm">{strip(sh["membership"], "ribbon", "apple", "dk")}</div>' if sh.get('membership') else ''}''', 'bed-purple', 'online', c, num()))
 
     # 10 Online course and toolkit
     tk = c.get('toolkit')
@@ -206,12 +207,13 @@ def build(c):
             {strip(f['line'], 'ribbon', 'fuchsia', 'cat')}</div>
           <div class="fl2">{strip(f['role'], 'angled', 'purple', 'mini')}<h2>{e(f['name'])}</h2><div class="fps">{paras}</div>
             <p class="fcourse">{picto(17, 'pic xs')}{e(f['for_course'])}</p></div>
-          <div class="fl3">{strip('NVR in practice', 'angled', 'teal', 'mini')}<div class="pfs">{proof}</div>
-            <blockquote style="{box('indigo')}">"{e(f['quote'][0])}"<cite>{e(f['quote'][1])}</cite></blockquote></div></div>''',
+          <div class="fl3">{strip(f.get('proof_label', 'In practice'), 'angled', 'teal', 'mini')}<div class="pfs">{proof}</div>
+            {f'<blockquote style="{box("indigo")}">"{e(f["quote"][0])}"<cite>{e(f["quote"][1])}</cite></blockquote>' if f.get('quote') else ''}</div></div>''',
           'light', 'why', c, num(), f'About your facilitator: {f["name"]}'))
 
     # 7 Formats and fees
-    imgs = [opt(A / 'img/tcll/blocks/block-5.webp', 500), opt(A / 'img/tcll/blocks/block-3.webp', 500)]
+    spare = [x for x in ('block-5.webp', 'block-3.webp', 'block-2.webp', 'block-6.webp') if x not in c['cover_image']]
+    imgs = [opt(A / 'img/tcll/blocks' / spare[0], 500), opt(A / 'img/tcll/blocks' / spare[1], 500)]
     def offer(f):
         if not f.get('offer'): return ''
         return f'<div class="foff" style="{box("apple")}"><b>{e(f["offer"][0])}</b><p>{e(f["offer"][1])}</p></div>'

@@ -1,0 +1,453 @@
+{
+  "slug": "corporate-parenting-in-practice",
+  "name": "Corporate Parenting in Practice",
+  "category": "Leadership",
+  "accent": "#cf0f55",
+  "cover_image": "blocks/block-3.webp",
+  "headline": "Would it be good enough. For my child?",
+  "intro": "Training that helps councillors and boards judge every decision by what a good parent would accept.",
+  "glance": [
+    [
+      "clock",
+      "Face to face or online",
+      "6 hours in person, or 2 hours live online",
+      "you choose the format",
+      "wide"
+    ],
+    [
+      "group",
+      "60",
+      "people per course",
+      "one fee covers everyone"
+    ],
+    [
+      "gift",
+      "5",
+      "things every delegate gets",
+      "workbook, recording and more"
+    ]
+  ],
+  "problem": {
+    "scene": "A care leaver is a green figure on the dashboard.",
+    "question": "He lives an hour from college, and has stopped going.",
+    "without": [
+      "Boards see dashboards, not children",
+      "Reports signed off without questions",
+      "Departments don't see themselves as parents",
+      "Young people never hear what changed"
+    ],
+    "with": [
+      "Every decision tested against your own child",
+      "Figures turned into questions",
+      "Every department knows its part",
+      "The board hears children and reports back"
+    ],
+    "standards": "Ofsted's 2026 ILACS framework gives care leavers a judgement of their own. The Children's Wellbeing and Schools Act 2026 extends the duty to schools, colleges, NHS bodies and government departments.",
+    "evidence": "Bring a recent board report and your local offer for care leavers. We build the exercises around your own material."
+  },
+  "audience": {
+    "groups": [
+      [
+        "clipboard",
+        "Elected members",
+        "Lead members for children and newly elected councillors"
+      ],
+      [
+        "group",
+        "Corporate parenting boards",
+        "Boards and panels, ideally one board together"
+      ],
+      [
+        "hands",
+        "Directors and senior leaders",
+        "From across the council, not only children's services"
+      ],
+      [
+        "heart",
+        "Partner agencies",
+        "Health, schools, colleges, housing and police"
+      ]
+    ],
+    "notes": [
+      "No children's services background needed",
+      "Best with one board",
+      "Up to 60 people"
+    ]
+  },
+  "outcomes": [
+    [
+      "See a decision from their side",
+      "Describe how a board decision, such as where a care leaver lives, feels from the young person's side."
+    ],
+    [
+      "Spot activity, not experience",
+      "Recognise when a report shows activity rather than children's experiences, and ask the next question."
+    ],
+    [
+      "Know the duty",
+      "Explain the seven corporate parenting principles and what the 2026 Act adds, and for whom."
+    ],
+    [
+      "Link it to inspection",
+      "Use Maslow to see what each department offers, and link the board's work to the four ILACS judgements."
+    ],
+    [
+      "Apply the test",
+      "Apply \"would it be good enough for my child?\" to a real decision and a board paper."
+    ],
+    [
+      "Close the gaps",
+      "Map what each department offers care leavers, name who follows up each gap, and report back to young people."
+    ]
+  ],
+  "pillars": {
+    "title": "The 7 corporate parenting principles",
+    "stance": "Would it be good enough for my child?",
+    "stance_line": "Section 1 of the Children and Social Work Act 2017 asks the council to act as a good parent would.",
+    "items": [
+      [
+        "Best interests",
+        "Act in their best interests and promote their health and wellbeing."
+      ],
+      [
+        "Views heard",
+        "Encourage children to say what they think, want and feel."
+      ],
+      [
+        "Views counted",
+        "Take those views, wishes and feelings into account."
+      ],
+      [
+        "Services used",
+        "Help them get to and make the best use of services."
+      ],
+      [
+        "High aspirations",
+        "Promote high aspirations and seek the best outcomes."
+      ],
+      [
+        "Safe and stable",
+        "Keep them safe, with stability at home, in relationships and at school or work."
+      ],
+      [
+        "Ready for adult life",
+        "Prepare them for adulthood and independent living."
+      ]
+    ],
+    "base": "The Children's Wellbeing and Schools Act 2026 extends these responsibilities to schools, colleges, NHS bodies and government departments."
+  },
+  "story_line": "Four stories run through the day: Kelsey, 17, Jodie, 15, Daniel, 19, and Dominic, 18. Each is a composite, drawn from real experiences of care.",
+  "parts": [
+    {
+      "title": "The duty",
+      "theory": "The seven principles and the 2026 Act.",
+      "leave": "The principles on one page"
+    },
+    {
+      "title": "The children",
+      "theory": "Lundy's model of participation.",
+      "leave": "The \"good enough for my child?\" test"
+    },
+    {
+      "title": "The council",
+      "theory": "Maslow, and your local offer.",
+      "leave": "A map of who offers what"
+    },
+    {
+      "title": "The board",
+      "theory": "Figures, children and ILACS.",
+      "leave": "The corporate parenting self-check"
+    }
+  ],
+  "online_session": {
+    "title": "Option 2: live online, a 2-hour keynote",
+    "sub": "For boards who can't give a full day, or want to try it first. A live talk on Teams or Zoom, with chat and Q&A.",
+    "keynote": {
+      "title": "The keynote",
+      "text": "Kelsey, Jodie, Daniel and Dominic's stories run through it, each one a decision seen from the young person's side.",
+      "ideas": [
+        "The duty and the 2026 Act",
+        "Hearing children",
+        "Every department a parent",
+        "Boards that act"
+      ]
+    },
+    "chat": {
+      "title": "Your say in the chat",
+      "text": "Questions to the audience throughout the talk.",
+      "bubbles": [
+        "Would you accept Kelsey's letter for your own child?",
+        "Which department rarely sees itself as a parent?",
+        "When did your board last hear from a care leaver?"
+      ]
+    },
+    "qa": {
+      "title": "Live Q&A",
+      "text": "Questions answered live at the end. Ask about:",
+      "asks": [
+        "Your board papers",
+        "The 2026 Act",
+        "Getting ready for ILACS"
+      ]
+    },
+    "after": "Use the tools afterwards in the online course, with the workbook and the recording.",
+    "compare": "Try it online first and get 20% off the face to face day. Details are with the fees."
+  },
+  "formats": [
+    {
+      "icon": "room",
+      "label": "Face to face",
+      "length": "6 hours",
+      "time": "Usually 10am to 4pm",
+      "fee": "£3,950",
+      "fee_note": "+ VAT + expenses",
+      "points": [
+        "In your building or a venue you choose",
+        "Practice in pairs and small groups",
+        "You provide a room and a screen"
+      ]
+    },
+    {
+      "icon": "laptop",
+      "label": "Live online",
+      "length": "2 hours",
+      "time": "A live keynote with Q&A",
+      "fee": "£1,950",
+      "fee_note": "+ VAT",
+      "points": [
+        "On Teams or Zoom",
+        "Questions in the chat throughout",
+        "Live Q&A at the end"
+      ]
+    }
+  ],
+  "fees_note": "One fee per course for up to 60 people. Examples and language from your service at no extra cost.",
+  "gets": [
+    [
+      "book",
+      "Workbook",
+      "for life",
+      "Stories, tools and space to plan. Theirs to keep."
+    ],
+    [
+      "play",
+      "Recording",
+      "12 months",
+      "Catch up or go back over any part."
+    ],
+    [
+      "laptop",
+      "Online course",
+      "12 months",
+      "The Corporate Parenting in Practice course on The Care Leaders Online."
+    ],
+    [
+      "award",
+      "Certificate",
+      "of completion",
+      "For their development record."
+    ],
+    [
+      "tag",
+      "50% off",
+      "The Care Leaders Online",
+      "A year's individual membership at half price."
+    ]
+  ],
+  "showcase": {
+    "title": "The online course, on any device",
+    "sub": "On a laptop, tablet or phone, for 12 months.",
+    "laptop": "corporate-parenting-in-practice-laptop.png",
+    "phone": "corporate-parenting-in-practice-phone.png",
+    "workbook": [
+      "corporate-parenting-in-practice-workbook-cover.jpg",
+      "corporate-parenting-in-practice-workbook-page.jpg"
+    ],
+    "labels": [
+      "The course home on a laptop",
+      "Every tool works on a phone",
+      "The workbook, theirs to keep"
+    ],
+    "membership": "Plus 50% off a year on The Care Leaders Online"
+  },
+  "screens": {
+    "title": "Corporate Parenting in Practice",
+    "kind": "Online course",
+    "intro": "Judge every decision by what a good parent would accept. Four parts, with a tool for your next board in each.",
+    "unit": "parts",
+    "unit_one": "Part",
+    "done": 1,
+    "sections": [
+      [
+        "The duty",
+        "The principles on one page"
+      ],
+      [
+        "The children",
+        "Good enough for my child?"
+      ],
+      [
+        "The council",
+        "Local offer map"
+      ],
+      [
+        "The board",
+        "Corporate parenting self-check"
+      ]
+    ],
+    "phone": {
+      "section_no": 2,
+      "title": "Good enough for my child?",
+      "intro": "Test one real decision from your service against your own child.",
+      "fields": [
+        [
+          "The decision",
+          "Care leaver moved to a flat an hour from college."
+        ],
+        [
+          "Would I accept it for my child?",
+          "No. Not without a plan for college and friends."
+        ],
+        [
+          "What the board needs to see",
+          "Distance to college, and what the young person said."
+        ],
+        [
+          "Who follows it up",
+          "Head of service, by next board."
+        ]
+      ],
+      "key": "A figure tells the board what is happening. Children tell it why."
+    }
+  },
+  "workbook": {
+    "cover_title": "Corporate Parenting",
+    "subtitle": "In practice",
+    "promise": "Judge every decision by what a good parent would accept, and hear from children directly.",
+    "for": "For councillors, boards and corporate parenting partners.",
+    "page": {
+      "title": "Good enough for my child?",
+      "intro": "Take one real decision from your service. Picture your own child in their place.",
+      "n": 12,
+      "questions": [
+        "What was decided, and who decided it?",
+        "Would you accept this for your own child? Why or why not?",
+        "What would the board need to see to be satisfied?",
+        "Who will follow it up, and how will the young person hear what changed?"
+      ]
+    }
+  },
+  "why": {
+    "title": "Why choose The Care Leaders Learning",
+    "sub": "Training built by people who have lived in care and people who have led services.",
+    "usps": [
+      [
+        21,
+        "Lived and professional experience",
+        "Founded and led by Luke Rodgers BEM, a care experienced leader. Every course is written by people who have been in care and people who have run, redesigned and inspected children's services. Your team hears both sides."
+      ],
+      [
+        12,
+        "Inside national policy",
+        "We led the national engagement on England's new fostering standards for the Department for Education. Our training reflects what the standards expect."
+      ],
+      [
+        16,
+        "Learning that carries on after the day",
+        "A workbook for life, the recording and 12 months online. Your team keeps going back to it."
+      ],
+      [
+        5,
+        "Honest about the evidence",
+        "We say what the research shows, and where it is still limited."
+      ]
+    ],
+    "stats": [
+      [
+        "36",
+        "local authorities we have worked with, plus the Department for Education and the NHS"
+      ],
+      [
+        "2,700+",
+        "learners on The Care Leaders Online"
+      ]
+    ],
+    "awards": [
+      [
+        "iese-gold-2026.jpg",
+        "Gold, Dual Perspective Leadership Award",
+        "iESE Public Sector Transformation Awards 2026"
+      ],
+      [
+        "cypn-logo.jpg",
+        "Workforce Development Award",
+        "Children & Young People Now Awards 2023"
+      ]
+    ]
+  },
+  "facilitator": {
+    "name": "Luke Rodgers BEM",
+    "role": "Your facilitator",
+    "line": "From care leaver to care leader",
+    "image": "luke-speaking.jpg",
+    "paras": [
+      "Luke went into care at 10. He has spent his career inside children's services as a consultant, trainer and keynote speaker, and is CEO of The Care Leaders.",
+      "He has worked with councils nationally on how they act as corporate parents, including Middlesbrough, where young people and staff co-produced the corporate parenting principles, and Durham, where the Durham Cares vision changed how corporate parenting is understood.",
+      "He led the national engagement on England's new fostering standards for the Department for Education, and knows the national policy behind the duty.",
+      "He was a Knowledge Equity Fellow at Saïd Business School, University of Oxford, and was awarded the British Empire Medal in 2018 for commitment to children and families."
+    ],
+    "proof": [
+      [
+        "300",
+        "staff, young people and partners shaped Middlesbrough Children Matter"
+      ],
+      [
+        "5",
+        "youth forums worked with us at every step in Middlesbrough"
+      ],
+      [
+        "800+",
+        "Durham children's social care staff joined the next stage of Durham Cares"
+      ]
+    ],
+    "proof_label": "Corporate parenting in practice",
+    "for_course": "On the face to face day Luke leads every part. Online, he gives the keynote and answers your questions live.",
+    "quote": [
+      "The process was crucial to get buy in and now in place there appears huge support.",
+      "Pete Dwyer CBE, on Middlesbrough Children Matter"
+    ]
+  },
+  "offer": {
+    "tag": "Try it online first",
+    "big": "20% off",
+    "line": "the face to face day when it is booked and facilitated within 12 months of your online session.",
+    "steps": [
+      [
+        "1",
+        "Live online keynote",
+        "£1,950",
+        "+ VAT",
+        ""
+      ],
+      [
+        "2",
+        "Face to face day",
+        "£3,150",
+        "+ VAT + expenses",
+        "£3,950"
+      ]
+    ],
+    "save": "You save £800",
+    "terms": "For the same organisation that booked the online session. One discounted face to face day per online session. The day must be booked and facilitated within 12 months of the online session."
+  },
+  "related": [
+    [
+      "Co-producing your Care Leaver Local Offer",
+      "Building your local offer with care leavers, not just for them."
+    ],
+    [
+      "The Five S Framework",
+      "Leading with lived experience."
+    ]
+  ]
+}

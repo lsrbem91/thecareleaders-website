@@ -1,0 +1,436 @@
+{
+  "slug": "tools-for-schools",
+  "name": "Tools for Schools",
+  "category": "Schools",
+  "accent": "#cf0f55",
+  "cover_image": "blocks/block-5.webp",
+  "headline": "Read the behaviour. Pick the right tool.",
+  "intro": "Training that helps school staff read what sits behind a behaviour and respond without escalating it.",
+  "glance": [
+    [
+      "clock",
+      "Face to face or online",
+      "6 hours in person, or 2 hours live online",
+      "you choose the format",
+      "wide"
+    ],
+    [
+      "group",
+      "60",
+      "people per course",
+      "one fee covers everyone"
+    ],
+    [
+      "gift",
+      "5",
+      "things every delegate gets",
+      "workbook, recording and more"
+    ]
+  ],
+  "problem": {
+    "scene": "Period 1. A pupil throws his book and walks out.",
+    "question": "By break he has a detention. Nobody has asked him why.",
+    "without": [
+      "The same sanction as everyone else",
+      "The behaviour escalates",
+      "Labels follow the child",
+      "Nobody knows who to call"
+    ],
+    "with": [
+      "Staff read what sits behind it",
+      "The boundary holds, with support",
+      "Profiles describe, not label",
+      "Staff know who to call and when"
+    ],
+    "standards": "The DfE's Behaviour in Schools guidance (2024) expects staff to consider underlying factors and put support in place alongside sanctions. This course shows staff how to do it in the moment.",
+    "evidence": "It works alongside your behaviour policy, not instead of it. Ideally the whole staff team trains together, so everyone shares a language."
+  },
+  "audience": {
+    "groups": [
+      [
+        "school",
+        "Teachers and teaching assistants",
+        "In primary and secondary schools"
+      ],
+      [
+        "heart",
+        "Pastoral and safeguarding staff",
+        "Pastoral, inclusion and safeguarding staff"
+      ],
+      [
+        "clipboard",
+        "Designated teachers",
+        "For children in care and previously in care"
+      ],
+      [
+        "hands",
+        "Senior leaders",
+        "The people who set and review the behaviour policy"
+      ]
+    ],
+    "notes": [
+      "No social care knowledge needed",
+      "Best with the whole staff team",
+      "Up to 60 people"
+    ]
+  },
+  "outcomes": [
+    [
+      "See the school day from their side",
+      "Describe a school day from the side of a child in care, including what adults often miss."
+    ],
+    [
+      "Spot attachment and trauma",
+      "Recognise how attachment difficulties and trauma show up in a classroom, a corridor and a detention."
+    ],
+    [
+      "Tell when a child can think",
+      "Use the window of tolerance to tell when a child can think and when they can't."
+    ],
+    [
+      "Challenge labels",
+      "Explain how labels and low expectations shape how a child is treated, using Goffman and Rosenthal."
+    ],
+    [
+      "Calm a tense moment",
+      "Use de-escalation phrases and hold the boundary while showing the child you understand why."
+    ],
+    [
+      "Know who to call",
+      "Rewrite a pupil profile without labels, and know when to contact the virtual school and social worker."
+    ]
+  ],
+  "pillars": {
+    "title": "The tools your staff take back to school",
+    "stance": "Read the behaviour, then reach for the right tool",
+    "stance_line": "Practised in the room, with handouts to keep, and ready for the next morning.",
+    "items": [
+      [
+        "Window of Tolerance",
+        "A quick way to tell when a child is calm enough to think, and when they are not."
+      ],
+      [
+        "De-escalation phrases",
+        "Fewer words, a calm voice, the boundary held in a tense moment."
+      ],
+      [
+        "Profile reframing",
+        "A pupil profile that is accurate, says what helps, and doesn't label."
+      ],
+      [
+        "Separating Reason from Behaviour",
+        "Hold the boundary while responding to the reason underneath."
+      ]
+    ],
+    "base": "Built on Siegel's window of tolerance, Bowlby's attachment theory, Louise Bombèr's work in schools, and Goffman on stigma."
+  },
+  "story_line": "Two stories run through the day: Tyler, 12, in his second secondary school this year, and Amira, 8, after half term. Each is a composite, drawn from real experiences of care.",
+  "parts": [
+    {
+      "title": "The messages in behaviour",
+      "theory": "The window of tolerance.",
+      "leave": "The Window of Tolerance"
+    },
+    {
+      "title": "Attachment and trauma",
+      "theory": "Why a key adult matters.",
+      "leave": "De-escalation phrases"
+    },
+    {
+      "title": "Language and stigma",
+      "theory": "How labels shape expectations.",
+      "leave": "A reframed pupil profile"
+    },
+    {
+      "title": "Where school and social care clash",
+      "theory": "Who does what, and when to call.",
+      "leave": "Three tools, with handouts"
+    }
+  ],
+  "online_session": {
+    "title": "Option 2: live online, a 2-hour keynote",
+    "sub": "For teams who can't give a full day, or want to try it first. A live talk on Teams or Zoom, with chat and Q&A.",
+    "keynote": {
+      "title": "The keynote",
+      "text": "Tyler and Amira's stories run through it, from period 1 to an exclusion and back.",
+      "ideas": [
+        "Behaviour is communication",
+        "Attachment and the key adult",
+        "Labels and expectations",
+        "School and social care, side by side"
+      ]
+    },
+    "chat": {
+      "title": "Your say in the chat",
+      "text": "Questions to the audience throughout the talk.",
+      "bubbles": [
+        "What would you say to Amira at the toilet door?",
+        "What word do staff use most about a child?",
+        "Who would you call first about Tyler?"
+      ]
+    },
+    "qa": {
+      "title": "Live Q&A",
+      "text": "Questions answered live at the end. Ask about:",
+      "asks": [
+        "A pupil you teach",
+        "Your behaviour policy",
+        "Working with the virtual school"
+      ]
+    },
+    "after": "Practise each tool afterwards in the online course, with the workbook and the recording.",
+    "compare": "Try it online first and get 20% off the face to face day. Details are with the fees."
+  },
+  "formats": [
+    {
+      "icon": "room",
+      "label": "Face to face",
+      "length": "6 hours",
+      "time": "Usually 10am to 4pm",
+      "fee": "£3,950",
+      "fee_note": "+ VAT + expenses",
+      "points": [
+        "In your building or a venue you choose",
+        "Practice in pairs and small groups",
+        "You provide a room and a screen"
+      ]
+    },
+    {
+      "icon": "laptop",
+      "label": "Live online",
+      "length": "2 hours",
+      "time": "A live keynote with Q&A",
+      "fee": "£1,950",
+      "fee_note": "+ VAT",
+      "points": [
+        "On Teams or Zoom",
+        "Questions in the chat throughout",
+        "Live Q&A at the end"
+      ]
+    }
+  ],
+  "fees_note": "One fee per course for up to 60 people. Examples and language from your service at no extra cost.",
+  "gets": [
+    [
+      "book",
+      "Workbook",
+      "for life",
+      "Stories, tools and space to plan. Theirs to keep."
+    ],
+    [
+      "play",
+      "Recording",
+      "12 months",
+      "Catch up or go back over any part."
+    ],
+    [
+      "laptop",
+      "Online course",
+      "12 months",
+      "The Tools for Schools course on The Care Leaders Online."
+    ],
+    [
+      "award",
+      "Certificate",
+      "of completion",
+      "For their development record."
+    ],
+    [
+      "tag",
+      "50% off",
+      "The Care Leaders Online",
+      "A year's individual membership at half price."
+    ]
+  ],
+  "showcase": {
+    "title": "The online course, on any device",
+    "sub": "On a laptop, tablet or phone, for 12 months.",
+    "laptop": "tools-for-schools-laptop.png",
+    "phone": "tools-for-schools-phone.png",
+    "workbook": [
+      "tools-for-schools-workbook-cover.jpg",
+      "tools-for-schools-workbook-page.jpg"
+    ],
+    "labels": [
+      "The course home on a laptop",
+      "Every tool works on a phone",
+      "The workbook, theirs to keep"
+    ],
+    "membership": "Plus 50% off a year on The Care Leaders Online"
+  },
+  "screens": {
+    "title": "Tools for Schools",
+    "kind": "Online course",
+    "intro": "Read what sits behind a behaviour and respond without escalating it. Four parts, with a tool in each.",
+    "unit": "parts",
+    "unit_one": "Part",
+    "done": 1,
+    "sections": [
+      [
+        "The messages in behaviour",
+        "Window of Tolerance"
+      ],
+      [
+        "Attachment and trauma",
+        "De-escalation phrases"
+      ],
+      [
+        "Language and stigma",
+        "Profile reframing"
+      ],
+      [
+        "School and social care",
+        "Separating Reason from Behaviour"
+      ]
+    ],
+    "phone": {
+      "section_no": 3,
+      "title": "Profile reframing",
+      "intro": "Rewrite one pupil profile so it is accurate and doesn't label. Initials only.",
+      "fields": [
+        [
+          "What the profile says now",
+          "\"Volatile, poor attendance.\""
+        ],
+        [
+          "What actually happens",
+          "Walks out when asked to read aloud."
+        ],
+        [
+          "What helps",
+          "A warning before reading. A key adult at break."
+        ],
+        [
+          "What they are good at",
+          "Art. Looking after younger pupils."
+        ]
+      ],
+      "key": "Words in a profile shape how a child is taught."
+    }
+  },
+  "workbook": {
+    "subtitle": "For school staff",
+    "promise": "Read what sits behind a behaviour, and reach for the right tool the next morning.",
+    "for": "For school staff who teach and support children in care.",
+    "page": {
+      "title": "Reframe a pupil profile",
+      "intro": "Keep one pupil in mind. Use initials only.",
+      "n": 12,
+      "questions": [
+        "What does the profile say about this pupil now?",
+        "What actually happens, described without labels?",
+        "What helps this pupil, and who helps them?",
+        "What are they good at, and what do they enjoy?"
+      ]
+    }
+  },
+  "why": {
+    "title": "Why choose The Care Leaders Learning",
+    "sub": "Training built by people who have lived in care and people who have led services.",
+    "usps": [
+      [
+        21,
+        "Lived and professional experience",
+        "Founded and led by Luke Rodgers BEM, a care experienced leader. Every course is written by people who have been in care and people who have run, redesigned and inspected children's services. Your team hears both sides."
+      ],
+      [
+        12,
+        "Inside national policy",
+        "We led the national engagement on England's new fostering standards for the Department for Education. Our training reflects what the standards expect."
+      ],
+      [
+        16,
+        "Learning that carries on after the day",
+        "A workbook for life, the recording and 12 months online. Your team keeps going back to it."
+      ],
+      [
+        5,
+        "Honest about the evidence",
+        "We say what the research shows, and where it is still limited."
+      ]
+    ],
+    "stats": [
+      [
+        "36",
+        "local authorities we have worked with, plus the Department for Education and the NHS"
+      ],
+      [
+        "2,700+",
+        "learners on The Care Leaders Online"
+      ]
+    ],
+    "awards": [
+      [
+        "iese-gold-2026.jpg",
+        "Gold, Dual Perspective Leadership Award",
+        "iESE Public Sector Transformation Awards 2026"
+      ],
+      [
+        "cypn-logo.jpg",
+        "Workforce Development Award",
+        "Children & Young People Now Awards 2023"
+      ]
+    ]
+  },
+  "facilitator": {
+    "name": "Luke Rodgers BEM",
+    "role": "Your facilitator",
+    "line": "From care leaver to care leader",
+    "image": "luke-speaking.jpg",
+    "paras": [
+      "Luke went into care at 10. He has spent his career inside children's services as a consultant, trainer and keynote speaker, and is CEO of The Care Leaders.",
+      "He has worked with councils nationally on children in care in schools, including Middlesbrough's town-wide programme to make every school attachment aware and trauma informed, and Darlington, where designated teachers designed their own training with him.",
+      "Teachers are one of the largest groups he trains, and he has spoken at national and regional virtual school conferences.",
+      "He was a Knowledge Equity Fellow at Saïd Business School, University of Oxford, and was awarded the British Empire Medal in 2018 for commitment to children and families."
+    ],
+    "proof": [
+      [
+        "427",
+        "school and council staff on Middlesbrough's trauma-informed training platform"
+      ],
+      [
+        "33.6%",
+        "fewer suspension episodes reported across Middlesbrough's PROCLAIM schools"
+      ],
+      [
+        "22",
+        "designated teachers trained in Darlington, on a programme they helped design"
+      ]
+    ],
+    "proof_label": "In schools",
+    "for_course": "On the face to face day Luke leads every part. Online, he gives the keynote and answers your questions live."
+  },
+  "offer": {
+    "tag": "Try it online first",
+    "big": "20% off",
+    "line": "the face to face day when it is booked and facilitated within 12 months of your online session.",
+    "steps": [
+      [
+        "1",
+        "Live online keynote",
+        "£1,950",
+        "+ VAT",
+        ""
+      ],
+      [
+        "2",
+        "Face to face day",
+        "£3,150",
+        "+ VAT + expenses",
+        "£3,950"
+      ]
+    ],
+    "save": "You save £800",
+    "terms": "For the same organisation that booked the online session. One discounted face to face day per online session. The day must be booked and facilitated within 12 months of the online session."
+  },
+  "related": [
+    [
+      "Behind the Behaviour",
+      "Reading behaviour as communication, without losing the relationship."
+    ],
+    [
+      "Two Timetables",
+      "Teachers and social workers learning each other's worlds."
+    ]
+  ]
+}

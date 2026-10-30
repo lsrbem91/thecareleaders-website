@@ -234,11 +234,11 @@
   "showcase": {
     "title": "The NVR Toolkit on any device",
     "sub": "The NVR Toolkit works on a laptop, tablet or phone. The workbook is theirs to print and keep.",
-    "laptop": "nvr-laptop.png",
-    "phone": "nvr-phone.png",
+    "laptop": "nvr-essentials-laptop.png",
+    "phone": "nvr-essentials-phone.png",
     "workbook": [
-      "nvr-workbook-cover.jpg",
-      "nvr-workbook-page.jpg"
+      "nvr-essentials-workbook-cover.jpg",
+      "nvr-essentials-workbook-page.jpg"
     ],
     "labels": [
       "NVR Toolkit course home on a laptop",
@@ -419,7 +419,8 @@
       "Since using NVR we have had no placement breakdowns in any of our children's homes.",
       "Paul Rudd, Strategic Manager, Children's Homes, Durham County Council"
     ],
-    "for_course": "On the face to face day Luke leads every part. Online, he gives the keynote and answers your questions live."
+    "for_course": "On the face to face day Luke leads every part. Online, he gives the keynote and answers your questions live.",
+    "proof_label": "NVR in practice"
   },
   "pillars": {
     "title": "The 7 pillars of NVR",
@@ -456,5 +457,92 @@
       ]
     ],
     "base": "Non-violent resistance was developed by Haim Omer. The course covers every pillar, and the NVR Toolkit has a section on each."
+  },
+  "screens": {
+    "title": "The NVR Toolkit",
+    "kind": "Online course and toolkit",
+    "intro": "Calm, safe, non-violent responses when behaviour escalates. Ten sections, with an interactive tool in each.",
+    "sections": [
+      [
+        "Foundations",
+        "Your young person"
+      ],
+      [
+        "Parental presence",
+        "Presence map"
+      ],
+      [
+        "De-escalation",
+        "Hot-moment protocol"
+      ],
+      [
+        "Baskets",
+        "Baskets sort"
+      ],
+      [
+        "Reconciliation",
+        "Gesture menu"
+      ],
+      [
+        "Acts of resistance",
+        "Resistance planner"
+      ],
+      [
+        "Supporters and self-care",
+        "Supporter mapper"
+      ],
+      [
+        "Announcements",
+        "Announcement builder"
+      ],
+      [
+        "Sit-ins",
+        "Sit-in script builder"
+      ],
+      [
+        "Bringing it together",
+        "Your certificate"
+      ]
+    ],
+    "done": 3,
+    "phone": {
+      "section_no": 3,
+      "title": "Your hot-moment protocol",
+      "intro": "Plan what you will say and do before the next hot moment with your young person.",
+      "fields": [
+        [
+          "What I notice first",
+          "Voice gets louder. Starts pacing by the door."
+        ],
+        [
+          "My cold-iron line",
+          "\"I'm not going to argue. I'm staying right here.\""
+        ],
+        [
+          "What I will not do",
+          "Shout, threaten, or make a deal in the moment."
+        ],
+        [
+          "When I come back to it",
+          "Tomorrow, once we are both calm."
+        ]
+      ],
+      "key": "Strike when the iron is cold. Stay present now, respond later."
+    }
+  },
+  "workbook": {
+    "subtitle": "Non-violent resistance",
+    "promise": "Calm, safe responses when a young person's behaviour escalates, and a plan to repair afterwards.",
+    "page": {
+      "title": "Your hot-moment protocol",
+      "intro": "Keep your young person in mind. Plan this now, while you are calm, so you are not deciding in the moment.",
+      "n": 14,
+      "questions": [
+        "What do you notice first when your young person starts to escalate?",
+        "Write your cold-iron line. Short, calm, and something you can say on any shift.",
+        "What will you not do in the moment?",
+        "When and how will you come back to it once everyone is calm?"
+      ]
+    }
   }
 }

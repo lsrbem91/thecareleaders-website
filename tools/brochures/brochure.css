@@ -51,7 +51,7 @@ h2{font-size:50px;line-height:1.05;margin-bottom:24px}
 .ba{display:grid;grid-template-columns:1fr 90px 1fr;align-items:center}
 .b{background-size:100% 100%;padding:24px 30px 26px}
 .bh{margin-bottom:14px;font-size:16px}
-.b li{display:flex;gap:14px;align-items:center;font:400 23px/1.3 CS;margin-bottom:14px}
+.b li{display:flex;gap:14px;align-items:center;font:400 21px/1.25 CS;margin-bottom:11px}
 .bad li{padding-left:14px;border-left:5px solid #e73924}
 .good li img{width:30px}
 .pic.mid{width:70px;height:70px;justify-self:center}
@@ -127,16 +127,16 @@ h2{font-size:50px;line-height:1.05;margin-bottom:24px}
 .legal{position:absolute;left:60px;right:60px;bottom:22px;font:400 12px CS}
 /* online showcase */
 .shh{width:900px}.shh .sub{margin:0;max-width:640px}
-.shl{position:absolute;left:52px;top:236px;width:640px}
-.shp{position:absolute;left:600px;top:222px;height:400px}
+.shl{position:absolute;left:52px;top:254px;width:620px}
+.shp{position:absolute;left:590px;top:246px;height:378px}
 .shw1{position:absolute;left:846px;top:150px;width:240px;transform:rotate(-3deg)}
 .shw2{position:absolute;left:978px;top:196px;width:240px;transform:rotate(4deg)}
-.shlb{position:absolute;top:626px}.shlb.s1{left:60px}.shlb.s2{left:600px}.shlb.s3{left:900px;top:560px}
+.shlb{position:absolute;top:636px}.shlb.s1{left:60px}.shlb.s2{left:600px}.shlb.s3{left:900px;top:560px}
 .gl.wide{grid-column:span 2}
 /* live online keynote */
 .osub{max-width:900px}
 .ons{display:grid;grid-template-columns:1.35fr 1fr .8fr;gap:18px}
-.onk,.onc,.onq{background-size:100% 100%;padding:24px 26px 26px;position:relative;min-height:310px}
+.onk,.onc,.onq{background-size:100% 100%;padding:24px 26px 26px;position:relative;min-height:268px}
 .onp{position:absolute;right:20px;top:18px;width:58px;height:58px}
 .ons h3{font-size:30px;line-height:1.05;margin:0 70px 10px 0}.ons p{font-size:17px;line-height:1.4;padding-right:60px}
 .onl{margin-top:16px;display:flex;flex-direction:column;gap:10px}
@@ -147,7 +147,7 @@ h2{font-size:50px;line-height:1.05;margin-bottom:24px}
 .dark .tln{color:#fff}.onx{margin-top:8px;font-family:CS}
 .onal{margin-top:14px;display:flex;flex-direction:column;gap:10px}.onal li{display:flex;gap:10px;align-items:center;font:400 17px/1.25 CS}.onal img{width:18px}
 .foff{background-size:100% 100%;color:#241b40;padding:12px 16px 14px;margin-top:14px}.foff b{font:400 21px CB;display:block}.foff p{font-size:15px;line-height:1.35;margin-top:2px}
-.osub{max-width:1000px}
+.osub{max-width:none;font-size:18px}
 /* offer page */
 .ofl{position:absolute;left:60px;top:130px;width:580px}
 .ofb{font:400 150px/1 CB;color:#acc90b;margin:22px 0 18px;white-space:nowrap;letter-spacing:-3px}
@@ -185,7 +185,7 @@ h2{font-size:50px;line-height:1.05;margin-bottom:24px}
 .fcourse{display:flex;align-items:center;font:400 16px/1.35 CS;margin-top:8px;color:#5f3c90}
 .pfs{display:grid;gap:10px;margin:12px 0 14px}
 .pf{background-size:100% 100%;color:#fff;display:flex;gap:16px;align-items:center;padding:12px 18px}
-.pf b{font:400 40px/1 CB;color:#acc90b;min-width:86px}.pf p{font:400 15px/1.3 CS}
+.pf b{font:400 36px/1 CB;color:#acc90b;min-width:112px}.pf p{font:400 15px/1.3 CS}
 blockquote{background-size:100% 100%;color:#fff;padding:16px 20px 18px;font:400 17px/1.35 CB}
 blockquote cite{display:block;font:400 13px/1.3 CS;color:#acc90b;margin-top:8px;font-style:normal}
 .rel2{max-width:640px;margin-top:10px}
@@ -202,3 +202,6 @@ blockquote cite{display:block;font:400 13px/1.3 CS;color:#acc90b;margin-top:8px;
 .stas{display:flex;flex-direction:column;gap:16px;margin-top:6px}
 .sta{background-size:100% 100%;display:grid;grid-template-columns:90px 200px 1fr;align-items:center;gap:10px;padding:18px 110px 20px 24px;color:#fff;min-height:118px}
 .sta.dk{color:#241b40}.sta .stp{width:76px;height:76px}.sta b{font:400 46px/1 CB}.sta p{font:400 24px/1.3 CS}
+.pils.wide .pil h3{font-size:24px}.pils.wide .pil p{font-size:17px}.pils.wide .pil{padding:20px 20px 22px}
+.shm{position:absolute;left:60px;top:200px}.shm .strip{white-space:nowrap}.shm .strip{font-size:18px;padding:9px 46px 10px 14px}
+.cover h1.long{font-size:66px;line-height:1}
