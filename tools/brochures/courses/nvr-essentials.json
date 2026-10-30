@@ -544,5 +544,10 @@
         "When and how will you come back to it once everyone is calm?"
       ]
     }
+  },
+  "theme": {
+    "sta": "spine-bands",
+    "offer": "chevrons-colour",
+    "online": "tonal-midnight"
   }
 }

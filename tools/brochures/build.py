@@ -58,14 +58,28 @@ def nav(cur, has_online, dark):
             out.append(f'<span class="navi">{e(t)}</span>')
     return f'<nav class="nav"><img class="bm" src="{K}/brandmark.png" alt="">{"".join(out)}</nav>'
 
-def page(inner, cls, sec=None, c=None, n=None, t=None):
+GROUNDS = {  # October 2026 TCLL grounds: (file, x offset so the shapes sit clear of the text on the right)
+    'spine-bands': ('spine-bands-landscape.jpg', 300), 'chevrons-colour': ('chevrons-colour-landscape.jpg', 330),
+    'mark-together': ('mark-together-landscape.jpg', 260), 'drifting': ('drifting-landscape.jpg', 260),
+    'tipped-out': ('tipped-out-landscape.jpg', 260), 'tower': ('tower-landscape.jpg', 60),
+    'diamond': ('diamond-landscape.jpg', 260), 'steps': ('steps-landscape.jpg', 260)}
+def ground(name, extra=0):
+    """Inline background for a midnight page: a composition, the quiet tonal texture, or plain midnight."""
+    if name in GROUNDS:
+        f, x = GROUNDS[name]; return f'background:#241b40 url({K}/tcll2026/{f}) {x + extra}px 0/auto 100% no-repeat'
+    if name == 'tonal-midnight':
+        return f'background:#241b40 url({K}/tcll2026/tonal-midnight.jpg) center/cover'
+    return 'background:#241b40'
+def page(inner, cls, sec=None, c=None, n=None, t=None, bg=None):
     dark = 'dark' in cls
     top = nav(sec, bool(c.get('toolkit')), dark) if sec else ''
     foot = f'<div class="foot"><span>{e(c["name"])} · Course brochure · thecareleaders.com</span><span>{n}</span></div>' if n else ''
     toc = f' data-toc="{e(t)}" data-n="{n}"' if t else ''
-    return f'<section class="pg {cls}"{toc}>{top}{inner}{foot}</section>'
+    st = f' style="{bg}"' if bg else ''
+    return f'<section class="pg {cls}"{toc}{st}>{top}{inner}{foot}</section>'
 
 def build(c):
+    TH = {'sta': 'spine-bands', 'offer': 'chevrons-colour', 'online': 'tonal-midnight', **c.get('theme', {})}
     acc = c['accent']; name = c['name']; P = []
     num = lambda: len(P) + 1
     hs = c['headline'].split('. ', 1)
@@ -148,7 +162,7 @@ def build(c):
             <div class="onc" style="{box('purple')}">{picto(13, 'pic onp')}<h3>{e(ch['title'])}</h3><p>{e(ch['text'])}</p>{bub}</div>
             <div class="onq" style="{box('apple')}">{picto(11, 'pic onp')}<h3>{e(qa['title'])}</h3><p>{e(qa['text'])}</p><ul class="onal">{''.join(f'<li><img src="{K}/chev.png" alt="">{e(x)}</li>' for x in qa.get('asks', []))}</ul></div></div>
           <p class="tln">{strip('Afterwards', 'ribbon', 'apple', 'mini')} {e(on['after'])}</p>
-          <p class="tln onx">{e(on['compare'])}</p>''', 'dark tteal', 'course', c, num()))
+          <p class="tln onx">{e(on['compare'])}</p>''', 'dark', 'course', c, num(), bg=ground(TH['online'])))
 
     # 6 Our framework: Story, Theory, Action (the same page in every brochure)
     sta = [(18, 'fuchsia', '', 'Story', 'A real moment from care, told from the young person\'s side.'),
@@ -157,7 +171,7 @@ def build(c):
     cards = ''.join(f'<div class="sta {d}" style="background-image:url({K}/strips/arrowlong-{col}.png)">{picto(n, "pic stp")}<b>{t}</b><p>{x}</p></div>' for n, col, d, t, x in sta)
     P.append(page(f'''<h2>How we teach: Story, Theory, Action</h2>
       <p class="sub">Every Care Leaders Learning course, workbook and online lesson follows the same three steps.</p>
-      <div class="stas">{cards}</div>{f'<p class="tln">{strip("In this course", "ribbon", "apple", "mini")} {e(c["story_line"])}</p>' if c.get('story_line') else ''}''', 'dark spine', 'course', c, num()))
+      <div class="stas">{cards}</div>{f'<p class="tln">{strip("In this course", "ribbon", "apple", "mini")} {e(c["story_line"])}</p>' if c.get('story_line') else ''}''', 'dark spine', 'course', c, num(), bg=ground(TH['sta'])))
 
     # 8 Included
     gp = [20, 5, 8, 1, 16]
@@ -241,7 +255,7 @@ def build(c):
             for k, (n, t, fee, note, old) in enumerate(of['steps']))
         P.append(page(f'''<div class="ofl">{strip(of['tag'], 'ribbon', 'apple', 'cat')}<p class="ofb">{e(of['big'])}</p><p class="ofx">{e(of['line'])}</p></div>
           <div class="ofr">{stp}{strip(of['save'], 'ribbon', 'white', 'ofv dk')}</div>
-          <p class="oft">{e(of['terms'])}</p>''', 'dark chev', 'formats', c, num(), f"Try it online first: {of['big']} the face to face day"))
+          <p class="oft">{e(of['terms'])}</p>''', 'dark chev', 'formats', c, num(), f"Try it online first: {of['big']} the face to face day", bg=ground(TH['offer'], 0 if TH['offer'] == 'chevrons-colour' else 160)))
 
     # 13 Book
     scol = ['apple', 'teal', 'brightpurple']

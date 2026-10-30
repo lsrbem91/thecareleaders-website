@@ -207,9 +207,6 @@ blockquote cite{display:block;font:400 13px/1.3 CS;color:#acc90b;margin-top:8px;
 .cover h1.long{font-size:66px;line-height:1}
 /* October 2026 TCLL grounds */
 .dark.tmid{background:#241b40 url({K}/tcll2026/tonal-midnight.jpg) center/cover}
-.dark.tteal{background:#008196 url({K}/tcll2026/tonal-teal.jpg) center/cover}
-.dark.spine{background:#241b40 url({K}/tcll2026/spine-bands-landscape.jpg) 300px 0/auto 100% no-repeat}
-.dark.chev{background:#241b40 url({K}/tcll2026/chevrons-colour-landscape.jpg) 330px 0/auto 100% no-repeat}
 .tpale{background:#f0f1df url({K}/tcll2026/tonal-pale-green.jpg) center/cover}
 .dark.spine .stas{width:780px;gap:12px}.dark.spine .sta{padding-right:90px;min-height:104px}.dark.spine .sub,.dark.spine .tln{max-width:800px}
 .dark.tteal .sub,.dark.tteal .tln{color:#fff;font-family:CS}
@@ -222,3 +219,4 @@ blockquote cite{display:block;font:400 13px/1.3 CS;color:#acc90b;margin-top:8px;
 .dark.chev .ofs{width:380px;padding:16px 70px 18px 20px}
 .dark.chev .ofs b{font-size:24px}.dark.chev .ofp{font-size:36px}
 .dark.chev .ofv{align-self:center;font-size:22px}
+.dark.chev .oft{right:auto;width:900px}

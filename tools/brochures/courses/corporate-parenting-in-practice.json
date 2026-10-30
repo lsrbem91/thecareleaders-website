@@ -449,5 +449,10 @@
       "The Five S Framework",
       "Leading with lived experience."
     ]
-  ]
+  ],
+  "theme": {
+    "sta": "diamond",
+    "offer": "mark-together",
+    "online": "midnight"
+  }
 }
