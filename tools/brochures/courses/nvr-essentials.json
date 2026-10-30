@@ -215,7 +215,7 @@
     [
       "laptop",
       "NVR Toolkit",
-      "12 months",
+      "Free for 12 months",
       "Our full online NVR course and toolkit."
     ],
     [
@@ -227,13 +227,13 @@
     [
       "tag",
       "50% off",
-      "The Care Leaders Online",
-      "A year's individual membership at half price."
+      "All our online training",
+      "A year's membership of The Care Leaders Online at half price: every on-demand course, guest speakers and practice tools."
     ]
   ],
   "showcase": {
     "title": "The NVR Toolkit on any device",
-    "sub": "The NVR Toolkit works on a laptop, tablet or phone. The workbook is theirs to print and keep.",
+    "sub": "On a laptop, tablet or phone.",
     "laptop": "nvr-essentials-laptop.png",
     "phone": "nvr-essentials-phone.png",
     "workbook": [
@@ -244,7 +244,9 @@
       "NVR Toolkit course home on a laptop",
       "Every tool works on a phone",
       "The workbook, theirs to keep"
-    ]
+    ],
+    "free": "Free for 12 months: the NVR Toolkit",
+    "half": "All our online training? 50% off a year's membership"
   },
   "toolkit": {
     "name": "The NVR Toolkit",

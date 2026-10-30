@@ -238,7 +238,7 @@
     [
       "laptop",
       "Online course",
-      "12 months",
+      "Free for 12 months",
       "The Corporate Parenting in Practice course on The Care Leaders Online."
     ],
     [
@@ -250,13 +250,13 @@
     [
       "tag",
       "50% off",
-      "The Care Leaders Online",
-      "A year's individual membership at half price."
+      "All our online training",
+      "A year's membership of The Care Leaders Online at half price: every on-demand course, guest speakers and practice tools."
     ]
   ],
   "showcase": {
     "title": "The online course, on any device",
-    "sub": "On a laptop, tablet or phone, for 12 months.",
+    "sub": "On a laptop, tablet or phone.",
     "laptop": "corporate-parenting-in-practice-laptop.png",
     "phone": "corporate-parenting-in-practice-phone.png",
     "workbook": [
@@ -268,7 +268,8 @@
       "Every tool works on a phone",
       "The workbook, theirs to keep"
     ],
-    "membership": "Plus 50% off a year on The Care Leaders Online"
+    "free": "Free for 12 months: this course online",
+    "half": "All our online training? 50% off a year's membership"
   },
   "screens": {
     "title": "Corporate Parenting in Practice",

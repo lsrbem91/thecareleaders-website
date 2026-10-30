@@ -189,7 +189,7 @@ def build(c):
           <img class="shw1" src="{S}/{sh['workbook'][0]}" alt=""><img class="shw2" src="{S}/{sh['workbook'][1]}" alt="">
           <div class="shlb s1">{strip(lb[0], 'angled', 'purple')}</div><div class="shlb s2">{strip(lb[1], 'angled', 'teal')}</div>
           <div class="shlb s3">{strip(lb[2], 'angled', 'fuchsia')}</div>
-          {f'<div class="shm">{strip(sh["membership"], "ribbon", "apple", "dk")}</div>' if sh.get('membership') else ''}''', 'bed-purple', 'online', c, num()))
+          {f'<div class="shm">{strip(sh["free"], "ribbon", "apple", "dk")}{strip(sh["half"], "ribbon", "fuchsia")}</div>' if sh.get('free') else ''}''', 'bed-purple', 'online', c, num()))
 
     # 10 Online course and toolkit
     tk = c.get('toolkit')
