@@ -38,7 +38,7 @@ h2{font-size:50px;line-height:1.05;margin-bottom:24px}
 .cov{position:absolute;left:60px;top:120px;width:680px}
 .cat{font-size:16px;margin-bottom:16px;padding:8px 40px 9px 14px;color:#241b40}
 .cover h1{font-size:96px;line-height:.95;margin-bottom:14px}
-.hl{font-family:CB;font-size:42px;line-height:1.05;margin-bottom:18px}
+.hl{font-family:CB;font-size:38px;line-height:1.05;margin-bottom:18px}
 .intro{font-size:21px;line-height:1.45;max-width:620px}
 .covimg{position:absolute;right:46px;top:84px;width:480px}
 .glance{position:absolute;left:60px;right:60px;bottom:40px;display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
@@ -126,7 +126,7 @@ h2{font-size:50px;line-height:1.05;margin-bottom:24px}
 .rel p{font-size:15px;line-height:1.4;margin-top:10px}
 .legal{position:absolute;left:60px;right:60px;bottom:22px;font:400 12px CS}
 /* online showcase */
-.shh{width:640px}.shh .sub{margin:0}
+.shh{width:900px}.shh .sub{margin:0;max-width:640px}
 .shl{position:absolute;left:52px;top:236px;width:640px}
 .shp{position:absolute;left:600px;top:222px;height:400px}
 .shw1{position:absolute;left:846px;top:150px;width:240px;transform:rotate(-3deg)}

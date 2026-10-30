@@ -99,7 +99,7 @@ def build(c):
           <p class="ts">{e(p["theory"])}</p>{strip(p["leave"], "ribbon", "apple", "lv")}</div>'''
     am = ''.join(blk(i + 1, p) for i, p in enumerate(parts[:half]))
     pm = ''.join(blk(i + 1 + half, p) for i, p in enumerate(parts[half:]))
-    P.append(page(f'''<h2>The day at a glance</h2>
+    P.append(page(f'''<h2>The day: {len(parts)} parts, 10am to 4pm</h2>
       <div class="ruler" style="background-image:url({K}/strips/arrowlong-navy.png)"><span>10am</span><span>Morning</span><span>Lunch</span><span>Afternoon</span><span>4pm</span></div>
       <div class="trow"><div class="tbs">{am}</div><div class="lunch" style="{box('midgreen')}">Lunch</div><div class="tbs">{pm}</div></div>
       <p class="tln">{strip('You leave with', 'ribbon', 'apple', 'mini')} a tool ready to use on your next shift.</p>''', 'light', 'course', c, num()))
@@ -108,7 +108,7 @@ def build(c):
     rows = ''.join(f'''<div class="gr"><div class="gp" style="{box(pcols[(i - 1) % 4])}"><span class="tn">{i}</span>{e(p["title"])}</div>
         <div class="gc gs">{e(p["story"])}</div><div class="gc gt">{e(p["theory"])}</div><div class="gc ga">{e(p["action"])}</div></div>'''
         for i, p in enumerate(parts, 1))
-    P.append(page(f'''<h2>How every part works</h2>
+    P.append(page(f'''<h2>Every part: a story, the theory, then practice</h2>
       <div class="grid"><div class="gh"><div></div>
         <div>{picto(18, 'pic sm')}{strip('Story', 'ribbon', 'fuchsia', 'gh1')}<small>A moment from care</small></div>
         <div>{picto(6, 'pic sm')}{strip('Theory', 'ribbon', 'purple', 'gh1')}<small>The thinking behind it</small></div>
@@ -131,7 +131,7 @@ def build(c):
     gp = [20, 5, 8, 1, 16]
     gets = ''.join(f'<div class="gi" style="{box("indigo")}">{picto(gp[k % 5])}<b>{e(t)}</b>{strip(s, "angled", "apple", "gs2")}<p>{e(d)}</p></div>'
                    for k, (_, t, s, d) in enumerate(c['gets']))
-    P.append(page(f'''<h2>Every delegate gets</h2><p class="sub">Face to face or online. All included in the fee.</p>
+    P.append(page(f'''<h2>What every delegate gets</h2><p class="sub">Face to face or online. All included in the fee.</p>
       <div class="gis">{gets}</div>''', 'dark', 'included', c, num()))
 
     # 9 Online showcase: devices and workbook
