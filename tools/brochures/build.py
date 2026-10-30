@@ -9,7 +9,7 @@ No icon fonts, no drawn icons, no grey, no rounded corners.
 
 Page order (navigation strip on every inner page):
  Cover · Problem · Who it's for · Outcomes · The course (2 pages) · Formats and fees
- · Included · Online course (if the course has one) · Book
+ · Included · Online showcase and toolkit (if the course has one) · Book
 
 Design rule: no CSS shadows, filters, masks or opacity. They export as soft masks
 that the iPhone PDF viewer draws as dark boxes. Shapes are pre-tinted PNGs.
@@ -134,7 +134,17 @@ def build(c):
     P.append(page(f'''<h2>Every delegate gets</h2><p class="sub">Face to face or online. All included in the fee.</p>
       <div class="gis">{gets}</div>''', 'dark', 'included', c, num()))
 
-    # 9 Online course and toolkit
+    # 9 Online showcase: devices and workbook
+    sh = c.get('showcase')
+    if sh:
+        S = f'{K}/showcase'; lb = sh['labels']
+        P.append(page(f'''<div class="shh"><h2>{e(sh['title'])}</h2><p class="sub">{e(sh['sub'])}</p></div>
+          <img class="shl" src="{S}/{sh['laptop']}" alt=""><img class="shp" src="{S}/{sh['phone']}" alt="">
+          <img class="shw1" src="{S}/{sh['workbook'][0]}" alt=""><img class="shw2" src="{S}/{sh['workbook'][1]}" alt="">
+          <div class="shlb s1">{strip(lb[0], 'angled', 'purple')}</div><div class="shlb s2">{strip(lb[1], 'angled', 'teal')}</div>
+          <div class="shlb s3">{strip(lb[2], 'angled', 'fuchsia')}</div>''', 'bed-purple', 'online', c, num()))
+
+    # 10 Online course and toolkit
     tk = c.get('toolkit')
     if tk:
         hc = ['purple', 'teal', 'fuchsia', 'indigo', 'midgreen']

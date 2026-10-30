@@ -125,3 +125,10 @@ h2{font-size:50px;line-height:1.05;margin-bottom:24px}
 .who2 h3{font-size:24px;margin:10px 0 6px}.who2 p{font-size:15px;line-height:1.45}
 .rel p{font-size:15px;line-height:1.4;margin-top:10px}
 .legal{position:absolute;left:60px;right:60px;bottom:22px;font:400 12px CS}
+/* online showcase */
+.shh{width:640px}.shh .sub{margin:0}
+.shl{position:absolute;left:52px;top:236px;width:640px}
+.shp{position:absolute;left:600px;top:222px;height:400px}
+.shw1{position:absolute;left:846px;top:150px;width:240px;transform:rotate(-3deg)}
+.shw2{position:absolute;left:978px;top:196px;width:240px;transform:rotate(4deg)}
+.shlb{position:absolute;top:626px}.shlb.s1{left:60px}.shlb.s2{left:600px}.shlb.s3{left:900px;top:560px}

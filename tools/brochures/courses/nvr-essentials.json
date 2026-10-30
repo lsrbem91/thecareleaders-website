@@ -11,7 +11,7 @@
   "glance": [
     ["clock", "6 hrs", "face to face", "or 2 hours live online"],
     ["group", "60", "people", "per course, either format"],
-    ["pound", "£4,950", "face to face", "£2,490 live online, + VAT"],
+    ["laptop", "2 ways", "face to face or online", "you choose the format"],
     ["gift", "5", "things included", "for every delegate"]
   ],
 
@@ -52,8 +52,8 @@
   ],
 
   "formats": [
-    {"icon": "room", "label": "Face to face", "length": "6 hours", "time": "Usually 10am to 4pm", "fee": "£4,950", "fee_note": "+ VAT + expenses", "points": ["In your building or a venue you choose", "Practice in pairs and small groups", "You provide a room and a screen"]},
-    {"icon": "laptop", "label": "Live online", "length": "2 hours", "time": "One live session", "fee": "£2,490", "fee_note": "+ VAT", "points": ["On Teams or Zoom", "The key story, theory and tool from each part", "Breakout rooms for practice in pairs"]}
+    {"icon": "room", "label": "Face to face", "length": "6 hours", "time": "Usually 10am to 4pm", "fee": "£3,950", "fee_note": "+ VAT + expenses", "points": ["In your building or a venue you choose", "Practice in pairs and small groups", "You provide a room and a screen"]},
+    {"icon": "laptop", "label": "Live online", "length": "2 hours", "time": "One live session", "fee": "£1,950", "fee_note": "+ VAT", "points": ["On Teams or Zoom", "The key story, theory and tool from each part", "Breakout rooms for practice in pairs"]}
   ],
   "fees_note": "One fee per course for up to 60 people. Examples and language from your service at no extra cost.",
 
@@ -64,6 +64,14 @@
     ["award", "Certificate", "of completion", "For their development record."],
     ["tag", "50% off", "The Care Leaders Online", "A year's individual membership at half price."]
   ],
+
+  "showcase": {
+    "title": "Online, on any device",
+    "sub": "The NVR Toolkit works on a laptop, tablet or phone. The workbook is theirs to print and keep.",
+    "laptop": "nvr-laptop.png", "phone": "nvr-phone.png",
+    "workbook": ["nvr-workbook-cover.jpg", "nvr-workbook-page.jpg"],
+    "labels": ["The course home", "Every tool works on a phone", "The workbook, for life"]
+  },
 
   "toolkit": {
     "name": "The NVR Toolkit",
