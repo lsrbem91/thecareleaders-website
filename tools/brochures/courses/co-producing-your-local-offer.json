@@ -1,0 +1,443 @@
+{
+  "slug": "co-producing-your-local-offer",
+  "name": "Co-producing your Local Offer",
+  "category": "Care leavers and participation",
+  "accent": "#cf0f55",
+  "glance": [
+    [
+      "clock",
+      "Face to face or online",
+      "6 hours in person, or 2 hours live online",
+      "you choose the format",
+      "wide"
+    ],
+    [
+      "group",
+      "60",
+      "people per course",
+      "one fee covers everyone"
+    ],
+    [
+      "gift",
+      "5",
+      "things every delegate gets",
+      "workbook, recording, online course, certificate and 50% off"
+    ]
+  ],
+  "formats": [
+    {
+      "icon": "room",
+      "label": "Face to face",
+      "length": "6 hours",
+      "time": "Usually 10am to 4pm",
+      "fee": "£3,950",
+      "fee_note": "+ VAT + expenses",
+      "points": [
+        "In your building or a venue you choose",
+        "Practice in pairs and small groups",
+        "You provide a room and a screen"
+      ]
+    },
+    {
+      "icon": "laptop",
+      "label": "Live online",
+      "length": "2 hours",
+      "time": "A live keynote with Q&A",
+      "fee": "£1,950",
+      "fee_note": "+ VAT",
+      "points": [
+        "On Teams or Zoom",
+        "Questions in the chat throughout",
+        "Live Q&A at the end"
+      ]
+    }
+  ],
+  "fees_note": "One fee covers up to 60 people. We build examples from your own service into the training at no extra cost.",
+  "why": {
+    "title": "Why choose The Care Leaders Learning",
+    "sub": "Training built by people who have lived in care and people who have led services.",
+    "usps": [
+      [
+        21,
+        "Lived and professional experience",
+        "Founded and led by Luke Rodgers BEM, a care experienced leader. Every course is written by people who have been in care and people who have run, redesigned and inspected children's services. Your team hears both sides."
+      ],
+      [
+        12,
+        "Inside national policy",
+        "We led the national engagement on England's new fostering standards for the Department for Education. Our training reflects what the standards expect."
+      ],
+      [
+        16,
+        "Learning that carries on after the day",
+        "A workbook for life, the recording and 12 months online. Your team keeps going back to it."
+      ],
+      [
+        5,
+        "Honest about the evidence",
+        "We say what the research shows, and where it is still limited."
+      ]
+    ],
+    "stats": [
+      [
+        "36",
+        "local authorities we have worked with, plus the Department for Education and the NHS"
+      ],
+      [
+        "2,700+",
+        "learners on The Care Leaders Online"
+      ]
+    ],
+    "awards": [
+      [
+        "iese-gold-2026.jpg",
+        "Gold, Dual Perspective Leadership Award",
+        "iESE Public Sector Transformation Awards 2026"
+      ],
+      [
+        "cypn-logo.jpg",
+        "Workforce Development Award",
+        "Children & Young People Now Awards 2023"
+      ]
+    ]
+  },
+  "offer": {
+    "tag": "Try it online first",
+    "big": "20% off",
+    "line": "the face to face day when it is booked and facilitated within 12 months of your online session.",
+    "steps": [
+      [
+        "1",
+        "Live online keynote",
+        "£1,950",
+        "+ VAT",
+        ""
+      ],
+      [
+        "2",
+        "Face to face day",
+        "£3,150",
+        "+ VAT + expenses",
+        "£3,950"
+      ]
+    ],
+    "save": "You save £800",
+    "terms": "For the same organisation that booked the online session. One discounted face to face day per online session. The day must be booked and facilitated within 12 months of the online session."
+  },
+  "cover_image": "blocks/block-5.webp",
+  "headline": "Write the offer. With the people it is for.",
+  "intro": "Training that helps leaving care staff and care leavers rebuild your local offer together.",
+  "problem": {
+    "scene": "Paige, 20, needs help with a deposit.",
+    "question": "Housing is on page 31 of a 40-page PDF.",
+    "without": [
+      "An offer written by staff alone",
+      "Consultation after the decision",
+      "Support that \"may be available\"",
+      "Nobody hears what changed"
+    ],
+    "with": [
+      "Staff and care leavers writing together",
+      "Care leavers paid and supported to take part",
+      "Clear entitlements that work on a phone",
+      "A review that tells care leavers what changed"
+    ],
+    "standards": "From 30 September 2026 the local offer must cover accommodation and homelessness prevention for care leavers under 25, financial support, and what every department provides.",
+    "evidence": "The guidance expects the offer to be co-produced and reviewed at least every two years. We start from your current offer."
+  },
+  "audience": {
+    "groups": [
+      [
+        "home",
+        "Leaving care teams",
+        "Leaving care managers, team managers and personal advisers"
+      ],
+      [
+        "clipboard",
+        "Corporate parenting leads",
+        "Board members and lead members for children's services"
+      ],
+      [
+        "heart",
+        "Care leavers and forums",
+        "Care leavers, forums and children in care councils, supported to take part"
+      ],
+      [
+        "group",
+        "Council departments",
+        "Housing, finance, employment and public health officers"
+      ]
+    ],
+    "notes": [
+      "Staff and care leavers together",
+      "No co-production knowledge needed",
+      "Up to 60 people"
+    ]
+  },
+  "outcomes": [
+    [
+      "See the offer from their side",
+      "Describe what it takes a care leaver to find and use support in your offer, and where they give up."
+    ],
+    [
+      "Spot consultation that changes nothing",
+      "Recognise when care leavers are consulted on decisions already made, and what that does to trust."
+    ],
+    [
+      "Know the duty",
+      "Explain what the law and the September 2026 guidance require, separating entitlements from discretionary support."
+    ],
+    [
+      "Plan real co-production",
+      "Use Lundy's model to plan how care leavers are recruited, paid, supported and kept safe."
+    ],
+    [
+      "Rewrite it together",
+      "Audit your offer, then rewrite sections with care leavers and test them on a phone."
+    ],
+    [
+      "Keep it going",
+      "Plan a review at least every two years that tells care leavers what changed, overseen by the corporate parenting board."
+    ]
+  ],
+  "pillars": {
+    "title": "Lundy's model of participation",
+    "stance": "Write the offer with the people it is for",
+    "stance_line": "Hearing care leavers takes four things. Most consultations stop after the first two.",
+    "items": [
+      [
+        "Space",
+        "A safe place to give views, at a time that works, with care leavers paid for their time."
+      ],
+      [
+        "Voice",
+        "Support to form and share their views on the offer."
+      ],
+      [
+        "Audience",
+        "The people who make the decisions in the room, and listening."
+      ],
+      [
+        "Influence",
+        "Care leavers see what changed because they spoke up, and what didn't and why."
+      ]
+    ],
+    "base": "Laura Lundy's model of participation (2007), with Roger Hart's ladder of participation (1992) and Sweller's cognitive load theory (1988)."
+  },
+  "story_line": "Two stories run through the day: Paige, 20, searching for help with a deposit, and Rio, 19, who gave his views and never heard back. Each is a composite, drawn from real experiences of care.",
+  "parts": [
+    {
+      "title": "The duty",
+      "theory": "What the law and the 2026 guidance require.",
+      "leave": "An audit of your current offer"
+    },
+    {
+      "title": "The people",
+      "theory": "The difference between consulting and co-producing.",
+      "leave": "A co-production plan"
+    },
+    {
+      "title": "The offer",
+      "theory": "What care leavers are entitled to, written to work on a phone.",
+      "leave": "Rewritten draft sections"
+    },
+    {
+      "title": "The review",
+      "theory": "Showing care leavers what changed, every two years.",
+      "leave": "A review cycle and an update template"
+    }
+  ],
+  "online_session": {
+    "title": "Option 2: live online, a 2-hour keynote",
+    "sub": "For teams who can't give a full day, or want to try it first. A live talk on Teams or Zoom, with chat and Q&A.",
+    "keynote": {
+      "title": "The keynote",
+      "text": "Paige and Rio's stories run through it, from a 40-page PDF to a consultation nobody followed up.",
+      "ideas": [
+        "What the 2026 guidance requires",
+        "Consulting or co-producing",
+        "An offer that works on a phone",
+        "Telling care leavers what changed"
+      ]
+    },
+    "chat": {
+      "title": "Your say in the chat",
+      "text": "Questions to the audience throughout the talk.",
+      "bubbles": [
+        "How long would Paige take to find housing help in your offer?",
+        "Are care leavers paid for their time?",
+        "When did care leavers last hear what changed?"
+      ]
+    },
+    "qa": {
+      "title": "Live Q&A",
+      "text": "Questions answered live at the end. Ask about:",
+      "asks": [
+        "Your current offer",
+        "The September 2026 guidance",
+        "Paying and supporting care leavers"
+      ]
+    },
+    "after": "Use the tools afterwards in the online course, with the workbook and the recording.",
+    "compare": "Try it online first and get 20% off the face to face day. Details are with the fees."
+  },
+  "gets": [
+    [
+      "book",
+      "Workbook",
+      "for life",
+      "Stories, tools and space to plan. Theirs to keep."
+    ],
+    [
+      "play",
+      "Recording",
+      "12 months",
+      "Catch up or go back over any part."
+    ],
+    [
+      "laptop",
+      "Online course",
+      "Free for 12 months",
+      "The Co-producing your Local Offer course on The Care Leaders Online."
+    ],
+    [
+      "award",
+      "Certificate",
+      "of completion",
+      "For their development record."
+    ],
+    [
+      "tag",
+      "50% off",
+      "All our online training",
+      "A year's membership of The Care Leaders Online at half price: every on-demand course, guest speakers and practice tools."
+    ]
+  ],
+  "showcase": {
+    "title": "The online course, on any device",
+    "sub": "On a laptop, tablet or phone.",
+    "laptop": "co-producing-your-local-offer-laptop.png",
+    "phone": "co-producing-your-local-offer-phone.png",
+    "workbook": [
+      "co-producing-your-local-offer-workbook-cover.jpg",
+      "co-producing-your-local-offer-workbook-page.jpg"
+    ],
+    "labels": [
+      "The course home on a laptop",
+      "Every tool works on a phone",
+      "The workbook, theirs to keep"
+    ],
+    "free": "Free for 12 months: this course online",
+    "half": "All our online training? 50% off a year's membership"
+  },
+  "screens": {
+    "title": "Co-producing your Local Offer",
+    "kind": "Online course",
+    "intro": "Rebuild your care leaver local offer with the people it is for. Four parts, with a tool in each.",
+    "unit": "parts",
+    "unit_one": "Part",
+    "done": 1,
+    "sections": [
+      [
+        "The duty",
+        "Local offer audit"
+      ],
+      [
+        "The people",
+        "Co-production plan"
+      ],
+      [
+        "The offer",
+        "Statutory or discretionary"
+      ],
+      [
+        "The review",
+        "You said, we did"
+      ]
+    ],
+    "phone": {
+      "section_no": 1,
+      "title": "Local offer audit",
+      "intro": "Check each requirement against your current offer.",
+      "fields": [
+        [
+          "Accommodation up to 25",
+          "Partly met. Hard to find."
+        ],
+        [
+          "Financial support",
+          "Missing from the offer."
+        ],
+        [
+          "Found on a phone in 2 minutes?",
+          "No. It's on page 31."
+        ],
+        [
+          "Who updates it",
+          "Leaving care manager, by March."
+        ]
+      ],
+      "key": "If a care leaver can't find it on a phone, it isn't on offer."
+    }
+  },
+  "workbook": {
+    "cover_title": "Co-producing your Local Offer",
+    "subtitle": "With care leavers",
+    "promise": "Rebuild your local offer with care leavers, so it says what they need and works on a phone.",
+    "for": "For leaving care teams, leaders and care leavers.",
+    "page": {
+      "title": "Plan your co-production",
+      "intro": "Use Lundy's four elements as headings.",
+      "n": 12,
+      "questions": [
+        "Space: who takes part, and how are they paid and kept safe?",
+        "Voice: what support will care leavers need to share their views?",
+        "Audience: which decision makers will be in the room?",
+        "Influence: how will care leavers hear what changed, and what didn't?"
+      ]
+    }
+  },
+  "facilitator": {
+    "name": "Luke Rodgers BEM",
+    "role": "Your facilitator",
+    "line": "From care leaver to care leader",
+    "image": "luke-speaking.jpg",
+    "paras": [
+      "Luke went into care at 10. He has spent his career inside children's services as a consultant, trainer and keynote speaker, and is CEO of The Care Leaders.",
+      "He has worked with councils nationally on participation and co-production, including Middlesbrough, where the leaving care offer was revised and relaunched with young people, and Buckinghamshire, where young people named and shaped a new participation service.",
+      "He founded the Care Leavers National Movement, and brings care leavers and decision makers into the same room.",
+      "He was a Knowledge Equity Fellow at Saïd Business School, University of Oxford, and was awarded the British Empire Medal in 2018 for commitment to children and families."
+    ],
+    "proof": [
+      [
+        "5",
+        "youth forums worked with us at every step in Middlesbrough"
+      ],
+      [
+        "19",
+        "participation champions from 11 service areas in Buckinghamshire"
+      ],
+      [
+        "11",
+        "councils in the South East youth participation collective"
+      ]
+    ],
+    "proof_label": "Co-production in practice",
+    "for_course": "On the face to face day Luke leads every part. Online, he gives the keynote and answers your questions live."
+  },
+  "related": [
+    [
+      "Corporate Parenting in Practice",
+      "What being a good corporate parent looks like, every day."
+    ],
+    [
+      "Power to Lead",
+      "A short leadership course for young people in care and care leavers."
+    ]
+  ],
+  "theme": {
+    "sta": "drifting",
+    "offer": "tower",
+    "online": "tonal-midnight"
+  }
+}

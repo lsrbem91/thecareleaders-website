@@ -1,0 +1,454 @@
+{
+  "slug": "the-person-behind-the-file",
+  "name": "The Person Behind the File",
+  "category": "Adults with care experience",
+  "accent": "#cf0f55",
+  "glance": [
+    [
+      "clock",
+      "Face to face or online",
+      "6 hours in person, or 2 hours live online",
+      "you choose the format",
+      "wide"
+    ],
+    [
+      "group",
+      "60",
+      "people per course",
+      "one fee covers everyone"
+    ],
+    [
+      "gift",
+      "5",
+      "things every delegate gets",
+      "workbook, recording, online course, certificate and 50% off"
+    ]
+  ],
+  "formats": [
+    {
+      "icon": "room",
+      "label": "Face to face",
+      "length": "6 hours",
+      "time": "Usually 10am to 4pm",
+      "fee": "£3,950",
+      "fee_note": "+ VAT + expenses",
+      "points": [
+        "In your building or a venue you choose",
+        "Practice in pairs and small groups",
+        "You provide a room and a screen"
+      ]
+    },
+    {
+      "icon": "laptop",
+      "label": "Live online",
+      "length": "2 hours",
+      "time": "A live keynote with Q&A",
+      "fee": "£1,950",
+      "fee_note": "+ VAT",
+      "points": [
+        "On Teams or Zoom",
+        "Questions in the chat throughout",
+        "Live Q&A at the end"
+      ]
+    }
+  ],
+  "fees_note": "One fee covers up to 60 people. We build examples from your own service into the training at no extra cost.",
+  "why": {
+    "title": "Why choose The Care Leaders Learning",
+    "sub": "Training built by people who have lived in care and people who have led services.",
+    "usps": [
+      [
+        21,
+        "Lived and professional experience",
+        "Founded and led by Luke Rodgers BEM, a care experienced leader. Every course is written by people who have been in care and people who have run, redesigned and inspected children's services. Your team hears both sides."
+      ],
+      [
+        12,
+        "Inside national policy",
+        "We led the national engagement on England's new fostering standards for the Department for Education. Our training reflects what the standards expect."
+      ],
+      [
+        16,
+        "Learning that carries on after the day",
+        "A workbook for life, the recording and 12 months online. Your team keeps going back to it."
+      ],
+      [
+        5,
+        "Honest about the evidence",
+        "We say what the research shows, and where it is still limited."
+      ]
+    ],
+    "stats": [
+      [
+        "36",
+        "local authorities we have worked with, plus the Department for Education and the NHS"
+      ],
+      [
+        "2,700+",
+        "learners on The Care Leaders Online"
+      ]
+    ],
+    "awards": [
+      [
+        "iese-gold-2026.jpg",
+        "Gold, Dual Perspective Leadership Award",
+        "iESE Public Sector Transformation Awards 2026"
+      ],
+      [
+        "cypn-logo.jpg",
+        "Workforce Development Award",
+        "Children & Young People Now Awards 2023"
+      ]
+    ]
+  },
+  "offer": {
+    "tag": "Try it online first",
+    "big": "20% off",
+    "line": "the face to face day when it is booked and facilitated within 12 months of your online session.",
+    "steps": [
+      [
+        "1",
+        "Live online keynote",
+        "£1,950",
+        "+ VAT",
+        ""
+      ],
+      [
+        "2",
+        "Face to face day",
+        "£3,150",
+        "+ VAT + expenses",
+        "£3,950"
+      ]
+    ],
+    "save": "You save £800",
+    "terms": "For the same organisation that booked the online session. One discounted face to face day per online session. The day must be booked and facilitated within 12 months of the online session."
+  },
+  "cover_image": "blocks/block-6.webp",
+  "headline": "They were a child. In care first.",
+  "intro": "Training that helps probation, prison, police, housing and health staff see the care experience behind the file.",
+  "problem": {
+    "scene": "Dean, 23, has missed three appointments.",
+    "question": "His 40-page file never mentions his eight years in care.",
+    "without": [
+      "Care experience never asked about",
+      "Missed appointments logged as non-compliance",
+      "A sharp reply read as hostility",
+      "No call to the leaving care team"
+    ],
+    "with": [
+      "Staff ask about care, with consent",
+      "Missed appointments read for the reason",
+      "First conversations planned differently",
+      "Personal advisers involved early"
+    ],
+    "standards": "The HMPPS framework now asks prisons to identify care experience and, with consent, contact the local authority. Since 30 September 2026 care leavers under 25 can't be found intentionally homeless.",
+    "evidence": "Most of the changes cost nothing: a text reminder, a clearer letter, a named worker and a first call to the leaving care team."
+  },
+  "audience": {
+    "groups": [
+      [
+        "clipboard",
+        "Probation and prisons",
+        "Probation practitioners, offender managers, senior leads and keyworkers"
+      ],
+      [
+        "hands",
+        "Police and youth justice",
+        "Police, custody and youth justice staff working with young adults"
+      ],
+      [
+        "home",
+        "Housing teams",
+        "Housing options, homelessness and supported accommodation teams"
+      ],
+      [
+        "heart",
+        "Health practitioners",
+        "Health, mental health and substance use practitioners"
+      ]
+    ],
+    "notes": [
+      "No children's social care knowledge needed",
+      "Works as a team day or induction",
+      "Up to 60 people"
+    ]
+  },
+  "outcomes": [
+    [
+      "Spot care experience",
+      "Recognise signs someone grew up in care when it isn't on the file, and ask in a way that respects consent."
+    ],
+    [
+      "See it from their side",
+      "Describe a missed appointment or a sharp reply from the side of someone whose adults kept leaving."
+    ],
+    [
+      "Know who is entitled",
+      "Explain care experienced and care leaver, personal advisers up to 25, and the HMPPS and homelessness changes."
+    ],
+    [
+      "Understand the response",
+      "Use Bowlby and the window of tolerance to explain how early trauma shapes trust and responses to authority."
+    ],
+    [
+      "Make it trauma informed",
+      "Apply the six principles of trauma-informed practice to appointments, letters and first conversations."
+    ],
+    [
+      "Bring in the right people",
+      "Find the leaving care team and local offer, and plan when to involve the personal adviser."
+    ]
+  ],
+  "pillars": {
+    "title": "Six principles for the next appointment",
+    "stance": "They were a child in care first",
+    "stance_line": "The government's working definition of trauma-informed practice sets out six principles. We turn them into front-desk practice.",
+    "items": [
+      [
+        "Safety",
+        "Short waits and a calm opening, so people can take in what they're told."
+      ],
+      [
+        "Trustworthiness",
+        "A named worker who does what they said they would."
+      ],
+      [
+        "Choice",
+        "Options on times and on how to get in touch."
+      ],
+      [
+        "Collaboration",
+        "Plan changes with the person and their personal adviser."
+      ],
+      [
+        "Empowerment",
+        "Start from what the person can do, not the warning."
+      ],
+      [
+        "Cultural consideration",
+        "Recognise the person's history and identity, including care."
+      ]
+    ],
+    "base": "Office for Health Improvement and Disparities, working definition of trauma-informed practice (2022), with Bowlby's attachment theory and Siegel's window of tolerance."
+  },
+  "story_line": "Two stories run through the day: Dean, 23, on a community order, and Shay, 22, at the housing options desk with one bag. Each is a composite, drawn from real experiences of care.",
+  "parts": [
+    {
+      "title": "The file",
+      "theory": "Who counts as a care leaver, and what they're entitled to.",
+      "leave": "Questions for asking about care"
+    },
+    {
+      "title": "The person",
+      "theory": "How early relationships shape trust in adults.",
+      "leave": "A replay of one moment from your caseload"
+    },
+    {
+      "title": "The pattern",
+      "theory": "Why people under stress can't take things in.",
+      "leave": "A new way to read a missed appointment"
+    },
+    {
+      "title": "The approach",
+      "theory": "Six principles for appointments, letters and first conversations.",
+      "leave": "A checklist and local contacts"
+    }
+  ],
+  "online_session": {
+    "title": "Option 2: live online, a 2-hour keynote",
+    "sub": "For teams who can't give a full day, or want to try it first. A live talk on Teams or Zoom, with chat and Q&A.",
+    "keynote": {
+      "title": "The keynote",
+      "text": "Dean's file runs through it, retold from his side, then Shay at the housing desk.",
+      "ideas": [
+        "Asking about care, with consent",
+        "Why a childhood of adults leaving shapes trust",
+        "Missed appointments, read differently",
+        "Six changes to make at the front desk"
+      ]
+    },
+    "chat": {
+      "title": "Your say in the chat",
+      "text": "Questions to the audience throughout the talk.",
+      "bubbles": [
+        "Does your first meeting ask about care?",
+        "What gets logged when someone misses an appointment?",
+        "Who would you call for Shay first?"
+      ]
+    },
+    "qa": {
+      "title": "Live Q&A",
+      "text": "Questions answered live at the end. Ask about:",
+      "asks": [
+        "A case from your caseload",
+        "The HMPPS framework",
+        "Working with personal advisers"
+      ]
+    },
+    "after": "Use the tools afterwards in the online course, with the workbook and the recording.",
+    "compare": "Try it online first and get 20% off the face to face day. Details are with the fees."
+  },
+  "gets": [
+    [
+      "book",
+      "Workbook",
+      "for life",
+      "Stories, tools and space to plan. Theirs to keep."
+    ],
+    [
+      "play",
+      "Recording",
+      "12 months",
+      "Catch up or go back over any part."
+    ],
+    [
+      "laptop",
+      "Online course",
+      "Free for 12 months",
+      "The The Person Behind the File course on The Care Leaders Online."
+    ],
+    [
+      "award",
+      "Certificate",
+      "of completion",
+      "For their development record."
+    ],
+    [
+      "tag",
+      "50% off",
+      "All our online training",
+      "A year's membership of The Care Leaders Online at half price: every on-demand course, guest speakers and practice tools."
+    ]
+  ],
+  "showcase": {
+    "title": "The online course, on any device",
+    "sub": "On a laptop, tablet or phone.",
+    "laptop": "the-person-behind-the-file-laptop.png",
+    "phone": "the-person-behind-the-file-phone.png",
+    "workbook": [
+      "the-person-behind-the-file-workbook-cover.jpg",
+      "the-person-behind-the-file-workbook-page.jpg"
+    ],
+    "labels": [
+      "The course home on a laptop",
+      "Every tool works on a phone",
+      "The workbook, theirs to keep"
+    ],
+    "free": "Free for 12 months: this course online",
+    "half": "All our online training? 50% off a year's membership"
+  },
+  "screens": {
+    "title": "The Person Behind the File",
+    "kind": "Online course",
+    "intro": "See the care experience behind the file, and change what happens at the next appointment. Four parts, with a tool in each.",
+    "unit": "parts",
+    "unit_one": "Part",
+    "done": 1,
+    "sections": [
+      [
+        "The file",
+        "Asking about care"
+      ],
+      [
+        "The person",
+        "Rewind and Replay"
+      ],
+      [
+        "The pattern",
+        "Window of Tolerance"
+      ],
+      [
+        "The approach",
+        "Six principles checklist"
+      ]
+    ],
+    "phone": {
+      "section_no": 4,
+      "title": "Six principles checklist",
+      "intro": "Plan changes for one person on your caseload. No names.",
+      "fields": [
+        [
+          "Safety",
+          "Book the first slot, so there's no long wait."
+        ],
+        [
+          "Trustworthiness",
+          "One named worker, and a text the day before."
+        ],
+        [
+          "Choice",
+          "Offer a phone call instead of a letter."
+        ],
+        [
+          "Collaboration",
+          "Call the personal adviser, with consent."
+        ]
+      ],
+      "key": "Read a missed appointment for the reason before you record it."
+    }
+  },
+  "workbook": {
+    "subtitle": "Care-experienced adults",
+    "promise": "See the care experience behind the file, and plan the next appointment differently.",
+    "for": "For probation, prison, police, housing and health staff.",
+    "page": {
+      "title": "Plan the next appointment",
+      "intro": "Bring one person from your caseload in mind. No names.",
+      "n": 12,
+      "questions": [
+        "What does the file say, and what might it leave out?",
+        "What might sit behind the last missed appointment or sharp reply?",
+        "Which of the six principles could you put into the next appointment?",
+        "Who in the leaving care team will you contact, with the person's consent?"
+      ]
+    }
+  },
+  "facilitator": {
+    "name": "Luke Rodgers BEM",
+    "role": "Your facilitator",
+    "line": "From care leaver to care leader",
+    "image": "luke-speaking.jpg",
+    "paras": [
+      "Luke went into care at 10. He has spent his career inside children's services as a consultant, trainer and keynote speaker, and is CEO of The Care Leaders.",
+      "He has worked with councils and the NHS nationally on how services see the person behind the label, including Staffordshire and Stoke-on-Trent, where he trained more than 400 staff across health, social care and education.",
+      "He led the national engagement on England's new fostering standards for the Department for Education, and knows the system a care-experienced adult grew up in.",
+      "He was a Knowledge Equity Fellow at Saïd Business School, University of Oxford, and was awarded the British Empire Medal in 2018 for commitment to children and families."
+    ],
+    "proof": [
+      [
+        "400+",
+        "staff trained across health, social care and education in Staffordshire and Stoke-on-Trent"
+      ],
+      [
+        "97%",
+        "of 119 people who gave feedback said the training met its objectives"
+      ],
+      [
+        "100+",
+        "professionals in three system-wide workshops"
+      ]
+    ],
+    "proof_label": "Across health and care",
+    "for_course": "On the face to face day Luke leads every part. Online, he gives the keynote and answers your questions live.",
+    "quote": [
+      "This training has transformed the way I approach children in distress.",
+      "Training participant, Staffordshire and Stoke-on-Trent"
+    ]
+  },
+  "related": [
+    [
+      "Supporting Care Leavers at Work: For Managers",
+      "Trauma-informed training for managers who employ care leavers."
+    ],
+    [
+      "Behind the Behaviour",
+      "Reading behaviour as communication, without losing the relationship."
+    ]
+  ],
+  "theme": {
+    "sta": "spine-bands",
+    "offer": "tipped-out",
+    "online": "midnight"
+  }
+}

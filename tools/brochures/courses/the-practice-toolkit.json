@@ -1,0 +1,445 @@
+{
+  "slug": "the-practice-toolkit",
+  "name": "The Practice Toolkit",
+  "category": "Behaviour and relationships",
+  "cover_image": "blocks/block-5.webp",
+  "theme": {
+    "sta": "tower",
+    "offer": "drifting",
+    "online": "midnight"
+  },
+  "headline": "Four tools. Ready for tomorrow morning.",
+  "intro": "Training that helps your team use four trauma-informed tools in the moment, not just know them.",
+  "problem": {
+    "scene": "A child says \"fine\", then throws a mug.",
+    "question": "Your team knows what PACE stands for. What do they say next?",
+    "without": [
+      "People fall back on habit",
+      "A consequence or a raised voice",
+      "Nobody has said the words out loud",
+      "No shared language afterwards"
+    ],
+    "with": [
+      "Early signs spotted sooner",
+      "Calm first, questions later",
+      "Practised words for the hard moments",
+      "The same tool names at handover"
+    ],
+    "standards": "Most teams have sat through trauma training. This course is mostly practice, out loud, on moments from your own setting.",
+    "evidence": "PACE keeps the boundary in place. Disclosures are never reframed: they go to the safeguarding lead that day."
+  },
+  "audience": {
+    "groups": [
+      [
+        "home",
+        "Children's homes",
+        "Residential support workers, team leaders and registered managers"
+      ],
+      [
+        "heart",
+        "Foster and kinship carers",
+        "Carers and supervising social workers"
+      ],
+      [
+        "school",
+        "School staff",
+        "Teaching assistants, pastoral staff and designated teachers"
+      ],
+      [
+        "hands",
+        "Family Help teams",
+        "Lead practitioners and early help workers"
+      ]
+    ],
+    "notes": [
+      "No previous training needed",
+      "Practice in pairs and threes",
+      "Up to 60 people"
+    ]
+  },
+  "outcomes": [
+    [
+      "See it from the child's side",
+      "Describe a moment that escalated from the child's side, and how the adult's first words landed."
+    ],
+    [
+      "Spot the early signs",
+      "Recognise when a child you support is moving out of their window of tolerance."
+    ],
+    [
+      "Know why calm comes first",
+      "Explain Siegel's window of tolerance and Perry's Regulate, Relate, Reason, and why reasoning fails in a hot moment."
+    ],
+    [
+      "Use PACE well",
+      "Explain the four parts of PACE, and why accepting a feeling is not accepting the behaviour."
+    ],
+    [
+      "Practise the words",
+      "Use PACE and Spot, Soothe, Shift out loud, and know when a conversation has become a disclosure."
+    ],
+    [
+      "Pick the right tool",
+      "Choose the right tool for a moment from your own setting, and explain it in two sentences."
+    ]
+  ],
+  "pillars": {
+    "title": "The four tools in The Practice Toolkit",
+    "stance": "Tools you can use tomorrow morning",
+    "stance_line": "A few minutes on the idea behind each tool, then most of the time on practice.",
+    "items": [
+      [
+        "Window of Tolerance",
+        "Spot the early signs that a child is leaving the zone where they can think and talk."
+      ],
+      [
+        "Regulate, Relate, Reason",
+        "Lend your calm first. Questions and consequences come when the child can hear them."
+      ],
+      [
+        "PACE",
+        "Playfulness, acceptance, curiosity and empathy, with the boundary still in place."
+      ],
+      [
+        "Spot, Soothe, Shift",
+        "Name the feeling, soothe it, then help the young person see it differently."
+      ]
+    ],
+    "base": "Built on Dan Siegel's window of tolerance, Bruce Perry's Regulate, Relate, Reason, Dan Hughes's PACE and John Gottman's emotion coaching."
+  },
+  "story_line": "Four stories run through the day: Zara, 15, Leon, 11, Freya, 8, and Ollie, 16. Each is a composite, drawn from real experiences of care.",
+  "parts": [
+    {
+      "title": "Spotting it early",
+      "theory": "The window of tolerance.",
+      "leave": "A Window of Tolerance map"
+    },
+    {
+      "title": "Calm before questions",
+      "theory": "Regulate, Relate, Reason.",
+      "leave": "Your first two minutes, tested"
+    },
+    {
+      "title": "Talking with PACE",
+      "theory": "Accept the feeling, not the behaviour.",
+      "leave": "Three PACE responses of your own"
+    },
+    {
+      "title": "Naming the feeling",
+      "theory": "Spot, Soothe, Shift, and disclosures.",
+      "leave": "A team chart of which tool fits"
+    }
+  ],
+  "online_session": {
+    "title": "Option 2: live online, a 2-hour keynote",
+    "sub": "For teams who can't give a full day, or want to try it first. A live talk on Teams or Zoom, with chat and Q&A.",
+    "keynote": {
+      "title": "The keynote",
+      "text": "Zara, Leon, Freya and Ollie's stories run through it, one hard moment for each tool.",
+      "ideas": [
+        "Spot the early signs",
+        "Calm before questions",
+        "Talk with PACE",
+        "Name the feeling with Spot, Soothe, Shift"
+      ]
+    },
+    "chat": {
+      "title": "Your say in the chat",
+      "text": "Questions to the audience throughout the talk.",
+      "bubbles": [
+        "What does \"fine\" mean in your setting?",
+        "What do you say first when a child kicks off?",
+        "What is the hardest thing a child has said to you?"
+      ]
+    },
+    "qa": {
+      "title": "Live Q&A",
+      "text": "Questions answered live at the end. Ask about:",
+      "asks": [
+        "A child you support",
+        "Which tool fits which moment",
+        "Keeping it going in supervision"
+      ]
+    },
+    "after": "Practise each tool afterwards in the online course, with the workbook and the recording.",
+    "compare": "Try it online first and get 20% off the face to face day. Details are with the fees."
+  },
+  "gets": [
+    [
+      "book",
+      "Workbook",
+      "for life",
+      "Stories, tools and space to plan. Theirs to keep."
+    ],
+    [
+      "play",
+      "Recording",
+      "12 months",
+      "Catch up or go back over any part."
+    ],
+    [
+      "laptop",
+      "Online course",
+      "Free for 12 months",
+      "The Practice Toolkit course on The Care Leaders Online."
+    ],
+    [
+      "award",
+      "Certificate",
+      "of completion",
+      "For their development record."
+    ],
+    [
+      "tag",
+      "50% off",
+      "All our online training",
+      "A year's membership of The Care Leaders Online at half price: every on-demand course, guest speakers and practice tools."
+    ]
+  ],
+  "showcase": {
+    "title": "The online course, on any device",
+    "sub": "On a laptop, tablet or phone.",
+    "laptop": "the-practice-toolkit-laptop.png",
+    "phone": "the-practice-toolkit-phone.png",
+    "workbook": [
+      "the-practice-toolkit-workbook-cover.jpg",
+      "the-practice-toolkit-workbook-page.jpg"
+    ],
+    "labels": [
+      "The course home on a laptop",
+      "Every tool works on a phone",
+      "The workbook, theirs to keep"
+    ],
+    "free": "Free for 12 months: this course online",
+    "half": "All our online training? 50% off a year's membership"
+  },
+  "screens": {
+    "title": "The Practice Toolkit",
+    "kind": "Online course",
+    "intro": "Four trauma-informed tools, practised for the moment you need them. Four parts, with a tool in each.",
+    "unit": "parts",
+    "unit_one": "Part",
+    "done": 1,
+    "sections": [
+      [
+        "Spotting it early",
+        "Window of Tolerance"
+      ],
+      [
+        "Calm before questions",
+        "Regulate, Relate, Reason"
+      ],
+      [
+        "Talking with PACE",
+        "PACE responses"
+      ],
+      [
+        "Naming the feeling",
+        "Spot, Soothe, Shift"
+      ]
+    ],
+    "phone": {
+      "section_no": 3,
+      "title": "Your PACE responses",
+      "intro": "Take the hardest thing a child has said to you. Rewrite your usual reply.",
+      "fields": [
+        [
+          "What the child said",
+          "\"You're not my mum. You only do this for the money.\""
+        ],
+        [
+          "My usual reply",
+          "\"That's not fair, after everything I do.\""
+        ],
+        [
+          "Acceptance and empathy",
+          "\"It sounds like you're wondering if I really care.\""
+        ],
+        [
+          "Curiosity",
+          "\"I wonder if bedtime is when you miss home most.\""
+        ]
+      ],
+      "key": "Accept the feeling, not the behaviour. The boundary stays."
+    }
+  },
+  "workbook": {
+    "subtitle": "Four tools for the moment",
+    "promise": "Spot it early, calm first, talk with PACE and name the feeling, practised out loud.",
+    "page": {
+      "title": "Your Window of Tolerance map",
+      "intro": "Keep one child in mind. Use initials only.",
+      "n": 12,
+      "questions": [
+        "What does this child look like when they are inside their window?",
+        "What are the first signs they are leaving it?",
+        "What does it look like when they go up, and when they go down?",
+        "What brings them back?"
+      ]
+    }
+  },
+  "facilitator": {
+    "name": "Luke Rodgers BEM",
+    "role": "Your facilitator",
+    "line": "From care leaver to care leader",
+    "image": "luke-speaking.jpg",
+    "paras": [
+      "Luke went into care at 10. He has spent his career inside children's services as a consultant, trainer and keynote speaker, and is CEO of The Care Leaders.",
+      "He has worked with councils nationally on trauma-informed practice, including Durham, where he put NVR into 11 children's homes and trained 120 residential staff, and Staffordshire, where four organisations trained 400 staff across health, social care and education together.",
+      "He led the national engagement on England's new fostering standards for the Department for Education, so he knows what the standards expect of the adults around a child.",
+      "He was a Knowledge Equity Fellow at Saïd Business School, University of Oxford, and was awarded the British Empire Medal in 2018 for commitment to children and families."
+    ],
+    "proof": [
+      [
+        "400+",
+        "staff trained across health, social care and education in Staffordshire"
+      ],
+      [
+        "97%",
+        "of 119 people who gave feedback said the training met its objectives"
+      ],
+      [
+        "120",
+        "residential staff trained across 11 Durham children's homes"
+      ]
+    ],
+    "proof_label": "Trauma-informed practice",
+    "for_course": "On the face to face day Luke leads every part. Online, he gives the keynote and answers your questions live.",
+    "quote": [
+      "I now feel more confident approaching behaviour with curiosity rather than judgment.",
+      "Training participant, Staffordshire"
+    ]
+  },
+  "related": [
+    [
+      "NVR Essentials",
+      "A one-day introduction to non-violent resistance."
+    ],
+    [
+      "Behind the Behaviour",
+      "Reading behaviour as communication."
+    ]
+  ],
+  "accent": "#cf0f55",
+  "glance": [
+    [
+      "clock",
+      "Face to face or online",
+      "6 hours in person, or 2 hours live online",
+      "you choose the format",
+      "wide"
+    ],
+    [
+      "group",
+      "60",
+      "people per course",
+      "one fee covers everyone"
+    ],
+    [
+      "gift",
+      "5",
+      "things every delegate gets",
+      "workbook, recording and more"
+    ]
+  ],
+  "formats": [
+    {
+      "icon": "room",
+      "label": "Face to face",
+      "length": "6 hours",
+      "time": "Usually 10am to 4pm",
+      "fee": "£3,950",
+      "fee_note": "+ VAT + expenses",
+      "points": [
+        "In your building or a venue you choose",
+        "Practice in pairs and small groups",
+        "You provide a room and a screen"
+      ]
+    },
+    {
+      "icon": "laptop",
+      "label": "Live online",
+      "length": "2 hours",
+      "time": "A live keynote with Q&A",
+      "fee": "£1,950",
+      "fee_note": "+ VAT",
+      "points": [
+        "On Teams or Zoom",
+        "Questions in the chat throughout",
+        "Live Q&A at the end"
+      ]
+    }
+  ],
+  "fees_note": "One fee covers up to 60 people. We build examples from your own service into the training at no extra cost.",
+  "why": {
+    "title": "Why choose The Care Leaders Learning",
+    "sub": "Training built by people who have lived in care and people who have led services.",
+    "usps": [
+      [
+        21,
+        "Lived and professional experience",
+        "Founded and led by Luke Rodgers BEM, a care experienced leader. Every course is written by people who have been in care and people who have run, redesigned and inspected children's services. Your team hears both sides."
+      ],
+      [
+        12,
+        "Inside national policy",
+        "We led the national engagement on England's new fostering standards for the Department for Education. Our training reflects what the standards expect."
+      ],
+      [
+        16,
+        "Learning that carries on after the day",
+        "A workbook for life, the recording and 12 months online. Your team keeps going back to it."
+      ],
+      [
+        5,
+        "Honest about the evidence",
+        "We say what the research shows, and where it is still limited."
+      ]
+    ],
+    "stats": [
+      [
+        "36",
+        "local authorities we have worked with, plus the Department for Education and the NHS"
+      ],
+      [
+        "2,700+",
+        "learners on The Care Leaders Online"
+      ]
+    ],
+    "awards": [
+      [
+        "iese-gold-2026.jpg",
+        "Gold, Dual Perspective Leadership Award",
+        "iESE Public Sector Transformation Awards 2026"
+      ],
+      [
+        "cypn-logo.jpg",
+        "Workforce Development Award",
+        "Children & Young People Now Awards 2023"
+      ]
+    ]
+  },
+  "offer": {
+    "tag": "Try it online first",
+    "big": "20% off",
+    "line": "the face to face day when it is booked and facilitated within 12 months of your online session.",
+    "steps": [
+      [
+        "1",
+        "Live online keynote",
+        "£1,950",
+        "+ VAT",
+        ""
+      ],
+      [
+        "2",
+        "Face to face day",
+        "£3,150",
+        "+ VAT + expenses",
+        "£3,950"
+      ]
+    ],
+    "save": "You save £800",
+    "terms": "For the same organisation that booked the online session. One discounted face to face day per online session. The day must be booked and facilitated within 12 months of the online session."
+  }
+}

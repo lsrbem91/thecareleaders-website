@@ -1,0 +1,447 @@
+{
+  "slug": "leading-care-leavers-at-work",
+  "name": "Supporting Care Leavers at Work",
+  "category": "Employment",
+  "accent": "#cf0f55",
+  "cover_image": "blocks/block-2.webp",
+  "headline": "A first job. Can change everything.",
+  "intro": "Training that helps managers and HR keep care leavers in work without lowering the bar.",
+  "glance": [
+    [
+      "clock",
+      "Face to face or online",
+      "6 hours in person, or 2 hours live online",
+      "you choose the format",
+      "wide"
+    ],
+    [
+      "group",
+      "60",
+      "people per course",
+      "one fee covers everyone"
+    ],
+    [
+      "gift",
+      "5",
+      "things every delegate gets",
+      "workbook, recording and more"
+    ]
+  ],
+  "problem": {
+    "scene": "Day three. An apprentice walks out at lunch.",
+    "question": "Her manager never finds out why.",
+    "without": [
+      "Lateness becomes a disciplinary",
+      "A sharp reply is taken at face value",
+      "Nobody notices the housing crisis",
+      "Care leavers drop out early"
+    ],
+    "with": [
+      "Managers ask what is going on",
+      "A named buddy from day one",
+      "Feedback that keeps the standard",
+      "Care leavers stay and progress"
+    ],
+    "standards": "Employers who sign the Care Leaver Covenant's Care Leaver Friendly Employer Charter commit to responding with empathy. This course shows managers how.",
+    "evidence": "It is support without lowering the bar. Managers keep the same expectations and learn the extra support that helps someone meet them."
+  },
+  "audience": {
+    "groups": [
+      [
+        "clipboard",
+        "Line managers",
+        "Supervisors of care leavers, including first-time managers"
+      ],
+      [
+        "hands",
+        "HR and apprenticeship teams",
+        "HR, recruitment and apprenticeship staff"
+      ],
+      [
+        "group",
+        "Covenant employers",
+        "Council departments and businesses signed up to the Care Leaver Covenant"
+      ],
+      [
+        "heart",
+        "Mentors and buddies",
+        "The named person a new starter can go to"
+      ]
+    ],
+    "notes": [
+      "No knowledge of care needed",
+      "Works well before a new intake",
+      "Up to 60 people"
+    ]
+  },
+  "outcomes": [
+    [
+      "See what leaving care means",
+      "Describe what leaving care can mean for someone aged 16 to 25 starting work."
+    ],
+    [
+      "Spot a crisis early",
+      "Recognise when housing, money or family pressure is affecting work, and act before a disciplinary."
+    ],
+    [
+      "Read the behaviour",
+      "Use the window of tolerance to explain lateness, shutting down or a sharp reaction to criticism."
+    ],
+    [
+      "Build belonging",
+      "Explain why the first 12 weeks matter, and how Radical Candor holds the standard and the relationship."
+    ],
+    [
+      "Plan the induction",
+      "Plan a 12-week induction and use a feedback script that names the standard and agrees the next step."
+    ],
+    [
+      "Point to support",
+      "Point a care leaver to their personal adviser, the council's offer for care leavers and the £3,000 bursary for apprentices who start under 25."
+    ]
+  ],
+  "pillars": {
+    "title": "Four stages of a first job",
+    "stance": "Support without lowering the bar",
+    "stance_line": "The same expectations, with the extra support that helps someone meet them.",
+    "items": [
+      [
+        "Understanding",
+        "Read what lateness, silence or a sharp reply may be telling you."
+      ],
+      [
+        "Starting well",
+        "A named buddy, the unwritten rules written down and check-ins booked."
+      ],
+      [
+        "Staying well",
+        "Feedback that cares and challenges, and a plan for when a crisis hits."
+      ],
+      [
+        "Growing",
+        "A progression conversation that agrees one realistic next step."
+      ]
+    ],
+    "base": "Built on Siegel's window of tolerance, Baumeister and Leary's need to belong, Kim Scott's Radical Candor and Carol Dweck's work on growth mindset."
+  },
+  "story_line": "Four stories run through the day: Jess, 18, Bailey, 19, Kayla, 20, and Liam, 21. Each is a composite, drawn from real experiences of care.",
+  "parts": [
+    {
+      "title": "Understanding",
+      "theory": "Why a small criticism can feel big.",
+      "leave": "A guide to what sits behind it"
+    },
+    {
+      "title": "Starting well",
+      "theory": "Why feeling expected on day one matters.",
+      "leave": "A 12-week induction checklist"
+    },
+    {
+      "title": "Staying well",
+      "theory": "Feedback that cares and challenges.",
+      "leave": "A feedback script and crisis plan"
+    },
+    {
+      "title": "Growing",
+      "theory": "Believing ability can grow.",
+      "leave": "A plan for progression"
+    }
+  ],
+  "online_session": {
+    "title": "Option 2: live online, a 2-hour keynote",
+    "sub": "For managers who can't give a full day, or want to try it first. A live talk on Teams or Zoom, with chat and Q&A.",
+    "keynote": {
+      "title": "The keynote",
+      "text": "Jess, Bailey, Kayla and Liam's stories run through it, from day three of an apprenticeship to a permanent job.",
+      "ideas": [
+        "What sits behind the behaviour",
+        "The first 12 weeks",
+        "Feedback that keeps the standard",
+        "Growing into the job"
+      ]
+    },
+    "chat": {
+      "title": "Your say in the chat",
+      "text": "Questions to the audience throughout the talk.",
+      "bubbles": [
+        "What would you say to Jess when she comes back?",
+        "Who does a new starter go to in your team?",
+        "When did lateness last become a disciplinary?"
+      ]
+    },
+    "qa": {
+      "title": "Live Q&A",
+      "text": "Questions answered live at the end. Ask about:",
+      "asks": [
+        "A new starter you manage",
+        "Your induction",
+        "The Care Leaver Covenant"
+      ]
+    },
+    "after": "Practise each tool afterwards in the online course, with the workbook and the recording.",
+    "compare": "Try it online first and get 20% off the face to face day. Details are with the fees."
+  },
+  "formats": [
+    {
+      "icon": "room",
+      "label": "Face to face",
+      "length": "6 hours",
+      "time": "Usually 10am to 4pm",
+      "fee": "£3,950",
+      "fee_note": "+ VAT + expenses",
+      "points": [
+        "In your building or a venue you choose",
+        "Practice in pairs and small groups",
+        "You provide a room and a screen"
+      ]
+    },
+    {
+      "icon": "laptop",
+      "label": "Live online",
+      "length": "2 hours",
+      "time": "A live keynote with Q&A",
+      "fee": "£1,950",
+      "fee_note": "+ VAT",
+      "points": [
+        "On Teams or Zoom",
+        "Questions in the chat throughout",
+        "Live Q&A at the end"
+      ]
+    }
+  ],
+  "fees_note": "One fee covers up to 60 people. We build examples from your own service into the training at no extra cost.",
+  "why": {
+    "title": "Why choose The Care Leaders Learning",
+    "sub": "Training built by people who have lived in care and people who have led services.",
+    "usps": [
+      [
+        21,
+        "Lived and professional experience",
+        "Founded and led by Luke Rodgers BEM, a care experienced leader. Every course is written by people who have been in care and people who have run, redesigned and inspected children's services. Your team hears both sides."
+      ],
+      [
+        12,
+        "Inside national policy",
+        "We led the national engagement on England's new fostering standards for the Department for Education. Our training reflects what the standards expect."
+      ],
+      [
+        16,
+        "Learning that carries on after the day",
+        "A workbook for life, the recording and 12 months online. Your team keeps going back to it."
+      ],
+      [
+        5,
+        "Honest about the evidence",
+        "We say what the research shows, and where it is still limited."
+      ]
+    ],
+    "stats": [
+      [
+        "36",
+        "local authorities we have worked with, plus the Department for Education and the NHS"
+      ],
+      [
+        "2,700+",
+        "learners on The Care Leaders Online"
+      ]
+    ],
+    "awards": [
+      [
+        "iese-gold-2026.jpg",
+        "Gold, Dual Perspective Leadership Award",
+        "iESE Public Sector Transformation Awards 2026"
+      ],
+      [
+        "cypn-logo.jpg",
+        "Workforce Development Award",
+        "Children & Young People Now Awards 2023"
+      ]
+    ]
+  },
+  "offer": {
+    "tag": "Try it online first",
+    "big": "20% off",
+    "line": "the face to face day when it is booked and facilitated within 12 months of your online session.",
+    "steps": [
+      [
+        "1",
+        "Live online keynote",
+        "£1,950",
+        "+ VAT",
+        ""
+      ],
+      [
+        "2",
+        "Face to face day",
+        "£3,150",
+        "+ VAT + expenses",
+        "£3,950"
+      ]
+    ],
+    "save": "You save £800",
+    "terms": "For the same organisation that booked the online session. One discounted face to face day per online session. The day must be booked and facilitated within 12 months of the online session."
+  },
+  "gets": [
+    [
+      "book",
+      "Workbook",
+      "for life",
+      "Stories, tools and space to plan. Theirs to keep."
+    ],
+    [
+      "play",
+      "Recording",
+      "12 months",
+      "Catch up or go back over any part."
+    ],
+    [
+      "laptop",
+      "Online course",
+      "Free for 12 months",
+      "The Supporting Care Leavers at Work course on The Care Leaders Online."
+    ],
+    [
+      "award",
+      "Certificate",
+      "of completion",
+      "For their development record."
+    ],
+    [
+      "tag",
+      "50% off",
+      "All our online training",
+      "A year's membership of The Care Leaders Online at half price: every on-demand course, guest speakers and practice tools."
+    ]
+  ],
+  "showcase": {
+    "title": "The online course, on any device",
+    "sub": "On a laptop, tablet or phone.",
+    "laptop": "leading-care-leavers-at-work-laptop.png",
+    "phone": "leading-care-leavers-at-work-phone.png",
+    "workbook": [
+      "leading-care-leavers-at-work-workbook-cover.jpg",
+      "leading-care-leavers-at-work-workbook-page.jpg"
+    ],
+    "labels": [
+      "The course home on a laptop",
+      "Every tool works on a phone",
+      "The workbook, theirs to keep"
+    ],
+    "free": "Free for 12 months: this course online",
+    "half": "All our online training? 50% off a year's membership"
+  },
+  "screens": {
+    "title": "Supporting Care Leavers at Work",
+    "kind": "Online course",
+    "intro": "Keep care leavers in work without lowering the bar. Four parts, with a tool in each.",
+    "unit": "parts",
+    "unit_one": "Part",
+    "done": 1,
+    "sections": [
+      [
+        "Understanding",
+        "Separating Reason from Behaviour"
+      ],
+      [
+        "Starting well",
+        "12-week induction"
+      ],
+      [
+        "Staying well",
+        "Feedback script"
+      ],
+      [
+        "Growing",
+        "Progression conversation"
+      ]
+    ],
+    "phone": {
+      "section_no": 3,
+      "title": "Feedback script",
+      "intro": "Plan a hard conversation in three steps.",
+      "fields": [
+        [
+          "Name the standard",
+          "We start at 9. You've been late three times this month."
+        ],
+        [
+          "Ask what is going on",
+          "Is something making mornings hard right now?"
+        ],
+        [
+          "Agree the next step",
+          "Let's call your personal adviser together today."
+        ],
+        [
+          "When we check in",
+          "Friday, 10 minutes, just us."
+        ]
+      ],
+      "key": "Care personally and challenge directly. Drop either and it fails."
+    }
+  },
+  "workbook": {
+    "cover_title": "Supporting Care Leavers",
+    "subtitle": "At work, for managers",
+    "promise": "Keep care leavers in work without lowering the bar, from day one to their next step.",
+    "for": "For line managers, HR and apprenticeship teams.",
+    "page": {
+      "title": "Your 12-week induction",
+      "intro": "Keep one new starter in mind. Plan their first 12 weeks before they arrive.",
+      "n": 12,
+      "questions": [
+        "Who is their named buddy, and when do they meet on day one?",
+        "Which unwritten rules will you write down for them?",
+        "When are your check-ins booked for the first 12 weeks?",
+        "How will you make it easy for them to tell you about their care experience, if they choose to?"
+      ]
+    }
+  },
+  "facilitator": {
+    "name": "Luke Rodgers BEM",
+    "role": "Your facilitator",
+    "line": "From care leaver to care leader",
+    "image": "luke-speaking.jpg",
+    "paras": [
+      "Luke went into care at 10. He has spent his career inside children's services as a consultant, trainer and keynote speaker, and is CEO of The Care Leaders.",
+      "He has worked with councils nationally on employment for care leavers, including Suffolk County Council, where the induction and supervisor training this course grew from was built for the council's employment programme.",
+      "He led the national engagement on England's new fostering standards for the Department for Education, and has spent his career helping services become better corporate parents.",
+      "He was a Knowledge Equity Fellow at Saïd Business School, University of Oxford, and was awarded the British Empire Medal in 2018 for commitment to children and families."
+    ],
+    "proof": [
+      [
+        "6",
+        "care leavers in Suffolk council apprenticeships, 4 completed or on track"
+      ],
+      [
+        "5",
+        "ring-fenced council apprenticeships agreed in the first year"
+      ],
+      [
+        "60+",
+        "people at Suffolk's employer launch"
+      ]
+    ],
+    "proof_label": "Care leavers in work",
+    "for_course": "On the face to face day Luke leads every part. Online, he gives the keynote and answers your questions live.",
+    "quote": [
+      "6 young care leavers with an apprenticeship within our own organisation, 4 of which have either successfully completed or are on track.",
+      "Megan O'Keefe, Suffolk County Council HR"
+    ]
+  },
+  "related": [
+    [
+      "Be the First Yes",
+      "For employers ready to open doors to care-experienced people."
+    ],
+    [
+      "Corporate Parenting in Practice",
+      "What being a good corporate parent looks like, every day."
+    ]
+  ],
+  "theme": {
+    "sta": "tower",
+    "offer": "chevrons-colour",
+    "online": "tonal-midnight"
+  }
+}

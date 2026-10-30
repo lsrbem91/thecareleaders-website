@@ -1,0 +1,450 @@
+{
+  "slug": "trauma-attachment-transitions",
+  "name": "Trauma, Attachment and Transitions",
+  "category": "Trauma and attachment",
+  "accent": "#cf0f55",
+  "cover_image": "blocks/block-6.webp",
+  "glance": [
+    [
+      "clock",
+      "Face to face or online",
+      "6 hours in person, or 2 hours live online",
+      "you choose the format",
+      "wide"
+    ],
+    [
+      "group",
+      "60",
+      "people per course",
+      "one fee covers everyone"
+    ],
+    [
+      "gift",
+      "5",
+      "things every delegate gets",
+      "workbook, recording and more"
+    ]
+  ],
+  "formats": [
+    {
+      "icon": "room",
+      "label": "Face to face",
+      "length": "6 hours",
+      "time": "Usually 10am to 4pm",
+      "fee": "£3,950",
+      "fee_note": "+ VAT + expenses",
+      "points": [
+        "In your building or a venue you choose",
+        "Practice in pairs and small groups",
+        "You provide a room and a screen"
+      ]
+    },
+    {
+      "icon": "laptop",
+      "label": "Live online",
+      "length": "2 hours",
+      "time": "A live keynote with Q&A",
+      "fee": "£1,950",
+      "fee_note": "+ VAT",
+      "points": [
+        "On Teams or Zoom",
+        "Questions in the chat throughout",
+        "Live Q&A at the end"
+      ]
+    }
+  ],
+  "fees_note": "One fee covers up to 60 people. We build examples from your own service into the training at no extra cost.",
+  "gets": [
+    [
+      "book",
+      "Workbook",
+      "for life",
+      "Stories, tools and space to plan. Theirs to keep."
+    ],
+    [
+      "play",
+      "Recording",
+      "12 months",
+      "Catch up or go back over any part."
+    ],
+    [
+      "laptop",
+      "Online course",
+      "Free for 12 months",
+      "The Trauma, Attachment and Transitions course on The Care Leaders Online."
+    ],
+    [
+      "award",
+      "Certificate",
+      "of completion",
+      "For their development record."
+    ],
+    [
+      "tag",
+      "50% off",
+      "All our online training",
+      "A year's membership of The Care Leaders Online at half price: every on-demand course, guest speakers and practice tools."
+    ]
+  ],
+  "showcase": {
+    "title": "The online course, on any device",
+    "sub": "On a laptop, tablet or phone.",
+    "laptop": "trauma-attachment-transitions-laptop.png",
+    "phone": "trauma-attachment-transitions-phone.png",
+    "workbook": [
+      "trauma-attachment-transitions-workbook-cover.jpg",
+      "trauma-attachment-transitions-workbook-page.jpg"
+    ],
+    "labels": [
+      "The course home on a laptop",
+      "Every tool works on a phone",
+      "The workbook, theirs to keep"
+    ],
+    "free": "Free for 12 months: this course online",
+    "half": "All our online training? 50% off a year's membership"
+  },
+  "why": {
+    "title": "Why choose The Care Leaders Learning",
+    "sub": "Training built by people who have lived in care and people who have led services.",
+    "usps": [
+      [
+        21,
+        "Lived and professional experience",
+        "Founded and led by Luke Rodgers BEM, a care experienced leader. Every course is written by people who have been in care and people who have run, redesigned and inspected children's services. Your team hears both sides."
+      ],
+      [
+        12,
+        "Inside national policy",
+        "We led the national engagement on England's new fostering standards for the Department for Education. Our training reflects what the standards expect."
+      ],
+      [
+        16,
+        "Learning that carries on after the day",
+        "A workbook for life, the recording and 12 months online. Your team keeps going back to it."
+      ],
+      [
+        5,
+        "Honest about the evidence",
+        "We say what the research shows, and where it is still limited."
+      ]
+    ],
+    "stats": [
+      [
+        "36",
+        "local authorities we have worked with, plus the Department for Education and the NHS"
+      ],
+      [
+        "2,700+",
+        "learners on The Care Leaders Online"
+      ]
+    ],
+    "awards": [
+      [
+        "iese-gold-2026.jpg",
+        "Gold, Dual Perspective Leadership Award",
+        "iESE Public Sector Transformation Awards 2026"
+      ],
+      [
+        "cypn-logo.jpg",
+        "Workforce Development Award",
+        "Children & Young People Now Awards 2023"
+      ]
+    ]
+  },
+  "offer": {
+    "tag": "Try it online first",
+    "big": "20% off",
+    "line": "the face to face day when it is booked and facilitated within 12 months of your online session.",
+    "steps": [
+      [
+        "1",
+        "Live online keynote",
+        "£1,950",
+        "+ VAT",
+        ""
+      ],
+      [
+        "2",
+        "Face to face day",
+        "£3,150",
+        "+ VAT + expenses",
+        "£3,950"
+      ]
+    ],
+    "save": "You save £800",
+    "terms": "For the same organisation that booked the online session. One discounted face to face day per online session. The day must be booked and facilitated within 12 months of the online session."
+  },
+  "theme": {
+    "sta": "drifting",
+    "offer": "diamond",
+    "online": "midnight"
+  },
+  "headline": "Every move costs a child something. Plan it with them.",
+  "intro": "Training that helps your team plan each move between homes and schools with the child, not around them.",
+  "problem": {
+    "scene": "Tuesday: Leah, 11, is told she moves on Friday.",
+    "question": "She packs her things into bin bags. On Thursday she throws a chair.",
+    "without": [
+      "Moves arranged around a free bed",
+      "No time to prepare the child",
+      "Old losses missed",
+      "The details that help get lost"
+    ],
+    "with": [
+      "Moves planned with the child",
+      "Proper goodbyes",
+      "A school place arranged at the same time",
+      "A handover on what helps them settle"
+    ],
+    "standards": "The Care Planning, Placement and Case Review (England) Regulations 2010 and the education guidance expect a school place arranged alongside a new home, and protection for moves in years 10 and 11.",
+    "evidence": "Developmental trauma is explained honestly: what it is, and that it is not a recognised diagnosis in DSM-5 or ICD-11, nor a label for a child."
+  },
+  "audience": {
+    "groups": [
+      [
+        "clipboard",
+        "Social workers",
+        "Social workers, personal advisers and independent reviewing officers"
+      ],
+      [
+        "home",
+        "Carers and residential staff",
+        "Foster carers, supervising social workers and residential staff"
+      ],
+      [
+        "school",
+        "Schools and virtual schools",
+        "Designated teachers, pastoral staff and virtual school staff"
+      ],
+      [
+        "hands",
+        "Health and early help",
+        "Health and early help staff who stay through a move"
+      ]
+    ],
+    "notes": [
+      "No prior training needed",
+      "Best with social care and schools together",
+      "Up to 60 people"
+    ]
+  },
+  "outcomes": [
+    [
+      "See a move from their side",
+      "Describe a move from the child's side: the weeks before, the day itself and the first week."
+    ],
+    [
+      "Spot old losses returning",
+      "Recognise the signs that a move is bringing back earlier losses, before and after it happens."
+    ],
+    [
+      "Explain developmental trauma",
+      "Explain what developmental trauma is and isn't, and how threat shapes stress, learning and behaviour."
+    ],
+    [
+      "Understand testing behaviour",
+      "Use Bowlby, Ainsworth and Pauline Boss's ambiguous loss to explain why children test new adults."
+    ],
+    [
+      "Plan a move with the child",
+      "Use a transition planning tool covering goodbyes, belongings, the school place and the first week."
+    ],
+    [
+      "Hand over what helps",
+      "Write a short handover for the new carers and school on what helps the child settle."
+    ]
+  ],
+  "pillars": {
+    "title": "The Secure Base model",
+    "stance": "What helps a child feel safe in a new home",
+    "stance_line": "Five things carers do, used to plan the first week after a move.",
+    "items": [
+      [
+        "Being available",
+        "Helping the child trust that the adult will be there."
+      ],
+      [
+        "Being sensitive",
+        "Helping the child make sense of and manage their feelings."
+      ],
+      [
+        "Accepting",
+        "Building the child's self-esteem by accepting who they are."
+      ],
+      [
+        "Co-operation",
+        "Helping the child feel effective and part of decisions."
+      ],
+      [
+        "Family membership",
+        "Helping the child feel they belong."
+      ]
+    ],
+    "base": "Developed by Gillian Schofield and Mary Beek at the University of East Anglia."
+  },
+  "story_line": "Two stories run through the day: Leah, 11, moved at four days' notice, and Sam, 15, moving homes in Year 11. Each is a composite, drawn from real experiences of care.",
+  "parts": [
+    {
+      "title": "Trauma",
+      "theory": "What developmental trauma is, and isn't.",
+      "leave": "A shared explanation of trauma"
+    },
+    {
+      "title": "Attachment",
+      "theory": "Testing behaviour is a question.",
+      "leave": "PACE responses to testing"
+    },
+    {
+      "title": "Transitions",
+      "theory": "Ambiguous loss, and the rules on moves.",
+      "leave": "Prompts for where a move will hurt"
+    },
+    {
+      "title": "Planning well",
+      "theory": "The Secure Base model.",
+      "leave": "A transition plan and handover"
+    }
+  ],
+  "online_session": {
+    "title": "Option 2: live online, a 2-hour keynote",
+    "sub": "For teams who can't give a full day, or want to try it first. A live talk on Teams or Zoom, with chat and Q&A.",
+    "keynote": {
+      "title": "The keynote",
+      "text": "Leah and Sam's stories run through it, from a move at four days' notice to one planned with the child.",
+      "ideas": [
+        "What developmental trauma is",
+        "Why children test new adults",
+        "Ambiguous loss: grieving people still alive",
+        "Planning the first week with the child"
+      ]
+    },
+    "chat": {
+      "title": "Your say in the chat",
+      "text": "Questions to the audience throughout the talk.",
+      "bubbles": [
+        "How much notice did your last move give?",
+        "What did the child take with them?",
+        "Who knew their routines?"
+      ]
+    },
+    "qa": {
+      "title": "Live Q&A",
+      "text": "Questions answered live at the end. Ask about:",
+      "asks": [
+        "A move you are planning",
+        "The education guidance",
+        "Working with the virtual school"
+      ]
+    },
+    "after": "Practise each tool afterwards in the online course, with the workbook and the recording.",
+    "compare": "Try it online first and get 20% off the face to face day. Details are with the fees."
+  },
+  "screens": {
+    "title": "Trauma, Attachment and Transitions",
+    "kind": "Online course",
+    "intro": "Plan each move with the child, not around them. Four parts, with a tool in each.",
+    "unit": "parts",
+    "unit_one": "Part",
+    "done": 1,
+    "sections": [
+      [
+        "Trauma",
+        "Explaining developmental trauma"
+      ],
+      [
+        "Attachment",
+        "PACE responses to testing"
+      ],
+      [
+        "Transitions",
+        "Where a move will hurt most"
+      ],
+      [
+        "Planning well",
+        "Transition planning tool"
+      ]
+    ],
+    "phone": {
+      "section_no": 4,
+      "title": "Transition planning tool",
+      "intro": "Plan one move with the child. Use initials only.",
+      "fields": [
+        [
+          "Who they need to say goodbye to",
+          "Her friend Mia and her PE teacher."
+        ],
+        [
+          "What goes with them",
+          "Her duvet, photos and the bike."
+        ],
+        [
+          "What the new school needs to know",
+          "She reads ahead of her age. Mornings are hard."
+        ],
+        [
+          "How the first week will go",
+          "Same bedtime. Visit her old home on Saturday."
+        ]
+      ],
+      "key": "Expect the first weeks to be hard, and stay patient."
+    }
+  },
+  "workbook": {
+    "cover_title": "Trauma, Attachment and Transitions",
+    "subtitle": "Moves planned with the child",
+    "promise": "Plan each move between homes and schools with the child, not around them.",
+    "page": {
+      "title": "Your transition plan",
+      "intro": "Keep one child in mind. Use initials only. Plan the move with them.",
+      "n": 12,
+      "questions": [
+        "Who does this child need to say goodbye to, and how?",
+        "What needs to go with them to the new home?",
+        "What do the new home and school need to know before they arrive?",
+        "How will the first week go, and who will check in?"
+      ]
+    }
+  },
+  "facilitator": {
+    "name": "Luke Rodgers BEM",
+    "role": "Your facilitator",
+    "line": "From care leaver to care leader",
+    "image": "luke-speaking.jpg",
+    "paras": [
+      "Luke went into care at 10. He has spent his career inside children's services as a consultant, trainer and keynote speaker, and is CEO of The Care Leaders.",
+      "He has worked with councils and the NHS nationally on children who move between systems, including Staffordshire and Stoke-on-Trent, where more than 400 staff across health, social care and education were trained.",
+      "He led the national engagement on England's new fostering standards for the Department for Education, so he knows what the standards expect of the adults around a child.",
+      "He was a Knowledge Equity Fellow at Saïd Business School, University of Oxford, and was awarded the British Empire Medal in 2018 for commitment to children and families."
+    ],
+    "proof": [
+      [
+        "400+",
+        "staff trained across health, social care and education in Staffordshire and Stoke-on-Trent"
+      ],
+      [
+        "97%",
+        "of 119 people who gave feedback there said the training met its objectives"
+      ],
+      [
+        "120",
+        "residential staff trained across 11 Durham children's homes"
+      ]
+    ],
+    "proof_label": "Trauma-informed practice",
+    "for_course": "On the face to face day Luke leads every part. Online, he gives the keynote and answers your questions live.",
+    "quote": [
+      "This training has transformed the way I approach children in distress.",
+      "Training participant, NHS Staffordshire and Stoke-on-Trent"
+    ]
+  },
+  "related": [
+    [
+      "Behind the Behaviour",
+      "Reading behaviour as communication, without losing the relationship."
+    ],
+    [
+      "Supporting Boys in Care",
+      "Reaching boys who have learned to keep adults out."
+    ]
+  ]
+}

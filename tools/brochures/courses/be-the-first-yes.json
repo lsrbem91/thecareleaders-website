@@ -1,0 +1,450 @@
+{
+  "slug": "be-the-first-yes",
+  "name": "Be the First Yes",
+  "category": "Care leavers and work",
+  "accent": "#cf0f55",
+  "glance": [
+    [
+      "clock",
+      "Face to face or online",
+      "6 hours in person, or 2 hours live online",
+      "you choose the format",
+      "wide"
+    ],
+    [
+      "group",
+      "60",
+      "people per course",
+      "one fee covers everyone"
+    ],
+    [
+      "gift",
+      "5",
+      "things every delegate gets",
+      "workbook, recording, online course, certificate and 50% off"
+    ]
+  ],
+  "formats": [
+    {
+      "icon": "room",
+      "label": "Face to face",
+      "length": "6 hours",
+      "time": "Usually 10am to 4pm",
+      "fee": "£3,950",
+      "fee_note": "+ VAT + expenses",
+      "points": [
+        "In your building or a venue you choose",
+        "Practice in pairs and small groups",
+        "You provide a room and a screen"
+      ]
+    },
+    {
+      "icon": "laptop",
+      "label": "Live online",
+      "length": "2 hours",
+      "time": "A live keynote with Q&A",
+      "fee": "£1,950",
+      "fee_note": "+ VAT",
+      "points": [
+        "On Teams or Zoom",
+        "Questions in the chat throughout",
+        "Live Q&A at the end"
+      ]
+    }
+  ],
+  "fees_note": "One fee covers up to 60 people. We build examples from your own service into the training at no extra cost.",
+  "why": {
+    "title": "Why choose The Care Leaders Learning",
+    "sub": "Training built by people who have lived in care and people who have led services.",
+    "usps": [
+      [
+        21,
+        "Lived and professional experience",
+        "Founded and led by Luke Rodgers BEM, a care experienced leader. Every course is written by people who have been in care and people who have run, redesigned and inspected children's services. Your team hears both sides."
+      ],
+      [
+        12,
+        "Inside national policy",
+        "We led the national engagement on England's new fostering standards for the Department for Education. Our training reflects what the standards expect."
+      ],
+      [
+        16,
+        "Learning that carries on after the day",
+        "A workbook for life, the recording and 12 months online. Your team keeps going back to it."
+      ],
+      [
+        5,
+        "Honest about the evidence",
+        "We say what the research shows, and where it is still limited."
+      ]
+    ],
+    "stats": [
+      [
+        "36",
+        "local authorities we have worked with, plus the Department for Education and the NHS"
+      ],
+      [
+        "2,700+",
+        "learners on The Care Leaders Online"
+      ]
+    ],
+    "awards": [
+      [
+        "iese-gold-2026.jpg",
+        "Gold, Dual Perspective Leadership Award",
+        "iESE Public Sector Transformation Awards 2026"
+      ],
+      [
+        "cypn-logo.jpg",
+        "Workforce Development Award",
+        "Children & Young People Now Awards 2023"
+      ]
+    ]
+  },
+  "offer": {
+    "tag": "Try it online first",
+    "big": "20% off",
+    "line": "the face to face day when it is booked and facilitated within 12 months of your online session.",
+    "steps": [
+      [
+        "1",
+        "Live online keynote",
+        "£1,950",
+        "+ VAT",
+        ""
+      ],
+      [
+        "2",
+        "Face to face day",
+        "£3,150",
+        "+ VAT + expenses",
+        "£3,950"
+      ]
+    ],
+    "save": "You save £800",
+    "terms": "For the same organisation that booked the online session. One discounted face to face day per online session. The day must be booked and facilitated within 12 months of the online session."
+  },
+  "cover_image": "blocks/block-2.webp",
+  "headline": "The talent is there. The process loses it.",
+  "intro": "Training that helps employers find and fix the points where care leavers drop out of recruitment.",
+  "problem": {
+    "scene": "Marley, 19, is offered an interview at 9am across town.",
+    "question": "Payday is Friday. She can't pay the bus fare.",
+    "without": [
+      "Two references and five years of addresses",
+      "Interviews nobody can get to",
+      "\"Not interested\" on the file",
+      "No support before first pay"
+    ],
+    "with": [
+      "Adverts a young person can finish alone",
+      "A named contact and a guaranteed interview",
+      "A first month that doesn't assume family",
+      "A dated pledge with named owners"
+    ],
+    "standards": "Every council in England must publish a local offer for care leavers, including help with education, training and employment. We show employers how to get their opportunities into it.",
+    "evidence": "We use the Care Leaver Covenant's employer charter as a practical checklist. Signing the Covenant is your decision."
+  },
+  "audience": {
+    "groups": [
+      [
+        "clipboard",
+        "Employers and HR",
+        "HR, recruitment and early careers teams in any sector"
+      ],
+      [
+        "school",
+        "Training providers",
+        "Apprenticeship and training providers who recruit for employers"
+      ],
+      [
+        "group",
+        "Employer networks",
+        "Chambers of commerce, employer networks and skills teams"
+      ],
+      [
+        "hands",
+        "Council leads",
+        "Economic development, leaving care and corporate parenting leads"
+      ]
+    ],
+    "notes": [
+      "No care system knowledge needed",
+      "Works for several employers together",
+      "Up to 60 people"
+    ]
+  },
+  "outcomes": [
+    [
+      "See recruitment from their side",
+      "Walk a recruitment process from advert to first payday and name where a family usually fills the gap."
+    ],
+    [
+      "Spot the hidden talent",
+      "Describe what care-experienced young people bring, and why references and an unbroken education can hide it."
+    ],
+    [
+      "Know why contacts matter",
+      "Use Granovetter's research on how people hear about jobs to explain why care leavers often lack the contacts that lead to a first one."
+    ],
+    [
+      "Know what keeps a starter",
+      "Use Maslow to explain why travel, ID and the wait for first pay decide whether a new starter stays."
+    ],
+    [
+      "Rewrite your advert",
+      "Rewrite an advert in clear, everyday language, with a named contact and a guaranteed interview offer."
+    ],
+    [
+      "Make a dated pledge",
+      "Write a pledge for your organisation with named owners, using the Care Leaver Covenant's employer charter."
+    ]
+  ],
+  "pillars": {
+    "title": "Where care leavers drop out of recruitment",
+    "stance": "From advert to first payday",
+    "stance_line": "Recruitment quietly assumes a family in the background. These are the points where one usually fills the gap.",
+    "items": [
+      [
+        "The advert",
+        "Written for someone with a person to check it. Clear words and a named contact help."
+      ],
+      [
+        "The application",
+        "Two references and five years of addresses that many care leavers don't have to hand."
+      ],
+      [
+        "The interview",
+        "Across town at 9am, before payday. The bus fare decides whether they turn up."
+      ],
+      [
+        "The start",
+        "Travel, ID, uniform and the weeks before the first wage."
+      ],
+      [
+        "The first weeks",
+        "A problem at home shows up as lateness. A buddy and a conversation come before a warning."
+      ]
+    ],
+    "base": "Built on Granovetter's research on how people hear about jobs (1973) and Maslow's hierarchy of needs (1943), with the Care Leaver Covenant's employer charter as a checklist."
+  },
+  "story_line": "Two stories run through the day: Marley, 19, from her CV to her second week in the job, and Kyra, 21, still waiting for a call. Each is a composite, drawn from real experiences of care.",
+  "parts": [
+    {
+      "title": "The talent",
+      "theory": "The strengths a care leaver's CV hides.",
+      "leave": "A brief on care-experienced talent"
+    },
+    {
+      "title": "The barriers",
+      "theory": "How people really hear about jobs, and who misses out.",
+      "leave": "A map of where applicants drop out"
+    },
+    {
+      "title": "The changes",
+      "theory": "Why lateness can be a housing problem first.",
+      "leave": "A rewritten advert and first-month checklist"
+    },
+    {
+      "title": "The pledge",
+      "theory": "Why plans with a name and a date get done.",
+      "leave": "A dated pledge with named owners"
+    }
+  ],
+  "online_session": {
+    "title": "Option 2: live online, a 2-hour keynote",
+    "sub": "For employers who can't give a full day, or want to try it first. A live talk on Teams or Zoom, with chat and Q&A.",
+    "keynote": {
+      "title": "The keynote",
+      "text": "Marley's story runs through it, from a CV that looks like a risk to her second week in the job.",
+      "ideas": [
+        "The talent a CV hides",
+        "How people really hear about jobs",
+        "A first month without family",
+        "A pledge with a date on it"
+      ]
+    },
+    "chat": {
+      "title": "Your say in the chat",
+      "text": "Questions to the audience throughout the talk.",
+      "bubbles": [
+        "What would Marley's CV get scored in your process?",
+        "Where would she fall out of your recruitment?",
+        "Who would she call on her first late morning?"
+      ]
+    },
+    "qa": {
+      "title": "Live Q&A",
+      "text": "Questions answered live at the end. Ask about:",
+      "asks": [
+        "Your adverts and application steps",
+        "Apprenticeships and the bursary",
+        "Working with the leaving care team"
+      ]
+    },
+    "after": "Use the tools afterwards in the online course, with the workbook and the recording.",
+    "compare": "Try it online first and get 20% off the face to face day. Details are with the fees."
+  },
+  "gets": [
+    [
+      "book",
+      "Workbook",
+      "for life",
+      "Stories, tools and space to plan. Theirs to keep."
+    ],
+    [
+      "play",
+      "Recording",
+      "12 months",
+      "Catch up or go back over any part."
+    ],
+    [
+      "laptop",
+      "Online course",
+      "Free for 12 months",
+      "The Be the First Yes course on The Care Leaders Online."
+    ],
+    [
+      "award",
+      "Certificate",
+      "of completion",
+      "For their development record."
+    ],
+    [
+      "tag",
+      "50% off",
+      "All our online training",
+      "A year's membership of The Care Leaders Online at half price: every on-demand course, guest speakers and practice tools."
+    ]
+  ],
+  "showcase": {
+    "title": "The online course, on any device",
+    "sub": "On a laptop, tablet or phone.",
+    "laptop": "be-the-first-yes-laptop.png",
+    "phone": "be-the-first-yes-phone.png",
+    "workbook": [
+      "be-the-first-yes-workbook-cover.jpg",
+      "be-the-first-yes-workbook-page.jpg"
+    ],
+    "labels": [
+      "The course home on a laptop",
+      "Every tool works on a phone",
+      "The workbook, theirs to keep"
+    ],
+    "free": "Free for 12 months: this course online",
+    "half": "All our online training? 50% off a year's membership"
+  },
+  "screens": {
+    "title": "Be the First Yes",
+    "kind": "Online course",
+    "intro": "Find and fix the points where care leavers drop out of your recruitment. Four parts, with a tool in each.",
+    "unit": "parts",
+    "unit_one": "Part",
+    "done": 1,
+    "sections": [
+      [
+        "The talent",
+        "Care-experienced talent brief"
+      ],
+      [
+        "The barriers",
+        "Recruitment route map"
+      ],
+      [
+        "The changes",
+        "First-month checklist"
+      ],
+      [
+        "The pledge",
+        "Your dated pledge"
+      ]
+    ],
+    "phone": {
+      "section_no": 2,
+      "title": "Recruitment route map",
+      "intro": "Walk one applicant through your process. Mark where a family usually fills the gap.",
+      "fields": [
+        [
+          "The advert",
+          "Long form, no named contact."
+        ],
+        [
+          "The application",
+          "Two references needed."
+        ],
+        [
+          "The interview",
+          "9am, across town, no travel paid."
+        ],
+        [
+          "Who owns the fix",
+          "Head of HR, by the next campaign."
+        ]
+      ],
+      "key": "Recruitment relies on a family nobody notices until it isn't there."
+    }
+  },
+  "workbook": {
+    "subtitle": "For employers",
+    "promise": "Find the points where care leavers drop out of your recruitment, and fix them.",
+    "for": "For employers, HR and early careers teams.",
+    "page": {
+      "title": "Your recruitment route map",
+      "intro": "Take one real vacancy. Walk it from advert to first payday.",
+      "n": 12,
+      "questions": [
+        "Where would an applicant need someone to check a form or lend a fare?",
+        "Which screening criteria could a care leaver fail for reasons that have nothing to do with the job?",
+        "What would their first month cost them before the first wage?",
+        "Who in your organisation will own each fix, and by when?"
+      ]
+    }
+  },
+  "facilitator": {
+    "name": "Luke Rodgers BEM",
+    "role": "Your facilitator",
+    "line": "From care leaver to care leader",
+    "image": "luke-speaking.jpg",
+    "paras": [
+      "Luke went into care at 10. He has spent his career inside children's services as a consultant, trainer and keynote speaker, and is CEO of The Care Leaders.",
+      "He has worked with councils and employers nationally on routes into work for care leavers, including Suffolk, where the council ring-fenced apprenticeships for its own care leavers, and PwC, where he brought care leavers from four councils into a global firm for the day.",
+      "He leads The Care Leaders Fellowship, a 12-month leadership programme for people solving problems for care-experienced people.",
+      "He was a Knowledge Equity Fellow at Saïd Business School, University of Oxford, and was awarded the British Empire Medal in 2018 for commitment to children and families."
+    ],
+    "proof": [
+      [
+        "30",
+        "care leavers from 4 councils spent a day at PwC's London office"
+      ],
+      [
+        "5",
+        "ring-fenced council apprenticeships agreed in Suffolk's first year"
+      ],
+      [
+        "60+",
+        "people at Suffolk's employer launch"
+      ]
+    ],
+    "proof_label": "Care leavers and work",
+    "for_course": "On the face to face day Luke leads every part. Online, he gives the keynote and answers your questions live.",
+    "quote": [
+      "6 young care leavers with an apprenticeship within our own organisation, 4 of which have either successfully completed or are on track.",
+      "Megan O'Keefe, Suffolk County Council HR"
+    ]
+  },
+  "related": [
+    [
+      "Supporting Care Leavers at Work: For Managers",
+      "Trauma-informed training for managers who employ care leavers."
+    ],
+    [
+      "Corporate Parenting in Practice",
+      "What being a good corporate parent looks like, every day."
+    ]
+  ],
+  "theme": {
+    "sta": "mark-together",
+    "offer": "drifting",
+    "online": "midnight"
+  }
+}

@@ -1,0 +1,454 @@
+{
+  "slug": "raising-aspirations",
+  "name": "Raising Aspirations",
+  "category": "Schools",
+  "accent": "#cf0f55",
+  "cover_image": "blocks/block-3.webp",
+  "glance": [
+    [
+      "clock",
+      "Face to face or online",
+      "6 hours in person, or 2 hours live online",
+      "you choose the format",
+      "wide"
+    ],
+    [
+      "group",
+      "60",
+      "people per course",
+      "one fee covers everyone"
+    ],
+    [
+      "gift",
+      "5",
+      "things every delegate gets",
+      "workbook, recording and more"
+    ]
+  ],
+  "formats": [
+    {
+      "icon": "room",
+      "label": "Face to face",
+      "length": "6 hours",
+      "time": "Usually 10am to 4pm",
+      "fee": "£3,950",
+      "fee_note": "+ VAT + expenses",
+      "points": [
+        "In your building or a venue you choose",
+        "Practice in pairs and small groups",
+        "You provide a room and a screen"
+      ]
+    },
+    {
+      "icon": "laptop",
+      "label": "Live online",
+      "length": "2 hours",
+      "time": "A live keynote with Q&A",
+      "fee": "£1,950",
+      "fee_note": "+ VAT",
+      "points": [
+        "On Teams or Zoom",
+        "Questions in the chat throughout",
+        "Live Q&A at the end"
+      ]
+    }
+  ],
+  "fees_note": "One fee covers up to 60 people. We build examples from your own service into the training at no extra cost.",
+  "gets": [
+    [
+      "book",
+      "Workbook",
+      "for life",
+      "Stories, tools and space to plan. Theirs to keep."
+    ],
+    [
+      "play",
+      "Recording",
+      "12 months",
+      "Catch up or go back over any part."
+    ],
+    [
+      "laptop",
+      "Online course",
+      "Free for 12 months",
+      "The Raising Aspirations course on The Care Leaders Online."
+    ],
+    [
+      "award",
+      "Certificate",
+      "of completion",
+      "For their development record."
+    ],
+    [
+      "tag",
+      "50% off",
+      "All our online training",
+      "A year's membership of The Care Leaders Online at half price: every on-demand course, guest speakers and practice tools."
+    ]
+  ],
+  "showcase": {
+    "title": "The online course, on any device",
+    "sub": "On a laptop, tablet or phone.",
+    "laptop": "raising-aspirations-laptop.png",
+    "phone": "raising-aspirations-phone.png",
+    "workbook": [
+      "raising-aspirations-workbook-cover.jpg",
+      "raising-aspirations-workbook-page.jpg"
+    ],
+    "labels": [
+      "The course home on a laptop",
+      "Every tool works on a phone",
+      "The workbook, theirs to keep"
+    ],
+    "free": "Free for 12 months: this course online",
+    "half": "All our online training? 50% off a year's membership"
+  },
+  "why": {
+    "title": "Why choose The Care Leaders Learning",
+    "sub": "Training built by people who have lived in care and people who have led services.",
+    "usps": [
+      [
+        21,
+        "Lived and professional experience",
+        "Founded and led by Luke Rodgers BEM, a care experienced leader. Every course is written by people who have been in care and people who have run, redesigned and inspected children's services. Your team hears both sides."
+      ],
+      [
+        12,
+        "Inside national policy",
+        "We led the national engagement on England's new fostering standards for the Department for Education. Our training reflects what the standards expect."
+      ],
+      [
+        16,
+        "Learning that carries on after the day",
+        "A workbook for life, the recording and 12 months online. Your team keeps going back to it."
+      ],
+      [
+        5,
+        "Honest about the evidence",
+        "We say what the research shows, and where it is still limited."
+      ]
+    ],
+    "stats": [
+      [
+        "36",
+        "local authorities we have worked with, plus the Department for Education and the NHS"
+      ],
+      [
+        "2,700+",
+        "learners on The Care Leaders Online"
+      ]
+    ],
+    "awards": [
+      [
+        "iese-gold-2026.jpg",
+        "Gold, Dual Perspective Leadership Award",
+        "iESE Public Sector Transformation Awards 2026"
+      ],
+      [
+        "cypn-logo.jpg",
+        "Workforce Development Award",
+        "Children & Young People Now Awards 2023"
+      ]
+    ]
+  },
+  "offer": {
+    "tag": "Try it online first",
+    "big": "20% off",
+    "line": "the face to face day when it is booked and facilitated within 12 months of your online session.",
+    "steps": [
+      [
+        "1",
+        "Live online keynote",
+        "£1,950",
+        "+ VAT",
+        ""
+      ],
+      [
+        "2",
+        "Face to face day",
+        "£3,150",
+        "+ VAT + expenses",
+        "£3,950"
+      ]
+    ],
+    "save": "You save £800",
+    "terms": "For the same organisation that booked the online session. One discounted face to face day per online session. The day must be booked and facilitated within 12 months of the online session."
+  },
+  "theme": {
+    "sta": "diamond",
+    "offer": "tower",
+    "online": "tonal-midnight"
+  },
+  "headline": "Expect more. Then help it happen.",
+  "intro": "Training that helps your whole school expect more of children in care and with a social worker.",
+  "problem": {
+    "scene": "\"Let's think about something more realistic.\"",
+    "question": "Marcus, 15, wants to be a vet. He doesn't bring it up again.",
+    "without": [
+      "A lowered target",
+      "A future conversation that never happens",
+      "A display she isn't on",
+      "One person left to fix it"
+    ],
+    "with": [
+      "Expectations that stretch",
+      "Honest, hopeful talk about the future",
+      "Classrooms where they belong",
+      "A named action for every adult"
+    ],
+    "standards": "The DfE's statutory guidance asks designated teachers to make sure school staff have high expectations of children in care and previously in care. One person can't do that alone.",
+    "evidence": "Delivered at Darlington as a one-day course for all school staff, within the Designated Leaders Programme."
+  },
+  "audience": {
+    "groups": [
+      [
+        "group",
+        "All school staff",
+        "Teachers, teaching assistants, pastoral, office and site staff"
+      ],
+      [
+        "clipboard",
+        "Designated teachers",
+        "Who can co-lead parts of the day with us"
+      ],
+      [
+        "hands",
+        "Senior leaders and governors",
+        "Responsible for children in care and previously in care"
+      ],
+      [
+        "school",
+        "Your whole school",
+        "Primary, secondary and special schools"
+      ]
+    ],
+    "notes": [
+      "No prior training needed",
+      "Your whole staff in one room",
+      "Up to 60 people"
+    ]
+  },
+  "outcomes": [
+    [
+      "See what they carry",
+      "Describe what a child in care or with a social worker may bring into school."
+    ],
+    [
+      "Spot low expectations",
+      "Recognise low expectations in everyday phrases, tasks, groupings and displays."
+    ],
+    [
+      "Explain how expectations travel",
+      "Use the Pygmalion research to explain how expectations reach a child."
+    ],
+    [
+      "Safe and belonging first",
+      "Use Maslow and Baumeister and Leary to explain why belonging comes before stretch."
+    ],
+    [
+      "Audit your school",
+      "Use a walk-through checklist and Language that Cares to change what holds children back."
+    ],
+    [
+      "Own an action",
+      "Map one child's strengths and write your own named action in the school plan."
+    ]
+  ],
+  "pillars": {
+    "title": "Five steps to higher expectations",
+    "stance": "Expect more. Then help it happen.",
+    "stance_line": "The five sessions of the day, each built on its own research.",
+    "items": [
+      [
+        "Safe first",
+        "A child still working out if they are safe has less left for learning. (Maslow)"
+      ],
+      [
+        "Expect more",
+        "Adults' beliefs reach a child through grouping, feedback and tone. (Pygmalion)"
+      ],
+      [
+        "Belonging",
+        "Displays, seating and jobs tell a child whether they belong. (Baumeister and Leary)"
+      ],
+      [
+        "Grow strengths",
+        "Build stretch on what a child does well. (Dweck)"
+      ],
+      [
+        "A named action for every adult",
+        "Every member of staff writes one action, with a date it will be reviewed."
+      ]
+    ],
+    "base": "The day is designed so your designated teacher can co-lead it, especially the final session on the school plan."
+  },
+  "story_line": "Two stories run through the day: Priya, 9, at her third school in two years, and Marcus, 15, who wants to be a vet. Each is a composite, drawn from real experiences of care.",
+  "parts": [
+    {
+      "title": "Where they start",
+      "theory": "Maslow: safe before learning.",
+      "leave": "A workbook page on one child"
+    },
+    {
+      "title": "What we expect",
+      "theory": "How expectations reach a child.",
+      "leave": "Phrases to stop and start"
+    },
+    {
+      "title": "Environments shape beliefs",
+      "theory": "The need to belong.",
+      "leave": "A walk-through checklist"
+    },
+    {
+      "title": "Strengths and our plan",
+      "theory": "Growth mindset, and every adult owns a part.",
+      "leave": "A strengths map and the school plan"
+    }
+  ],
+  "online_session": {
+    "title": "Option 2: live online, a 2-hour keynote",
+    "sub": "For staff teams who can't give a full day, or want to try it first. A live talk on Teams or Zoom, with chat and Q&A.",
+    "keynote": {
+      "title": "The keynote",
+      "text": "Priya and Marcus's stories run through it, from a reading book two levels too low to the adults who kept asking about the vet plan.",
+      "ideas": [
+        "Feeling safe comes before learning",
+        "How adults' expectations reach a child",
+        "Belonging in every classroom",
+        "A named action for every adult"
+      ]
+    },
+    "chat": {
+      "title": "Your say in the chat",
+      "text": "Questions to the audience throughout the talk.",
+      "bubbles": [
+        "What phrase have you heard that holds a child back?",
+        "What does your classroom say about who belongs?",
+        "What is one child you teach brilliant at?"
+      ]
+    },
+    "qa": {
+      "title": "Live Q&A",
+      "text": "Questions answered live at the end. Ask about:",
+      "asks": [
+        "A pupil you teach",
+        "Your designated teacher's role",
+        "Children with a social worker"
+      ]
+    },
+    "after": "Practise each tool afterwards in the online course, with the workbook and the recording.",
+    "compare": "Try it online first and get 20% off the face to face day. Details are with the fees."
+  },
+  "screens": {
+    "title": "Raising Aspirations",
+    "kind": "Online course",
+    "intro": "Expect more of children in care and with a social worker, then help it happen. Five sessions, with a tool in each.",
+    "unit": "sessions",
+    "unit_one": "Session",
+    "done": 1,
+    "sections": [
+      [
+        "Where they start",
+        "Notice, don't diagnose"
+      ],
+      [
+        "What we expect",
+        "Language that Cares"
+      ],
+      [
+        "Environments",
+        "Walk-through checklist"
+      ],
+      [
+        "Growing strengths",
+        "Strengths map"
+      ],
+      [
+        "Our pathway",
+        "School plan"
+      ]
+    ],
+    "phone": {
+      "section_no": 2,
+      "title": "Language that Cares",
+      "intro": "Swap phrases that hold children back for ones that stretch.",
+      "fields": [
+        [
+          "What we say now",
+          "\"Let's think about something more realistic.\""
+        ],
+        [
+          "What it tells the child",
+          "Adults don't think I can."
+        ],
+        [
+          "What to say instead",
+          "\"What would you need to get there?\""
+        ],
+        [
+          "Who will try it this week",
+          "Me, with M in tutor time."
+        ]
+      ],
+      "key": "Expectations reach a child through every word."
+    }
+  },
+  "workbook": {
+    "subtitle": "Higher expectations, whole school",
+    "promise": "Expect more of children in care and with a social worker, and give every adult a part in it.",
+    "for": "For everyone who works in a school.",
+    "page": {
+      "title": "Your strengths map",
+      "intro": "Keep one child in mind. Use initials only. Start from what they do well.",
+      "n": 12,
+      "questions": [
+        "What is this child good at, in and out of lessons?",
+        "Who has noticed it, and when?",
+        "What two ways could you build on it this term?",
+        "What is your named action, and when will it be reviewed?"
+      ]
+    }
+  },
+  "facilitator": {
+    "name": "Luke Rodgers BEM",
+    "role": "Your facilitator",
+    "line": "From care leaver to care leader",
+    "image": "luke-speaking.jpg",
+    "paras": [
+      "Luke went into care at 10. He has spent his career inside children's services as a consultant, trainer and keynote speaker, and is CEO of The Care Leaders.",
+      "He has worked with councils nationally on the education of children in care, including Darlington, where designated teachers designed their own programme with him and this day ran for all school staff, and Middlesbrough's town-wide programme to make every school attachment aware and trauma informed.",
+      "Teachers are one of the largest groups he trains, and he has spoken at national and regional virtual school conferences.",
+      "He was a Knowledge Equity Fellow at Saïd Business School, University of Oxford, and was awarded the British Empire Medal in 2018 for commitment to children and families."
+    ],
+    "proof": [
+      [
+        "22",
+        "designated teachers trained in Darlington, on a programme they helped design"
+      ],
+      [
+        "427",
+        "school and council staff on Middlesbrough's trauma-informed training platform"
+      ],
+      [
+        "33.6%",
+        "fewer suspension episodes reported across Middlesbrough's PROCLAIM schools"
+      ]
+    ],
+    "proof_label": "In schools",
+    "for_course": "On the face to face day Luke leads every part. Online, he gives the keynote and answers your questions live.",
+    "quote": [
+      "Something that you can take back to the school and actually use",
+      "Designated teacher, Darlington co-design workshop"
+    ]
+  },
+  "related": [
+    [
+      "Two Timetables",
+      "Teachers and social workers learning each other's worlds."
+    ],
+    [
+      "Tools for Schools",
+      "Reading the messages in behaviour, with three tools for the next morning."
+    ]
+  ]
+}

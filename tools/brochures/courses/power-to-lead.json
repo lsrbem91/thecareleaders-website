@@ -1,0 +1,437 @@
+{
+  "slug": "power-to-lead",
+  "name": "Power to Lead",
+  "category": "Participation",
+  "accent": "#cf0f55",
+  "cover_image": "blocks/block-3.webp",
+  "headline": "Young people. Leading the change.",
+  "intro": "Training that helps young people in care and care leavers choose what they share and make their point to adults.",
+  "glance": [
+    [
+      "clock",
+      "Face to face or online",
+      "6 hours in person, or 2 hours live online",
+      "you choose the format",
+      "wide"
+    ],
+    [
+      "group",
+      "60",
+      "people per course",
+      "one fee covers everyone"
+    ],
+    [
+      "gift",
+      "5",
+      "things every delegate gets",
+      "workbook, recording and more"
+    ]
+  ],
+  "problem": {
+    "scene": "Keisha, 15, tells the board about her worst move.",
+    "question": "The room claps. She goes home and can't sleep.",
+    "without": [
+      "Little preparation before big meetings",
+      "The same few voices carry the load",
+      "Young people share more than they meant to",
+      "Ideas get thanked, then nothing changes"
+    ],
+    "with": [
+      "Young people choose what they share",
+      "Everyone in the group has a role",
+      "They know who decides, and how to reach them",
+      "Each young person leaves with a plan"
+    ],
+    "standards": "Councils have a duty to encourage children in care and care leavers to express their views. Doing that safely takes preparation.",
+    "evidence": "Nobody is asked to retell their story. Choosing what to share, and what to keep private, is the first thing the course covers."
+  },
+  "audience": {
+    "groups": [
+      [
+        "group",
+        "Councils and forums",
+        "Children in care councils and care leaver forums"
+      ],
+      [
+        "hands",
+        "Youth participation groups",
+        "Youth ambassador, shadow board and participation groups"
+      ],
+      [
+        "heart",
+        "Ages 13 to 25",
+        "Separate groups for 13 to 17 and 18 to 25 if needed"
+      ]
+    ],
+    "notes": [
+      "No speaking experience needed",
+      "A worker they know is welcome",
+      "Up to 60 people"
+    ]
+  },
+  "outcomes": [
+    [
+      "Know their strengths",
+      "Describe three of their own strengths, with an example of each from their own life."
+    ],
+    [
+      "Choose what to share",
+      "Decide which parts of their story they will share, with whom and when, and turn down a question."
+    ],
+    [
+      "Check a meeting can change things",
+      "Use Laura Lundy's model of participation to check whether a meeting they go to can actually change anything."
+    ],
+    [
+      "Know who decides",
+      "Explain who makes decisions in their council and what the corporate parenting principles say."
+    ],
+    [
+      "Make their point",
+      "Make a two-minute point to a group of adults and answer one challenging question."
+    ],
+    [
+      "Plan a project",
+      "Write a plan with a SMART goal, the first three steps and the adult who will back it."
+    ]
+  ],
+  "pillars": {
+    "title": "Lundy's model of participation",
+    "stance": "Being heard takes four things",
+    "stance_line": "Most groups get the first two. Power to Lead helps young people get all four.",
+    "items": [
+      [
+        "Space",
+        "Somewhere safe to speak, with time to prepare."
+      ],
+      [
+        "Voice",
+        "Support to give their view, in their own words."
+      ],
+      [
+        "Audience",
+        "Adults in the room who can act on what they hear."
+      ],
+      [
+        "Influence",
+        "Their views change what happens next, and they hear how."
+      ]
+    ],
+    "base": "Laura Lundy's model of participation (2007), with Roger Hart's ladder of participation and the corporate parenting principles."
+  },
+  "story_line": "Four stories run through the day: Keisha, 15, Connor, 16, Imani, 19, and Finn, 14. Each is a composite, drawn from real experiences of care.",
+  "parts": [
+    {
+      "title": "Me",
+      "theory": "The story you lived, and the story you tell.",
+      "leave": "Strengths and a sharing plan"
+    },
+    {
+      "title": "Us",
+      "theory": "How groups grow stronger.",
+      "leave": "A practised point and a role"
+    },
+    {
+      "title": "Them",
+      "theory": "Space, voice, audience and influence.",
+      "leave": "A map of who decides"
+    },
+    {
+      "title": "Next",
+      "theory": "A goal that is specific, with a date.",
+      "leave": "A personal leadership plan"
+    }
+  ],
+  "online_session": {
+    "title": "Option 2: live online, a 2-hour keynote",
+    "sub": "For groups who can't give a full day, or want to try it first. A live talk on Teams or Zoom, with chat and Q&A.",
+    "keynote": {
+      "title": "The keynote",
+      "text": "Keisha, Connor, Imani and Finn's stories run through it, from a board meeting to a plan of their own.",
+      "ideas": [
+        "What you share is your choice",
+        "Every voice in the group",
+        "Who really decides",
+        "From idea to plan"
+      ]
+    },
+    "chat": {
+      "title": "Your say in the chat",
+      "text": "Questions to the audience throughout the talk.",
+      "bubbles": [
+        "What would you say if a question felt too personal?",
+        "Who speaks most in your group?",
+        "Who decides on the issue you care about?"
+      ]
+    },
+    "qa": {
+      "title": "Live Q&A",
+      "text": "Questions answered live at the end. Ask about:",
+      "asks": [
+        "A meeting coming up",
+        "Getting in front of decision makers",
+        "Starting a project"
+      ]
+    },
+    "after": "Practise each part afterwards in the online course, with the workbook and the recording.",
+    "compare": "Try it online first and get 20% off the face to face day. Details are with the fees."
+  },
+  "formats": [
+    {
+      "icon": "room",
+      "label": "Face to face",
+      "length": "6 hours",
+      "time": "Usually 10am to 4pm",
+      "fee": "£3,950",
+      "fee_note": "+ VAT + expenses",
+      "points": [
+        "In your building or a venue you choose",
+        "Practice in pairs and small groups",
+        "You provide a room and a screen"
+      ]
+    },
+    {
+      "icon": "laptop",
+      "label": "Live online",
+      "length": "2 hours",
+      "time": "A live keynote with Q&A",
+      "fee": "£1,950",
+      "fee_note": "+ VAT",
+      "points": [
+        "On Teams or Zoom",
+        "Questions in the chat throughout",
+        "Live Q&A at the end"
+      ]
+    }
+  ],
+  "fees_note": "One fee covers up to 60 people. We build examples from your own service into the training at no extra cost.",
+  "why": {
+    "title": "Why choose The Care Leaders Learning",
+    "sub": "Training built by people who have lived in care and people who have led services.",
+    "usps": [
+      [
+        21,
+        "Lived and professional experience",
+        "Founded and led by Luke Rodgers BEM, a care experienced leader. Every course is written by people who have been in care and people who have run, redesigned and inspected children's services. Your team hears both sides."
+      ],
+      [
+        12,
+        "Inside national policy",
+        "We led the national engagement on England's new fostering standards for the Department for Education. Our training reflects what the standards expect."
+      ],
+      [
+        16,
+        "Learning that carries on after the day",
+        "A workbook for life, the recording and 12 months online. Your team keeps going back to it."
+      ],
+      [
+        5,
+        "Honest about the evidence",
+        "We say what the research shows, and where it is still limited."
+      ]
+    ],
+    "stats": [
+      [
+        "36",
+        "local authorities we have worked with, plus the Department for Education and the NHS"
+      ],
+      [
+        "2,700+",
+        "learners on The Care Leaders Online"
+      ]
+    ],
+    "awards": [
+      [
+        "iese-gold-2026.jpg",
+        "Gold, Dual Perspective Leadership Award",
+        "iESE Public Sector Transformation Awards 2026"
+      ],
+      [
+        "cypn-logo.jpg",
+        "Workforce Development Award",
+        "Children & Young People Now Awards 2023"
+      ]
+    ]
+  },
+  "offer": {
+    "tag": "Try it online first",
+    "big": "20% off",
+    "line": "the face to face day when it is booked and facilitated within 12 months of your online session.",
+    "steps": [
+      [
+        "1",
+        "Live online keynote",
+        "£1,950",
+        "+ VAT",
+        ""
+      ],
+      [
+        "2",
+        "Face to face day",
+        "£3,150",
+        "+ VAT + expenses",
+        "£3,950"
+      ]
+    ],
+    "save": "You save £800",
+    "terms": "For the same organisation that booked the online session. One discounted face to face day per online session. The day must be booked and facilitated within 12 months of the online session."
+  },
+  "gets": [
+    [
+      "book",
+      "Workbook",
+      "for life",
+      "Stories, tools and space to plan. Theirs to keep."
+    ],
+    [
+      "play",
+      "Recording",
+      "12 months",
+      "Catch up or go back over any part."
+    ],
+    [
+      "laptop",
+      "Online course",
+      "Free for 12 months",
+      "The Power to Lead course on The Care Leaders Online."
+    ],
+    [
+      "award",
+      "Certificate",
+      "of completion",
+      "For their development record."
+    ],
+    [
+      "tag",
+      "50% off",
+      "All our online training",
+      "A year's membership of The Care Leaders Online at half price: every on-demand course, guest speakers and practice tools."
+    ]
+  ],
+  "showcase": {
+    "title": "The online course, on any device",
+    "sub": "On a laptop, tablet or phone.",
+    "laptop": "power-to-lead-laptop.png",
+    "phone": "power-to-lead-phone.png",
+    "workbook": [
+      "power-to-lead-workbook-cover.jpg",
+      "power-to-lead-workbook-page.jpg"
+    ],
+    "labels": [
+      "The course home on a laptop",
+      "Every tool works on a phone",
+      "The workbook, theirs to keep"
+    ],
+    "free": "Free for 12 months: this course online",
+    "half": "All our online training? 50% off a year's membership"
+  },
+  "screens": {
+    "title": "Power to Lead",
+    "kind": "Online course",
+    "intro": "Choose what you share and make your point to adults. Four parts, with something to practise in each.",
+    "unit": "parts",
+    "unit_one": "Part",
+    "done": 1,
+    "sections": [
+      [
+        "Me",
+        "Strengths and sharing plan"
+      ],
+      [
+        "Us",
+        "Making your point"
+      ],
+      [
+        "Them",
+        "Power map"
+      ],
+      [
+        "Next",
+        "Leadership plan"
+      ]
+    ],
+    "phone": {
+      "section_no": 3,
+      "title": "Power map",
+      "intro": "Pick an issue you care about and map who decides.",
+      "fields": [
+        [
+          "My issue",
+          "Travel costs for care leavers."
+        ],
+        [
+          "Who decides",
+          "Head of the leaving care service."
+        ],
+        [
+          "Who influences them",
+          "The lead member for children."
+        ],
+        [
+          "How we reach them",
+          "Ask to join the next corporate parenting board."
+        ]
+      ],
+      "key": "Find the person who decides, then get in front of them."
+    }
+  },
+  "workbook": {
+    "subtitle": "For young people in and leaving care",
+    "promise": "Choose what you share, make your point to adults, and plan a project of your own.",
+    "for": "For young people aged 13 to 25 in care or leaving care.",
+    "page": {
+      "title": "Your leadership plan",
+      "intro": "Pick one thing you want to change.",
+      "n": 12,
+      "questions": [
+        "What do you want to change, and why does it matter to you?",
+        "Write your goal so it is specific, with a date.",
+        "What are your first three steps?",
+        "Which adult will back you, and when will you check in?"
+      ]
+    }
+  },
+  "facilitator": {
+    "name": "Luke Rodgers BEM",
+    "role": "Your facilitator",
+    "line": "From care leaver to care leader",
+    "image": "luke-speaking.jpg",
+    "paras": [
+      "Luke went into care at 10. He has spent his career inside children's services as a consultant, trainer and keynote speaker, and is CEO of The Care Leaders.",
+      "He has worked with councils nationally on youth participation, including Home and Future, the South East Regional Care Cooperative, where Power to Lead began as five sessions with Youth Ambassadors from across the region.",
+      "He founded the Care Leavers National Movement and led the national engagement on England's new fostering standards for the Department for Education, which included sessions with young people.",
+      "He was a Knowledge Equity Fellow at Saïd Business School, University of Oxford, and was awarded the British Empire Medal in 2018 for commitment to children and families."
+    ],
+    "proof": [
+      [
+        "11",
+        "local authorities brought together in the South East's youth participation collective"
+      ],
+      [
+        "5",
+        "co-design sessions with Youth Ambassadors, January to May 2025"
+      ],
+      [
+        "80%",
+        "of the project's agreed targets met by the end of the project"
+      ]
+    ],
+    "proof_label": "Youth participation in practice",
+    "for_course": "On the face to face day Luke leads every part. Online, he gives the keynote and answers your questions live."
+  },
+  "related": [
+    [
+      "The Five S Framework",
+      "Leading with lived experience."
+    ],
+    [
+      "Co-producing your Care Leaver Local Offer",
+      "Building your local offer with care leavers, not just for them."
+    ]
+  ],
+  "theme": {
+    "sta": "diamond",
+    "offer": "mark-together",
+    "online": "tonal-midnight"
+  }
+}

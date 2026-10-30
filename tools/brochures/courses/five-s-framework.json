@@ -1,0 +1,455 @@
+{
+  "slug": "five-s-framework",
+  "name": "The Five S Framework",
+  "category": "Lived experience leadership",
+  "accent": "#cf0f55",
+  "cover_image": "blocks/block-6.webp",
+  "headline": "From care leaver. To care leader.",
+  "intro": "Training that helps care-experienced people and leaders turn lived experience into leadership that lasts.",
+  "glance": [
+    [
+      "clock",
+      "Face to face or online",
+      "6 hours in person, or 2 hours live online",
+      "you choose the format",
+      "wide"
+    ],
+    [
+      "group",
+      "60",
+      "people per course",
+      "one fee covers everyone"
+    ],
+    [
+      "gift",
+      "5",
+      "things every delegate gets",
+      "workbook, recording and more"
+    ]
+  ],
+  "problem": {
+    "scene": "Kayla tells her story to 200 people.",
+    "question": "Everyone says it was powerful. Nobody asks what happens next.",
+    "without": [
+      "A story told once at an event",
+      "The person is thanked",
+      "The service moves on",
+      "Nothing they started lasts"
+    ],
+    "with": [
+      "A story that asks for something",
+      "Skills mapped, gaps filled",
+      "A plan with a way to pay for it",
+      "Work that outlasts one person"
+    ],
+    "standards": "Services want lived experience in the room, and care-experienced people want to lead. Leadership needs more than a story: skills, a strategy, a way to grow and someone ready to take over.",
+    "evidence": "Nobody has to share their own story. Storytelling in the Five S is about the story of the work, and people share only what they choose."
+  },
+  "audience": {
+    "groups": [
+      [
+        "heart",
+        "Care-experienced people",
+        "Adults with care experience who lead, or want to lead, work in the sector"
+      ],
+      [
+        "clipboard",
+        "Leaders and managers",
+        "People who want lived experience leadership in their service, not just consultation"
+      ],
+      [
+        "group",
+        "Both together",
+        "A mixed group, so lived and professional leaders plan side by side"
+      ],
+      [
+        "hands",
+        "Participation teams",
+        "The people who support care-experienced people into leadership roles"
+      ]
+    ],
+    "notes": [
+      "No prior knowledge needed",
+      "Bring a piece of work to grow",
+      "Up to 60 people"
+    ]
+  },
+  "outcomes": [
+    [
+      "Tell the story of your work",
+      "Tell the story behind your work so funders and partners understand why it matters, sharing only what you choose."
+    ],
+    [
+      "Know your skills",
+      "Name the leadership skills you have, the ones the work needs, and who could fill the gaps."
+    ],
+    [
+      "Turn an idea into a plan",
+      "Plan who the work is for, how it reaches them and how it is paid for."
+    ],
+    [
+      "Choose how it grows",
+      "Decide whether to grow the work or keep it running well where it is, and what each route needs."
+    ],
+    [
+      "Plan your succession",
+      "Plan for the work to carry on without depending on one person, including you."
+    ],
+    [
+      "Lead, not just share",
+      "Describe how your service will support care-experienced people to lead, not only to share their story."
+    ]
+  ],
+  "pillars": {
+    "title": "The Five S Framework",
+    "stance": "From care leaver to care leader",
+    "stance_line": "Five stages, in order, that take lived experience work from a story to something that lasts.",
+    "items": [
+      [
+        "Storytelling",
+        "Choose what you share, and what you are asking people to do."
+      ],
+      [
+        "Skills",
+        "The skills you have, the ones the work needs, and who could bring them."
+      ],
+      [
+        "Strategies",
+        "Who it is for, how it reaches them, and how it is paid for."
+      ],
+      [
+        "Scaling or sustaining",
+        "Grow the work, or keep it running well where it is."
+      ],
+      [
+        "Succession planning",
+        "Write down how the work runs and grow the next leaders."
+      ]
+    ],
+    "base": "Built on Marshall Ganz's public narrative and Moore, Riddell and Vocisano's work on how social innovations grow. The Fellowship follows the Five S over 12 months."
+  },
+  "story_line": "Five stories run through the day: Kayla, 24, Marcus, 27, Priya, 21, Jordan, 30, and Ellie, 26. Each is a composite, drawn from real experiences of care.",
+  "parts": [
+    {
+      "title": "Storytelling",
+      "theory": "A story of self, of us and of now.",
+      "leave": "A short version of your story"
+    },
+    {
+      "title": "Skills",
+      "theory": "Leading takes different skills.",
+      "leave": "A skills map"
+    },
+    {
+      "title": "Strategies",
+      "theory": "Who it is for, how it reaches them, how it is paid for.",
+      "leave": "A one-page plan"
+    },
+    {
+      "title": "Scaling or sustaining",
+      "theory": "Grow it out, up or deep, or keep it as it is.",
+      "leave": "A decision on how it grows"
+    },
+    {
+      "title": "Succession planning",
+      "theory": "Work that outlasts one person.",
+      "leave": "A succession plan"
+    }
+  ],
+  "online_session": {
+    "title": "Option 2: live online, a 2-hour keynote",
+    "sub": "For teams who can't give a full day, or want to try it first. A live talk on Teams or Zoom, with chat and Q&A.",
+    "keynote": {
+      "title": "The keynote",
+      "text": "Kayla, Marcus, Priya, Jordan and Ellie's stories run through it, one for each stage of the Five S.",
+      "ideas": [
+        "Storytelling that asks for something",
+        "Skills and strategies",
+        "Scaling or sustaining",
+        "Succession planning"
+      ]
+    },
+    "chat": {
+      "title": "Your say in the chat",
+      "text": "Questions to the audience throughout the talk.",
+      "bubbles": [
+        "What do people ask after you tell your story?",
+        "Which skill does your work need most?",
+        "Who could lead your work next?"
+      ]
+    },
+    "qa": {
+      "title": "Live Q&A",
+      "text": "Questions answered live at the end. Ask about:",
+      "asks": [
+        "A piece of work you want to grow",
+        "Funding and partners",
+        "Lived experience in your service"
+      ]
+    },
+    "after": "Finish each page of your plan afterwards in the online course, with the workbook and the recording.",
+    "compare": "Try it online first and get 20% off the face to face day. Details are with the fees."
+  },
+  "formats": [
+    {
+      "icon": "room",
+      "label": "Face to face",
+      "length": "6 hours",
+      "time": "Usually 10am to 4pm",
+      "fee": "£3,950",
+      "fee_note": "+ VAT + expenses",
+      "points": [
+        "In your building or a venue you choose",
+        "Practice in pairs and small groups",
+        "You provide a room and a screen"
+      ]
+    },
+    {
+      "icon": "laptop",
+      "label": "Live online",
+      "length": "2 hours",
+      "time": "A live keynote with Q&A",
+      "fee": "£1,950",
+      "fee_note": "+ VAT",
+      "points": [
+        "On Teams or Zoom",
+        "Questions in the chat throughout",
+        "Live Q&A at the end"
+      ]
+    }
+  ],
+  "fees_note": "One fee covers up to 60 people. We build examples from your own service into the training at no extra cost.",
+  "why": {
+    "title": "Why choose The Care Leaders Learning",
+    "sub": "Training built by people who have lived in care and people who have led services.",
+    "usps": [
+      [
+        21,
+        "Lived and professional experience",
+        "Founded and led by Luke Rodgers BEM, a care experienced leader. Every course is written by people who have been in care and people who have run, redesigned and inspected children's services. Your team hears both sides."
+      ],
+      [
+        12,
+        "Inside national policy",
+        "We led the national engagement on England's new fostering standards for the Department for Education. Our training reflects what the standards expect."
+      ],
+      [
+        16,
+        "Learning that carries on after the day",
+        "A workbook for life, the recording and 12 months online. Your team keeps going back to it."
+      ],
+      [
+        5,
+        "Honest about the evidence",
+        "We say what the research shows, and where it is still limited."
+      ]
+    ],
+    "stats": [
+      [
+        "36",
+        "local authorities we have worked with, plus the Department for Education and the NHS"
+      ],
+      [
+        "2,700+",
+        "learners on The Care Leaders Online"
+      ]
+    ],
+    "awards": [
+      [
+        "iese-gold-2026.jpg",
+        "Gold, Dual Perspective Leadership Award",
+        "iESE Public Sector Transformation Awards 2026"
+      ],
+      [
+        "cypn-logo.jpg",
+        "Workforce Development Award",
+        "Children & Young People Now Awards 2023"
+      ]
+    ]
+  },
+  "offer": {
+    "tag": "Try it online first",
+    "big": "20% off",
+    "line": "the face to face day when it is booked and facilitated within 12 months of your online session.",
+    "steps": [
+      [
+        "1",
+        "Live online keynote",
+        "£1,950",
+        "+ VAT",
+        ""
+      ],
+      [
+        "2",
+        "Face to face day",
+        "£3,150",
+        "+ VAT + expenses",
+        "£3,950"
+      ]
+    ],
+    "save": "You save £800",
+    "terms": "For the same organisation that booked the online session. One discounted face to face day per online session. The day must be booked and facilitated within 12 months of the online session."
+  },
+  "gets": [
+    [
+      "book",
+      "Workbook",
+      "for life",
+      "Stories, tools and space to plan. Theirs to keep."
+    ],
+    [
+      "play",
+      "Recording",
+      "12 months",
+      "Catch up or go back over any part."
+    ],
+    [
+      "laptop",
+      "Online course",
+      "Free for 12 months",
+      "The Five S Framework course on The Care Leaders Online."
+    ],
+    [
+      "award",
+      "Certificate",
+      "of completion",
+      "For their development record."
+    ],
+    [
+      "tag",
+      "50% off",
+      "All our online training",
+      "A year's membership of The Care Leaders Online at half price: every on-demand course, guest speakers and practice tools."
+    ]
+  ],
+  "showcase": {
+    "title": "The online course, on any device",
+    "sub": "On a laptop, tablet or phone.",
+    "laptop": "five-s-framework-laptop.png",
+    "phone": "five-s-framework-phone.png",
+    "workbook": [
+      "five-s-framework-workbook-cover.jpg",
+      "five-s-framework-workbook-page.jpg"
+    ],
+    "labels": [
+      "The course home on a laptop",
+      "Every tool works on a phone",
+      "The workbook, theirs to keep"
+    ],
+    "free": "Free for 12 months: this course online",
+    "half": "All our online training? 50% off a year's membership"
+  },
+  "screens": {
+    "title": "The Five S Framework",
+    "kind": "Online course",
+    "intro": "Turn lived experience into leadership that lasts. Five parts, with a page of your plan in each.",
+    "unit": "parts",
+    "unit_one": "Part",
+    "done": 1,
+    "sections": [
+      [
+        "Storytelling",
+        "Your story, short version"
+      ],
+      [
+        "Skills",
+        "Skills map"
+      ],
+      [
+        "Strategies",
+        "One-page plan"
+      ],
+      [
+        "Scaling or sustaining",
+        "How it grows"
+      ],
+      [
+        "Succession planning",
+        "Succession plan"
+      ]
+    ],
+    "phone": {
+      "section_no": 2,
+      "title": "Skills map",
+      "intro": "Map your skills against what your work needs.",
+      "fields": [
+        [
+          "What my work needs",
+          "Running a budget. Writing funding bids."
+        ],
+        [
+          "What I already bring",
+          "Young people trust me. I can run a group."
+        ],
+        [
+          "The gap",
+          "Budgets and bids."
+        ],
+        [
+          "Who could fill it",
+          "A finance officer at the council."
+        ]
+      ],
+      "key": "Leading something takes different skills from taking part in it."
+    }
+  },
+  "workbook": {
+    "subtitle": "Leading with lived experience",
+    "promise": "Turn lived experience into leadership that lasts, with a page of your plan for each S.",
+    "for": "For care-experienced people and the leaders who support them.",
+    "page": {
+      "title": "Your succession plan",
+      "intro": "Keep one piece of work in mind. Plan for it to carry on without you.",
+      "n": 12,
+      "questions": [
+        "What is the work, and who is it for?",
+        "Who could lead it next?",
+        "What are the three things only you know about how it runs?",
+        "How and when will you hand it over?"
+      ]
+    }
+  },
+  "facilitator": {
+    "name": "Luke Rodgers BEM",
+    "role": "Your facilitator",
+    "line": "From care leaver to care leader",
+    "image": "luke-speaking.jpg",
+    "paras": [
+      "Luke went into care at 10. He has spent his career inside children's services as a consultant, trainer and keynote speaker, and is CEO of The Care Leaders.",
+      "He built the Five S Framework from his own route out of care and into leadership. The Care Leaders Fellowship follows it over 12 months.",
+      "He founded the Care Leavers National Movement, led the national engagement on England's new fostering standards for the Department for Education, and gave the Five S as the keynote at The Care Leaders Summit in 2026.",
+      "He was a Knowledge Equity Fellow at Saïd Business School, University of Oxford, and was awarded the British Empire Medal in 2018 for commitment to children and families."
+    ],
+    "proof": [
+      [
+        "12",
+        "months: the Fellowship takes leaders through all Five S stages"
+      ],
+      [
+        "2026",
+        "Fellows led sessions at The Care Leaders Summit in York"
+      ]
+    ],
+    "proof_label": "The Five S in practice",
+    "for_course": "On the face to face day Luke leads every part. Online, he gives the keynote and answers your questions live.",
+    "quote": [
+      "The Fellowship supported me from my initial ideas phase through to launching; they've been critical in the success of my business.",
+      "Mary-Anne Hodd, CEO, Vital Voice Ltd, Fellow 2023"
+    ]
+  },
+  "related": [
+    [
+      "The Care Leaders Fellowship",
+      "The full 12 months of the Five S, for people with an idea."
+    ],
+    [
+      "Power to Lead",
+      "A short leadership course for young people in care and care leavers."
+    ]
+  ],
+  "theme": {
+    "sta": "tipped-out",
+    "offer": "tower",
+    "online": "midnight"
+  }
+}

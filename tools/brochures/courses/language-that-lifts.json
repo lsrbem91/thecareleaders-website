@@ -1,0 +1,443 @@
+{
+  "slug": "language-that-lifts",
+  "name": "Language that Lifts",
+  "category": "Recording and the words we use",
+  "cover_image": "blocks/block-3.webp",
+  "theme": {
+    "sta": "drifting",
+    "offer": "chevrons-colour",
+    "online": "midnight"
+  },
+  "headline": "The words we use. Become their story.",
+  "intro": "Training that helps your team swap service jargon for the words children in care have asked for.",
+  "problem": {
+    "scene": "\"Does the placement mean I have to move again?\"",
+    "question": "Demi, 11, has lived there for three years.",
+    "without": [
+      "Service words used about children",
+      "Habits passed on through templates",
+      "Children hear themselves as a case",
+      "Banned-word lists ignored"
+    ],
+    "with": [
+      "Children's names and everyday words",
+      "An agreed swap list",
+      "Letters a child would recognise",
+      "Templates changed so it sticks"
+    ],
+    "standards": "In TACT's Language that Cares guide (2019), young people asked for \"family time\" instead of contact and \"our home\" instead of placement.",
+    "evidence": "Formal terms such as \"looked after\" still have to be used in court and statutory documents. The course shows where, and how to explain them."
+  },
+  "audience": {
+    "groups": [
+      [
+        "clipboard",
+        "Social care teams",
+        "Social work, fostering, residential and leaving care"
+      ],
+      [
+        "school",
+        "Schools",
+        "Designated teachers, school staff and virtual schools"
+      ],
+      [
+        "hands",
+        "Leaders and business support",
+        "The people who own policies, letters and templates"
+      ],
+      [
+        "heart",
+        "Corporate parenting boards",
+        "Elected members and board members"
+      ]
+    ],
+    "notes": [
+      "Mixed roles work well",
+      "No prior knowledge needed",
+      "Up to 60 people"
+    ]
+  },
+  "outcomes": [
+    [
+      "Hear it as a child does",
+      "Describe how words such as \"placement\" and \"contact\" sound to a child hearing them about themselves."
+    ],
+    [
+      "Spot the words that label",
+      "Recognise the terms in your own letters and reports that children are most likely to find stigmatising."
+    ],
+    [
+      "Explain why labels stick",
+      "Use Becker's labelling theory and Goffman's work on stigma to explain how a label changes how a child is seen."
+    ],
+    [
+      "Know where formal terms stay",
+      "Describe when a term such as \"looked after\" still has to be used, and how to explain it to a child."
+    ],
+    [
+      "Swap and rewrite",
+      "Use Language that Cares to swap common terms, and rewrite a letter in words a child would choose."
+    ],
+    [
+      "Make it stick",
+      "Plan changes to templates, policies and induction, with a named owner for each."
+    ]
+  ],
+  "pillars": {
+    "title": "The words children asked for",
+    "stance": "Children's names and everyday words",
+    "stance_line": "Alternatives that keep the meaning and lose the stigma.",
+    "items": [
+      [
+        "Contact",
+        "Family time"
+      ],
+      [
+        "Placement",
+        "Our home"
+      ],
+      [
+        "LAC review",
+        "The child's name, and what the meeting is for"
+      ],
+      [
+        "Looked after",
+        "Kept where the law needs it, and explained to the child"
+      ]
+    ],
+    "base": "Alternatives from TACT's Language that Cares (2019), written with Children in Care Councils in 11 areas."
+  },
+  "story_line": "Four stories run through the day: Demi, 11, Jayden, 14, Shannon, 17, and Holly, 15. Each is a composite, drawn from real experiences of care.",
+  "parts": [
+    {
+      "title": "Hear it",
+      "theory": "Why labels stick to children.",
+      "leave": "The words your service uses most"
+    },
+    {
+      "title": "Swap it",
+      "theory": "What young people asked for.",
+      "leave": "An agreed swap list"
+    },
+    {
+      "title": "Write it",
+      "theory": "Accurate and kind are not opposites.",
+      "leave": "Before and after rewrites"
+    },
+    {
+      "title": "Spread it",
+      "theory": "Change templates, policies and induction.",
+      "leave": "A draft language guide"
+    }
+  ],
+  "online_session": {
+    "title": "Option 2: live online, a 2-hour keynote",
+    "sub": "For teams who can't give a full day, or want to try it first. A live talk on Teams or Zoom, with chat and Q&A.",
+    "keynote": {
+      "title": "The keynote",
+      "text": "Demi, Jayden, Shannon and Holly's stories run through it, each one a word seen from the child's side.",
+      "ideas": [
+        "How children hear our words",
+        "Swap service words for everyday ones",
+        "Rewrite letters and reports",
+        "Change templates so it sticks"
+      ]
+    },
+    "chat": {
+      "title": "Your say in the chat",
+      "text": "Questions to the audience throughout the talk.",
+      "bubbles": [
+        "Which word does your service use most about children?",
+        "What would you call contact if it were your family?",
+        "Which template still says LAC?"
+      ]
+    },
+    "qa": {
+      "title": "Live Q&A",
+      "text": "Questions answered live at the end. Ask about:",
+      "asks": [
+        "Words in your own letters",
+        "Where formal terms must stay",
+        "Involving your Children in Care Council"
+      ]
+    },
+    "after": "Practise each tool afterwards in the online course, with the workbook and the recording.",
+    "compare": "Try it online first and get 20% off the face to face day. Details are with the fees."
+  },
+  "gets": [
+    [
+      "book",
+      "Workbook",
+      "for life",
+      "Stories, tools and space to plan. Theirs to keep."
+    ],
+    [
+      "play",
+      "Recording",
+      "12 months",
+      "Catch up or go back over any part."
+    ],
+    [
+      "laptop",
+      "Online course",
+      "Free for 12 months",
+      "The Language that Lifts course on The Care Leaders Online."
+    ],
+    [
+      "award",
+      "Certificate",
+      "of completion",
+      "For their development record."
+    ],
+    [
+      "tag",
+      "50% off",
+      "All our online training",
+      "A year's membership of The Care Leaders Online at half price: every on-demand course, guest speakers and practice tools."
+    ]
+  ],
+  "showcase": {
+    "title": "The online course, on any device",
+    "sub": "On a laptop, tablet or phone.",
+    "laptop": "language-that-lifts-laptop.png",
+    "phone": "language-that-lifts-phone.png",
+    "workbook": [
+      "language-that-lifts-workbook-cover.jpg",
+      "language-that-lifts-workbook-page.jpg"
+    ],
+    "labels": [
+      "The course home on a laptop",
+      "Every tool works on a phone",
+      "The workbook, theirs to keep"
+    ],
+    "free": "Free for 12 months: this course online",
+    "half": "All our online training? 50% off a year's membership"
+  },
+  "screens": {
+    "title": "Language that Lifts",
+    "kind": "Online course",
+    "intro": "Swap service jargon for the words children in care have asked for. Four parts, with a tool in each.",
+    "unit": "parts",
+    "unit_one": "Part",
+    "done": 1,
+    "sections": [
+      [
+        "Hear it",
+        "Your service's words"
+      ],
+      [
+        "Swap it",
+        "Swap list"
+      ],
+      [
+        "Write it",
+        "Before and after"
+      ],
+      [
+        "Spread it",
+        "Language guide"
+      ]
+    ],
+    "phone": {
+      "section_no": 2,
+      "title": "Your swap list",
+      "intro": "Take a word your service uses. Find one that keeps the meaning.",
+      "fields": [
+        [
+          "The word we use",
+          "Contact"
+        ],
+        [
+          "How a child hears it",
+          "Like a visit to a stranger."
+        ],
+        [
+          "What we will say",
+          "Family time"
+        ],
+        [
+          "Where the formal word stays",
+          "Court reports only."
+        ]
+      ],
+      "key": "Children notice the words. Use their name first."
+    }
+  },
+  "workbook": {
+    "cover_title": "Language that Lifts",
+    "subtitle": "Child-centred language",
+    "promise": "Swap service jargon for the words children in care have asked for, and make the change stick.",
+    "for": "For social care teams, schools and leaders.",
+    "page": {
+      "title": "Your swap list",
+      "intro": "List the words your service uses most about children.",
+      "n": 12,
+      "questions": [
+        "Which words does your service use most about children?",
+        "How might a child hear each one?",
+        "What will you say instead, keeping the meaning?",
+        "Where does the formal term have to stay, and how will you explain it?"
+      ]
+    }
+  },
+  "facilitator": {
+    "name": "Luke Rodgers BEM",
+    "role": "Your facilitator",
+    "line": "From care leaver to care leader",
+    "image": "luke-speaking.jpg",
+    "paras": [
+      "Luke went into care at 10. He has spent his career inside children's services as a consultant, trainer and keynote speaker, and is CEO of The Care Leaders.",
+      "He has worked with councils nationally on the words services use about children, including Middlesbrough, where the vision, values and corporate parenting principles came from young people's and staff's own words.",
+      "He led the national engagement on England's new fostering standards for the Department for Education, and has run national co-design work with Virtual School Heads.",
+      "He was a Knowledge Equity Fellow at Saïd Business School, University of Oxford, and was awarded the British Empire Medal in 2018 for commitment to children and families."
+    ],
+    "proof": [
+      [
+        "300",
+        "staff, young people and partners shaped Middlesbrough Children Matter"
+      ],
+      [
+        "5",
+        "youth forums worked with us at every step in Middlesbrough"
+      ],
+      [
+        "200",
+        "Virtual School Heads and their teams in our NAVSH co-design workshop"
+      ]
+    ],
+    "proof_label": "Work built on young people's own words",
+    "for_course": "On the face to face day Luke leads every part. Online, he gives the keynote and answers your questions live."
+  },
+  "related": [
+    [
+      "A Guide to Good Recording",
+      "Records written with the child in mind."
+    ],
+    [
+      "Corporate Parenting in Practice",
+      "What being a good corporate parent looks like."
+    ]
+  ],
+  "accent": "#cf0f55",
+  "glance": [
+    [
+      "clock",
+      "Face to face or online",
+      "6 hours in person, or 2 hours live online",
+      "you choose the format",
+      "wide"
+    ],
+    [
+      "group",
+      "60",
+      "people per course",
+      "one fee covers everyone"
+    ],
+    [
+      "gift",
+      "5",
+      "things every delegate gets",
+      "workbook, recording and more"
+    ]
+  ],
+  "formats": [
+    {
+      "icon": "room",
+      "label": "Face to face",
+      "length": "6 hours",
+      "time": "Usually 10am to 4pm",
+      "fee": "£3,950",
+      "fee_note": "+ VAT + expenses",
+      "points": [
+        "In your building or a venue you choose",
+        "Practice in pairs and small groups",
+        "You provide a room and a screen"
+      ]
+    },
+    {
+      "icon": "laptop",
+      "label": "Live online",
+      "length": "2 hours",
+      "time": "A live keynote with Q&A",
+      "fee": "£1,950",
+      "fee_note": "+ VAT",
+      "points": [
+        "On Teams or Zoom",
+        "Questions in the chat throughout",
+        "Live Q&A at the end"
+      ]
+    }
+  ],
+  "fees_note": "One fee covers up to 60 people. We build examples from your own service into the training at no extra cost.",
+  "why": {
+    "title": "Why choose The Care Leaders Learning",
+    "sub": "Training built by people who have lived in care and people who have led services.",
+    "usps": [
+      [
+        21,
+        "Lived and professional experience",
+        "Founded and led by Luke Rodgers BEM, a care experienced leader. Every course is written by people who have been in care and people who have run, redesigned and inspected children's services. Your team hears both sides."
+      ],
+      [
+        12,
+        "Inside national policy",
+        "We led the national engagement on England's new fostering standards for the Department for Education. Our training reflects what the standards expect."
+      ],
+      [
+        16,
+        "Learning that carries on after the day",
+        "A workbook for life, the recording and 12 months online. Your team keeps going back to it."
+      ],
+      [
+        5,
+        "Honest about the evidence",
+        "We say what the research shows, and where it is still limited."
+      ]
+    ],
+    "stats": [
+      [
+        "36",
+        "local authorities we have worked with, plus the Department for Education and the NHS"
+      ],
+      [
+        "2,700+",
+        "learners on The Care Leaders Online"
+      ]
+    ],
+    "awards": [
+      [
+        "iese-gold-2026.jpg",
+        "Gold, Dual Perspective Leadership Award",
+        "iESE Public Sector Transformation Awards 2026"
+      ],
+      [
+        "cypn-logo.jpg",
+        "Workforce Development Award",
+        "Children & Young People Now Awards 2023"
+      ]
+    ]
+  },
+  "offer": {
+    "tag": "Try it online first",
+    "big": "20% off",
+    "line": "the face to face day when it is booked and facilitated within 12 months of your online session.",
+    "steps": [
+      [
+        "1",
+        "Live online keynote",
+        "£1,950",
+        "+ VAT",
+        ""
+      ],
+      [
+        "2",
+        "Face to face day",
+        "£3,150",
+        "+ VAT + expenses",
+        "£3,950"
+      ]
+    ],
+    "save": "You save £800",
+    "terms": "For the same organisation that booked the online session. One discounted face to face day per online session. The day must be booked and facilitated within 12 months of the online session."
+  }
+}

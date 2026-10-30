@@ -1,0 +1,445 @@
+{
+  "slug": "supporting-boys-in-care",
+  "name": "Supporting Boys in Care",
+  "category": "Behaviour and relationships",
+  "accent": "#cf0f55",
+  "cover_image": "blocks/block-5.webp",
+  "glance": [
+    [
+      "clock",
+      "Face to face or online",
+      "6 hours in person, or 2 hours live online",
+      "you choose the format",
+      "wide"
+    ],
+    [
+      "group",
+      "60",
+      "people per course",
+      "one fee covers everyone"
+    ],
+    [
+      "gift",
+      "5",
+      "things every delegate gets",
+      "workbook, recording and more"
+    ]
+  ],
+  "formats": [
+    {
+      "icon": "room",
+      "label": "Face to face",
+      "length": "6 hours",
+      "time": "Usually 10am to 4pm",
+      "fee": "£3,950",
+      "fee_note": "+ VAT + expenses",
+      "points": [
+        "In your building or a venue you choose",
+        "Practice in pairs and small groups",
+        "You provide a room and a screen"
+      ]
+    },
+    {
+      "icon": "laptop",
+      "label": "Live online",
+      "length": "2 hours",
+      "time": "A live keynote with Q&A",
+      "fee": "£1,950",
+      "fee_note": "+ VAT",
+      "points": [
+        "On Teams or Zoom",
+        "Questions in the chat throughout",
+        "Live Q&A at the end"
+      ]
+    }
+  ],
+  "fees_note": "One fee covers up to 60 people. We build examples from your own service into the training at no extra cost.",
+  "gets": [
+    [
+      "book",
+      "Workbook",
+      "for life",
+      "Stories, tools and space to plan. Theirs to keep."
+    ],
+    [
+      "play",
+      "Recording",
+      "12 months",
+      "Catch up or go back over any part."
+    ],
+    [
+      "laptop",
+      "Online course",
+      "Free for 12 months",
+      "The Supporting Boys in Care course on The Care Leaders Online."
+    ],
+    [
+      "award",
+      "Certificate",
+      "of completion",
+      "For their development record."
+    ],
+    [
+      "tag",
+      "50% off",
+      "All our online training",
+      "A year's membership of The Care Leaders Online at half price: every on-demand course, guest speakers and practice tools."
+    ]
+  ],
+  "showcase": {
+    "title": "The online course, on any device",
+    "sub": "On a laptop, tablet or phone.",
+    "laptop": "supporting-boys-in-care-laptop.png",
+    "phone": "supporting-boys-in-care-phone.png",
+    "workbook": [
+      "supporting-boys-in-care-workbook-cover.jpg",
+      "supporting-boys-in-care-workbook-page.jpg"
+    ],
+    "labels": [
+      "The course home on a laptop",
+      "Every tool works on a phone",
+      "The workbook, theirs to keep"
+    ],
+    "free": "Free for 12 months: this course online",
+    "half": "All our online training? 50% off a year's membership"
+  },
+  "why": {
+    "title": "Why choose The Care Leaders Learning",
+    "sub": "Training built by people who have lived in care and people who have led services.",
+    "usps": [
+      [
+        21,
+        "Lived and professional experience",
+        "Founded and led by Luke Rodgers BEM, a care experienced leader. Every course is written by people who have been in care and people who have run, redesigned and inspected children's services. Your team hears both sides."
+      ],
+      [
+        12,
+        "Inside national policy",
+        "We led the national engagement on England's new fostering standards for the Department for Education. Our training reflects what the standards expect."
+      ],
+      [
+        16,
+        "Learning that carries on after the day",
+        "A workbook for life, the recording and 12 months online. Your team keeps going back to it."
+      ],
+      [
+        5,
+        "Honest about the evidence",
+        "We say what the research shows, and where it is still limited."
+      ]
+    ],
+    "stats": [
+      [
+        "36",
+        "local authorities we have worked with, plus the Department for Education and the NHS"
+      ],
+      [
+        "2,700+",
+        "learners on The Care Leaders Online"
+      ]
+    ],
+    "awards": [
+      [
+        "iese-gold-2026.jpg",
+        "Gold, Dual Perspective Leadership Award",
+        "iESE Public Sector Transformation Awards 2026"
+      ],
+      [
+        "cypn-logo.jpg",
+        "Workforce Development Award",
+        "Children & Young People Now Awards 2023"
+      ]
+    ]
+  },
+  "offer": {
+    "tag": "Try it online first",
+    "big": "20% off",
+    "line": "the face to face day when it is booked and facilitated within 12 months of your online session.",
+    "steps": [
+      [
+        "1",
+        "Live online keynote",
+        "£1,950",
+        "+ VAT",
+        ""
+      ],
+      [
+        "2",
+        "Face to face day",
+        "£3,150",
+        "+ VAT + expenses",
+        "£3,950"
+      ]
+    ],
+    "save": "You save £800",
+    "terms": "For the same organisation that booked the online session. One discounted face to face day per online session. The day must be booked and facilitated within 12 months of the online session."
+  },
+  "theme": {
+    "sta": "tipped-out",
+    "offer": "chevrons-colour",
+    "online": "tonal-midnight"
+  },
+  "headline": "Boys in care. Need to be seen too.",
+  "intro": "Training that helps your team stay alongside boys in care when they push adults away.",
+  "problem": {
+    "scene": "11pm. Dylan, 15, kicks a hole in a door.",
+    "question": "Within a month: arrested, excluded, moved 40 miles away.",
+    "without": [
+      "Anger met with a sanction",
+      "A police call for a home matter",
+      "An exclusion, then a move",
+      "Adults with different rules"
+    ],
+    "with": [
+      "The feeling underneath is answered",
+      "Incidents managed at home",
+      "A restorative conversation",
+      "One team plan around each boy"
+    ],
+    "standards": "The 2018 national protocol on reducing unnecessary criminalisation of looked-after children and care leavers says the police should be a last resort for incidents a reasonable parent would manage at home.",
+    "evidence": "The DfE's figures for 2025 show boys make up 56% of children in care in England. Most of what people practise works with girls too, and we say so in the room."
+  },
+  "audience": {
+    "groups": [
+      [
+        "heart",
+        "Foster carers",
+        "Foster carers and supervising social workers"
+      ],
+      [
+        "home",
+        "Children's homes",
+        "Residential children's home staff"
+      ],
+      [
+        "school",
+        "Schools",
+        "Pastoral, behaviour and inclusion staff, and designated teachers"
+      ],
+      [
+        "hands",
+        "Youth justice",
+        "Youth justice, early help and youth workers, and personal advisers"
+      ]
+    ],
+    "notes": [
+      "No prior training needed",
+      "Mixed care and school groups",
+      "Up to 60 people"
+    ]
+  },
+  "outcomes": [
+    [
+      "See the chain",
+      "Describe how one incident becomes a police call, an exclusion and a move, from the boy's side."
+    ],
+    [
+      "Read what is underneath",
+      "Recognise the fear, shame and loss that can sit underneath anger or withdrawal."
+    ],
+    [
+      "Explain the anger",
+      "Use Bowlby and Siegel's window of tolerance to explain why anger can feel safer than sadness."
+    ],
+    [
+      "Keep police a last resort",
+      "Apply the 2018 national protocol to decide when an incident can be managed without the police."
+    ],
+    [
+      "Talk side by side",
+      "Use PACE and side-by-side conversation to build trust with a boy who avoids talking face to face."
+    ],
+    [
+      "Put it right and stay",
+      "Plan a restorative conversation, and agree a team plan with named actions."
+    ]
+  ],
+  "pillars": {
+    "title": "The four restorative questions",
+    "stance": "Put things right, and stay",
+    "stance_line": "Used after an incident so a boy can repair it, rather than be punished and moved.",
+    "items": [
+      [
+        "What happened?",
+        "Hear his side first, calmly, once everyone is back in their window."
+      ],
+      [
+        "Who was affected?",
+        "Help him see who the incident touched, including himself."
+      ],
+      [
+        "How do you feel now?",
+        "Make room for the feeling underneath, not only the behaviour."
+      ],
+      [
+        "What do we do to put it right?",
+        "Agree a way to repair it, so he can stay."
+      ]
+    ],
+    "base": "Restorative approaches come first under the 2018 national protocol on reducing unnecessary criminalisation."
+  },
+  "story_line": "Two stories run through the day: Dylan, 15, at his children's home, and Josh, 12, with his foster carer. Each is a composite, drawn from real experiences of care.",
+  "parts": [
+    {
+      "title": "What we see",
+      "theory": "The 2018 protocol, and behaviour as communication.",
+      "leave": "Questions to spot the incident, police, move pattern"
+    },
+    {
+      "title": "What is underneath",
+      "theory": "Attachment and the window of tolerance.",
+      "leave": "A window of tolerance map"
+    },
+    {
+      "title": "What works",
+      "theory": "PACE and restorative approaches.",
+      "leave": "Conversation starters and a plan"
+    },
+    {
+      "title": "Our plan",
+      "theory": "Adult presence, from Non-Violent Resistance.",
+      "leave": "A team action plan"
+    }
+  ],
+  "online_session": {
+    "title": "Option 2: live online, a 2-hour keynote",
+    "sub": "For teams who can't give a full day, or want to try it first. A live talk on Teams or Zoom, with chat and Q&A.",
+    "keynote": {
+      "title": "The keynote",
+      "text": "Dylan and Josh's stories run through it, from a door kicked at 11pm to a conversation in the car to football.",
+      "ideas": [
+        "How one incident leads to a police call and a move",
+        "Why anger can feel safer than sadness",
+        "Talking side by side, not face to face",
+        "One shared plan for the adults around each boy"
+      ]
+    },
+    "chat": {
+      "title": "Your say in the chat",
+      "text": "Questions to the audience throughout the talk.",
+      "bubbles": [
+        "When did you last call the police for something at home?",
+        "Where do your boys talk most?",
+        "Do the adults around him share one rule?"
+      ]
+    },
+    "qa": {
+      "title": "Live Q&A",
+      "text": "Questions answered live at the end. Ask about:",
+      "asks": [
+        "A boy you support",
+        "Your local police agreement",
+        "Restorative conversations"
+      ]
+    },
+    "after": "Practise each tool afterwards in the online course, with the workbook and the recording.",
+    "compare": "Try it online first and get 20% off the face to face day. Details are with the fees."
+  },
+  "screens": {
+    "title": "Supporting Boys in Care",
+    "kind": "Online course",
+    "intro": "Stay alongside boys in care when they push adults away. Four parts, with a tool in each.",
+    "unit": "parts",
+    "unit_one": "Part",
+    "done": 1,
+    "sections": [
+      [
+        "What we see",
+        "Separating Reason from Behaviour"
+      ],
+      [
+        "What is underneath",
+        "Window of Tolerance map"
+      ],
+      [
+        "What works",
+        "Restorative conversation plan"
+      ],
+      [
+        "Our plan",
+        "Team action plan"
+      ]
+    ],
+    "phone": {
+      "section_no": 3,
+      "title": "Restorative conversation plan",
+      "intro": "Plan the conversation after one incident. Initials only.",
+      "fields": [
+        [
+          "What happened?",
+          "Kicked the office door after a missed call."
+        ],
+        [
+          "Who was affected?",
+          "Night staff, the boy next door, him."
+        ],
+        [
+          "How do you feel now?",
+          "Gutted his dad didn't ring."
+        ],
+        [
+          "What do we do to put it right?",
+          "Help fix the door on Saturday."
+        ]
+      ],
+      "key": "A boy who can put things right can stay."
+    }
+  },
+  "workbook": {
+    "subtitle": "Staying alongside boys in care",
+    "promise": "Read the feeling under the anger, keep the police a last resort, and agree one plan around each boy.",
+    "page": {
+      "title": "Your restorative conversation",
+      "intro": "Keep one boy in mind. Use initials only. Plan it for when everyone is calm.",
+      "n": 12,
+      "questions": [
+        "What happened, from his side?",
+        "Who was affected, including him?",
+        "What might he be feeling now?",
+        "What could he do to put it right, and stay?"
+      ]
+    }
+  },
+  "facilitator": {
+    "name": "Luke Rodgers BEM",
+    "role": "Your facilitator",
+    "line": "From care leaver to care leader",
+    "image": "luke-speaking.jpg",
+    "paras": [
+      "Luke went into care at 10. He has spent his career inside children's services as a consultant, trainer and keynote speaker, and is CEO of The Care Leaders.",
+      "He has worked with councils and the NHS nationally on children whose behaviour leads to moves, including Durham's children's homes, where he put NVR into 11 homes, and Staffordshire and Stoke-on-Trent, where more than 400 staff were trained.",
+      "He led the national engagement on England's new fostering standards for the Department for Education, so he knows what the standards expect of the adults around a child.",
+      "He was a Knowledge Equity Fellow at Saïd Business School, University of Oxford, and was awarded the British Empire Medal in 2018 for commitment to children and families."
+    ],
+    "proof": [
+      [
+        "120",
+        "residential staff trained across 11 Durham children's homes"
+      ],
+      [
+        "70%",
+        "less restraint reported in one Durham children's home"
+      ],
+      [
+        "400+",
+        "staff trained across health, social care and education in Staffordshire"
+      ]
+    ],
+    "proof_label": "Behaviour and relationships",
+    "for_course": "On the face to face day Luke leads every part. Online, he gives the keynote and answers your questions live.",
+    "quote": [
+      "I now feel more confident approaching behaviour with curiosity rather than judgment.",
+      "Training participant, NHS Staffordshire and Stoke-on-Trent"
+    ]
+  },
+  "related": [
+    [
+      "Behind the Behaviour",
+      "Reading behaviour as communication, without losing the relationship."
+    ],
+    [
+      "The Person Behind the File",
+      "For probation, police, housing and health staff working with care-experienced adults."
+    ]
+  ]
+}
