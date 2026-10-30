@@ -59,7 +59,7 @@ def nav(cur, has_online, dark):
     return f'<nav class="nav"><img class="bm" src="{K}/brandmark.png" alt="">{"".join(out)}</nav>'
 
 GROUNDS = {  # October 2026 TCLL grounds: (file, x offset so the shapes sit clear of the text on the right)
-    'spine-bands': ('spine-bands-landscape.jpg', 300), 'chevrons-colour': ('chevrons-colour-landscape.jpg', 330),
+    'spine-bands': ('spine-bands-landscape.jpg', 380), 'chevrons-colour': ('chevrons-colour-landscape.jpg', 330),
     'mark-together': ('mark-together-landscape.jpg', 260), 'drifting': ('drifting-landscape.jpg', 260),
     'tipped-out': ('tipped-out-landscape.jpg', 260), 'tower': ('tower-landscape.jpg', 60),
     'diamond': ('diamond-landscape.jpg', 260), 'steps': ('steps-landscape.jpg', 260)}
@@ -265,7 +265,7 @@ def build(c):
     st = ''.join(f'<div class="st {"dk" if scol[i] == "apple" else ""}" style="background-image:url({K}/strips/arrow-{scol[i]}.png)"><span>{i + 1}</span><b>{e(a)}</b><p>{e(b)}</p></div>'
                  for i, (a, b) in enumerate(steps))
     rel = ''.join(f'<p><span class="k">{e(a)}.</span> {e(b)}</p>' for a, b in c.get('related', []))
-    P.append(page(f'''<h2>Book {e(name)} in {len(steps)} steps</h2>
+    P.append(page(f'''<h2{' class="longh"' if len(name) > 26 else ''}>Book {e(name)} in {len(steps)} steps</h2>
       <div class="sts">{st}</div>
       {strip('hello@thecareleaders.com', 'ribbon', 'apple', 'mail')}
       <div class="rel rel2">{strip('Often booked with', 'angled', 'purple', 'mini')}{rel}</div>

@@ -136,7 +136,7 @@ h2{font-size:50px;line-height:1.05;margin-bottom:24px}
 /* live online keynote */
 .osub{max-width:900px}
 .ons{display:grid;grid-template-columns:1.35fr 1fr .8fr;gap:18px}
-.onk,.onc,.onq{background-size:100% 100%;padding:24px 26px 26px;position:relative;min-height:268px}
+.onk,.onc,.onq{background-size:100% 100%;padding:24px 26px 26px;position:relative;min-height:240px}
 .onp{position:absolute;right:20px;top:18px;width:58px;height:58px}
 .ons h3{font-size:30px;line-height:1.05;margin:0 70px 10px 0}.ons p{font-size:17px;line-height:1.4;padding-right:60px}
 .onl{margin-top:16px;display:flex;flex-direction:column;gap:10px}
@@ -208,7 +208,7 @@ blockquote cite{display:block;font:400 13px/1.3 CS;color:#acc90b;margin-top:8px;
 /* October 2026 TCLL grounds */
 .dark.tmid{background:#241b40 url({K}/tcll2026/tonal-midnight.jpg) center/cover}
 .tpale{background:#f0f1df url({K}/tcll2026/tonal-pale-green.jpg) center/cover}
-.dark.spine .stas{width:780px;gap:12px}.dark.spine .sta{padding-right:90px;min-height:104px}.dark.spine .sub,.dark.spine .tln{max-width:800px}
+.dark.spine .stas{width:780px;gap:12px}.dark.spine .sta{padding-right:90px;min-height:104px}.dark.spine .sub{max-width:800px}.dark.spine .tln{max-width:740px}
 .dark.tteal .sub,.dark.tteal .tln{color:#fff;font-family:CS}
 .incimg{position:absolute;right:60px;top:70px;height:150px}
 /* offer on chevrons: text top left, the two prices in a row below, chevrons on the right */
@@ -227,3 +227,6 @@ blockquote cite{display:block;font:400 13px/1.3 CS;color:#acc90b;margin-top:8px;
 .shl{top:290px;width:580px}.shp{top:276px;height:350px;left:560px}
 .shh .sub{display:none}
 .tb.many{padding:18px 14px 20px}.tb.many h3{font-size:22px}.tb.many .ts{font-size:16px}.tb.many .lv{font-size:13px;padding:8px 26px 9px 10px}
+.ons+.tln{margin-top:12px}
+.dark.spine .stas{margin-bottom:-8px}
+h2.longh{font-size:40px}

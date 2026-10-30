@@ -149,7 +149,7 @@
       "bubbles": [
         "Which word do you use most about children?",
         "What would you call contact in your family?",
-        "Which template still says LAC?"
+        "Which of your templates still uses a label children dislike?"
       ]
     },
     "qa": {
@@ -175,7 +175,7 @@
       "play",
       "Recording",
       "12 months",
-      "Catch up or go back over any part."
+      "A recording of the session to watch again for 12 months."
     ],
     [
       "laptop",
@@ -211,7 +211,7 @@
       "The workbook, theirs to keep"
     ],
     "free": "Free for 12 months: this course online",
-    "half": "All our online training? 50% off a year's membership"
+    "half": "All our online training: 50% off a year on The Care Leaders Online"
   },
   "screens": {
     "title": "Language that Lifts",
@@ -302,7 +302,7 @@
       ],
       [
         "200",
-        "Virtual School Heads and their teams in our NAVSH co-design workshop"
+        "Virtual School Heads and their teams in our co-design workshop with the National Association of Virtual School Heads"
       ]
     ],
     "proof_label": "Work built on young people's own words",
@@ -347,7 +347,7 @@
       "length": "6 hours",
       "time": "Usually 10am to 4pm",
       "fee": "£3,950",
-      "fee_note": "+ VAT + expenses",
+      "fee_note": "+ VAT + travel expenses",
       "points": [
         "In your building or a venue you choose",
         "Practice in pairs and small groups",
@@ -433,7 +433,7 @@
         "2",
         "Face to face day",
         "£3,150",
-        "+ VAT + expenses",
+        "+ VAT + travel expenses",
         "£3,950"
       ]
     ],

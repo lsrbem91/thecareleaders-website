@@ -31,7 +31,7 @@
       "length": "6 hours",
       "time": "Usually 10am to 4pm",
       "fee": "£3,950",
-      "fee_note": "+ VAT + expenses",
+      "fee_note": "+ VAT + travel expenses",
       "points": [
         "In your building or a venue you choose",
         "Practice in pairs and small groups",
@@ -117,7 +117,7 @@
         "2",
         "Face to face day",
         "£3,150",
-        "+ VAT + expenses",
+        "+ VAT + travel expenses",
         "£3,950"
       ]
     ],
@@ -292,7 +292,7 @@
       "play",
       "Recording",
       "12 months",
-      "Catch up or go back over any part."
+      "A recording of the session to watch again for 12 months."
     ],
     [
       "laptop",
@@ -328,7 +328,7 @@
       "The workbook, theirs to keep"
     ],
     "free": "Free for 12 months: this course online",
-    "half": "All our online training? 50% off a year's membership"
+    "half": "All our online training: 50% off a year on The Care Leaders Online"
   },
   "screens": {
     "title": "Co-producing your Local Offer",
