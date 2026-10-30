@@ -11,7 +11,7 @@
   "glance": [
     ["clock", "6 hrs", "face to face", "or 2 hours live online"],
     ["group", "60", "people", "per course, either format"],
-    ["laptop", "2 ways", "face to face or online", "you choose the format"],
+    ["laptop", "Face to face", "or live online", "you choose the format"],
     ["gift", "5", "things included", "for every delegate"]
   ],
 
