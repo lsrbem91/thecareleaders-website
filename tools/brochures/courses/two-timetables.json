@@ -188,7 +188,7 @@
       "Meetings booked in lesson time",
       "Moves in the middle of term",
       "Files arriving weeks late",
-      "A PEP filled in, not worked to"
+      "A personal education plan filled in, not used"
     ],
     "with": [
       "Meetings booked around lessons",
@@ -247,15 +247,15 @@
     ],
     [
       "Write better PEP targets",
-      "Write PEP targets with the child's views, using Lundy's model, linked to Pupil Premium Plus."
+      "Write personal education plan (PEP) targets with the child's views, linked to Pupil Premium Plus."
     ],
     [
-      "Agree the deal",
-      "Agree written joint habits with colleagues on the other side that protect a child's education."
+      "Agree who does what",
+      "Agree in writing what school and social care will each do to protect a child's education."
     ]
   ],
   "pillars": {
-    "title": "Lundy's four tests for a PEP",
+    "title": "Lundy's four tests for a personal education plan",
     "stance": "A plan the child helped to make",
     "stance_line": "Laura Lundy's model of participation (2007), used to rewrite PEP targets with the child.",
     "items": [
@@ -278,7 +278,7 @@
     ],
     "base": "Built alongside Bronfenbrenner's ecological systems theory and the statutory guidance on the education of children in care."
   },
-  "story_line": "Two stories run through the day: Ellie, 14, and Aaron, 9, who moves foster home in February. Each is a composite, drawn from real experiences of care.",
+  "story_line": "Ellie, 14, and Aaron, 9, run through the day. Both are composites, drawn from real experiences of care.",
   "parts": [
     {
       "title": "Two worlds",
