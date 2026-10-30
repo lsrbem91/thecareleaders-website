@@ -224,7 +224,7 @@
     ],
     "base": "Laura Lundy's model of participation (2007), with Roger Hart's ladder of participation (1992) and Sweller's cognitive load theory (1988)."
   },
-  "story_line": "Two stories run through the day: Paige, 20, searching for help with a deposit, and Rio, 19, who gave his views and never heard back. Each is a composite, drawn from real experiences of care.",
+  "story_line": "Paige, 20, looking for help with a deposit, and Rio, 19, who never heard back. Both are composites.",
   "parts": [
     {
       "title": "The duty",
@@ -298,7 +298,7 @@
       "laptop",
       "Online course",
       "Free for 12 months",
-      "The Co-producing your Local Offer course on The Care Leaders Online."
+      "Co-producing your Local Offer on The Care Leaders Online."
     ],
     [
       "award",
@@ -381,7 +381,7 @@
     }
   },
   "workbook": {
-    "cover_title": "Co-producing your Local Offer",
+    "cover_title": "Your Local Offer",
     "subtitle": "With care leavers",
     "promise": "Rebuild your local offer with care leavers, so it says what they need and works on a phone.",
     "for": "For leaving care teams, leaders and care leavers.",

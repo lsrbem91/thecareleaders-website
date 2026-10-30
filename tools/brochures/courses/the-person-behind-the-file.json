@@ -125,7 +125,7 @@
     "terms": "For the same organisation that booked the online session. One discounted face to face day per online session. The day must be booked and facilitated within 12 months of the online session."
   },
   "cover_image": "blocks/block-6.webp",
-  "headline": "They were a child. In care first.",
+  "headline": "Before the file. A child in care.",
   "intro": "Training that helps probation, prison, police, housing and health staff see the care experience behind the file.",
   "problem": {
     "scene": "Dean, 23, has missed three appointments.",
@@ -142,7 +142,7 @@
       "First conversations planned differently",
       "Personal advisers involved early"
     ],
-    "standards": "The HMPPS framework now asks prisons to identify care experience and, with consent, contact the local authority. Since 30 September 2026 care leavers under 25 can't be found intentionally homeless.",
+    "standards": "Prisons are now asked to identify care experience and, with consent, contact the council. Since 30 September 2026 care leavers under 25 can't be found intentionally homeless.",
     "evidence": "Most of the changes cost nothing: a text reminder, a clearer letter, a named worker and a first call to the leaving care team."
   },
   "audience": {
@@ -232,7 +232,7 @@
     ],
     "base": "Office for Health Improvement and Disparities, working definition of trauma-informed practice (2022), with Bowlby's attachment theory and Siegel's window of tolerance."
   },
-  "story_line": "Two stories run through the day: Dean, 23, on a community order, and Shay, 22, at the housing options desk with one bag. Each is a composite, drawn from real experiences of care.",
+  "story_line": "Dean, 23, on a community order, and Shay, 22, at the housing options desk. Both are composites.",
   "parts": [
     {
       "title": "The file",
@@ -263,7 +263,7 @@
       "text": "Dean's file runs through it, retold from his side, then Shay at the housing desk.",
       "ideas": [
         "Asking about care, with consent",
-        "Why a childhood of adults leaving shapes trust",
+        "How early moves shape trust",
         "Missed appointments, read differently",
         "Six changes to make at the front desk"
       ]
@@ -306,7 +306,7 @@
       "laptop",
       "Online course",
       "Free for 12 months",
-      "The The Person Behind the File course on The Care Leaders Online."
+      "The Person Behind the File on The Care Leaders Online."
     ],
     [
       "award",
