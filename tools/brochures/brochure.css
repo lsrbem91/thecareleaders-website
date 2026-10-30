@@ -90,11 +90,11 @@ h2{font-size:50px;line-height:1.05;margin-bottom:24px}
 .gs{background:#f9e2df}.gt{background:#ede3ed}.ga{background:#f0f1df}
 /* formats */
 .fcs{display:grid;grid-template-columns:1fr 1fr;gap:28px}
-.fc{background-size:100% 100%;padding:26px 30px 26px;position:relative;min-height:440px}
+.fc{background-size:100% 100%;padding:24px 30px 22px;position:relative}
 .fimg{position:absolute;right:18px;top:-24px;height:200px;width:auto;max-width:250px}
 .fl{font-size:16px}
 .flen{font:400 52px/1 CB;margin-top:12px}.ftime{font:400 17px CS;color:#312b6c;margin-top:4px}
-.fee{font:400 66px/1 CB;color:{ACC};margin:22px 0 16px}.fee span{font:400 18px CS;color:#312b6c}
+.fee{font:400 66px/1 CB;color:{ACC};margin:14px 0 10px}.fee span{font:400 18px CS;color:#312b6c}
 .fc li{display:flex;gap:12px;align-items:center;font:400 18px CS;margin-bottom:10px}.fc li img{width:26px}
 .fnote{margin-top:20px;font:400 18px CS;display:flex;align-items:center}
 /* included */
@@ -146,3 +146,5 @@ h2{font-size:50px;line-height:1.05;margin-bottom:24px}
 .onq{color:#241b40}
 .dark .tln{color:#fff}.onx{margin-top:8px;font-family:CS}
 .onal{margin-top:14px;display:flex;flex-direction:column;gap:10px}.onal li{display:flex;gap:10px;align-items:center;font:400 17px/1.25 CS}.onal img{width:18px}
+.foff{background-size:100% 100%;color:#241b40;padding:12px 16px 14px;margin-top:14px}.foff b{font:400 21px CB;display:block}.foff p{font-size:15px;line-height:1.35;margin-top:2px}
+.osub{max-width:1000px}

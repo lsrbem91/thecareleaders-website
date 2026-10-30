@@ -132,12 +132,15 @@ def build(c):
 
     # 7 Formats and fees
     imgs = [f'{A}/img/tcll/blocks/block-5.webp', f'{A}/img/tcll/blocks/block-3.webp']
+    def offer(f):
+        if not f.get('offer'): return ''
+        return f'<div class="foff" style="{box("apple")}"><b>{e(f["offer"][0])}</b><p>{e(f["offer"][1])}</p></div>'
     def fmt(k, f):
         pts = ''.join(f'<li><img src="{K}/tick.png" alt="">{e(x)}</li>' for x in f['points'])
         return f'''<div class="fc" style="{box('white')}"><img class="fimg" src="{imgs[k % 2]}" alt="">
           {strip(f['label'], 'angled', 'teal', 'fl')}
           <p class="flen">{e(f['length'])}</p><p class="ftime">{e(f['time'])}</p>
-          <p class="fee">{e(f['fee'])} <span>{e(f['fee_note'])}</span></p><ul>{pts}</ul></div>'''
+          <p class="fee">{e(f['fee'])} <span>{e(f['fee_note'])}</span></p><ul>{pts}</ul>{offer(f)}</div>'''
     P.append(page(f'''<h2>Face to face or live online</h2>
       <div class="fcs">{''.join(fmt(k, f) for k, f in enumerate(c['formats']))}</div>
       <p class="fnote">{picto(12, 'pic xs')}{e(c['fees_note'])}</p>''', 'bed-blue', 'formats', c, num()))

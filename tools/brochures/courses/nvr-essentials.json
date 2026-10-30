@@ -138,7 +138,7 @@
   ],
   "online_session": {
     "title": "The live online session: a 2-hour NVR keynote",
-    "sub": "For teams who can't give a full day. One live talk on Teams or Zoom, with chat and Q&A.",
+    "sub": "For teams who can't give a full day, or want to try NVR before committing to it. One live talk on Teams or Zoom, with chat and Q&A.",
     "keynote": {
       "title": "The keynote",
       "text": "Reece's story runs all the way through, from the 11pm door to the repair the next morning.",
@@ -168,7 +168,7 @@
       ]
     },
     "after": "Practise each tool afterwards in the NVR Toolkit, with the workbook and the recording.",
-    "compare": "Want your team practising the skills together? Choose the face to face day."
+    "compare": "Try it online first: book the face to face day within 12 months of your online session and get 25% off."
   },
   "formats": [
     {
@@ -195,6 +195,10 @@
         "On Teams or Zoom",
         "Questions in the chat throughout",
         "Live Q&A at the end"
+      ],
+      "offer": [
+        "25% off the face to face day",
+        "Book it within 12 months of your online session. That's £2,962.50 + VAT instead of £3,950."
       ]
     }
   ],
