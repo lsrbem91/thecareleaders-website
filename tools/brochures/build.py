@@ -28,6 +28,15 @@ def strip(text, shape='ribbon', col='fuchsia', cls=''):
     return f'<span class="strip {shape} {cls}" style="background-image:url({K}/strips/{shape}-{col}.png)">{e(text)}</span>'
 def picto(n, cls='pic'):
     return f'<img class="{cls}" src="{K}/picto/p{int(n):02d}.png" alt="">'
+def opt(path, maxw=800):
+    """A smaller copy of an image for the PDF: resized and quantised to 256 colours, alpha kept."""
+    from PIL import Image
+    src = pathlib.Path(path); out = K / 'opt' / f'{src.stem}-{maxw}.png'
+    if not out.exists() or out.stat().st_mtime < src.stat().st_mtime:
+        out.parent.mkdir(exist_ok=True)
+        im = Image.open(src).convert('RGBA'); im.thumbnail((maxw, maxw * 2))
+        im.quantize(256, method=Image.Quantize.FASTOCTREE, dither=Image.Dither.NONE).save(out, optimize=True)
+    return out
 def box(col):
     return f'background-image:url({K}/strips/box-{col}.png)'
 
@@ -64,7 +73,7 @@ def build(c):
       <img class="logo" src="{A}/img/tcll/tcll-logo-white.png" alt="The Care Leaders Learning">
       <div class="cov">{strip(c['category'], 'ribbon', 'apple', 'cat')}
         <h1>{e(name)}</h1><p class="hl">{head}</p><p class="intro">{e(c['intro'])}</p></div>
-      <img class="covimg" src="{A}/img/tcll/{c['cover_image']}" alt="">
+      <img class="covimg" src="{opt(A / 'img/tcll' / c['cover_image'], 960)}" alt="">
       <div class="glance">{glance}</div>''', 'dark cover', c=c))
 
     # 2 Contents (filled in at the end, once page numbers are known)
@@ -157,7 +166,7 @@ def build(c):
     if sh:
         S = f'{K}/showcase'; lb = sh['labels']
         P.append(page(f'''<div class="shh"><h2>{e(sh['title'])}</h2><p class="sub">{e(sh['sub'])}</p></div>
-          <img class="shl" src="{S}/{sh['laptop']}" alt=""><img class="shp" src="{S}/{sh['phone']}" alt="">
+          <img class="shl" src="{opt(K / 'showcase' / sh['laptop'], 1300)}" alt=""><img class="shp" src="{opt(K / 'showcase' / sh['phone'], 800)}" alt="">
           <img class="shw1" src="{S}/{sh['workbook'][0]}" alt=""><img class="shw2" src="{S}/{sh['workbook'][1]}" alt="">
           <div class="shlb s1">{strip(lb[0], 'angled', 'purple')}</div><div class="shlb s2">{strip(lb[1], 'angled', 'teal')}</div>
           <div class="shlb s3">{strip(lb[2], 'angled', 'fuchsia')}</div>''', 'bed-purple', 'online', c, num()))
@@ -202,7 +211,7 @@ def build(c):
           'light', 'why', c, num(), f'About your facilitator: {f["name"]}'))
 
     # 7 Formats and fees
-    imgs = [f'{A}/img/tcll/blocks/block-5.webp', f'{A}/img/tcll/blocks/block-3.webp']
+    imgs = [opt(A / 'img/tcll/blocks/block-5.webp', 500), opt(A / 'img/tcll/blocks/block-3.webp', 500)]
     def offer(f):
         if not f.get('offer'): return ''
         return f'<div class="foff" style="{box("apple")}"><b>{e(f["offer"][0])}</b><p>{e(f["offer"][1])}</p></div>'
