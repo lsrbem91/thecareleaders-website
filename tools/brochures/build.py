@@ -37,6 +37,11 @@ def opt(path, maxw=800):
         im = Image.open(src).convert('RGBA'); im.thumbnail((maxw, maxw * 2))
         im.quantize(256, method=Image.Quantize.FASTOCTREE, dither=Image.Dither.NONE).save(out, optimize=True)
     return out
+def hires(name):
+    """The October 2026 high-resolution version of a TCLL image block, where one exists."""
+    import re as _re
+    m = _re.search(r'block-(\d)', str(name)); new = K / 'tcll2026' / f'image-block-0{m.group(1)}.png' if m else None
+    return new if new and new.exists() else A / 'img/tcll' / name
 def box(col):
     return f'background-image:url({K}/strips/box-{col}.png)'
 
@@ -73,7 +78,7 @@ def build(c):
       <img class="logo" src="{A}/img/tcll/tcll-logo-white.png" alt="The Care Leaders Learning">
       <div class="cov">{strip(c['category'], 'ribbon', 'apple', 'cat')}
         <h1{' class="long"' if len(name) > 20 else ''}>{e(name)}</h1><p class="hl">{head}</p><p class="intro">{e(c['intro'])}</p></div>
-      <img class="covimg" src="{opt(A / 'img/tcll' / c['cover_image'], 960)}" alt="">
+      <img class="covimg" src="{opt(hires(c["cover_image"]), 960)}" alt="">
       <div class="glance">{glance}</div>''', 'dark cover', c=c))
 
     # 2 Contents (filled in at the end, once page numbers are known)
@@ -143,7 +148,7 @@ def build(c):
             <div class="onc" style="{box('purple')}">{picto(13, 'pic onp')}<h3>{e(ch['title'])}</h3><p>{e(ch['text'])}</p>{bub}</div>
             <div class="onq" style="{box('apple')}">{picto(11, 'pic onp')}<h3>{e(qa['title'])}</h3><p>{e(qa['text'])}</p><ul class="onal">{''.join(f'<li><img src="{K}/chev.png" alt="">{e(x)}</li>' for x in qa.get('asks', []))}</ul></div></div>
           <p class="tln">{strip('Afterwards', 'ribbon', 'apple', 'mini')} {e(on['after'])}</p>
-          <p class="tln onx">{e(on['compare'])}</p>''', 'dark', 'course', c, num()))
+          <p class="tln onx">{e(on['compare'])}</p>''', 'dark tteal', 'course', c, num()))
 
     # 6 Our framework: Story, Theory, Action (the same page in every brochure)
     sta = [(18, 'fuchsia', '', 'Story', 'A real moment from care, told from the young person\'s side.'),
@@ -152,14 +157,14 @@ def build(c):
     cards = ''.join(f'<div class="sta {d}" style="background-image:url({K}/strips/arrowlong-{col}.png)">{picto(n, "pic stp")}<b>{t}</b><p>{x}</p></div>' for n, col, d, t, x in sta)
     P.append(page(f'''<h2>How we teach: Story, Theory, Action</h2>
       <p class="sub">Every Care Leaders Learning course, workbook and online lesson follows the same three steps.</p>
-      <div class="stas">{cards}</div>{f'<p class="tln">{strip("In this course", "ribbon", "apple", "mini")} {e(c["story_line"])}</p>' if c.get('story_line') else ''}''', 'bed-purple', 'course', c, num()))
+      <div class="stas">{cards}</div>{f'<p class="tln">{strip("In this course", "ribbon", "apple", "mini")} {e(c["story_line"])}</p>' if c.get('story_line') else ''}''', 'dark spine', 'course', c, num()))
 
     # 8 Included
     gp = [20, 5, 8, 1, 16]
     gets = ''.join(f'<div class="gi" style="{box("indigo")}">{picto(gp[k % 5])}<b>{e(t)}</b>{strip(s, "angled", "apple", "gs2")}<p>{e(d)}</p></div>'
                    for k, (_, t, s, d) in enumerate(c['gets']))
     P.append(page(f'''<h2>What every delegate gets</h2><p class="sub">Face to face or online. All included in the fee.</p>
-      <div class="gis">{gets}</div>''', 'light', 'included', c, num()))
+      <div class="gis">{gets}</div><img class="incimg" src="{opt(K / 'tcll2026' / 'image-block-04.png', 600)}" alt="">''', 'light', 'included', c, num()))
 
     # 9 Online showcase: devices and workbook
     sh = c.get('showcase')
@@ -182,7 +187,7 @@ def build(c):
                         for i, (a, b) in enumerate(tk['tools'], 1))
         P.append(page(f'''<div class="tkh"><div>{strip(tk['kind'], 'ribbon', 'fuchsia', 'cat')}<h2>{e(tk['name'])}</h2>
             <p class="sub">{e(tk['intro'])}</p></div><ol class="path">{path}</ol></div>
-          <p class="lbl">{picto(9, 'pic xs')}{len(tk['tools'])} interactive tools inside</p><div class="tools">{tools}</div>''', 'bed-green', 'online', c, num()))
+          <p class="lbl">{picto(9, 'pic xs')}{len(tk['tools'])} interactive tools inside</p><div class="tools">{tools}</div>''', 'tpale', 'online', c, num()))
 
     # 11 Why choose us: USPs, awards with their logos, stats
     w = c.get('why')
@@ -195,7 +200,7 @@ def build(c):
         P.append(page(f'''<h2>{e(w['title'])}</h2><p class="sub">{e(w['sub'])}</p>
           <div class="wgrid"><div class="usps">{usps}</div>
             <div class="awbox" style="{box('white')}">{strip('Award winning', 'angled', 'purple', 'mini')}{aws}</div></div>
-          <div class="wsts">{stats}</div>''', 'dark', 'why', c, num(), w['title']))
+          <div class="wsts">{stats}</div>''', 'dark tmid', 'why', c, num(), w['title']))
 
     # 12 About your facilitator
     f = c.get('facilitator')
@@ -213,7 +218,7 @@ def build(c):
 
     # 7 Formats and fees
     spare = [x for x in ('block-5.webp', 'block-3.webp', 'block-2.webp', 'block-6.webp') if x not in c['cover_image']]
-    imgs = [opt(A / 'img/tcll/blocks' / spare[0], 500), opt(A / 'img/tcll/blocks' / spare[1], 500)]
+    imgs = [opt(hires(spare[0]), 500), opt(hires(spare[1]), 500)]
     def offer(f):
         if not f.get('offer'): return ''
         return f'<div class="foff" style="{box("apple")}"><b>{e(f["offer"][0])}</b><p>{e(f["offer"][1])}</p></div>'
@@ -236,7 +241,7 @@ def build(c):
             for k, (n, t, fee, note, old) in enumerate(of['steps']))
         P.append(page(f'''<div class="ofl">{strip(of['tag'], 'ribbon', 'apple', 'cat')}<p class="ofb">{e(of['big'])}</p><p class="ofx">{e(of['line'])}</p></div>
           <div class="ofr">{stp}{strip(of['save'], 'ribbon', 'white', 'ofv dk')}</div>
-          <p class="oft">{e(of['terms'])}</p>''', 'dark', 'formats', c, num(), f"Try it online first: {of['big']} the face to face day"))
+          <p class="oft">{e(of['terms'])}</p>''', 'dark chev', 'formats', c, num(), f"Try it online first: {of['big']} the face to face day"))
 
     # 13 Book
     scol = ['apple', 'teal', 'brightpurple']
@@ -250,7 +255,7 @@ def build(c):
       {strip('hello@thecareleaders.com', 'ribbon', 'apple', 'mail')}
       <div class="rel rel2">{strip('Often booked with', 'angled', 'purple', 'mini')}{rel}</div>
       <p class="legal">Gold, Dual Perspective Leadership Award, iESE Public Sector Transformation Awards 2026 · Children &amp; Young People Now Workforce Development Award 2023 · The Care Leaders Ltd, company number 10782615 · thecareleaders.com</p>''',
-      'light', 'book', c))
+      'tpale', 'book', c))
 
     # Contents: every numbered page, by its heading
     items = []

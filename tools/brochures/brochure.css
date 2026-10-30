@@ -40,7 +40,7 @@ h2{font-size:50px;line-height:1.05;margin-bottom:24px}
 .cover h1{font-size:96px;line-height:.95;margin-bottom:14px}
 .hl{white-space:nowrap;font-family:CB;font-size:36px;line-height:1.05;margin-bottom:18px}
 .intro{font-size:21px;line-height:1.45;max-width:620px}
-.covimg{position:absolute;right:46px;top:84px;width:480px}
+.covimg{position:absolute;right:46px;top:84px;width:auto;max-width:480px;max-height:480px}
 .glance{position:absolute;left:60px;right:60px;bottom:40px;display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
 .gl{background-size:100% 100%;padding:18px 22px 20px}
 .gl b{display:block;font:400 46px/1 CB;color:#acc90b}.gl span{display:block;font:400 17px CS;margin-top:6px}.gl small{display:block;font-size:14px;margin-top:2px}
@@ -205,3 +205,20 @@ blockquote cite{display:block;font:400 13px/1.3 CS;color:#acc90b;margin-top:8px;
 .pils.wide .pil h3{font-size:24px}.pils.wide .pil p{font-size:17px}.pils.wide .pil{padding:20px 20px 22px}
 .shm{position:absolute;left:60px;top:200px}.shm .strip{white-space:nowrap}.shm .strip{font-size:18px;padding:9px 46px 10px 14px}
 .cover h1.long{font-size:66px;line-height:1}
+/* October 2026 TCLL grounds */
+.dark.tmid{background:#241b40 url({K}/tcll2026/tonal-midnight.jpg) center/cover}
+.dark.tteal{background:#008196 url({K}/tcll2026/tonal-teal.jpg) center/cover}
+.dark.spine{background:#241b40 url({K}/tcll2026/spine-bands-landscape.jpg) 300px 0/auto 100% no-repeat}
+.dark.chev{background:#241b40 url({K}/tcll2026/chevrons-colour-landscape.jpg) 330px 0/auto 100% no-repeat}
+.tpale{background:#f0f1df url({K}/tcll2026/tonal-pale-green.jpg) center/cover}
+.dark.spine .stas{width:780px;gap:12px}.dark.spine .sta{padding-right:90px;min-height:104px}.dark.spine .sub,.dark.spine .tln{max-width:800px}
+.dark.tteal .sub,.dark.tteal .tln{color:#fff;font-family:CS}
+.incimg{position:absolute;right:60px;top:70px;height:150px}
+/* offer on chevrons: text top left, the two prices in a row below, chevrons on the right */
+.dark.chev .ofl{top:110px;width:760px}
+.dark.chev .ofb{font-size:140px;margin:16px 0 10px}
+.dark.chev .ofx{font-size:26px;max-width:640px}
+.dark.chev .ofr{left:60px;right:auto;top:470px;width:980px;flex-direction:row;align-items:center;gap:14px}
+.dark.chev .ofs{width:380px;padding:16px 70px 18px 20px}
+.dark.chev .ofs b{font-size:24px}.dark.chev .ofp{font-size:36px}
+.dark.chev .ofv{align-self:center;font-size:22px}

@@ -66,7 +66,7 @@ def laptop(s):
   <div style="display:flex;align-items:center;gap:22px;margin-top:24px;width:640px">
     <div style="flex:1"><div style="display:flex;gap:4px">{segs}</div><p style="font:400 14px CS;margin-top:8px">{done} of {n} {s.get('unit', 'sections')} complete</p></div>
     {strip('Continue: ' + nxt, 'arrow', 'apple', 'color:#241b40;font-size:17px;padding:11px 48px 12px 16px')}</div>
-  <img src="{A}/img/tcll/blocks/{s.get('hero', 'block-1.webp')}" style="position:absolute;right:40px;bottom:0;height:300px">
+  <img src="{K}/tcll2026/{s.get('hero', 'image-block-01.png')}" style="position:absolute;right:40px;bottom:0;height:300px">
 </section>
 <section style="padding:26px 40px">
   <div style="display:flex;align-items:baseline;gap:16px;margin-bottom:16px"><h2 style="font:400 28px CB">Your {e(s.get('unit', 'sections'))}</h2><span style="font:400 15px CS;color:#312b6c">12 months' access · Certificate on completion</span></div>
@@ -103,11 +103,7 @@ def wb_cover(c, w):
     mid = (len(t) + 1) // 2; title = ' '.join(t[:mid]) + '<br>' + ' '.join(t[mid:]) if len(t) > 1 else t[0]
     size = 92 if max(len(x) for x in t) < 10 and len(t) <= 3 else 70
     return f'''<html><head><style>{FONTS}</style></head><body style="width:794px;height:1123px;overflow:hidden;background:#dae2e6;position:relative">
-<div style="position:absolute;left:0;top:0;width:794px;height:590px;background:#241b40"></div>
-<img src="{K}/strips/angled-apple.png" style="position:absolute;left:560px;top:0;width:90px;height:60px">
-<img src="{K}/strips/hex-teal.png" style="position:absolute;left:600px;top:96px;width:110px;height:64px">
-<img src="{K}/strips/arrow-purple.png" style="position:absolute;left:540px;top:190px;width:200px;height:56px">
-<img src="{K}/strips/ribbon-fuchsia.png" style="position:absolute;left:580px;top:276px;width:130px;height:40px">
+<div style="position:absolute;left:0;top:0;width:794px;height:590px;background:#241b40 url({K}/tcll2026/tower-portrait.jpg) right top/auto 790px no-repeat"></div>
 <div style="position:absolute;left:56px;top:{230 if size == 92 else 220}px;color:#fff;width:490px">
   <h1 style="font:400 {size}px/.95 CB">{title}</h1>
   <p style="font:400 21px CS;color:#acc90b;margin:18px 0 12px">{e(w['subtitle'])}</p>
