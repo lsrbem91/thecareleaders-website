@@ -174,18 +174,18 @@ def build(c):
             <p class="sub">{e(tk['intro'])}</p></div><ol class="path">{path}</ol></div>
           <p class="lbl">{picto(9, 'pic xs')}{len(tk['tools'])} interactive tools inside</p><div class="tools">{tools}</div>''', 'bed-green', 'online', c, num()))
 
-    # 11 Why choose us
+    # 11 Why choose us: USPs, awards with their logos, stats
     w = c.get('why')
     if w:
-        def usp(u):
-            body = f'<p>{e(u[2])}</p>' if u[2] else ''
-            aw = ''.join(f'<div class="aw">{strip(a, "angled", "apple", "mini")}<p>{e(b)}</p></div>' for a, b in u[3:])
-            return f'<div class="usp" style="{box("white")}">{picto(u[0])}<h3>{e(u[1])}</h3>{body}{aw}</div>'
+        usps = ''.join(f'<div class="usp" style="{box("white")}">{picto(n)}<h3>{e(t)}</h3><p>{e(x)}</p></div>' for n, t, x in w['usps'])
+        aws = ''.join(f'<div class="awl"><img src="{A}/img/{img}" alt="{e(a)}"><b>{e(a)}</b><p>{e(b_)}</p></div>' for img, a, b_ in w['awards'])
         cols2 = ['apple', 'teal']
-        stats = ''.join(f'<div class="wst {"dk" if cols2[i] == "apple" else ""}" style="background-image:url({K}/strips/arrowlong-{cols2[i]}.png)"><b>{e(a)}</b><p>{e(b)}</p></div>'
-                        for i, (a, b) in enumerate(w['stats']))
+        stats = ''.join(f'<div class="wst {"dk" if cols2[i] == "apple" else ""}" style="background-image:url({K}/strips/arrowlong-{cols2[i]}.png)"><b>{e(a)}</b><p>{e(b_)}</p></div>'
+                        for i, (a, b_) in enumerate(w['stats']))
         P.append(page(f'''<h2>{e(w['title'])}</h2><p class="sub">{e(w['sub'])}</p>
-          <div class="usps">{''.join(usp(u) for u in w['usps'])}</div><div class="wsts">{stats}</div>''', 'dark', 'why', c, num(), w['title']))
+          <div class="wgrid"><div class="usps">{usps}</div>
+            <div class="awbox" style="{box('white')}">{strip('Award winning', 'angled', 'purple', 'mini')}{aws}</div></div>
+          <div class="wsts">{stats}</div>''', 'dark', 'why', c, num(), w['title']))
 
     # 12 About your facilitator
     f = c.get('facilitator')
