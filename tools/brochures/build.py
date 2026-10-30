@@ -104,20 +104,20 @@ def build(c):
       <div class="trow"><div class="tbs">{am}</div><div class="lunch" style="{box('midgreen')}">Lunch</div><div class="tbs">{pm}</div></div>
       <p class="tln">{strip('You leave with', 'ribbon', 'apple', 'mini')} a tool ready to use on your next shift.</p>''', 'light', 'course', c, num()))
 
-    # 5b The live online session
+    # 5b The live online session: a keynote, not a shorter day
     on = c.get('online_session')
     if on:
-        def oblk(i, p, o):
-            return f'''<div class="tb" style="{box(pcols[(i - 1) % 4])}"><span class="tn">{i}</span><h3>{e(p["title"])}</h3>
-              <p class="ts">{e(o["focus"])}</p><p class="ot2">{e(o["practise"])}</p>{strip(o["time"], "ribbon", "apple", "lv")}</div>'''
-        op = on['parts']
-        oam = ''.join(oblk(i + 1, parts[i], op[i]) for i in range(half))
-        opm = ''.join(oblk(i + 1 + half, parts[i + half], op[i + half]) for i in range(len(op) - half))
-        ru = ''.join(f'<span>{e(x)}</span>' for x in on['ruler'])
-        P.append(page(f'''<h2>The live online session: {len(op)} parts in 2 hours</h2>
-          <div class="ruler" style="background-image:url({K}/strips/arrowlong-navy.png)">{ru}</div>
-          <div class="trow"><div class="tbs">{oam}</div><div class="lunch" style="{box('midgreen')}">{e(on['break'])}</div><div class="tbs">{opm}</div></div>
-          <p class="tln">{strip('After the session', 'ribbon', 'apple', 'mini')} {e(on['after'])}</p>''', 'bed-green', 'course', c, num()))
+        k, ch, qa = on['keynote'], on['chat'], on['qa']
+        hcs = ['fuchsia', 'purple', 'teal', 'indigo']
+        ideas = ''.join(f'<li><span class="hx" style="background-image:url({K}/strips/hex-{hcs[n % 4]}.png)">{n + 1}</span>{e(x)}</li>' for n, x in enumerate(k['ideas']))
+        bub = ''.join(f'<p class="bub" style="{box("white")}">{e(x)}</p>' for x in ch['bubbles'])
+        P.append(page(f'''<h2>{e(on['title'])}</h2><p class="sub osub">{e(on['sub'])}</p>
+          <div class="ons">
+            <div class="onk" style="{box('navy')}">{picto(18, 'pic onp')}<h3>{e(k['title'])}</h3><p>{e(k['text'])}</p><ol class="onl">{ideas}</ol></div>
+            <div class="onc" style="{box('purple')}">{picto(13, 'pic onp')}<h3>{e(ch['title'])}</h3><p>{e(ch['text'])}</p>{bub}</div>
+            <div class="onq" style="{box('apple')}">{picto(11, 'pic onp')}<h3>{e(qa['title'])}</h3><p>{e(qa['text'])}</p><ul class="onal">{''.join(f'<li><img src="{K}/chev.png" alt="">{e(x)}</li>' for x in qa.get('asks', []))}</ul></div></div>
+          <p class="tln">{strip('Afterwards', 'ribbon', 'apple', 'mini')} {e(on['after'])}</p>
+          <p class="tln onx">{e(on['compare'])}</p>''', 'dark', 'course', c, num()))
 
     # 6 Story, Theory, Action
     rows = ''.join(f'''<div class="gr"><div class="gp" style="{box(pcols[(i - 1) % 4])}"><span class="tn">{i}</span>{e(p["title"])}</div>

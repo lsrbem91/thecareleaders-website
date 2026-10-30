@@ -133,4 +133,16 @@ h2{font-size:50px;line-height:1.05;margin-bottom:24px}
 .shw2{position:absolute;left:978px;top:196px;width:240px;transform:rotate(4deg)}
 .shlb{position:absolute;top:626px}.shlb.s1{left:60px}.shlb.s2{left:600px}.shlb.s3{left:900px;top:560px}
 .gl.wide{grid-column:span 2}
-.ot2{font:400 16px/1.35 CS;color:#acc90b;margin-top:10px}
+/* live online keynote */
+.osub{max-width:900px}
+.ons{display:grid;grid-template-columns:1.35fr 1fr .8fr;gap:18px}
+.onk,.onc,.onq{background-size:100% 100%;padding:24px 26px 26px;position:relative;min-height:310px}
+.onp{position:absolute;right:20px;top:18px;width:58px;height:58px}
+.ons h3{font-size:30px;line-height:1.05;margin:0 70px 10px 0}.ons p{font-size:17px;line-height:1.4;padding-right:60px}
+.onl{margin-top:16px;display:flex;flex-direction:column;gap:10px}
+.onl li{display:flex;gap:12px;align-items:center;font:400 19px CS}
+.bub{color:#0e2545;font:400 16px CS !important;padding:9px 14px;margin-top:8px;width:92%}
+.bub:nth-of-type(odd){margin-left:8%}
+.onq{color:#241b40}
+.dark .tln{color:#fff}.onx{margin-top:8px;font-family:CS}
+.onal{margin-top:14px;display:flex;flex-direction:column;gap:10px}.onal li{display:flex;gap:10px;align-items:center;font:400 17px/1.25 CS}.onal img{width:18px}

@@ -7,105 +7,316 @@
   "side_image": "blocks/block-2.webp",
   "headline": "One course. Your whole team using NVR.",
   "intro": "Non-violent resistance training that helps your whole team respond as one when a young person's behaviour escalates.",
-
   "glance": [
-    ["clock", "Face to face or online", "6 hours in person, or 2 hours live online", "you choose the format", "wide"],
-    ["group", "60", "people per course", "one fee covers everyone"],
-    ["gift", "5", "things every delegate gets", "workbook, recording and more"]
+    [
+      "clock",
+      "Face to face or online",
+      "6 hours in person, or 2 hours live online",
+      "you choose the format",
+      "wide"
+    ],
+    [
+      "group",
+      "60",
+      "people per course",
+      "one fee covers everyone"
+    ],
+    [
+      "gift",
+      "5",
+      "things every delegate gets",
+      "workbook, recording and more"
+    ]
   ],
-
   "problem": {
     "scene": "11pm. A young person is kicking the office door.",
     "question": "What does your team do next?",
-    "without": ["Some shout", "Some back off", "Every shift responds differently", "Restraint becomes the default"],
-    "with": ["Everyone stays calm and present", "The same response on every shift", "Resist the behaviour, never the child", "Repair the relationship afterwards"],
+    "without": [
+      "Some shout",
+      "Some back off",
+      "Every shift responds differently",
+      "Restraint becomes the default"
+    ],
+    "with": [
+      "Everyone stays calm and present",
+      "The same response on every shift",
+      "Resist the behaviour, never the child",
+      "Repair the relationship afterwards"
+    ],
     "standards": "The Children's Homes Regulations and the Fostering National Minimum Standards expect de-escalation. Neither says what to say at 11pm. This course does.",
     "evidence": "Honest about the evidence: early trials with parents are encouraging, research in care settings is still limited, and we say so on the day."
   },
-
   "audience": {
     "groups": [
-      ["home", "Children's homes", "Support workers, team leaders, registered managers"],
-      ["heart", "Foster and kinship care", "Carers, supervising social workers, team leaders"],
-      ["hands", "Early help", "Family workers who coach parents"],
-      ["clipboard", "Commissioners", "Deciding whether NVR fits your service"]
+      [
+        "home",
+        "Children's homes",
+        "Support workers, team leaders, registered managers"
+      ],
+      [
+        "heart",
+        "Foster and kinship care",
+        "Carers, supervising social workers, team leaders"
+      ],
+      [
+        "hands",
+        "Early help",
+        "Family workers who coach parents"
+      ],
+      [
+        "clipboard",
+        "Commissioners",
+        "Deciding whether NVR fits your service"
+      ]
     ],
-    "notes": ["No NVR knowledge needed", "Mixed groups work well", "Up to 60 people"]
+    "notes": [
+      "No NVR knowledge needed",
+      "Mixed groups work well",
+      "Up to 60 people"
+    ]
   },
-
   "outcomes": [
-    ["See both sides", "Describe an escalation from the young person's side and the adult's, and how shouting or backing off feeds it."],
-    ["Choose your battles", "Sort behaviours into those to resist, those to negotiate and those to let go."],
-    ["Know the seven pillars", "Explain non-violent resistance (Haim Omer, 2004), the seven pillars and the three dimensions of adult presence."],
-    ["Link it to the standards", "Show how NVR supports the Children's Homes Regulations and Standard 3 of the Fostering National Minimum Standards."],
-    ["De-escalate without giving in", "Use cold-iron lines, delayed responses and baskets in a hot moment."],
-    ["Plan repair and resistance", "Plan a reconciliation gesture, an act of resistance and a first NVR session for your team."]
+    [
+      "See both sides",
+      "Describe an escalation from the young person's side and the adult's, and how shouting or backing off feeds it."
+    ],
+    [
+      "Choose your battles",
+      "Sort behaviours into those to resist, those to negotiate and those to let go."
+    ],
+    [
+      "Know the seven pillars",
+      "Explain non-violent resistance (Haim Omer, 2004), the seven pillars and the three dimensions of adult presence."
+    ],
+    [
+      "Link it to the standards",
+      "Show how NVR supports the Children's Homes Regulations and Standard 3 of the Fostering National Minimum Standards."
+    ],
+    [
+      "De-escalate without giving in",
+      "Use cold-iron lines, delayed responses and baskets in a hot moment."
+    ],
+    [
+      "Plan repair and resistance",
+      "Plan a reconciliation gesture, an act of resistance and a first NVR session for your team."
+    ]
   ],
-
   "story_line": "One story runs through the day: Reece, 15, in a children's home. Reece is a composite, drawn from real experiences of care.",
   "parts": [
-    {"title": "The NVR stance", "when": "Morning", "story": "Reece kicks the door until the Wi-Fi stays on.", "theory": "From control to presence: the seven pillars.", "action": "Map the cycle. Drop one habit.", "leave": "The NVR framework on one page"},
-    {"title": "De-escalation", "when": "Morning", "story": "10:55pm. Reece waits to see what the adult does.", "theory": "Strike when the iron is cold.", "action": "Practise cold-iron lines. Sort the baskets.", "leave": "Your hot-moment protocol"},
-    {"title": "Reconciliation and resistance", "when": "Afternoon", "story": "The next morning: his favourite toast.", "theory": "Resist the behaviour, never the child.", "action": "Build a gesture menu. Rehearse an announcement.", "leave": "A gesture menu and a resistance plan"},
-    {"title": "Leading it in your team", "when": "Afternoon", "story": "Six weeks on, every shift responds the same way.", "theory": "Adults are stronger together.", "action": "Map supporters. Plan your first team session.", "leave": "A plan for your first team session"}
+    {
+      "title": "The NVR stance",
+      "when": "Morning",
+      "story": "Reece kicks the door until the Wi-Fi stays on.",
+      "theory": "From control to presence: the seven pillars.",
+      "action": "Map the cycle. Drop one habit.",
+      "leave": "The NVR framework on one page"
+    },
+    {
+      "title": "De-escalation",
+      "when": "Morning",
+      "story": "10:55pm. Reece waits to see what the adult does.",
+      "theory": "Strike when the iron is cold.",
+      "action": "Practise cold-iron lines. Sort the baskets.",
+      "leave": "Your hot-moment protocol"
+    },
+    {
+      "title": "Reconciliation and resistance",
+      "when": "Afternoon",
+      "story": "The next morning: his favourite toast.",
+      "theory": "Resist the behaviour, never the child.",
+      "action": "Build a gesture menu. Rehearse an announcement.",
+      "leave": "A gesture menu and a resistance plan"
+    },
+    {
+      "title": "Leading it in your team",
+      "when": "Afternoon",
+      "story": "Six weeks on, every shift responds the same way.",
+      "theory": "Adults are stronger together.",
+      "action": "Map supporters. Plan your first team session.",
+      "leave": "A plan for your first team session"
+    }
   ],
-
   "online_session": {
-    "ruler": ["Start", "30 min", "Break", "90 min", "2 hours"],
-    "break": "5 min break",
-    "parts": [
-      {"time": "About 25 minutes", "focus": "From control to presence: the seven pillars.", "practise": "In breakout rooms: map the escalation cycle"},
-      {"time": "About 25 minutes", "focus": "Strike when the iron is cold.", "practise": "In breakout rooms: write your cold-iron line"},
-      {"time": "About 25 minutes", "focus": "Resist the behaviour, never the child.", "practise": "In breakout rooms: draft a gesture menu"},
-      {"time": "About 25 minutes", "focus": "Adults are stronger together.", "practise": "On your own: plan your first team session"}
-    ],
-    "after": "The workbook, the recording and the NVR Toolkit take each part further after the session."
+    "title": "The live online session: a 2-hour NVR keynote",
+    "sub": "For teams who can't give a full day. One live talk on Teams or Zoom, with chat and Q&A.",
+    "keynote": {
+      "title": "The keynote",
+      "text": "Reece's story runs all the way through, from the 11pm door to the repair the next morning.",
+      "ideas": [
+        "Presence, not control",
+        "Strike when the iron is cold",
+        "Resist the behaviour, never the child",
+        "Adults are stronger together"
+      ]
+    },
+    "chat": {
+      "title": "Your say in the chat",
+      "text": "Questions to the audience throughout the talk.",
+      "bubbles": [
+        "What does your team do at 11pm?",
+        "Which behaviour would you let go?",
+        "Who could stand with you?"
+      ]
+    },
+    "qa": {
+      "title": "Live Q&A",
+      "text": "Questions answered live at the end. Ask about:",
+      "asks": [
+        "A young person in your service",
+        "How NVR fits your policies",
+        "Where to start with your team"
+      ]
+    },
+    "after": "Practise each tool afterwards in the NVR Toolkit, with the workbook and the recording.",
+    "compare": "Want your team practising the skills together? Choose the face to face day."
   },
-
   "formats": [
-    {"icon": "room", "label": "Face to face", "length": "6 hours", "time": "Usually 10am to 4pm", "fee": "£3,950", "fee_note": "+ VAT + expenses", "points": ["In your building or a venue you choose", "Practice in pairs and small groups", "You provide a room and a screen"]},
-    {"icon": "laptop", "label": "Live online", "length": "2 hours", "time": "One live session", "fee": "£1,950", "fee_note": "+ VAT", "points": ["On Teams or Zoom", "The key story, theory and tool from each part", "Breakout rooms for practice in pairs"]}
+    {
+      "icon": "room",
+      "label": "Face to face",
+      "length": "6 hours",
+      "time": "Usually 10am to 4pm",
+      "fee": "£3,950",
+      "fee_note": "+ VAT + expenses",
+      "points": [
+        "In your building or a venue you choose",
+        "Practice in pairs and small groups",
+        "You provide a room and a screen"
+      ]
+    },
+    {
+      "icon": "laptop",
+      "label": "Live online",
+      "length": "2 hours",
+      "time": "A live keynote with Q&A",
+      "fee": "£1,950",
+      "fee_note": "+ VAT",
+      "points": [
+        "On Teams or Zoom",
+        "Questions in the chat throughout",
+        "Live Q&A at the end"
+      ]
+    }
   ],
   "fees_note": "One fee per course for up to 60 people. Examples and language from your service at no extra cost.",
-
   "gets": [
-    ["book", "Workbook", "for life", "Stories, tools and space to plan. Theirs to keep."],
-    ["play", "Recording", "12 months", "Catch up or go back over any part."],
-    ["laptop", "NVR Toolkit", "12 months", "Our full online NVR course and toolkit."],
-    ["award", "Certificate", "of completion", "For their development record."],
-    ["tag", "50% off", "The Care Leaders Online", "A year's individual membership at half price."]
+    [
+      "book",
+      "Workbook",
+      "for life",
+      "Stories, tools and space to plan. Theirs to keep."
+    ],
+    [
+      "play",
+      "Recording",
+      "12 months",
+      "Catch up or go back over any part."
+    ],
+    [
+      "laptop",
+      "NVR Toolkit",
+      "12 months",
+      "Our full online NVR course and toolkit."
+    ],
+    [
+      "award",
+      "Certificate",
+      "of completion",
+      "For their development record."
+    ],
+    [
+      "tag",
+      "50% off",
+      "The Care Leaders Online",
+      "A year's individual membership at half price."
+    ]
   ],
-
   "showcase": {
     "title": "The NVR Toolkit on any device",
     "sub": "The NVR Toolkit works on a laptop, tablet or phone. The workbook is theirs to print and keep.",
-    "laptop": "nvr-laptop.png", "phone": "nvr-phone.png",
-    "workbook": ["nvr-workbook-cover.jpg", "nvr-workbook-page.jpg"],
-    "labels": ["NVR Toolkit course home on a laptop", "Every tool works on a phone", "The workbook, theirs to keep"]
+    "laptop": "nvr-laptop.png",
+    "phone": "nvr-phone.png",
+    "workbook": [
+      "nvr-workbook-cover.jpg",
+      "nvr-workbook-page.jpg"
+    ],
+    "labels": [
+      "NVR Toolkit course home on a laptop",
+      "Every tool works on a phone",
+      "The workbook, theirs to keep"
+    ]
   },
-
   "toolkit": {
     "name": "The NVR Toolkit",
     "kind": "Online course and toolkit",
     "intro": "Our comprehensive online NVR course, with an interactive tool in every section. 12 months' access for every delegate.",
-    "sections": ["Foundations", "Parental presence", "De-escalation", "Baskets", "Reconciliation", "Acts of resistance", "Supporters and self-care", "Announcements", "Sit-ins", "Bringing it together"],
+    "sections": [
+      "Foundations",
+      "Parental presence",
+      "De-escalation",
+      "Baskets",
+      "Reconciliation",
+      "Acts of resistance",
+      "Supporters and self-care",
+      "Announcements",
+      "Sit-ins",
+      "Bringing it together"
+    ],
     "tools": [
-      ["Your young person", "A profile used all the way through"],
-      ["Presence map", "Where your presence is strong or lost"],
-      ["The escalation trap", "Spot the patterns in real scenarios"],
-      ["Hot-moment protocol", "Your cold-iron lines and your plan"],
-      ["Baskets sort", "Resist, negotiate or let go"],
-      ["Gesture menu", "Reconciliation with no conditions"],
-      ["Resistance planner", "Low, medium and high-level acts"],
-      ["Supporter mapper", "Who stands with you"],
-      ["Self-care planner", "Stay inside your window of tolerance"],
-      ["Announcement builder", "Structure, words and delivery"],
-      ["Sit-in script builder", "Four stages, scripted"]
+      [
+        "Your young person",
+        "A profile used all the way through"
+      ],
+      [
+        "Presence map",
+        "Where your presence is strong or lost"
+      ],
+      [
+        "The escalation trap",
+        "Spot the patterns in real scenarios"
+      ],
+      [
+        "Hot-moment protocol",
+        "Your cold-iron lines and your plan"
+      ],
+      [
+        "Baskets sort",
+        "Resist, negotiate or let go"
+      ],
+      [
+        "Gesture menu",
+        "Reconciliation with no conditions"
+      ],
+      [
+        "Resistance planner",
+        "Low, medium and high-level acts"
+      ],
+      [
+        "Supporter mapper",
+        "Who stands with you"
+      ],
+      [
+        "Self-care planner",
+        "Stay inside your window of tolerance"
+      ],
+      [
+        "Announcement builder",
+        "Structure, words and delivery"
+      ],
+      [
+        "Sit-in script builder",
+        "Four stages, scripted"
+      ]
     ]
   },
-
   "related": [
-    ["NVR Advanced", "For the people who will lead NVR in your service."],
-    ["Behind the Behaviour", "Reading behaviour as communication."]
+    [
+      "NVR Advanced",
+      "For the people who will lead NVR in your service."
+    ],
+    [
+      "Behind the Behaviour",
+      "Reading behaviour as communication."
+    ]
   ]
 }
