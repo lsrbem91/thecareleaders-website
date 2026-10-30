@@ -187,3 +187,14 @@ blockquote cite{display:block;font:400 13px/1.3 CS;color:#acc90b;margin-top:8px;
 .rel2{max-width:640px;margin-top:10px}
 .aw .strip{white-space:normal;display:inline-block;max-width:100%}
 .usp h3+.aw{margin-top:34px}
+/* 7 pillars */
+.roof{background-size:100% 100%;color:#fff;text-align:center;padding:16px 30px 18px;margin-bottom:12px}
+.roof b{font:400 34px/1.1 CB;color:#acc90b;display:block}.roof p{font:400 17px CS;margin-top:4px}
+.pils{display:grid;grid-template-columns:repeat(7,1fr);gap:10px}
+.pil{background-size:100% 100%;color:#fff;padding:16px 10px 18px 12px;min-height:250px}
+.pil .tn{font-size:38px}.pil h3{font-size:17px;line-height:1.1;margin:8px 0 10px;hyphens:none}.pil p{font-size:15px;line-height:1.4}
+.pbase{background-size:100% 100%;margin-top:12px;padding:12px 18px;font:400 16px CS;display:flex;align-items:center}
+/* story theory action */
+.stas{display:flex;flex-direction:column;gap:16px;margin-top:6px}
+.sta{background-size:100% 100%;display:grid;grid-template-columns:90px 200px 1fr;align-items:center;gap:10px;padding:18px 110px 20px 24px;color:#fff;min-height:118px}
+.sta.dk{color:#241b40}.sta .stp{width:76px;height:76px}.sta b{font:400 46px/1 CB}.sta p{font:400 24px/1.3 CS}

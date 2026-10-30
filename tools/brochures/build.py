@@ -98,7 +98,17 @@ def build(c):
                    for i, (h, d) in enumerate(c['outcomes'], 1))
     P.append(page(f'''<h2>By the end of the day, people can</h2><div class="ots">{outs}</div>''', 'light', 'outcomes', c, num()))
 
-    # 5 The day at a glance
+    # 5a Course-specific model page (NVR: the 7 pillars)
+    pl = c.get('pillars')
+    if pl:
+        pc = ['fuchsia', 'purple', 'teal', 'indigo', 'midgreen', 'brightpurple', 'navy']
+        cols_ = ''.join(f'<div class="pil" style="{box(pc[i])}"><span class="tn">{i + 1}</span><h3>{e(a)}</h3><p>{e(t)}</p></div>' for i, (a, t) in enumerate(pl['items']))
+        P.append(page(f'''<h2>{e(pl['title'])}</h2>
+          <div class="roof" style="{box('midnight')}"><b>{e(pl['stance'])}</b><p>{e(pl['stance_line'])}</p></div>
+          <div class="pils">{cols_}</div>
+          <div class="pbase" style="{box('white')}">{picto(6, 'pic xs')}{e(pl['base'])}</div>''', 'bed-blue', 'course', c, num()))
+
+    # 5 Option 1: the face to face day
     parts = c['parts']; half = len(parts) // 2
     pcols = ['fuchsia', 'purple', 'teal', 'indigo']
     def blk(i, p):
@@ -106,21 +116,10 @@ def build(c):
           <p class="ts">{e(p["theory"])}</p>{strip(p["leave"], "ribbon", "apple", "lv")}</div>'''
     am = ''.join(blk(i + 1, p) for i, p in enumerate(parts[:half]))
     pm = ''.join(blk(i + 1 + half, p) for i, p in enumerate(parts[half:]))
-    P.append(page(f'''<h2>The face to face day: {len(parts)} parts, 10am to 4pm</h2>
-      <div class="ruler" style="background-image:url({K}/strips/arrowlong-navy.png)"><span>10am</span><span>Morning</span><span>Lunch</span><span>Afternoon</span><span>4pm</span></div>
+    P.append(page(f'''<h2>Option 1: face to face, a 6-hour day</h2>
+      <div class="ruler" style="background-image:url({K}/strips/arrowlong-navy.png)"><span>10am</span><span>Morning: parts 1 and 2</span><span>Lunch</span><span>Afternoon: parts 3 and 4</span><span>4pm</span></div>
       <div class="trow"><div class="tbs">{am}</div><div class="lunch" style="{box('midgreen')}">Lunch</div><div class="tbs">{pm}</div></div>
       <p class="tln">{strip('You leave with', 'ribbon', 'apple', 'mini')} a tool ready to use on your next shift.</p>''', 'light', 'course', c, num()))
-
-    # 6 Story, Theory, Action
-    rows = ''.join(f'''<div class="gr"><div class="gp" style="{box(pcols[(i - 1) % 4])}"><span class="tn">{i}</span>{e(p["title"])}</div>
-        <div class="gc gs">{e(p["story"])}</div><div class="gc gt">{e(p["theory"])}</div><div class="gc ga">{e(p["action"])}</div></div>'''
-        for i, p in enumerate(parts, 1))
-    P.append(page(f'''<h2>Every part: a story, the theory, then practice</h2>
-      <div class="grid"><div class="gh"><div></div>
-        <div>{picto(18, 'pic sm')}{strip('Story', 'ribbon', 'fuchsia', 'gh1')}<small>A moment from care</small></div>
-        <div>{picto(6, 'pic sm')}{strip('Theory', 'ribbon', 'purple', 'gh1')}<small>The thinking behind it</small></div>
-        <div>{picto(17, 'pic sm')}{strip('Action', 'ribbon', 'midgreen', 'gh1 dk')}<small>What people practise</small></div></div>{rows}</div>
-      <p class="tln">{e(c['story_line'])}</p>''', 'light', 'course', c, num()))
 
     # 5b The live online session: a keynote, not a shorter day
     on = c.get('online_session')
@@ -136,6 +135,15 @@ def build(c):
             <div class="onq" style="{box('apple')}">{picto(11, 'pic onp')}<h3>{e(qa['title'])}</h3><p>{e(qa['text'])}</p><ul class="onal">{''.join(f'<li><img src="{K}/chev.png" alt="">{e(x)}</li>' for x in qa.get('asks', []))}</ul></div></div>
           <p class="tln">{strip('Afterwards', 'ribbon', 'apple', 'mini')} {e(on['after'])}</p>
           <p class="tln onx">{e(on['compare'])}</p>''', 'dark', 'course', c, num()))
+
+    # 6 Our framework: Story, Theory, Action (the same page in every brochure)
+    sta = [(18, 'fuchsia', '', 'Story', 'A real moment from care, told from the young person\'s side.'),
+           (6, 'purple', '', 'Theory', 'The thinking that explains it, with honest evidence.'),
+           (17, 'midgreen', 'dk', 'Action', 'Something to practise and use at work the next day.')]
+    cards = ''.join(f'<div class="sta {d}" style="background-image:url({K}/strips/arrowlong-{col}.png)">{picto(n, "pic stp")}<b>{t}</b><p>{x}</p></div>' for n, col, d, t, x in sta)
+    P.append(page(f'''<h2>How we teach: Story, Theory, Action</h2>
+      <p class="sub">Every Care Leaders Learning course, workbook and online lesson follows the same three steps.</p>
+      <div class="stas">{cards}</div>{f'<p class="tln">{strip("In this course", "ribbon", "apple", "mini")} {e(c["story_line"])}</p>' if c.get('story_line') else ''}''', 'bed-purple', 'course', c, num()))
 
     # 8 Included
     gp = [20, 5, 8, 1, 16]
