@@ -228,13 +228,13 @@ def build(c):
           <p class="oft">{e(of['terms'])}</p>''', 'dark', 'formats', c, num(), f"Try it online first: {of['big']} the face to face day"))
 
     # 13 Book
-    scol = ['apple', 'midgreen', 'teal', 'brightpurple']
-    steps = [('Get in touch', 'Your date, format and numbers'), ('Get your fee', 'We hold the date for 14 days'),
-             ('Confirm by email', 'Your booking is secured'), ('Plan it together', 'A short call, shaped to your service')]
-    st = ''.join(f'<div class="st {"dk" if scol[i] in ("apple", "midgreen") else ""}" style="background-image:url({K}/strips/arrow-{scol[i]}.png)"><span>{i + 1}</span><b>{e(a)}</b><p>{e(b)}</p></div>'
+    scol = ['apple', 'teal', 'brightpurple']
+    steps = [('Choose your format', 'Face to face or live online'), ('Pick a date', 'One that works for your team'),
+             ('Book your training', 'Email us and we confirm it')]
+    st = ''.join(f'<div class="st {"dk" if scol[i] == "apple" else ""}" style="background-image:url({K}/strips/arrow-{scol[i]}.png)"><span>{i + 1}</span><b>{e(a)}</b><p>{e(b)}</p></div>'
                  for i, (a, b) in enumerate(steps))
     rel = ''.join(f'<p><span class="k">{e(a)}.</span> {e(b)}</p>' for a, b in c.get('related', []))
-    P.append(page(f'''<h2>Book {e(name)} in four steps</h2>
+    P.append(page(f'''<h2>Book {e(name)} in {len(steps)} steps</h2>
       <div class="sts">{st}</div>
       {strip('hello@thecareleaders.com', 'ribbon', 'apple', 'mail')}
       <div class="rel rel2">{strip('Often booked with', 'angled', 'purple', 'mini')}{rel}</div>

@@ -115,10 +115,10 @@ h2{font-size:50px;line-height:1.05;margin-bottom:24px}
 .tool{background-size:100% 100%;padding:14px 18px 16px;min-height:100px}
 .tool span{font:400 18px CB;color:{ACC}}.tool h3{font-size:19px;line-height:1.1;margin:2px 0 4px}.tool p{font-size:14.5px;line-height:1.35}
 /* book */
-.sts{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.sts{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
 .st{background-size:100% 100%;padding:20px 60px 22px 22px;min-height:150px;color:#fff}
 .st.dk{color:#241b40}
-.st span{font:400 40px/1 CB}.st b{display:block;font:400 23px CB;margin:6px 0 4px}.st p{font-size:16px}
+.st span{font:400 52px/1 CB}.st b{display:block;font:400 30px CB;margin:8px 0 6px}.st p{font-size:19px}
 .mail{font:400 38px CB;padding:10px 70px 12px 18px;margin:24px 0 22px}
 .who2{display:grid;grid-template-columns:160px 1fr 300px;gap:26px;align-items:start}
 .who2 img{width:160px;height:160px;object-fit:cover;clip-path:polygon(0 1.2%,99.4% 0,100% 98.6%,0.6% 100%)}
