@@ -55,8 +55,8 @@ def build(c):
     head = f'{e(hs[0])}. <span class="apple">{e(hs[1])}</span>' if len(hs) == 2 else e(c['headline'])
 
     # 1 Cover
-    glance = ''.join(f'<div class="gl" style="{box("indigo")}"><b{' class="long"' if len(big) > 7 else ''}>{e(big)}</b><span>{e(lab)}</span><small>{e(sm)}</small></div>'
-                     for _, big, lab, sm in c['glance'])
+    glance = ''.join(f'<div class="gl{" wide" if g[4:] else ""}" style="{box("indigo")}"><b>{e(g[1])}</b><span>{e(g[2])}</span><small>{e(g[3])}</small></div>'
+                     for g in c['glance'])
     P.append(page(f'''
       <img class="logo" src="{A}/img/tcll/tcll-logo-white.png" alt="The Care Leaders Learning">
       <div class="cov">{strip(c['category'], 'ribbon', 'apple', 'cat')}

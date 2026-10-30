@@ -5,13 +5,12 @@
   "accent": "#cf0f55",
   "cover_image": "blocks/block-6.webp",
   "side_image": "blocks/block-2.webp",
-  "headline": "One day. Your whole team using NVR.",
+  "headline": "One course. Your whole team using NVR.",
   "intro": "Non-violent resistance training that helps your whole team respond as one when a young person's behaviour escalates.",
 
   "glance": [
-    ["clock", "6 hours", "face to face", "usually 10am to 4pm"],
-    ["group", "60", "people per course", "face to face or online"],
-    ["laptop", "2 hours", "live online", "on Teams or Zoom"],
+    ["clock", "Face to face or online", "6 hours in person, or 2 hours live online", "you choose the format", "wide"],
+    ["group", "60", "people per course", "one fee covers everyone"],
     ["gift", "5", "things every delegate gets", "workbook, recording and more"]
   ],
 
