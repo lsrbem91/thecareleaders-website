@@ -62,7 +62,7 @@
   <section class="ty-hero">
     <div class="ty-confetti" aria-hidden="true"></div>
     <div class="wrap ty-hero-in">
-      <h1 class="ty-h1">Your <span class="ty-hl">free year</span> of learning</h1>
+      <h1 class="ty-h1"><span class="ty-bx b1">Your</span> <span class="ty-bx b2">free year</span> <span class="ty-bx b3">of learning</span></h1>
       <div class="ty-vid-frame">
         <span class="ty-cut ty-cut-a" aria-hidden="true"></span><span class="ty-cut ty-cut-b" aria-hidden="true"></span>
         <!-- PLACEHOLDER: replace this block with Luke's 90-second video embed when recorded -->
@@ -137,7 +137,11 @@
 .ty-hero{position:relative;overflow:hidden;background:var(--mid) url(./assets/img/thankyou/steps-landscape.webp) right -380px bottom 0/auto 100% no-repeat;color:#fff;padding:64px 0 80px}
 .ty-hero-in{position:relative;z-index:1;max-width:900px}
 .ty-h1{font-size:clamp(44px,8.4vw,104px);line-height:.95;margin:0 0 40px;color:#fff;max-width:11ch}
-.ty-hl{color:var(--lime)}
+.ty-h1{max-width:none;display:flex;flex-wrap:wrap;gap:.12em .18em;align-items:flex-start}
+.ty-bx{display:inline-block;padding:.1em .28em .16em;line-height:1}
+.b1{background:var(--pur);color:#fff;clip-path:polygon(0 6%,100% 0,96% 100%,3% 92%);transform:rotate(-2deg)}
+.b2{background:var(--lime);color:var(--mid);clip-path:polygon(2% 0,98% 8%,100% 94%,0 100%);transform:rotate(1.5deg)}
+.b3{background:var(--teal);color:#fff;clip-path:polygon(0 0,97% 5%,100% 100%,4% 95%);transform:rotate(-1deg)}
 .ty-vid-frame{position:relative;max-width:820px}
 .ty-cut{position:absolute;z-index:0}
 .ty-cut-a{left:-18px;top:-18px;width:62%;height:70%;background:var(--pur);clip-path:polygon(0 0,100% 4%,96% 100%,2% 96%)}
