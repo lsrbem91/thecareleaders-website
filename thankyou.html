@@ -89,8 +89,8 @@
       <li class="f1"><img src="./assets/img/thankyou/p01.webp" alt="" width="160" height="160" loading="lazy"><b>12 sessions</b><span>live with Luke</span></li>
       <li class="f2"><img src="./assets/img/thankyou/p10.webp" alt="" width="160" height="160" loading="lazy"><b>2nd Monday</b><span>of every month</span></li>
       <li class="f3"><img src="./assets/img/thankyou/p07.webp" alt="" width="160" height="160" loading="lazy"><b>12:30 to 13:00</b><span>on Teams</span></li>
-      <li class="f4"><img src="./assets/img/thankyou/p20.webp" alt="" width="160" height="160" loading="lazy"><b>20 minutes</b><span>of learning</span></li>
-      <li class="f5"><img src="./assets/img/thankyou/p18.webp" alt="" width="160" height="160" loading="lazy"><b>10 minutes</b><span>of questions. Optional, because we know you&#8217;re busy</span></li>
+      <li class="f4 ty-30"><img src="./assets/img/thankyou/p20.webp" alt="" width="160" height="160" loading="lazy"><b>30 minutes</b><span>each session, split into</span>
+        <div class="ty-split"><p><strong>20 minutes</strong> of learning</p><p><strong>10 minutes</strong> of questions. Optional, you don&#8217;t have to stay. We know you&#8217;re busy.</p></div></li>
       <li class="f6"><img src="./assets/img/thankyou/p17.webp" alt="" width="160" height="160" loading="lazy"><b>A free tool</b><span>every session, to use the next day</span></li>
       </ul>
       <p class="ty-once">Sign up once and we&#8217;ll send you every invite.</p>
@@ -181,7 +181,13 @@
 .f2{background:var(--teal);color:#fff;clip-path:polygon(1% 0,100% 4%,99% 97%,0 100%)}
 .f3{background:var(--pink);color:#fff;clip-path:polygon(0 0,99% 3%,100% 100%,2% 96%)}
 .f4{background:var(--grn);color:var(--mid);clip-path:polygon(2% 2%,100% 0,98% 96%,0 100%)}
-.f5{background:var(--mid);color:#fff;clip-path:polygon(0 0,98% 3%,100% 97%,1% 100%)}
+.ty-30{grid-column:span 2}
+.ty-facts li:not(.ty-30){grid-template-rows:auto auto;align-content:center}
+.ty-split{grid-column:1 / -1;display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px}
+.ty-split p{margin:0;padding:14px 16px;font-size:16px;line-height:1.35}
+.ty-split strong{display:block;font-family:var(--font-display);font-weight:900;font-size:24px;line-height:1;margin-bottom:4px}
+.ty-split p:first-child{background:var(--mid);color:#fff;clip-path:polygon(0 0,100% 4%,98% 100%,1% 96%)}
+.ty-split p:last-child{background:#fff;color:var(--mid);clip-path:polygon(1% 3%,100% 0,99% 97%,0 100%)}
 .f6{background:#fbab1e;color:var(--mid);clip-path:polygon(1% 4%,100% 0,99% 100%,0 95%)}
 /* sign up */
 .ty-sign{background:var(--bed);padding:72px 0}
@@ -213,7 +219,7 @@
   .ty-intro-in,.ty-sign-in{grid-template-columns:1fr}
   .ty-people{max-width:420px;margin:0 auto}
   .ty-people2{display:none}
-  .ty-facts{grid-template-columns:1fr}.ty-facts li{grid-template-columns:60px 1fr}.ty-facts img{width:60px;height:60px}
+  .ty-facts{grid-template-columns:1fr}.ty-30{grid-column:auto}.ty-split{grid-template-columns:1fr}.ty-facts li{grid-template-columns:60px 1fr}.ty-facts img{width:60px;height:60px}
   .ty-pass{background-size:auto 260px;background-position:right -150px bottom 0;padding:56px 0 280px}
   .ty-form{padding:22px;box-shadow:8px 8px 0 var(--pur)}
   .ty-cut-a{left:-8px;top:-8px}.ty-cut-b{right:-8px;bottom:-8px}
