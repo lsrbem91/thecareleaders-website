@@ -72,6 +72,7 @@
           <p class="ty-small">Placeholder until the video is recorded</p>
         </div>
       </div>
+      <a class="btn ty-go ty-hero-btn" href="https://mailchi.mp/thecareleaders/thankyouyear">Sign me up</a>
     </div>
   </section>
 
@@ -100,27 +101,9 @@
   <section class="ty-sign" id="sign-up">
     <div class="wrap ty-sign-in">
       <img class="ty-people2" src="./assets/img/thankyou/people-1.webp" alt="" width="900" height="681" loading="lazy">
-      <div class="enq-form ty-form" id="ty-form-wrap">
-        <!-- Mailchimp: The Care Leaders audience, sent with the JSONP endpoint so people stay on the page -->
-        <form class="enq-f" id="ty-form" novalidate>
-          <div class="enq-2"><label>First name<input type="text" name="FNAME" autocomplete="given-name"></label><label>Last name<input type="text" name="LNAME" autocomplete="family-name"></label></div>
-          <label>Email<input type="email" name="EMAIL" autocomplete="email" required></label>
-          <label>Organisation<input type="text" name="MMERGE6" autocomplete="organization"></label>
-          <label>Which best describes you?<select name="group[296961]" required><option value="">Choose one</option><option value="128">Foster and kinship carers</option><option value="268435456">Residential care</option><option value="64">Social workers and personal advisers</option><option value="536870912">Schools and Virtual Schools</option><option value="2147483648">Family support and early help</option><option value="1">Leaders and managers</option><option value="1073741824">Councillors and board members</option><option value="9007199254740992">Youth justice and probation</option><option value="2">Employers</option><option value="4">Care experienced people</option><option value="4294967296">Other</option></select></label>
-          <label>What type of organisation do you work for?<select name="group[296964]" required><option value="">Choose one</option><option value="35184372088832">Local authority</option><option value="70368744177664">Independent or private provider</option><option value="140737488355328">Charity or voluntary organisation</option><option value="281474976710656">School or college</option><option value="562949953421312">NHS or health</option><option value="1125899906842624">Employer or business</option><option value="2251799813685248">Individual (not with an organisation)</option><option value="4503599627370496">Other</option></select></label>
-          <input type="hidden" name="SOURCE" id="ty-src" value="direct">
-          <input type="hidden" name="tags" value="4229817">
-          <div class="ty-hp" aria-hidden="true"><input type="text" name="b_59c462198d19ae06ac1668f73_59f81c6487" tabindex="-1" value="" autocomplete="off"></div>
-          <label class="ty-tick"><input type="checkbox" name="gdpr[68380]" value="Y" required> <span>Send me the session invites and reminders. I can unsubscribe at any time.</span></label>
-          <button class="btn ty-go" type="submit">Sign me up</button>
-          <p class="enq-status" id="ty-status" role="alert"></p>
-        </form>
-        <div class="ty-done" id="ty-done" hidden tabindex="-1">
-          <h2 class="ty-h2">You&#8217;re in.</h2>
-          <p>Check your inbox for your welcome email with all 12 dates and the calendar file.</p>
-          <button class="btn ty-go" type="button" data-copy>Copy the link for a colleague</button>
-          <p class="ty-copied" aria-live="polite"></p>
-        </div>
+      <div class="ty-form ty-cta">
+        <a class="btn ty-go ty-big-btn" href="https://mailchi.mp/thecareleaders/thankyouyear">Sign up for the free training</a>
+        <p class="ty-cta-note">It takes a minute. We&#8217;ll email you all 12 dates and the calendar links.</p>
       </div>
     </div>
   </section>
@@ -187,18 +170,12 @@
 .ty-form{background:#fff;padding:32px;position:relative;box-shadow:12px 12px 0 var(--pur);border-top:10px solid var(--lime)}
 .ty-go{background:var(--lime)!important;color:var(--mid)!important;border-color:var(--lime)!important;font-size:18px;padding:14px 30px}
 .ty-go:hover{background:#c4e00f!important}
-.ty-form .ty-go{background:var(--pur)!important;color:#fff!important;border-color:var(--pur)!important}
-.ty-form .ty-go:hover{background:var(--pur2)!important}
-.enq-f label.ty-tick{display:flex!important;flex-direction:row!important;gap:10px;align-items:flex-start;font-weight:400}
-.enq-f label.ty-tick input{width:20px!important;min-width:20px;height:20px;margin:3px 0 0;padding:0;flex:0 0 20px;accent-color:var(--pur)}
-.enq-f label.ty-tick span{flex:1}
-.ty-done .ty-h2{font-size:clamp(40px,5vw,60px);color:var(--pur);margin:0}
-.ty-done p{margin:14px 0 22px;font-size:18px;line-height:1.5}
-.ty-done .ty-go{background:var(--lime)!important;color:var(--mid)!important;border-color:var(--lime)!important}
+.ty-cta{text-align:center;padding:48px 32px}
+.ty-big-btn{background:var(--pur)!important;color:#fff!important;border-color:var(--pur)!important;font-size:clamp(20px,2.2vw,26px);padding:20px 40px}
+.ty-big-btn:hover{background:var(--pur2)!important}
+.ty-cta-note{margin:18px 0 0;font-size:18px;line-height:1.5;color:var(--mid)}
+.ty-hero-btn{margin-top:40px;font-size:20px;padding:16px 36px}
 /* pass it on */
-.ty-hp{position:absolute;left:-5000px;width:1px;height:1px;overflow:hidden}
-.ty-copied{min-height:1.4em;margin:12px 0 0!important;font-weight:600}
-.ty-done .ty-copied{color:var(--pur)}
 @media (max-width:900px){
   .ty-hero{background-size:auto 55%;background-position:right -260px bottom -20px;padding:40px 0 120px}
   .ty-intro-in,.ty-sign-in{grid-template-columns:1fr}
@@ -212,12 +189,6 @@
 </style>
 <script>
 (function(){
-  var LINK='https://www.thecareleaders.com/thankyou';
-  var MC='https://thecareleaders.us20.list-manage.com/subscribe/post-json?u=59c462198d19ae06ac1668f73&id=59f81c6487&f_id=005a01eef0';
-  /* Source from the QR code link, e.g. ?src=dcs. No ?src= means direct. */
-  var src='direct';
-  try{var s=new URLSearchParams(location.search).get('src');if(s){s=s.toLowerCase().replace(/[^a-z0-9_-]/g,'').slice(0,40);if(s)src=s;}}catch(e){}
-  var f=document.getElementById('ty-src');if(f)f.value=src;
   var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
   var COLS=['#acc90b','#008196','#7c05ca','#78ae5d','#cf0f55','#fbab1e'],SH=['t','p','r'];
   function confetti(box,n,burst){
@@ -228,46 +199,6 @@
       box.appendChild(b);if(burst)(function(el){setTimeout(function(){el.remove();},4800);})(b);}
   }
   confetti(document.querySelector('.ty-confetti'),28,false);
-  function copy(btn){
-    var note=btn.parentNode.querySelector('.ty-copied'),label=btn.textContent;
-    function ok(){if(note)note.textContent='Link copied. Paste it into an email or a Teams chat.';btn.textContent='Copied';setTimeout(function(){btn.textContent=label;},2500);}
-    function fallback(){var t=document.createElement('textarea');t.value=LINK;t.setAttribute('readonly','');t.style.position='absolute';t.style.left='-9999px';document.body.appendChild(t);t.select();var d=false;try{d=document.execCommand('copy');}catch(e){}document.body.removeChild(t);if(d)ok();else if(note)note.textContent='Copy this link: '+LINK;}
-    if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(LINK).then(ok,fallback);}else{fallback();}
-  }
-  document.querySelectorAll('[data-copy]').forEach(function(b){b.addEventListener('click',function(){copy(b);});});
-  function done(){var form=document.getElementById('ty-form'),d=document.getElementById('ty-done'),w=document.getElementById('ty-form-wrap');form.hidden=true;d.hidden=false;d.focus();
-    var c=document.createElement('div');c.className='ty-confetti';c.setAttribute('aria-hidden','true');w.appendChild(c);w.style.overflow='hidden';confetti(c,40,true);}
-  var n=0;
-  function jsonp(url,cb){
-    var name='mcty'+(++n)+Date.now(),sc=document.createElement('script'),fin=false;
-    window[name]=function(r){if(fin)return;fin=true;cb(r);delete window[name];sc.remove();};
-    sc.src=url+'&c='+name;
-    sc.onerror=function(){if(!fin){fin=true;cb({result:'error',msg:'network'});}};
-    document.body.appendChild(sc);
-    setTimeout(function(){if(!fin){fin=true;cb({result:'error',msg:'timeout'});}},12000);
-  }
-  var form=document.getElementById('ty-form'),status=document.getElementById('ty-status'),btn=form.querySelector('button[type=submit]');
-  form.addEventListener('submit',function(e){
-    e.preventDefault();
-    if(!form.checkValidity()){status.textContent='Please add your email, choose an answer in both drop-downs and tick the box.';form.reportValidity();return;}
-    var q=[];
-    form.querySelectorAll('input,select').forEach(function(i){
-      if(!i.name||(i.type==='checkbox'&&!i.checked))return;
-      var v=i.value;
-      if(i.name==='FNAME'||i.name==='LNAME'){v=v.trim();v=v.charAt(0).toUpperCase()+v.slice(1);}
-      if(i.name==='EMAIL'||i.name==='MMERGE6')v=v.trim();
-      q.push(encodeURIComponent(i.name)+'='+encodeURIComponent(v));
-    });
-    btn.disabled=true;status.textContent='Signing you up…';
-    jsonp(MC+'&'+q.join('&'),function(r){
-      btn.disabled=false;
-      var msg=r.msg||'';
-      if(r.result==='success'||/already subscribed/i.test(msg)){status.textContent='';done();return;}
-      if(msg==='network'||msg==='timeout'){status.textContent='We couldn’t reach our mailing system. Please check your connection and try again.';return;}
-      if(/too many/i.test(msg)){status.textContent='Too many sign-ups from this address just now. Please try again in a few minutes.';return;}
-      status.textContent=msg.replace(/^\d+ - /,'').replace(/<[^>]+>/g,'')||'Something went wrong. Please try again.';
-    });
-  });
 })();
 </script>
 
