@@ -106,7 +106,8 @@
           <div class="enq-2"><label>First name<input type="text" name="FNAME" autocomplete="given-name"></label><label>Last name<input type="text" name="LNAME" autocomplete="family-name"></label></div>
           <label>Email<input type="email" name="EMAIL" autocomplete="email" required></label>
           <label>Organisation<input type="text" name="MMERGE6" autocomplete="organization"></label>
-          <label>Which best describes you?<select name="group[296961]"><option value="">Choose one</option><option value="128">Foster and kinship carers</option><option value="268435456">Residential care</option><option value="64">Social workers and personal advisers</option><option value="536870912">Schools and Virtual Schools</option><option value="2147483648">Family support and early help</option><option value="1">Leaders and managers</option><option value="1073741824">Councillors and board members</option><option value="9007199254740992">Youth justice and probation</option><option value="2">Employers</option><option value="4">Care experienced people</option><option value="4294967296">Other</option></select></label>
+          <label>Which best describes you?<select name="group[296961]" required><option value="">Choose one</option><option value="128">Foster and kinship carers</option><option value="268435456">Residential care</option><option value="64">Social workers and personal advisers</option><option value="536870912">Schools and Virtual Schools</option><option value="2147483648">Family support and early help</option><option value="1">Leaders and managers</option><option value="1073741824">Councillors and board members</option><option value="9007199254740992">Youth justice and probation</option><option value="2">Employers</option><option value="4">Care experienced people</option><option value="4294967296">Other</option></select></label>
+          <label>What type of organisation do you work for?<select name="group[296964]" required><option value="">Choose one</option><option value="35184372088832">Local authority</option><option value="70368744177664">Independent or private provider</option><option value="140737488355328">Charity or voluntary organisation</option><option value="281474976710656">School or college</option><option value="562949953421312">NHS or health</option><option value="1125899906842624">Employer or business</option><option value="2251799813685248">Individual (not with an organisation)</option><option value="4503599627370496">Other</option></select></label>
           <input type="hidden" name="SOURCE" id="ty-src" value="direct">
           <input type="hidden" name="tags" value="4229817">
           <div class="ty-hp" aria-hidden="true"><input type="text" name="b_59c462198d19ae06ac1668f73_59f81c6487" tabindex="-1" value="" autocomplete="off"></div>
@@ -248,7 +249,7 @@
   var form=document.getElementById('ty-form'),status=document.getElementById('ty-status'),btn=form.querySelector('button[type=submit]');
   form.addEventListener('submit',function(e){
     e.preventDefault();
-    if(!form.checkValidity()){status.textContent='Please add your email and tick the box so we can send you the invites.';form.reportValidity();return;}
+    if(!form.checkValidity()){status.textContent='Please add your email, choose an answer in both drop-downs and tick the box.';form.reportValidity();return;}
     var q=[];
     form.querySelectorAll('input,select').forEach(function(i){
       if(!i.name||(i.type==='checkbox'&&!i.checked))return;
