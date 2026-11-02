@@ -312,6 +312,91 @@ def keynotes():
     P[1] = contents(P, page, 1)
     return 'keynotes-brochure', 'Keynotes: The Care Leaders Learning', P
 
+def talk_page(page, i, talk, n, sec='talks'):
+    """A keynote page with more to look at: numbered hexagon, large pictogram, the outcomes, and who it is for."""
+    t, tag, who, aud, para, outs, pc = talk
+    cols = ['fuchsia', 'purple', 'teal', 'indigo', 'midgreen', 'brightpurple', 'navy']
+    beds = ['light', 'bed-blue', 'bed-green', 'bed-purple']
+    col = cols[i % 7]
+    lis = ''.join(f'<li><img src="{K}/tick.png" alt="">{e(x)}</li>' for x in outs)
+    extra = ''
+    if t == 'Lived Experience Leadership':
+        five = [('Storytelling', 'Sharing their experience safely, on their own terms.'), ('Skills', 'Recognising and building the skills their experience has given them.'),
+                ('Strategies', 'Helping shape plans, services and decisions.'), ('Scaling', 'Leading pieces of work, such as training staff or running projects.'),
+                ('Succession', 'Mentoring and bringing the next young people through.')]
+        hc = ['purple', 'teal', 'fuchsia', 'indigo', 'midgreen']
+        extra = '<ol class="fives">' + ''.join(f'<li><span class="hx" style="background-image:url({K}/strips/hex-{hc[k]}.png)">{k + 1}</span><b>{e(a)}.</b> {e(b)}</li>' for k, (a, b) in enumerate(five)) + '</ol>'
+    flag = strip('Flagship talk', 'ribbon', 'apple', 'mini') if i == 0 else ''
+    tiles = [(19, 'navy', 'In person', 'or live online'), (5, 'purple', '45 to 90 minutes', 'keynote or workshop'), (20, 'teal', 'Workbook, recording', 'and course included')]
+    glance = '' if extra else '<div class="tkg">' + ''.join(f'<div class="tkt" style="{box(c)}">{picto(pp, "pic sm")}<div><b>{e(x)}</b><span>{e(y)}</span></div></div>' for pp, c, x, y in tiles) + '</div>'
+    return page(f'''<span class="tkbig" style="background-image:url({K}/strips/hex-{col}.png)"></span>
+      <div class="tk2{' five' if extra else ''}{' lt' if len(t) > 22 else ''}"><div class="tkl">
+        <div class="tkh"><span class="tkn" style="background-image:url({K}/strips/hex-{col}.png)">{i + 1}</span>
+          <div><span class="tko">Keynote {i + 1} of {len(TALKS)}</span>{flag}</div></div>
+        <h2>{e(t)}</h2><p class="knt">{e(tag)}</p><p class="knp">{e(para)}</p>{extra}{glance}</div>
+      <div class="tkr"><div class="tkp" style="{box(col)}">{picto(pc, 'pic tkpi')}</div>
+        <div class="kno" style="{box('midnight')}"><h3>By the end, delegates will</h3><ul>{lis}</ul></div></div></div>
+      <div class="tkw" style="background-image:url({K}/strips/arrowlong-{'apple' if col != 'midgreen' else 'teal'}.png)"><b>Best for</b>{e(who)}</div>''',
+      beds[i % 4] + ' tkp2', sec, n, t)
+
+def keynotes2():
+    """The keynote brochure with sections, section openers and livelier keynote pages (option with sections)."""
+    items = [('talks', 'The keynotes'), ('get', 'What you get'), ('luke', 'About Luke'), ('fees', 'Fees'), ('book', 'Book')]
+    page = make_page(items, 'Keynotes with Luke Rodgers BEM · The Care Leaders Learning')
+    P = [cover('Keynotes with Luke Rodgers BEM', 'Keynotes and conference workshops', 'From care leaver. <span class="apple">To care leader.</span>',
+               'Story-led keynotes for conferences, staff days and boards: stories of care from Luke\'s lived experience, the theory behind them and tools your audience can use the next day.',
+               opt(hires('block-2.webp'), 960),
+               [('In person or online', 'keynotes of up to 90 minutes', 'or a conference workshop', True),
+                (str(len(TALKS)), 'keynotes', 'or one built for your audience', False), ('4,000+', 'delegates since 2024', 'from 30 to 400 in a room', False)], long=True), '']
+    num = lambda: len(P) + 1
+    first = num() + 2  # after the opener and the audience page
+    lis = ''.join(f'<li><span class="hx" style="background-image:url({K}/strips/hex-{["fuchsia", "purple", "teal", "indigo", "midgreen", "brightpurple", "navy"][k % 7]}.png)">{k + 1}</span>{e(t)}<span class="fpg">page {first + k}</span></li>'
+                  for k, (t, *_r) in enumerate(TALKS))
+    P.append(divider(page, 1, num(), 'The keynotes', 'Seven talks, each built for a different audience. Or tell us yours and we shape one around them.',
+                     [], 'tonal-midnight', f'<div class="fnd kfd"><p class="fnt">The {len(TALKS)} keynotes</p><ol>{lis}</ol></div>'))
+    rows = ''.join(f'<li><span class="mxa">{e(aud)}</span><img src="{K}/chev.png" alt=""><b>{e(t)}</b></li>' for t, _, _, aud, _, _, _ in TALKS)
+    P.append(page(f'''<h2>Find the keynote for your audience</h2>
+      <div class="mx"><ol class="mxl">{rows}</ol>
+        <div class="mxc" style="{box('navy')}">{picto(13)}<h3>Don&#8217;t see your audience here?</h3>
+          <p>Tell us your conference theme, who&#8217;s coming and what you want them to leave with, and we&#8217;ll shape a custom keynote around them. It follows the same approach as every other talk, with the recording, the on-demand course and the workbook included.</p></div></div>''',
+      'bed-purple', 'talks', num(), 'Find the keynote for your audience'))
+    for i, tk in enumerate(TALKS):
+        P.append(talk_page(page, i, tk, num()))
+    P.append(divider(page, 2, num(), 'What you get', 'Everything that comes with a booking, and how every keynote is built.',
+                     ['More than a keynote', 'The keynote course on any device', 'Story, theory and action'], 'tonal-midnight', img=opt(K / 'tcll2026' / 'image-block-04.png', 620)))
+    four = [(9, 'Before the day', 'A planning call', ['A 30-minute planning call', 'The keynote shaped around your audience and theme', 'A title and blurb for your programme, plus Luke\'s photo and bio']),
+            (18, 'On the day', 'The keynote', ['A keynote of up to 90 minutes', 'Time for questions and discussion', 'The slides, to share with delegates']),
+            (20, 'On the day', 'A workbook for every delegate', ['Print-ready or digital', 'Activities for individuals and teams', 'Theirs to keep']),
+            (8, 'After the day', 'The recording and course', ['The full keynote recorded', 'An on-demand course on The Care Leaders Online', '12 months\' access for every delegate'])]
+    g = ''.join(f'<div class="gi g4" style="{box("indigo")}">{picto(p)}<b>{e(t)}</b>{strip(w, "angled", "apple", "gs2")}<ul>{"".join(f"<li>{e(x)}</li>" for x in pts)}</ul></div>' for p, w, t, pts in four)
+    P.append(page(f'''<h2>More than a keynote</h2><p class="sub">Every booking, in person or online, comes with the same four things.</p>
+      <div class="gis g4s">{g}</div>''', 'light', 'get', num(), 'More than a keynote: what every booking includes'))
+    P.append(showcase_page(page, 'get', num(), 'tools-for-schools', 'The keynote course on any device',
+                           ['The course home on a laptop', 'Every tool works on a phone', 'The workbook, theirs to keep'],
+                           'Free for 12 months: the recording and the course', None,
+                           'Shown: Tools for Schools. Every keynote has its own online course and workbook.'))
+    P.append(sta_page(page, 'get', num(), 'Stories of care from Luke\'s lived experience, the theory behind them, and tools your audience uses the next day.'))
+    P.append(divider(page, 3, num(), 'About Luke', 'Who gives the keynote, and why organisations book him.',
+                     ['Your speaker: Luke Rodgers BEM', 'Why book Luke'], 'tonal-midnight', img=opt(K / 'tcll2026' / 'image-block-05.png', 620)))
+    P.append(luke_page(page, 'luke', num(), 'luke-lga-podium.jpg', 'Luke gives every keynote himself, in person or live online, and stays for questions.',
+                       ('You demand bravery and humanity in equal measure.', 'Maggie Atkinson, former Children\'s Commissioner for England'), 'Your speaker'))
+    P.append(why_page(page, 'luke', num(), 'Keynotes from someone who has lived in care and has led services.').replace('Why choose The Care Leaders Learning', 'Why book Luke'))
+    P.append(divider(page, 4, num(), 'Fees and booking', 'What it costs, and how to book.',
+                     ['Fees for every keynote', 'Book Luke in 4 steps'], 'tonal-midnight', f'<div class="dvpx">{picto(19)}{picto(18)}{picto(16)}</div>'))
+    fmts = [{'label': 'In person', 'length': 'Keynote', 'time': 'Up to 90 minutes, at your event', 'fee': '£4,950', 'fee_note': '+ VAT + travel expenses',
+             'points': ['A planning call before the day', 'A workbook for every delegate', 'The recording and course for 12 months']},
+            {'label': 'Live online', 'length': 'Keynote', 'time': 'Up to 90 minutes, on Teams or Zoom', 'fee': '£2,490', 'fee_note': '+ VAT',
+             'points': ['A planning call before the day', 'Questions in the chat and live Q&A', 'The recording and course for 12 months']}]
+    P.append(fees_page(page, 'fees', num(), 'Fees for every keynote', fmts,
+                       'Keynotes and conference workshops are contracted and invoiced by Luke Speaks Ltd, powered by The Care Leaders. If Luke is free, we hold your date for 14 days.',
+                       [opt(hires('block-6.webp'), 500), opt(hires('block-3.webp'), 500)]))
+    P.append(book_page(page, 'book', 'Book Luke in 4 steps',
+                       [('Tell us about your event', 'The date, your audience and the talk'), ('Get availability and a fee', 'We hold the date for 14 days'),
+                        ('Confirm by email', 'And send a purchase order if you use them'), ('Before the day', 'A planning call and a checklist')],
+                       f'{AWARDS_LINE} · Luke Speaks Ltd, company number 15452230 · thecareleaders.com/keynotes'))
+    P[1] = contents(P, page, 1)
+    return 'keynotes-brochure-sections', 'Keynotes: The Care Leaders Learning', P
+
 EXTRA_CSS = '''
 .cover h1.long{font-size:64px}
 .ccs{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
@@ -358,6 +443,25 @@ EXTRA_CSS = '''
 .fnd li{display:flex;gap:10px;align-items:center;font:400 16px/1.2 CS;margin-bottom:12px}.fnd .hx{flex:0 0 40px;width:40px;height:24px;font-size:13px}
 .cct{display:flex;gap:12px;align-items:center;margin-bottom:10px}.cct h3{margin:0}.cct .hx{flex:0 0 46px}
 .ccf{margin-top:16px;font:400 15px CS;color:#312b6c}
+.tkp2{padding-top:88px}
+.tkbig{position:absolute;right:-90px;bottom:-70px;width:360px;height:204px;background-size:100% 100%}
+.tk2{display:grid;grid-template-columns:1.2fr 1fr;gap:36px;align-items:start;position:relative}
+.tkh{display:flex;align-items:center;gap:16px;margin-bottom:10px}
+.tkn{width:110px;height:62px;flex:0 0 110px;background-size:100% 100%;color:#fff;font:400 30px CB;display:flex;align-items:center;justify-content:center}
+.tko{display:block;font:400 16px CS;color:#5f3c90;margin-bottom:4px}
+.tk2 h2{font-size:62px;line-height:1;margin-bottom:10px}.tk2 .knt{font-size:26px}.tk2.five h2,.tk2.lt h2{font-size:44px}
+.tk2 .knp{font-size:18px;line-height:1.55;margin-top:10px}.tk2.five .knp{font-size:15.5px;line-height:1.45}
+.tkr{position:relative;padding-top:56px}
+.tkp{position:absolute;right:18px;top:0;width:112px;height:112px;background-size:100% 100%;display:flex;align-items:center;justify-content:center;z-index:2}
+.pic.tkpi{width:84px;height:84px}
+.tkr .kno{padding-top:30px;padding-right:140px}.tkr .kno h3{margin-top:0}
+.tkr .kno ul{margin-right:-110px}
+.tkw{position:absolute;left:60px;bottom:52px;max-width:860px;background-size:100% 100%;padding:12px 70px 13px 18px;font:400 17px/1.3 CS;color:#241b40}
+.tkw b{font-family:CB;margin-right:12px}
+.tkg{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:22px}
+.tkt{background-size:100% 100%;color:#fff;padding:14px 14px 16px;display:flex;gap:10px;align-items:center}.tkt b{display:block;font:400 16px/1.15 CB}.tkt span{font:400 13px CS}
+.kfd{position:absolute;left:640px;top:130px;width:560px}.kfd li{font-size:20px;margin-bottom:16px}.kfd .hx{flex:0 0 52px;width:52px;height:30px;font-size:16px}
+.kfd .fpg{margin-left:auto;font:400 14px CS;color:#acc90b}
 .shnote{position:absolute;left:930px;top:612px;width:300px;font:400 13px/1.35 CS;color:#312b6c}
 '''
 
@@ -375,4 +479,4 @@ await b.close()}})();"""
 
 if __name__ == '__main__':
     which = sys.argv[1]; out = pathlib.Path(sys.argv[2]) if len(sys.argv) > 2 else A / 'docs/brochures'
-    render(*{'training': training, 'keynotes': keynotes}[which](), out)
+    render(*{'training': training, 'keynotes': keynotes, 'keynotes2': keynotes2}[which](), out)
