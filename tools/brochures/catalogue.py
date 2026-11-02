@@ -91,6 +91,16 @@ def book_page(page, sec, title, steps, legal, extra=''):
     return page(f'''<h2>{e(title)}</h2><div class="sts s{len(steps)}">{st}</div>
       {strip('hello@thecareleaders.com', 'ribbon', 'apple', 'mail')}{extra}<p class="legal">{legal}</p>''', 'tpale', sec)
 
+def showcase_page(page, sec, n, slug, title, labels, free, half=None, note=None):
+    S = K / 'showcase'
+    strips = strip(free, 'ribbon', 'apple', 'dk') + (strip(half, 'ribbon', 'fuchsia') if half else '')
+    nt = f'<p class="shnote">{e(note)}</p>' if note else ''
+    return page(f'''<div class="shh"><h2>{e(title)}</h2></div>
+      <img class="shl" src="{opt(S / f'{slug}-laptop.png', 1300)}" alt=""><img class="shp" src="{opt(S / f'{slug}-phone.png', 800)}" alt="">
+      <img class="shw1" src="{S}/{slug}-workbook-cover.jpg" alt=""><img class="shw2" src="{S}/{slug}-workbook-page.jpg" alt="">
+      <div class="shlb s1">{strip(labels[0], 'angled', 'purple')}</div><div class="shlb s2">{strip(labels[1], 'angled', 'teal')}</div>
+      <div class="shlb s3">{strip(labels[2], 'angled', 'fuchsia')}</div><div class="shm">{strips}</div>{nt}''', 'bed-purple', sec, n, title)
+
 AWARDS_LINE = 'Gold, Dual Perspective Leadership Award, iESE Public Sector Transformation Awards 2026 · Children &amp; Young People Now Workforce Development Award 2023'
 
 # ---------------------------------------------------------------- training
@@ -140,6 +150,10 @@ def training():
     g = ''.join(f'<div class="gi" style="{box("indigo")}">{picto(p)}<b>{e(t)}</b>{strip(s, "angled", "apple", "gs2")}<p>{e(d)}</p></div>' for p, t, s, d in gets)
     P.append(page(f'''<h2>What every delegate gets</h2><p class="sub">Face to face or online. All included in the fee.</p>
       <div class="gis">{g}</div><img class="incimg" src="{opt(K / 'tcll2026' / 'image-block-04.png', 600)}" alt="">''', 'light', 'included', num(), 'What every delegate gets'))
+    P.append(showcase_page(page, 'included', num(), 'behind-the-behaviour', 'The course online, on any device',
+                           ['The course home on a laptop', 'Every tool works on a phone', 'The workbook, theirs to keep'],
+                           'Free for 12 months: the course online', 'All our online training: 50% off a year on The Care Leaders Online',
+                           'Shown: Behind the Behaviour. Every course has its own online course and workbook.'))
     P.append(why_page(page, 'why', num(), 'Training built by people who have lived in care and people who have led services.'))
     P.append(luke_page(page, 'why', num(), 'luke-speaking.jpg', 'Luke facilitates every course. Face to face he leads every part. Online, he gives the keynote and answers your questions live.',
                        ('Nothing was as transformative as hearing Luke speak about his life.', 'Dr Janet Rose, Principal, Norland College'), 'Your facilitator'))
@@ -228,6 +242,10 @@ def keynotes():
     g = ''.join(f'<div class="gi g4" style="{box("indigo")}">{picto(p)}<b>{e(t)}</b>{strip(w, "angled", "apple", "gs2")}<ul>{"".join(f"<li>{e(x)}</li>" for x in pts)}</ul></div>' for p, w, t, pts in four)
     P.append(page(f'''<h2>More than a keynote</h2><p class="sub">Every booking, in person or online, comes with the same four things.</p>
       <div class="gis g4s">{g}</div>''', 'light', 'get', num(), 'More than a keynote: what every booking includes'))
+    P.append(showcase_page(page, 'get', num(), 'tools-for-schools', 'The keynote course on any device',
+                           ['The course home on a laptop', 'Every tool works on a phone', 'The workbook, theirs to keep'],
+                           'Free for 12 months: the recording and the course', None,
+                           'Shown: Tools for Schools. Every keynote has its own online course and workbook.'))
     P.append(sta_page(page, 'get', num(), 'Stories of care from Luke\'s lived experience, the theory behind them, and tools your audience uses the next day.'))
     P.append(luke_page(page, 'luke', num(), 'luke-lga-podium.jpg', 'Luke gives every keynote himself, in person or live online, and stays for questions.',
                        ('You demand bravery and humanity in equal measure.', 'Maggie Atkinson, former Children\'s Commissioner for England'), 'Your speaker'))
@@ -277,6 +295,7 @@ EXTRA_CSS = '''
 .fives .hx{flex:0 0 30px;height:30px;font-size:14px}
 .g4s{grid-template-columns:repeat(4,1fr)}.gi.g4{min-height:420px}.gi.g4 ul{margin-top:10px}.gi.g4 li{font-size:16px;line-height:1.4;margin-bottom:8px;padding-left:14px;border-left:3px solid #acc90b}
 .sts.s4{grid-template-columns:repeat(4,1fr)}
+.shnote{position:absolute;left:930px;top:612px;width:300px;font:400 13px/1.35 CS;color:#312b6c}
 '''
 
 def render(slug, title, P, out):
