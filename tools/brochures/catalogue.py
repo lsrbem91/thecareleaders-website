@@ -447,7 +447,8 @@ TALK_IMG = {'Living a Careless Life': 'image-block-06.png', 'Just Say Yes': 'ima
             'Tools for Schools': 'image-block-01.png', 'Lived Experience Leadership': 'image-block-04.png',
             'From Care Leaver to Care Leader': 'image-block-05.png', 'Be the First Yes': 'woman-laptop.png'}
 
-def sta_talk_page(page, i, talk, n):
+def sta_talk_page(page, i, talk, n, thm=None):
+    thm = thm or {}
     """Keynote page: number, title, a Story, Theory, Action overview, the outcomes, an image and who it is for."""
     t, tag, who, aud, para, outs, pc = talk
     cols = ['fuchsia', 'purple', 'teal', 'indigo', 'midgreen', 'brightpurple', 'navy']
@@ -460,11 +461,11 @@ def sta_talk_page(page, i, talk, n):
               ''.join(f'<li><span class="hx" style="background-image:url({K}/strips/hex-{hc[k]}.png)">{k + 1}</span><b>{e(a)}</b>&nbsp;{e(b)}</li>' for k, (a, b) in enumerate(FIVE_S)) + '</ol>')
     else:
         th = e(th)
-    icons = ['story-speech', 'theory-triangle', 'action-chevrons']
-    rows = ''.join(f'<li><img class="stic" src="{A}/img/tcll/icon-{ic}.png" alt=""><div><b>{lab}</b><p>{txt}</p></div></li>'
+    icons = thm.get('sta_icons') or [A / 'img/tcll' / f'icon-{x}.png' for x in ('story-speech', 'theory-triangle', 'action-chevrons')]
+    rows = ''.join(f'<li><img class="stic" src="{ic}" alt=""><div><b>{lab}</b><p>{txt}</p></div></li>'
                    for ic, lab, txt in zip(icons, ['Story', 'Theory', 'Action'], [e(st), th, e(ac)]))
     lis = ''.join(f'<li><img src="{K}/tick.png" alt="">{e(x)}</li>' for x in outs)
-    src = K / TALK_IMG[t] if TALK_IMG[t].startswith('woman') else K / 'tcll2026' / TALK_IMG[t]
+    src = thm['talk_img'][t] if 'talk_img' in thm else (K / TALK_IMG[t] if TALK_IMG[t].startswith('woman') else K / 'tcll2026' / TALK_IMG[t])
     flag = strip('Flagship talk', 'ribbon', 'apple', 'mini') if i == 0 else ''
     return page(f'''<div class="k3{' k3f' if t == 'Lived Experience Leadership' else ''}"><div class="k3l">
         <div class="tkh"><span class="tkn" style="background-image:url({K}/strips/hex-{col}.png)">{i + 1}</span>
@@ -475,10 +476,12 @@ def sta_talk_page(page, i, talk, n):
       <div class="tkw" style="background-image:url({K}/strips/arrowlong-apple.png)"><b>Best for</b>{e(who)}</div>''',
       beds[i % 4] + ' tkp2', 'talks', n, t)
 
-def keynotes3():
+def keynotes3(theme=None):
     """Keynote brochure with sections, and Story, Theory, Action keynote pages each with a Learning image.
     Photos of Luke on the cover and fees pages, so each Learning image appears once, on its keynote."""
     B = A / 'img/brand'
+    th = theme or {}
+    dx = lambda k, default: th.get('div', {}).get(k, default)
     items = [('talks', 'The keynotes'), ('get', 'What you get'), ('luke', 'About Luke'), ('fees', 'Fees'), ('book', 'Book')]
     page = make_page(items, 'Keynotes with Luke Rodgers BEM · The Care Leaders Learning')
     P = [cover('Keynotes with Luke Rodgers BEM', 'Keynotes and conference workshops', 'From care leaver. <span class="apple">To care leader.</span>',
@@ -500,9 +503,9 @@ def keynotes3():
           <p>Tell us your conference theme, who&#8217;s coming and what you want them to leave with, and we&#8217;ll shape a custom keynote around them. It follows the same approach as every other talk, with the recording, the on-demand course and the workbook included.</p></div></div>''',
       'bed-purple', 'talks', num(), 'Find the keynote for your audience'))
     for i, tk in enumerate(TALKS):
-        P.append(sta_talk_page(page, i, tk, num()))
+        P.append(sta_talk_page(page, i, tk, num(), th))
     P.append(divider(page, 2, num(), 'What you get', 'Everything that comes with a booking, and how every keynote is built.',
-                     ['More than a keynote', 'The keynote course on any device', 'Story, theory and action'], 'tonal-midnight', f'<div class="dvpx">{picto(9)}{picto(20)}{picto(8)}</div>'))
+                     ['More than a keynote', 'The keynote course on any device', 'Story, theory and action'], 'tonal-midnight', dx(2, f'<div class="dvpx">{picto(9)}{picto(20)}{picto(8)}</div>')))
     four = [(9, 'Before the day', 'A planning call', ['A 30-minute planning call', 'The keynote shaped around your audience and theme', 'A title and blurb for your programme, plus Luke\'s photo and bio']),
             (18, 'On the day', 'The keynote', ['A keynote of up to 90 minutes', 'Time for questions and discussion', 'The slides, to share with delegates']),
             (20, 'On the day', 'A workbook for every delegate', ['Print-ready or digital', 'Activities for individuals and teams', 'Theirs to keep']),
@@ -516,12 +519,12 @@ def keynotes3():
                            'Shown: Tools for Schools. Every keynote has its own online course and workbook.'))
     P.append(sta_page(page, 'get', num(), 'Stories of care from Luke\'s lived experience, the theory behind them, and tools your audience uses the next day.'))
     P.append(divider(page, 3, num(), 'About Luke', 'Who gives the keynote, and why organisations book him.',
-                     ['Your speaker: Luke Rodgers BEM', 'Why book Luke'], 'tonal-midnight', f'<div class="dvpx">{picto(13)}{picto(1)}{picto(14)}</div>'))
+                     ['Your speaker: Luke Rodgers BEM', 'Why book Luke'], 'tonal-midnight', dx(3, f'<div class="dvpx">{picto(13)}{picto(1)}{picto(14)}</div>')))
     P.append(luke_page(page, 'luke', num(), 'luke-lga-podium.jpg', 'Luke gives every keynote himself, in person or live online, and stays for questions.',
                        ('You demand bravery and humanity in equal measure.', 'Maggie Atkinson, former Children\'s Commissioner for England'), 'Your speaker'))
     P.append(why_page(page, 'luke', num(), 'Keynotes from someone who has lived in care and has led services.').replace('Why choose The Care Leaders Learning', 'Why book Luke'))
     P.append(divider(page, 4, num(), 'Fees and booking', 'What it costs, and how to book.',
-                     ['Fees for every keynote', 'Book Luke in 4 steps'], 'tonal-midnight', f'<div class="dvpx">{picto(19)}{picto(18)}{picto(16)}</div>'))
+                     ['Fees for every keynote', 'Book Luke in 4 steps'], 'tonal-midnight', dx(4, f'<div class="dvpx">{picto(19)}{picto(18)}{picto(16)}</div>')))
     fmts = [{'label': 'In person', 'length': 'Keynote', 'time': 'Up to 90 minutes, at your event', 'fee': '£4,950', 'fee_note': '+ VAT + travel expenses',
              'points': ['A planning call before the day', 'A workbook for every delegate', 'The recording and course for 12 months']},
             {'label': 'Live online', 'length': 'Keynote', 'time': 'Up to 90 minutes, on Teams or Zoom', 'fee': '£2,490', 'fee_note': '+ VAT',
