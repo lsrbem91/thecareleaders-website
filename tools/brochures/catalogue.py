@@ -16,10 +16,11 @@ def nav(items, cur, dark):
     return f'<nav class="nav"><img class="bm" src="{K}/brandmark.png" alt="">{"".join(out)}</nav>'
 
 def make_page(items, label):
-    def page(inner, cls, sec=None, n=None, t=None, bg=None):
+    def page(inner, cls, sec=None, n=None, t=None, bg=None, div=None):
         top = nav(items, sec, 'dark' in cls) if sec else ''
         foot = f'<div class="foot"><span>{e(label)} · thecareleaders.com</span><span>{n}</span></div>' if n else ''
         toc = f' data-toc="{e(t)}" data-n="{n}"' if t else ''
+        toc += f' data-div="{div}"' if div else ''
         st = f' style="{bg}"' if bg else ''
         return f'<section class="pg {cls}"{toc}{st}>{top}{inner}{foot}</section>'
     return page
@@ -34,11 +35,38 @@ def contents(P, page, ci):
     items = []
     for k, pg in enumerate(P):
         if k in (0, ci): continue
-        m = re.search(r'data-toc="([^"]+)" data-n="(\d+)"', pg)
-        if m: items.append((m.group(2), html.unescape(m.group(1))))
+        m = re.search(r'data-toc="([^"]+)" data-n="(\d+)"(?: data-div="(\d+)")?', pg)
+        if m: items.append((m.group(2), html.unescape(m.group(1)), m.group(3)))
     hc = ['purple', 'teal', 'fuchsia', 'indigo', 'midgreen']
-    lis = ''.join(f'<li><span class="hx cx" style="background-image:url({K}/strips/hex-{hc[i % 5]}.png)">{n}</span>{e(t)}</li>' for i, (n, t) in enumerate(items))
-    return page(f'<h2>Contents</h2><ol class="toc">{lis}</ol>', 'light', None, ci + 1)
+    if not any(d for _, _, d in items):
+        lis = ''.join(f'<li><span class="hx cx" style="background-image:url({K}/strips/hex-{hc[i % 5]}.png)">{n}</span>{e(t)}</li>' for i, (n, t, _) in enumerate(items))
+        return page(f'<h2>Contents</h2><ol class="toc">{lis}</ol>', 'light', None, ci + 1)
+    # Sectioned: each section opener starts a block; the pages after it sit under it
+    secs = []
+    for n, t, d in items:
+        if d: secs.append([d, t, n, []])
+        elif secs: secs[-1][3].append((n, t))
+    blocks = ''
+    for i, (d, t, n, sub) in enumerate(secs):
+        lis = ''.join(f'<li><span class="tcn">{pn}</span>{e(pt)}</li>' for pn, pt in sub)
+        blocks += f'''<div class="tcs" style="{box('white')}"><div class="tch"><span class="hx cx" style="background-image:url({K}/strips/hex-{hc[i % 5]}.png)">{d}</span>
+          <h3>{e(t)}</h3><span class="tcp">from page {n}</span></div><ol>{lis}</ol></div>'''
+    return page(f'<h2>Contents</h2><div class="tcg">{blocks}</div>', 'light', None, ci + 1)
+
+def divider(page, d, n, title, lead, inside, grd, extra='', img=None):
+    """Section opener: number, title, the question the section answers, and what is inside."""
+    lis = ''.join(f'<li><img src="{K}/chev.png" alt="">{e(x)}</li>' for x in inside)
+    return page(f'''<div class="dvl{' dvn' if extra else ''}">{strip(f'Section {d}', 'ribbon', 'apple', 'cat')}<h1 class="dvh">{e(title)}</h1>
+      <p class="dvp">{e(lead)}</p><ul class="dvi">{lis}</ul></div>{extra}{f'<img class="dvimg" src="{img}" alt="">' if img else ''}''',
+      'dark divp', None, n, title, ground(grd) if grd in ('tonal-midnight',) or not grd.startswith('tonal') else f'background:#241b40 url({K}/tcll2026/{grd}.jpg) center/cover', d)
+
+def what_it_does(c):
+    """The course intro without the repeated 'Training that' opening, so 18 cards don't all start the same way."""
+    t = c['intro']
+    if t.startswith('Non-violent resistance training that helps '):
+        return 'Uses non-violent resistance to help ' + t[len('Non-violent resistance training that helps '):]
+    t = re.sub(r'^Training that ', '', t)
+    return t[0].upper() + t[1:]
 
 def sta_page(page, sec, n, line):
     sta = [(18, 'fuchsia', '', 'Story', 'A real moment from care, told from the young person\'s side.'),
@@ -105,9 +133,9 @@ AWARDS_LINE = 'Gold, Dual Perspective Leadership Award, iESE Public Sector Trans
 
 # ---------------------------------------------------------------- training
 SHELVES = [
-    ('Courses on behaviour, trauma and relationships', ['behind-the-behaviour', 'the-practice-toolkit', 'trauma-attachment-transitions', 'supporting-boys-in-care', 'nvr-essentials', 'care-not-custody']),
-    ('Courses for schools, and on recording and language', ['tools-for-schools', 'raising-aspirations', 'two-timetables', 'good-recording', 'language-that-lifts', 'the-person-behind-the-file']),
-    ('Courses on leadership, participation and care leavers', ['corporate-parenting-in-practice', 'five-s-framework', 'power-to-lead', 'co-producing-your-local-offer', 'leading-care-leavers-at-work', 'be-the-first-yes']),
+    ('Behaviour, trauma and relationships', ['behind-the-behaviour', 'the-practice-toolkit', 'trauma-attachment-transitions', 'supporting-boys-in-care', 'nvr-essentials', 'care-not-custody']),
+    ('Schools, recording and language', ['tools-for-schools', 'raising-aspirations', 'two-timetables', 'good-recording', 'language-that-lifts', 'the-person-behind-the-file']),
+    ('Leadership, participation and care leavers', ['corporate-parenting-in-practice', 'five-s-framework', 'power-to-lead', 'co-producing-your-local-offer', 'leading-care-leavers-at-work', 'be-the-first-yes']),
 ]
 def training():
     items = [('courses', 'The courses'), ('how', 'How we teach'), ('included', 'Included'), ('why', 'Why us'), ('fees', 'Fees'), ('book', 'Book')]
@@ -123,15 +151,28 @@ def training():
     num = lambda: len(P) + 1
     cols = ['fuchsia', 'purple', 'teal', 'indigo', 'midgreen', 'navy']
     beds = ['bed-purple', 'bed-blue', 'bed-green']
+    hexes = ['purple', 'teal', 'indigo']
+    # Section 1 opener doubles as the course finder: every course, numbered, with the page it is on
+    first = num() + 1
+    idx, k = '', 0
+    for s, (title, slugs) in enumerate(SHELVES):
+        lis = ''
+        for sl in slugs:
+            k += 1; lis += f'<li><span class="hx" style="background-image:url({K}/strips/hex-{hexes[s]}.png)">{k}</span>{e(C[sl]["name"])}</li>'
+        idx += f'<div class="fnd"><p class="fnt">{e(title)}<span>page {first + s}</span></p><ol>{lis}</ol></div>'
+    P.append(divider(page, 1, num(), 'The courses', 'Find the course that fits your team, then choose face to face or online.',
+                     [], 'tonal-midnight', f'<div class="fnds">{idx}</div>'))
+    k = 0
     for s, (title, slugs) in enumerate(SHELVES):
         cards = ''
         for i, sl in enumerate(slugs):
-            c = C[sl]; hs = c['headline']
-            who = ', '.join(g[1] for g in c['audience']['groups'] if g[1] not in ('Both together', 'Your whole school'))
+            c = C[sl]; k += 1
+            who = ', '.join([g[1] for g in c['audience']['groups'] if g[1] not in ('Both together', 'Your whole school')][:3])
             cards += f'''<div class="cc" style="{box('white')}"><span class="ccb" style="{box(cols[(i + s) % 6])}"></span>
-              <h3>{e(c['name'])}</h3><p class="cch">{e(hs)}</p><p class="cci">{e(c['intro'])}</p>
-              <p class="ccw"><b>For</b> {e(who)}</p><p class="ccu">thecareleaders.com/{e(sl)}</p></div>'''
-        P.append(page(f'<h2>{e(title)}</h2><div class="ccs">{cards}</div>', beds[s] + ' catp', 'courses', num(), title))
+              <div class="cct"><span class="hx" style="background-image:url({K}/strips/hex-{hexes[s]}.png)">{k}</span><h3>{e(c['name'])}</h3></div>
+              <p class="cci">{e(what_it_does(c))}</p><p class="ccw"><b>For</b> {e(who)}</p></div>'''
+        P.append(page(f'<h2>{e(title)}</h2><div class="ccs">{cards}</div><p class="ccf">Every course has its own page with the full details: thecareleaders.com/training</p>',
+                      beds[s] + ' catp', 'courses', num(), title))
     # Two ways to run every course
     P.append(page(f'''<h2>Every course runs face to face or online</h2>
       <div class="two">
@@ -141,6 +182,8 @@ def training():
           <p>On Teams or Zoom, for up to 60 people. Luke gives the keynote, takes questions in the chat throughout and answers them live at the end. For teams who can&#8217;t give a full day.</p></div></div>
       <p class="tln dkl">{strip('Not sure which?', 'ribbon', 'apple', 'mini')} Try it online first, then get 20% off the face to face day. Details are with the fees.</p>''',
       'light', 'courses', num(), 'Every course runs face to face or online'))
+    P.append(divider(page, 2, num(), 'How we teach', 'What happens in the room, and what your team keeps afterwards.',
+                     ['Story, theory and action', 'What every delegate gets', 'The course online, on any device'], 'tonal-midnight', img=opt(K / 'tcll2026' / 'image-block-02.png', 620)))
     P.append(sta_page(page, 'how', num(), 'A story from care, the theory behind it, and a tool your team uses the next day.'))
     gets = [(20, 'Workbook', 'for life', 'Stories, tools and space to plan. Theirs to keep.'),
             (5, 'Recording', '12 months', 'A recording of the session to watch again for 12 months.'),
@@ -154,6 +197,8 @@ def training():
                            ['The course home on a laptop', 'Every tool works on a phone', 'The workbook, theirs to keep'],
                            'Free for 12 months: the course online', 'All our online training: 50% off a year on The Care Leaders Online',
                            'Shown: Behind the Behaviour. Every course has its own online course and workbook.'))
+    P.append(divider(page, 3, num(), 'Why choose us', 'Who builds the training, and who delivers it.',
+                     ['Why us', 'Your facilitator'], 'tonal-midnight', img=opt(K / 'tcll2026' / 'image-block-06.png', 620)))
     P.append(why_page(page, 'why', num(), 'Training built by people who have lived in care and people who have led services.'))
     P.append(luke_page(page, 'why', num(), 'luke-speaking.jpg', 'Luke facilitates every course. Face to face he leads every part. Online, he gives the keynote and answers your questions live.',
                        ('Nothing was as transformative as hearing Luke speak about his life.', 'Dr Janet Rose, Principal, Norland College'), 'Your facilitator'))
@@ -161,6 +206,9 @@ def training():
              'points': ['In your building or a venue you choose', 'Practice in pairs and small groups', 'You provide a room and a screen']},
             {'label': 'Live online', 'length': '2 hours', 'time': 'A live keynote with Q&A', 'fee': '£1,950', 'fee_note': '+ VAT',
              'points': ['On Teams or Zoom', 'Questions in the chat throughout', 'Live Q&A at the end']}]
+    P.append(divider(page, 4, num(), 'Fees and booking', 'What it costs, and how to book.',
+                     ['Fees for every course', 'Try it online first: 20% off the face to face day', 'Book your training in 4 steps'], 'tonal-midnight',
+                     f'<div class="dvpx">{picto(19)}{picto(18)}{picto(16)}</div>'))
     P.append(fees_page(page, 'fees', num(), 'Fees for every course', fmts,
                        'The same fee for every course. One fee covers up to 60 people. We build examples from your own service into the training at no extra cost.',
                        [opt(hires('block-5.webp'), 500), opt(hires('block-3.webp'), 500)]))
@@ -268,11 +316,11 @@ EXTRA_CSS = '''
 .cover h1.long{font-size:64px}
 .ccs{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 .catp h2{font-size:38px;margin-bottom:16px}
-.cc{background-size:100% 100%;padding:18px 22px 34px 26px;position:relative;min-height:242px}
+.cc{background-size:100% 100%;padding:20px 22px 20px 26px;position:relative;min-height:220px}
 .ccb{position:absolute;left:0;top:14px;bottom:14px;width:8px;background-size:100% 100%}
 .cc h3{font-size:24px;line-height:1.05;margin-bottom:6px}
 .cch{font:400 15px CS;color:#7c05ca;margin-bottom:8px}
-.cci{font-size:15px;line-height:1.4;margin-bottom:8px}
+.cci{font-size:17px;line-height:1.4;margin-bottom:10px}
 .ccw{font-size:13px;line-height:1.35;color:#312b6c}.ccw b{font-family:CS}
 .ccu{position:absolute;left:26px;bottom:14px;font:400 12px CS;color:#008196}
 .two{display:grid;grid-template-columns:1fr 1fr;gap:26px}
@@ -295,6 +343,21 @@ EXTRA_CSS = '''
 .fives .hx{flex:0 0 30px;height:30px;font-size:14px}
 .g4s{grid-template-columns:repeat(4,1fr)}.gi.g4{min-height:420px}.gi.g4 ul{margin-top:10px}.gi.g4 li{font-size:16px;line-height:1.4;margin-bottom:8px;padding-left:14px;border-left:3px solid #acc90b}
 .sts.s4{grid-template-columns:repeat(4,1fr)}
+.tcg{display:grid;grid-template-columns:1fr 1fr;gap:18px 22px;margin-top:4px}
+.tcs{background-size:100% 100%;padding:18px 24px 20px}
+.tch{display:flex;align-items:center;gap:14px;padding-bottom:10px;margin-bottom:8px;border-bottom:2px solid #e3dcef}
+.tch h3{font-size:26px;flex:1}.tcp{font:400 14px CS;color:#7c05ca}
+.tcs li{display:flex;gap:14px;font:400 17px/1.3 CS;padding:4px 0;color:#241b40}.tcn{width:58px;text-align:center;color:#008196;font-family:CB}
+.divp{padding-top:70px}.dvimg{position:absolute;right:60px;top:150px;max-width:560px;max-height:440px}
+.dvpx{position:absolute;right:90px;top:200px;display:flex;gap:30px}.dvpx .pic{width:150px;height:150px}.dvl{position:absolute;left:60px;top:120px;width:620px}
+.dvh{font-size:84px;line-height:1;margin:22px 0 18px;color:#fff}.dvp{font:400 24px/1.35 CS;margin-bottom:26px;color:#fff}
+.dvi li{display:flex;gap:14px;align-items:center;font:400 21px CS;margin-bottom:12px}.dvi img{width:22px}
+.dvl.dvn{width:380px}.dvl.dvn .dvh{font-size:64px}
+.fnds{position:absolute;left:470px;right:50px;top:110px;display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.fnt{font:400 18px/1.2 CB;color:#acc90b;margin-bottom:12px;min-height:44px}.fnt span{display:block;font:400 13px CS;color:#fff;margin-top:4px}
+.fnd li{display:flex;gap:10px;align-items:center;font:400 16px/1.2 CS;margin-bottom:12px}.fnd .hx{flex:0 0 40px;width:40px;height:24px;font-size:13px}
+.cct{display:flex;gap:12px;align-items:center;margin-bottom:10px}.cct h3{margin:0}.cct .hx{flex:0 0 46px}
+.ccf{margin-top:16px;font:400 15px CS;color:#312b6c}
 .shnote{position:absolute;left:930px;top:612px;width:300px;font:400 13px/1.35 CS;color:#312b6c}
 '''
 
