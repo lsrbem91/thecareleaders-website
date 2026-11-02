@@ -132,16 +132,20 @@ def showcase_page(page, sec, n, slug, title, labels, free, half=None, note=None)
 AWARDS_LINE = 'Gold, Dual Perspective Leadership Award, iESE Public Sector Transformation Awards 2026 · Children &amp; Young People Now Workforce Development Award 2023'
 
 # ---------------------------------------------------------------- training
+# Courses grouped by who they are for (each course sits under its main audience; the "For" line shows the rest).
+# Each entry is one page: (page title for the contents, [(group heading, course slugs)]).
 SHELVES = [
-    ('Behaviour, trauma and relationships', ['behind-the-behaviour', 'the-practice-toolkit', 'trauma-attachment-transitions', 'supporting-boys-in-care', 'nvr-essentials', 'care-not-custody']),
-    ('Schools, recording and language', ['tools-for-schools', 'raising-aspirations', 'two-timetables', 'good-recording', 'language-that-lifts', 'the-person-behind-the-file']),
-    ('Leadership, participation and care leavers', ['corporate-parenting-in-practice', 'five-s-framework', 'power-to-lead', 'co-producing-your-local-offer', 'leading-care-leavers-at-work', 'be-the-first-yes']),
+    ('For carers and children\'s homes', [('For carers and children\'s homes', ['behind-the-behaviour', 'the-practice-toolkit', 'nvr-essentials', 'supporting-boys-in-care', 'trauma-attachment-transitions', 'care-not-custody'])]),
+    ('For schools, social workers and other professionals', [('For schools', ['tools-for-schools', 'raising-aspirations', 'two-timetables']),
+                                                             ('For social workers and other professionals', ['good-recording', 'language-that-lifts', 'the-person-behind-the-file'])]),
+    ('For leaders, councils, young people and employers', [('For leaders, councils and young people', ['corporate-parenting-in-practice', 'co-producing-your-local-offer', 'five-s-framework', 'power-to-lead']),
+                                                            ('For employers', ['leading-care-leavers-at-work', 'be-the-first-yes'])]),
 ]
 def training():
     items = [('courses', 'The courses'), ('how', 'How we teach'), ('included', 'Included'), ('why', 'Why us'), ('fees', 'Fees'), ('book', 'Book')]
     page = make_page(items, 'Training · The Care Leaders Learning')
     C = {p.stem: json.loads(p.read_text()) for p in (HERE / 'courses').glob('*.json')}
-    n_courses = sum(len(s) for _, s in SHELVES)
+    n_courses = sum(len(sl) for _, gs in SHELVES for _, sl in gs)
     assert n_courses == len(C), 'every course file must sit on a shelf'
     P = [cover('Training for the people around children in care', 'Training', f'{n_courses} courses. <span class="apple">Face to face or online.</span>',
                'Every course is written by people who have lived in care and people who have led services. Choose a course, then choose how your team learns it.',
@@ -152,27 +156,33 @@ def training():
     cols = ['fuchsia', 'purple', 'teal', 'indigo', 'midgreen', 'navy']
     beds = ['bed-purple', 'bed-blue', 'bed-green']
     hexes = ['purple', 'teal', 'indigo']
-    # Section 1 opener doubles as the course finder: every course, numbered, with the page it is on
+    # Section 1 opener doubles as the course finder: every course, numbered, under who it is for, with its page
     first = num() + 1
     idx, k = '', 0
-    for s, (title, slugs) in enumerate(SHELVES):
-        lis = ''
-        for sl in slugs:
-            k += 1; lis += f'<li><span class="hx" style="background-image:url({K}/strips/hex-{hexes[s]}.png)">{k}</span>{e(C[sl]["name"])}</li>'
-        idx += f'<div class="fnd"><p class="fnt">{e(title)}<span>page {first + s}</span></p><ol>{lis}</ol></div>'
-    P.append(divider(page, 1, num(), 'The courses', 'Find the course that fits your team, then choose face to face or online.',
+    for s, (ptitle, groups) in enumerate(SHELVES):
+        col = ''
+        for g, (gt, slugs) in enumerate(groups):
+            lis = ''
+            for sl in slugs:
+                k += 1; lis += f'<li><span class="hx" style="background-image:url({K}/strips/hex-{hexes[s]}.png)">{k}</span>{e(C[sl]["name"])}</li>'
+            col += f'<p class="fnt">{e(gt)}<span>page {first + s}</span></p><ol>{lis}</ol>'
+        idx += f'<div class="fnd">{col}</div>'
+    P.append(divider(page, 1, num(), 'The courses', 'Find a course for your team, then choose face to face or online.',
                      [], 'tonal-midnight', f'<div class="fnds">{idx}</div>'))
     k = 0
-    for s, (title, slugs) in enumerate(SHELVES):
-        cards = ''
-        for i, sl in enumerate(slugs):
-            c = C[sl]; k += 1
-            who = ', '.join([g[1] for g in c['audience']['groups'] if g[1] not in ('Both together', 'Your whole school')][:3])
-            cards += f'''<div class="cc" style="{box('white')}"><span class="ccb" style="{box(cols[(i + s) % 6])}"></span>
-              <div class="cct"><span class="hx" style="background-image:url({K}/strips/hex-{hexes[s]}.png)">{k}</span><h3>{e(c['name'])}</h3></div>
-              <p class="cci">{e(what_it_does(c))}</p><p class="ccw"><b>For</b> {e(who)}</p></div>'''
-        P.append(page(f'<h2>{e(title)}</h2><div class="ccs">{cards}</div><p class="ccf">Every course has its own page with the full details: thecareleaders.com/training</p>',
-                      beds[s] + ' catp', 'courses', num(), title))
+    for s, (ptitle, groups) in enumerate(SHELVES):
+        body = ''
+        for g, (gt, slugs) in enumerate(groups):
+            cards = ''
+            for i, sl in enumerate(slugs):
+                c = C[sl]; k += 1
+                who = ', '.join([x[1] for x in c['audience']['groups'] if x[1] not in ('Both together', 'Your whole school')][:3])
+                cards += f'''<div class="cc" style="{box('white')}"><span class="ccb" style="{box(cols[(i + s + g) % 6])}"></span>
+                  <div class="cct"><span class="hx" style="background-image:url({K}/strips/hex-{hexes[s]}.png)">{k}</span><h3>{e(c['name'])}</h3></div>
+                  <p class="cci">{e(what_it_does(c))}</p><p class="ccw"><b>For</b> {e(who)}</p></div>'''
+            body += (f'<h2>{e(gt)}</h2>' if len(groups) == 1 else f'<h3 class="ccg">{e(gt)}</h3>') + f'<div class="ccs" style="grid-template-columns:repeat({max(3, max(len(x[1]) for x in groups))},1fr)">{cards}</div>'
+        P.append(page(f'{body}<p class="ccf">Every course has its own page with the full details: thecareleaders.com/training</p>',
+                      beds[s] + ' catp' + (' dbl' if len(groups) > 1 else ''), 'courses', num(), ptitle))
     # Two ways to run every course
     P.append(page(f'''<h2>Every course runs face to face or online</h2>
       <div class="two">
@@ -397,6 +407,135 @@ def keynotes2():
     P[1] = contents(P, page, 1)
     return 'keynotes-brochure-sections', 'Keynotes: The Care Leaders Learning', P
 
+# ---------------------------------------------------------------- keynotes, Story Theory Action pages
+# From the keynote overviews in Luke Speaks > General > Bio Info > Luke Speaks Keynotes (and the keynote overview documents).
+STA_TALKS = {
+    'Living a Careless Life': (
+        "Luke shares stories from his own time in care, from going into care at 10 onwards. They are moving and often funny, and they show the moments when one relationship changed what happened next.",
+        "Two ideas explain how systems shape the way a child is seen: how profiles and referrals can describe a child by what went wrong, and the Two Timetables, where school and social care clash around the child.",
+        "How to talk with children, read the message in a behaviour and spot the triggers that take a child back to trauma, so every adult in the room knows what they can change."),
+    'Just Say Yes': (
+        "Luke shares stories from foster care: being judged by a profile, being misunderstood and then believed in, and the moments when a foster carer made a life-changing difference.",
+        "Attachment, the impact of trauma on the developing brain, and why behaviour is often a survival strategy. It explains why traditional discipline may not work for children in care.",
+        "Simple ways to reframe behaviour through a trauma-informed lens, talk in ways that build trust and calm conflict, and make home feel safe and predictable."),
+    'The Power of the Profile': (
+        "Luke shares what it was like to read his own file: to be introduced through incident logs, and turned down because of paperwork that did not show who he was.",
+        "Trauma-informed storytelling, attachment and the psychology of language: how the words in a profile shape what the reader expects of the child.",
+        "How to write profiles that are honest, balanced and hopeful, reframe behaviour so it reduces fear, and help carers, schools and panels say yes through the way information is shared."),
+    'Tools for Schools': (
+        "Luke shares his own school experiences: what it felt like to be labelled and excluded, and the difference it made when a teacher believed in him.",
+        "Trauma, attachment and child development made relevant to the classroom, so staff understand the why behind the behaviour they see.",
+        "Tools to respond to trauma-based behaviour without escalating it, build safe learning environments, and talk with children in care in ways that build trust."),
+    'Lived Experience Leadership': (
+        "Luke shares his own journey from telling his story to leading national work, and what helped at each stage.",
+        None,
+        "Leaders map where the young people in their service are, match them to roles in service delivery and improvement that fit their stage, and plan who leads next."),
+    'From Care Leaver to Care Leader': (
+        "Luke shares his journey from growing up in care to becoming a national leader, speaker and founder, to show what is possible for every care-experienced young person.",
+        "How the care system shapes identity, how trauma shapes behaviour, and how getting through hard times builds real leadership skills.",
+        "Young people reframe their experience as a strength, recognise the skills they already have, and see themselves as people who can lead change."),
+    'Be the First Yes': (
+        "Luke shares his own move from care into work, and how one opportunity changed his future.",
+        "The barriers care leavers face in getting and keeping work, and the behavioural science behind stigma, opportunity and belonging.",
+        "Clear steps to make recruitment and induction care-aware, offer mentoring and onboarding that helps people stay, and build teams where care-experienced staff can grow."),
+}
+FIVE_S = [('Storytelling', 'sharing their experience safely, on their own terms'), ('Skills', 'recognising the skills their experience has given them'),
+          ('Strategies', 'helping shape plans, services and decisions'), ('Scaling', 'leading pieces of work, such as training staff'),
+          ('Succession', 'mentoring and bringing the next young people through')]
+# One Learning image per keynote, each used once in the brochure
+TALK_IMG = {'Living a Careless Life': 'image-block-06.png', 'Just Say Yes': 'image-block-02.png', 'The Power of the Profile': 'image-block-03.png',
+            'Tools for Schools': 'image-block-01.png', 'Lived Experience Leadership': 'image-block-04.png',
+            'From Care Leaver to Care Leader': 'image-block-05.png', 'Be the First Yes': 'woman-laptop.png'}
+
+def sta_talk_page(page, i, talk, n):
+    """Keynote page: number, title, a Story, Theory, Action overview, the outcomes, an image and who it is for."""
+    t, tag, who, aud, para, outs, pc = talk
+    cols = ['fuchsia', 'purple', 'teal', 'indigo', 'midgreen', 'brightpurple', 'navy']
+    beds = ['light', 'bed-blue', 'bed-green', 'bed-purple']
+    col = cols[i % 7]
+    st, th, ac = STA_TALKS[t]
+    if th is None:
+        hc = ['purple', 'teal', 'fuchsia', 'indigo', 'midgreen']
+        th = ('<span>The Five S framework, five stages from first telling a story to leading the work:</span><ol class="fives s5">' +
+              ''.join(f'<li><span class="hx" style="background-image:url({K}/strips/hex-{hc[k]}.png)">{k + 1}</span><b>{e(a)}</b>&nbsp;{e(b)}</li>' for k, (a, b) in enumerate(FIVE_S)) + '</ol>')
+    else:
+        th = e(th)
+    icons = ['story-speech', 'theory-triangle', 'action-chevrons']
+    rows = ''.join(f'<li><img class="stic" src="{A}/img/tcll/icon-{ic}.png" alt=""><div><b>{lab}</b><p>{txt}</p></div></li>'
+                   for ic, lab, txt in zip(icons, ['Story', 'Theory', 'Action'], [e(st), th, e(ac)]))
+    lis = ''.join(f'<li><img src="{K}/tick.png" alt="">{e(x)}</li>' for x in outs)
+    src = K / TALK_IMG[t] if TALK_IMG[t].startswith('woman') else K / 'tcll2026' / TALK_IMG[t]
+    flag = strip('Flagship talk', 'ribbon', 'apple', 'mini') if i == 0 else ''
+    return page(f'''<div class="k3{' k3f' if t == 'Lived Experience Leadership' else ''}"><div class="k3l">
+        <div class="tkh"><span class="tkn" style="background-image:url({K}/strips/hex-{col}.png)">{i + 1}</span>
+          <div><span class="tko">Keynote {i + 1} of {len(TALKS)}</span>{flag}</div></div>
+        <h2>{e(t)}</h2><p class="knt">{e(tag)}</p><ul class="sta3">{rows}</ul></div>
+      <div class="k3r"><img class="k3i" src="{opt(src, 640)}" alt="">
+        <div class="kno" style="{box('midnight')}"><h3>By the end, delegates will</h3><ul>{lis}</ul></div></div></div>
+      <div class="tkw" style="background-image:url({K}/strips/arrowlong-apple.png)"><b>Best for</b>{e(who)}</div>''',
+      beds[i % 4] + ' tkp2', 'talks', n, t)
+
+def keynotes3():
+    """Keynote brochure with sections, and Story, Theory, Action keynote pages each with a Learning image.
+    Photos of Luke on the cover and fees pages, so each Learning image appears once, on its keynote."""
+    B = A / 'img/brand'
+    items = [('talks', 'The keynotes'), ('get', 'What you get'), ('luke', 'About Luke'), ('fees', 'Fees'), ('book', 'Book')]
+    page = make_page(items, 'Keynotes with Luke Rodgers BEM · The Care Leaders Learning')
+    P = [cover('Keynotes with Luke Rodgers BEM', 'Keynotes and conference workshops', 'From care leaver. <span class="apple">To care leader.</span>',
+               'Story-led keynotes for conferences, staff days and boards: stories of care from Luke\'s lived experience, the theory behind them and tools your audience can use the next day.',
+               opt(B / 'luke-lga-wide.jpg', 960),
+               [('In person or online', 'keynotes of up to 90 minutes', 'or a conference workshop', True),
+                (str(len(TALKS)), 'keynotes', 'or one built for your audience', False), ('4,000+', 'delegates since 2024', 'from 30 to 400 in a room', False)], long=True).replace('class="covimg"', 'class="covimg covph"'), '']
+    num = lambda: len(P) + 1
+    first = num() + 2
+    hx = ["fuchsia", "purple", "teal", "indigo", "midgreen", "brightpurple", "navy"]
+    lis = ''.join(f'<li><span class="hx" style="background-image:url({K}/strips/hex-{hx[k % 7]}.png)">{k + 1}</span>{e(t)}<span class="fpg">page {first + k}</span></li>'
+                  for k, (t, *_r) in enumerate(TALKS))
+    P.append(divider(page, 1, num(), 'The keynotes', 'Seven talks, each built for a different audience. Or tell us yours and we shape one around them.',
+                     [], 'tonal-midnight', f'<div class="fnd kfd"><p class="fnt">The {len(TALKS)} keynotes</p><ol>{lis}</ol></div>'))
+    rows = ''.join(f'<li><span class="mxa">{e(aud)}</span><img src="{K}/chev.png" alt=""><b>{e(t)}</b></li>' for t, _, _, aud, _, _, _ in TALKS)
+    P.append(page(f'''<h2>Find the keynote for your audience</h2>
+      <div class="mx"><ol class="mxl">{rows}</ol>
+        <div class="mxc" style="{box('navy')}">{picto(13)}<h3>Don&#8217;t see your audience here?</h3>
+          <p>Tell us your conference theme, who&#8217;s coming and what you want them to leave with, and we&#8217;ll shape a custom keynote around them. It follows the same approach as every other talk, with the recording, the on-demand course and the workbook included.</p></div></div>''',
+      'bed-purple', 'talks', num(), 'Find the keynote for your audience'))
+    for i, tk in enumerate(TALKS):
+        P.append(sta_talk_page(page, i, tk, num()))
+    P.append(divider(page, 2, num(), 'What you get', 'Everything that comes with a booking, and how every keynote is built.',
+                     ['More than a keynote', 'The keynote course on any device', 'Story, theory and action'], 'tonal-midnight', f'<div class="dvpx">{picto(9)}{picto(20)}{picto(8)}</div>'))
+    four = [(9, 'Before the day', 'A planning call', ['A 30-minute planning call', 'The keynote shaped around your audience and theme', 'A title and blurb for your programme, plus Luke\'s photo and bio']),
+            (18, 'On the day', 'The keynote', ['A keynote of up to 90 minutes', 'Time for questions and discussion', 'The slides, to share with delegates']),
+            (20, 'On the day', 'A workbook for every delegate', ['Print-ready or digital', 'Activities for individuals and teams', 'Theirs to keep']),
+            (8, 'After the day', 'The recording and course', ['The full keynote recorded', 'An on-demand course on The Care Leaders Online', '12 months\' access for every delegate'])]
+    g = ''.join(f'<div class="gi g4" style="{box("indigo")}">{picto(p)}<b>{e(t)}</b>{strip(w, "angled", "apple", "gs2")}<ul>{"".join(f"<li>{e(x)}</li>" for x in pts)}</ul></div>' for p, w, t, pts in four)
+    P.append(page(f'''<h2>More than a keynote</h2><p class="sub">Every booking, in person or online, comes with the same four things.</p>
+      <div class="gis g4s">{g}</div>''', 'light', 'get', num(), 'More than a keynote: what every booking includes'))
+    P.append(showcase_page(page, 'get', num(), 'tools-for-schools', 'The keynote course on any device',
+                           ['The course home on a laptop', 'Every tool works on a phone', 'The workbook, theirs to keep'],
+                           'Free for 12 months: the recording and the course', None,
+                           'Shown: Tools for Schools. Every keynote has its own online course and workbook.'))
+    P.append(sta_page(page, 'get', num(), 'Stories of care from Luke\'s lived experience, the theory behind them, and tools your audience uses the next day.'))
+    P.append(divider(page, 3, num(), 'About Luke', 'Who gives the keynote, and why organisations book him.',
+                     ['Your speaker: Luke Rodgers BEM', 'Why book Luke'], 'tonal-midnight', f'<div class="dvpx">{picto(13)}{picto(1)}{picto(14)}</div>'))
+    P.append(luke_page(page, 'luke', num(), 'luke-lga-podium.jpg', 'Luke gives every keynote himself, in person or live online, and stays for questions.',
+                       ('You demand bravery and humanity in equal measure.', 'Maggie Atkinson, former Children\'s Commissioner for England'), 'Your speaker'))
+    P.append(why_page(page, 'luke', num(), 'Keynotes from someone who has lived in care and has led services.').replace('Why choose The Care Leaders Learning', 'Why book Luke'))
+    P.append(divider(page, 4, num(), 'Fees and booking', 'What it costs, and how to book.',
+                     ['Fees for every keynote', 'Book Luke in 4 steps'], 'tonal-midnight', f'<div class="dvpx">{picto(19)}{picto(18)}{picto(16)}</div>'))
+    fmts = [{'label': 'In person', 'length': 'Keynote', 'time': 'Up to 90 minutes, at your event', 'fee': '£4,950', 'fee_note': '+ VAT + travel expenses',
+             'points': ['A planning call before the day', 'A workbook for every delegate', 'The recording and course for 12 months']},
+            {'label': 'Live online', 'length': 'Keynote', 'time': 'Up to 90 minutes, on Teams or Zoom', 'fee': '£2,490', 'fee_note': '+ VAT',
+             'points': ['A planning call before the day', 'Questions in the chat and live Q&A', 'The recording and course for 12 months']}]
+    P.append(fees_page(page, 'fees', num(), 'Fees for every keynote', fmts,
+                       'Keynotes and conference workshops are contracted and invoiced by Luke Speaks Ltd, powered by The Care Leaders. If Luke is free, we hold your date for 14 days.',
+                       [opt(B / 'luke-stage.jpg', 500), opt(B / 'luke-room.jpg', 500)]).replace('class="fimg"', 'class="fimg lsph"'))
+    P.append(book_page(page, 'book', 'Book Luke in 4 steps',
+                       [('Tell us about your event', 'The date, your audience and the talk'), ('Get availability and a fee', 'We hold the date for 14 days'),
+                        ('Confirm by email', 'And send a purchase order if you use them'), ('Before the day', 'A planning call and a checklist')],
+                       f'{AWARDS_LINE} · Luke Speaks Ltd, company number 15452230 · thecareleaders.com/keynotes'))
+    P[1] = contents(P, page, 1)
+    return 'keynotes-brochure-sta', 'Keynotes: Luke Speaks', P
+
 EXTRA_CSS = '''
 .cover h1.long{font-size:64px}
 .ccs{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
@@ -442,6 +581,7 @@ EXTRA_CSS = '''
 .fnt{font:400 18px/1.2 CB;color:#acc90b;margin-bottom:12px;min-height:44px}.fnt span{display:block;font:400 13px CS;color:#fff;margin-top:4px}
 .fnd li{display:flex;gap:10px;align-items:center;font:400 16px/1.2 CS;margin-bottom:12px}.fnd .hx{flex:0 0 40px;width:40px;height:24px;font-size:13px}
 .cct{display:flex;gap:12px;align-items:center;margin-bottom:10px}.cct h3{margin:0}.cct .hx{flex:0 0 46px}
+.catp.dbl .cc{min-height:0}.ccg{font-size:28px;margin:0 0 10px}.catp.dbl .ccs+.ccg{margin-top:12px}.catp.dbl .ccf{margin-top:10px}.catp.dbl .cci{font-size:16px}.catp.dbl .cc h3{font-size:21px}.catp.dbl .cc{padding-top:16px;padding-bottom:14px}.catp.dbl .cct{margin-bottom:8px}.fnd ol+.fnt{margin-top:18px}
 .ccf{margin-top:16px;font:400 15px CS;color:#312b6c}
 .tkp2{padding-top:88px}
 .tkbig{position:absolute;right:-90px;bottom:-70px;width:360px;height:204px;background-size:100% 100%}
@@ -462,6 +602,17 @@ EXTRA_CSS = '''
 .tkt{background-size:100% 100%;color:#fff;padding:14px 14px 16px;display:flex;gap:10px;align-items:center}.tkt b{display:block;font:400 16px/1.15 CB}.tkt span{font:400 13px CS}
 .kfd{position:absolute;left:640px;top:130px;width:560px}.kfd li{font-size:20px;margin-bottom:16px}.kfd .hx{flex:0 0 52px;width:52px;height:30px;font-size:16px}
 .kfd .fpg{margin-left:auto;font:400 14px CS;color:#acc90b}
+.k3{display:grid;grid-template-columns:1.25fr 1fr;gap:34px;align-items:start;position:relative}
+.k3 h2{font-size:50px;line-height:1;margin-bottom:6px}.k3 .knt{font-size:22px;margin-bottom:12px}
+.sta3 li{display:flex;gap:14px;align-items:flex-start;margin-bottom:12px}.stic{width:46px;height:46px;flex:0 0 46px}
+.sta3 b{font:400 19px CB;display:block;margin-bottom:2px}.sta3 p{font-size:15px;line-height:1.42}
+.k3f h2{font-size:42px}.k3f .knt{font-size:18px;margin-bottom:8px}.k3f .sta3 li{margin-bottom:6px}.k3f .stic{width:38px;height:38px;flex-basis:38px}.k3f .sta3 p{font-size:14px;line-height:1.35}
+.fives.s5{margin-top:6px}.fives.s5 li{margin-bottom:3px;font-size:13px;gap:8px}.fives.s5 .hx{flex:0 0 26px;width:26px;height:22px;font-size:12px}.fives.s5 b{font:400 13px CS;display:inline;margin:0}
+.k3r{display:flex;flex-direction:column;gap:12px;margin-top:-30px}
+.k3i{height:215px;width:auto;max-width:100%;align-self:center;object-fit:contain}
+.k3r .kno{padding:20px 24px 16px}.k3r .kno h3{font-size:22px;margin:0 0 10px}.k3r .kno li{font-size:15px;margin-bottom:8px}
+.fimg.lsph{top:18px;height:120px;width:170px;max-width:170px;object-fit:cover;clip-path:polygon(6% 0,100% 0,100% 100%,0 94%)}
+.covph{object-fit:cover;clip-path:polygon(10% 0,100% 0,100% 100%,0 96%)}
 .shnote{position:absolute;left:930px;top:612px;width:300px;font:400 13px/1.35 CS;color:#312b6c}
 '''
 
@@ -479,4 +630,4 @@ await b.close()}})();"""
 
 if __name__ == '__main__':
     which = sys.argv[1]; out = pathlib.Path(sys.argv[2]) if len(sys.argv) > 2 else A / 'docs/brochures'
-    render(*{'training': training, 'keynotes': keynotes, 'keynotes2': keynotes2}[which](), out)
+    render(*{'training': training, 'keynotes': keynotes, 'keynotes2': keynotes2, 'keynotes3': keynotes3}[which](), out)

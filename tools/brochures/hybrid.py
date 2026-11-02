@@ -58,15 +58,15 @@ h2{{color:{PL}}}.dark h2,.dark h3{{color:#fff}}
 [style*="-purple.png"],[style*="-brightpurple.png"],[style*="-indigo.png"],[style*="-navy.png"],[style*="-teal.png"]{{color:#fff !important}}
 '''
 
-def build(out):
+def build(out, src='keynotes', slug_out='keynotes-brochure-hybrid'):
     recolour(); reversed_logo()
-    slug, title, P = catalogue.keynotes()
+    slug, title, P = getattr(catalogue, src)()
     h = ''.join(P)
     h = h.replace(f'{K}/strips/', f'{LS_STRIPS}/')
     h = h.replace(f'{A}/img/tcll/tcll-logo-white.png', str(LOGO)).replace('alt="The Care Leaders Learning"', 'alt="Luke Speaks"')
     h = h.replace(f'{K}/brandmark.png', str(LOGO))
     # navy pages carry the reversed logo
-    h = re.sub(r'(<section class="pg dark[^"]*"[^>]*>(?:(?!</section>).)*?)' + re.escape(str(LOGO)), lambda m: m.group(1) + str(LOGO_REV), h, flags=re.S)
+    h = re.sub(r'(<section class="pg dark(?! cover)[^"]*"[^>]*>(?:(?!</section>).)*?)' + re.escape(str(LOGO)), lambda m: m.group(1) + str(LOGO_REV), h, flags=re.S)
     h = re.sub(r'background:#241b40 url\([^)]*\)[^;"]*', f'background:{NA}', h)
     h = h.replace('Why choose The Care Leaders Learning', 'Why book Luke')
     h = h.replace('Keynotes with Luke Rodgers BEM · The Care Leaders Learning', 'Keynotes with Luke Rodgers BEM · Luke Speaks')
@@ -74,7 +74,7 @@ def build(out):
     css = re.sub(r'(\.dark\{background:)#241b40 url\([^)]*\) center/cover', r'\1' + NA, css)
     for a, b in CSS_SWAP: css = css.replace(a, b)
     css += EXTRA
-    slug = 'keynotes-brochure-hybrid'
+    slug = slug_out
     hp = out / f'{slug}.html'
     hp.write_text(f'<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><title>Keynotes: Luke Speaks</title><style>{css}</style></head><body>{h}</body></html>')
     pdf = out / f'{slug}.pdf'
@@ -86,4 +86,6 @@ await b.close()}})();"""
     print(pdf)
 
 if __name__ == '__main__':
-    build(pathlib.Path(sys.argv[1]) if len(sys.argv) > 1 else A / 'docs/brochures')
+    out = pathlib.Path(sys.argv[1]) if len(sys.argv) > 1 else A / 'docs/brochures'
+    if len(sys.argv) > 2: build(out, sys.argv[2], sys.argv[3])
+    else: build(out)
