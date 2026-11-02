@@ -475,6 +475,30 @@ def sta_talk_page(page, i, talk, n, thm=None):
         <div class="kbf" style="{box('teal')}"><h3>Best for</h3><p>{e(who)}</p></div></div></div>''',
       beds[i % 4] + ' tkp2', 'talks', n, t)
 
+# The online course that comes with a keynote, shown for Living a Careless Life.
+# Lessons as built in the course on The Care Leaders Online (the course's lesson files and workbook page).
+LACL_COURSE = [('Story', ['The lighter', 'The words we inherit', "Sam's profile, Sam's story"]),
+               ('Theory', ['Five biases in the file', 'What Sam learned before 10', 'The brain and five responses', 'Two timetables']),
+               ('Action', ['Tools 1 and 2', 'Tools 3 and 4']),
+               ('Keep', ['Keep: your plan for your team', 'End of course check and certificate'])]
+
+def course_page(page, sec, n):
+    cols = ['teal', 'purple', 'midgreen', 'navy']
+    k, blocks = 0, ''
+    for c, (part, lessons) in enumerate(LACL_COURSE):
+        lis = ''
+        for x in lessons:
+            k += 1; lis += f'<li><span class="hx" style="background-image:url({K}/strips/hex-{cols[c]}.png)">{k}</span>{e(x)}</li>'
+        blocks += f'<div class="cpb" style="{box("white")}"><h3>{e(part)}</h3><ol>{lis}</ol></div>'
+    facts = [('50 minutes', 'the full keynote film'), ('About 2 hours', 'self-paced, on any device'), ('12 months', 'free access for every delegate')]
+    fs = ''.join(f'<div class="cpf" style="{box("navy")}"><b>{e(a)}</b><span>{e(b)}</span></div>' for a, b in facts)
+    return page(f"""<h2>The keynote course: Living a Careless Life</h2>
+      <p class="sub">Every keynote comes with its own online course on The Care Leaders Online. This is the one for Living a Careless Life.</p>
+      <div class="cpw"><div><div class="cpg">{blocks}</div><p class="cpx">With games, scenarios and a certificate. The workbook follows the same four parts.</p></div>
+        <div class="cpr"><img class="cpi" src="{opt(A / 'img/keynotes/lacl-workbook-cover.jpg', 700)}" alt="">
+          <p class="cpn">{strip('The workbook, theirs to keep', 'ribbon', 'apple', 'dk')}</p><div class="cpfs">{fs}</div></div></div>""",
+      'bed-blue', sec, n, 'The keynote course: Living a Careless Life')
+
 def keynotes3(theme=None):
     """Keynote brochure with sections, and Story, Theory, Action keynote pages each with a Learning image.
     Photos of Luke on the cover and fees pages, so each Learning image appears once, on its keynote."""
@@ -504,7 +528,7 @@ def keynotes3(theme=None):
     for i, tk in enumerate(TALKS):
         P.append(sta_talk_page(page, i, tk, num(), th))
     P.append(divider(page, 2, num(), 'What you get', 'Everything that comes with a booking, and how every keynote is built.',
-                     ['More than a keynote', 'The keynote course on any device', 'Story, theory and action'], 'tonal-midnight', dx(2, f'<div class="dvpx">{picto(9)}{picto(20)}{picto(8)}</div>')))
+                     ['More than a keynote', 'The keynote course: Living a Careless Life', 'Story, theory and action'], 'tonal-midnight', dx(2, f'<div class="dvpx">{picto(9)}{picto(20)}{picto(8)}</div>')))
     four = [(9, 'Before the day', 'A planning call', ['A 30-minute planning call', 'The keynote shaped around your audience and theme', 'A title and blurb for your programme, plus Luke\'s photo and bio']),
             (18, 'On the day', 'The keynote', ['A keynote of up to 90 minutes', 'Time for questions and discussion', 'The slides, to share with delegates']),
             (20, 'On the day', 'A workbook for every delegate', ['Print-ready or digital', 'Activities for individuals and teams', 'Theirs to keep']),
@@ -512,10 +536,7 @@ def keynotes3(theme=None):
     g = ''.join(f'<div class="gi g4" style="{box("indigo")}">{picto(p)}<b>{e(t)}</b>{strip(w, "angled", "apple", "gs2")}<ul>{"".join(f"<li>{e(x)}</li>" for x in pts)}</ul></div>' for p, w, t, pts in four)
     P.append(page(f'''<h2>More than a keynote</h2><p class="sub">Every booking, in person or online, comes with the same four things.</p>
       <div class="gis g4s">{g}</div>''', 'light', 'get', num(), 'More than a keynote: what every booking includes'))
-    P.append(showcase_page(page, 'get', num(), 'tools-for-schools', 'The keynote course on any device',
-                           ['The course home on a laptop', 'Every tool works on a phone', 'The workbook, theirs to keep'],
-                           'Free for 12 months: the recording and the course', None,
-                           'Shown: Tools for Schools. Every keynote has its own online course and workbook.'))
+    P.append(course_page(page, 'get', num()))
     P.append(sta_page(page, 'get', num(), 'Stories of care from Luke\'s lived experience, the theory behind them, and tools your audience uses the next day.'))
     P.append(divider(page, 3, num(), 'About Luke', 'Who gives the keynote, and why organisations book him.',
                      ['Your speaker: Luke Rodgers BEM', 'Why book Luke'], 'tonal-midnight', dx(3, f'<div class="dvpx">{picto(13)}{picto(1)}{picto(14)}</div>')))
@@ -619,6 +640,14 @@ EXTRA_CSS = '''
 .ov h3{font-size:22px;margin:4px 0 8px}.k3 .ov p{font-size:18px;line-height:1.5;margin-bottom:12px}
 .ovf{font-size:16px;line-height:1.45;margin-bottom:12px}.ovf .fives.s5 li{font-size:14px}.k3.k3f .ov p{font-size:15.5px;line-height:1.42;margin-bottom:9px}
 .k3r .kbf{padding:16px 24px 18px;color:#fff}.kbf h3{font-size:20px;margin-bottom:4px;color:#fff}.kbf p{font:400 15px/1.4 CS}
+.cpw{display:grid;grid-template-columns:1.45fr 1fr;gap:40px;align-items:start}
+.cpg{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.cpb{background-size:100% 100%;padding:16px 20px 16px}.cpb h3{font-size:22px;margin-bottom:8px}
+.cpb li{display:flex;gap:10px;align-items:center;font:400 15.5px/1.25 CS;margin-bottom:8px}.cpb .hx{flex:0 0 38px;width:38px;height:22px;font-size:12px}
+.cpi{width:100%;height:auto;max-height:250px;object-fit:contain;object-position:left top;display:block}.cpn{margin:10px 0 12px}
+.cpfs{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.cpf{background-size:100% 100%;color:#fff;padding:12px 12px 14px}
+.cpf b{display:block;font:400 18px/1.1 CB;white-space:nowrap}.cpf span{font:400 12.5px/1.3 CS}
+.cpx{margin-top:14px;font:400 15px CS}
 .shnote{position:absolute;left:930px;top:612px;width:300px;font:400 13px/1.35 CS;color:#312b6c}
 '''
 
