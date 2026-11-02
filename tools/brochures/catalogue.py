@@ -113,11 +113,11 @@ def fees_page(page, sec, n, title, cards, note, imgs):
     return page(f'''<h2>{e(title)}</h2><div class="fcs">{''.join(fc(k, f) for k, f in enumerate(cards))}</div>
       <p class="fnote">{picto(12, 'pic xs')}{e(note)}</p>''', 'bed-blue', sec, n, title)
 
-def book_page(page, sec, title, steps, legal, extra=''):
+def book_page(page, sec, title, steps, legal, extra='', n=None):
     scol = ['apple', 'teal', 'brightpurple', 'indigo']
     st = ''.join(f'<div class="st {"dk" if scol[i] == "apple" else ""}" style="background-image:url({K}/strips/arrow-{scol[i]}.png)"><span>{i + 1}</span><b>{e(a)}</b><p>{e(b)}</p></div>' for i, (a, b) in enumerate(steps))
     return page(f'''<h2>{e(title)}</h2><div class="sts s{len(steps)}">{st}</div>
-      {strip('hello@thecareleaders.com', 'ribbon', 'apple', 'mail')}{extra}<p class="legal">{legal}</p>''', 'tpale', sec)
+      {strip('hello@thecareleaders.com', 'ribbon', 'apple', 'mail')}{extra}<p class="legal{' lgn' if n else ''}">{legal}</p>''', 'tpale', sec, n, title if n else None)
 
 def showcase_page(page, sec, n, slug, title, labels, free, half=None, note=None):
     S = K / 'showcase'
@@ -232,7 +232,7 @@ def training():
     P.append(book_page(page, 'book', 'Book your training in 4 steps',
                        [('Choose your course', 'Any of the courses in this brochure'), ('Choose your format', 'Face to face or live online'),
                         ('Pick a date', 'One that works for your team'), ('Book your training', 'Email us and we confirm it')],
-                       f'{AWARDS_LINE} · The Care Leaders Ltd, company number 10782615 · thecareleaders.com'))
+                       f'{AWARDS_LINE} · The Care Leaders Ltd, company number 10782615 · thecareleaders.com', n=num()))
     P[1] = contents(P, page, 1)
     return 'training-brochure', 'Training: The Care Leaders Learning', P
 
@@ -535,7 +535,7 @@ def keynotes3(theme=None):
     P.append(book_page(page, 'book', 'Book Luke in 4 steps',
                        [('Tell us about your event', 'The date, your audience and the talk'), ('Get availability and a fee', 'We hold the date for 14 days'),
                         ('Confirm by email', 'And send a purchase order if you use them'), ('Before the day', 'A planning call and a checklist')],
-                       f'{AWARDS_LINE} · Luke Speaks Ltd, company number 15452230 · thecareleaders.com/keynotes'))
+                       f'{AWARDS_LINE} · Luke Speaks Ltd, company number 15452230 · thecareleaders.com/keynotes', n=num()))
     P[1] = contents(P, page, 1)
     return 'keynotes-brochure-sta', 'Keynotes: Luke Speaks', P
 
@@ -607,7 +607,7 @@ EXTRA_CSS = '''
 .kfd .fpg{margin-left:auto;font:400 14px CS;color:#acc90b}
 .k3{display:grid;grid-template-columns:1.25fr 1fr;gap:34px;align-items:start;position:relative}
 .k3 h2{font-size:50px;line-height:1;margin-bottom:6px}.k3 .knt{font-size:22px;margin-bottom:12px}
-.sta3 li{display:flex;gap:14px;align-items:flex-start;margin-bottom:12px}.stic{width:46px;height:46px;flex:0 0 46px}
+.sta3 li{display:flex;gap:14px;align-items:flex-start;margin-bottom:12px}.stic{width:46px;height:46px;flex:0 0 46px;object-fit:contain}
 .sta3 b{font:400 19px CB;display:block;margin-bottom:2px}.sta3 p{font-size:15px;line-height:1.42}
 .k3f h2{font-size:42px}.k3f .knt{font-size:18px;margin-bottom:8px}.k3f .sta3 li{margin-bottom:6px}.k3f .stic{width:38px;height:38px;flex-basis:38px}.k3f .sta3 p{font-size:14px;line-height:1.35}
 .fives.s5{margin-top:6px}.fives.s5 li{margin-bottom:3px;font-size:13px;gap:8px}.fives.s5 .hx{flex:0 0 26px;width:26px;height:22px;font-size:12px}.fives.s5 b{font:400 13px CS;display:inline;margin:0}
@@ -616,6 +616,7 @@ EXTRA_CSS = '''
 .k3r .kno{padding:20px 24px 16px}.k3r .kno h3{font-size:22px;margin:0 0 10px}.k3r .kno li{font-size:15px;margin-bottom:8px}
 .fimg.lsph{top:18px;height:120px;width:170px;max-width:170px;object-fit:cover;clip-path:polygon(6% 0,100% 0,100% 100%,0 94%)}
 .covph{object-fit:cover;clip-path:polygon(10% 0,100% 0,100% 100%,0 96%)}
+.legal.lgn{bottom:44px}
 .shnote{position:absolute;left:930px;top:612px;width:300px;font:400 13px/1.35 CS;color:#312b6c}
 '''
 

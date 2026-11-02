@@ -1,4 +1,4 @@
-"""Keynote brochure in The Care Leaders branding.
+"""Keynote brochure in The Care Leaders branding, carrying the Luke Speaks logo.
 
   python3 tools/brochures/tcl.py [out_dir]  -> keynotes-brochure-tcl.pdf
 
@@ -15,7 +15,7 @@ import catalogue
 NA, TE, OR, IN, PU, AG = '#0e2545', '#008196', '#fbab1e', '#4e2b53', '#7c05ca', '#a4cd39'   # TCL brand colours
 BLUEBED, ORANGEBED = '#dae2e6', '#eee0d5'
 T = K / 'tcl'
-LOGO, LOGO_W = T / 'tcl-logo-full.png', A / 'img/logos/tcl-white.png'
+LOGO, LOGO_W = A / 'img/logos/luke-speaks.png', K / 'luke-speaks-reversed.png'   # Luke Speaks logo; reversed version on navy pages
 BR = A / 'img/brand'
 # Each Learning colour takes the nearest TCL colour, so every shape keeps its role
 MAP = {'fuchsia': OR, 'red': OR, 'apple': OR, 'purple': IN, 'brightpurple': PU, 'indigo': NA,
@@ -77,23 +77,26 @@ def build(out):
     slug, title, P = catalogue.keynotes3(THEME)
     h = ''.join(P)
     h = h.replace(f'{K}/strips/', f'{STRIPS}/')
-    h = h.replace(f'{A}/img/tcll/tcll-logo-white.png', str(LOGO)).replace('alt="The Care Leaders Learning"', 'alt="The Care Leaders"')
+    h = h.replace(f'{A}/img/tcll/tcll-logo-white.png', str(LOGO)).replace('alt="The Care Leaders Learning"', 'alt="Luke Speaks"')
     h = h.replace(f'{K}/brandmark.png', str(LOGO))
     h = re.sub(r'(<section class="pg dark(?! cover)[^"]*"[^>]*>(?:(?!</section>).)*?)' + re.escape(str(LOGO)), lambda m: m.group(1) + str(LOGO_W), h, flags=re.S)
     h = re.sub(r'background:#241b40 url\([^)]*\)[^;"]*', f'background:{NA}', h)
     h = h.replace(f'{K}/chev.png', str(BR / 'arrow-orange.png'))
+    # navy and indigo hexagons vanish on the navy finder page: give those two a colour that shows
+    i = h.index('class="fnd kfd"'); j = h.index('</section>', i)
+    h = h[:i] + h[i:j].replace(f'{STRIPS}/hex-indigo.png', f'{STRIPS}/hex-fuchsia.png').replace(f'{STRIPS}/hex-navy.png', f'{STRIPS}/hex-teal.png') + h[j:]
     seq = iter(PICTO_SEQ)
     n = len(re.findall(r'src="[^"]*/picto/p\d\d\.png"', h)); assert n == len(PICTO_SEQ), (n, len(PICTO_SEQ))
     h = re.sub(r'class="([^"]*)" src="[^"]*/picto/p\d\d\.png"', lambda m: f'class="{m.group(1)} tcli" src="{next(seq)}"', h)
     h = h.replace('Every Care Leaders Learning course, keynote, workbook and online lesson', 'Every Care Leaders course, keynote, workbook and online lesson')
-    h = h.replace('Keynotes with Luke Rodgers BEM · The Care Leaders Learning', 'Keynotes with Luke Rodgers BEM · The Care Leaders')
+    h = h.replace('Keynotes with Luke Rodgers BEM · The Care Leaders Learning', 'Keynotes with Luke Rodgers BEM · Luke Speaks')
     css = (HERE / 'brochure.css').read_text().replace('{ACC}', '#cf0f55').replace('{A}', str(A)).replace('{K}', str(K)) + catalogue.EXTRA_CSS
     css = re.sub(r'(\.dark\{background:)#241b40 url\([^)]*\) center/cover', r'\1' + NA, css)
     for a, b in CSS_SWAP: css = css.replace(a, b)
     css += EXTRA
     slug = 'keynotes-brochure-tcl'
     hp = out / f'{slug}.html'
-    hp.write_text(f'<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><title>Keynotes: The Care Leaders</title><style>{css}</style></head><body>{h}</body></html>')
+    hp.write_text(f'<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><title>Keynotes: Luke Speaks</title><style>{css}</style></head><body>{h}</body></html>')
     pdf = out / f'{slug}.pdf'
     js = f"""const {{chromium}}=require('playwright');(async()=>{{const b=await chromium.launch();const p=await b.newPage();
 await p.goto('file://{hp}');await p.evaluate(()=>document.fonts.ready);await p.waitForTimeout(600);

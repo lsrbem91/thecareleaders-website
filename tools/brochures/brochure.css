@@ -23,7 +23,7 @@ h2{font-size:50px;line-height:1.05;margin-bottom:24px}
 .navon{color:#fff}
 /* nav */
 .nav{position:absolute;left:60px;right:60px;top:26px;display:flex;align-items:center;gap:20px}
-.nav .bm{width:34px;height:34px}
+.nav .bm{width:34px;height:34px;object-fit:contain}
 .navi{font:400 14px CS;color:#312b6c}
 .dark .navi{color:#fff}
 .navon{font-size:14px;padding:6px 26px 7px 12px}
@@ -91,7 +91,7 @@ h2{font-size:50px;line-height:1.05;margin-bottom:24px}
 /* formats */
 .fcs{display:grid;grid-template-columns:1fr 1fr;gap:28px}
 .fc{background-size:100% 100%;padding:24px 30px 22px;position:relative}
-.fimg{position:absolute;right:18px;top:-24px;height:200px;width:auto;max-width:250px}
+.fimg{position:absolute;right:18px;top:-24px;height:200px;width:auto;max-width:250px;object-fit:contain;object-position:right top}
 .fl{font-size:16px}
 .flen{font:400 52px/1 CB;margin-top:12px}.ftime{font:400 17px CS;color:#312b6c;margin-top:4px}
 .fee{font:400 66px/1 CB;color:{ACC};margin:14px 0 10px}.fee span{font:400 18px CS;color:#312b6c}
