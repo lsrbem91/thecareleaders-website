@@ -69,7 +69,7 @@ h2{{color:{NA}}}.dark h2,.dark h3{{color:#fff}}
 [style*="-purple.png"],[style*="-brightpurple.png"],[style*="-indigo.png"],[style*="-navy.png"],[style*="-teal.png"]{{color:#fff !important}}
 img.tcli{{object-fit:contain}}
 .tclic img{{width:150px;height:150px;object-fit:contain}}
-.k3i{{height:230px}}
+.k3i{{height:180px}}
 '''
 
 def build(out):

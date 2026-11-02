@@ -411,32 +411,32 @@ def keynotes2():
 # From the keynote overviews in Luke Speaks > General > Bio Info > Luke Speaks Keynotes (and the keynote overview documents).
 STA_TALKS = {
     'Living a Careless Life': (
-        "Luke shares stories from his own time in care, from going into care at 10 onwards. They are moving and often funny, and they show the moments when one relationship changed what happened next.",
-        "Two ideas explain how systems shape the way a child is seen: how profiles and referrals can describe a child by what went wrong, and the Two Timetables, where school and social care clash around the child.",
-        "How to talk with children, read the message in a behaviour and spot the triggers that take a child back to trauma, so every adult in the room knows what they can change."),
+        "Luke went into care at 10. He shares stories from his own time in care that are moving and often funny, and that show the moments when one adult and one relationship changed what happened next.",
+        "Two ideas explain how systems shape the way a child is seen. The first is how profiles and referrals are written: too often they describe a child by what went wrong, and placements and school places are lost because of it. The second is the Two Timetables, where school and social care clash around the child, from reviews held in school to how information is shared.",
+        "Your audience leaves knowing how to talk with children, read the message in a behaviour and spot the triggers that can take a child back to trauma, and how much one relationship can do."),
     'Just Say Yes': (
-        "Luke shares stories from foster care: being judged by a profile, being misunderstood and then believed in, and the moments when a foster carer made a life-changing difference.",
-        "Attachment, the impact of trauma on the developing brain, and why behaviour is often a survival strategy. It explains why traditional discipline may not work for children in care.",
-        "Simple ways to reframe behaviour through a trauma-informed lens, talk in ways that build trust and calm conflict, and make home feel safe and predictable."),
+        "Luke shares stories from his time in foster care: what it felt like to be judged by a profile, to be misunderstood and then believed in, and the moments when a foster carer made a life-changing difference. They show how relationships, not labels, create safety.",
+        "Attachment and how early relationships shape behaviour, the impact of trauma on brain development and emotional regulation, and the link between behaviour and survival. It explains why traditional approaches to discipline may not work for children in care.",
+        "Simple tools carers can use straight away: reframing behaviour through a trauma-informed lens, ways of talking that build trust and calm conflict, making home feel safe and predictable, and responding to hard moments with empathy, not punishment."),
     'The Power of the Profile': (
         "Luke shares what it was like to read his own file: to be introduced through incident logs, and turned down because of paperwork that did not show who he was.",
-        "Trauma-informed storytelling, attachment and the psychology of language: how the words in a profile shape what the reader expects of the child.",
-        "How to write profiles that are honest, balanced and hopeful, reframe behaviour so it reduces fear, and help carers, schools and panels say yes through the way information is shared."),
+        "Trauma-informed storytelling, attachment and the psychology of language. A profile is often built from inherited court reports, incident logs and assessments, so the child is described by what went wrong. This explains how those words shape what a school, carer or panel expects before they meet the child.",
+        "Practical ways to write profiles that are honest, balanced and hopeful, reframe behaviour so it reduces fear, and help other professionals say yes through the way information is shared. It also recognises the weight social workers carry when the answer is no."),
     'Tools for Schools': (
-        "Luke shares his own school experiences: what it felt like to be labelled and excluded, and the difference it made when a teacher believed in him.",
-        "Trauma, attachment and child development made relevant to the classroom, so staff understand the why behind the behaviour they see.",
-        "Tools to respond to trauma-based behaviour without escalating it, build safe learning environments, and talk with children in care in ways that build trust."),
+        "Luke shares his own school experiences: what it felt like to be labelled and excluded, and the difference it made when a teacher believed in him. His story helps staff understand the inner world of a child in care.",
+        "Trauma, attachment and child development made relevant to the classroom, so staff understand the why behind the behaviour they see. Most teacher training does not cover trauma or children in care, yet schools are expected to be a critical support.",
+        "Tools to respond to trauma-based behaviour without escalating it, build safe learning environments where every child can thrive, and talk with children in care in ways that build trust, not fear."),
     'Lived Experience Leadership': (
         "Luke shares his own journey from telling his story to leading national work, and what helped at each stage.",
         None,
-        "Leaders map where the young people in their service are, match them to roles in service delivery and improvement that fit their stage, and plan who leads next."),
+        "Leaders map where the young people in their service are on the five stages, match them to roles in service delivery and improvement that fit their stage, and plan how each young person moves on, and who leads next."),
     'From Care Leaver to Care Leader': (
-        "Luke shares his journey from growing up in care to becoming a national leader, speaker and founder, to show what is possible for every care-experienced young person.",
-        "How the care system shapes identity, how trauma shapes behaviour, and how getting through hard times builds real leadership skills.",
-        "Young people reframe their experience as a strength, recognise the skills they already have, and see themselves as people who can lead change."),
+        "Luke shares his journey from growing up in care to becoming a national leader, speaker and founder. His story shows what is possible for every care-experienced young person.",
+        "How the care system shapes identity, how trauma shapes behaviour, and how getting through hard times builds real leadership skills: adapting, solving problems, reading people and keeping going. Young people are often described by other people\'s words in case notes and plans. This talk helps them tell their own.",
+        "Young people reframe their experience as a strength, recognise the skills they already have, and see themselves as people who can lead change in their own lives and beyond."),
     'Be the First Yes': (
         "Luke shares his own move from care into work, and how one opportunity changed his future.",
-        "The barriers care leavers face in getting and keeping work, and the behavioural science behind stigma, opportunity and belonging.",
+        "The barriers care leavers face in getting and keeping work, often without family networks, references or a safety net, and the behavioural science behind stigma, opportunity and belonging. Care leavers are not asking for special treatment. They are asking for a chance.",
         "Clear steps to make recruitment and induction care-aware, offer mentoring and onboarding that helps people stay, and build teams where care-experienced staff can grow."),
 }
 FIVE_S = [('Storytelling', 'sharing their experience safely, on their own terms'), ('Skills', 'recognising the skills their experience has given them'),
@@ -449,7 +449,7 @@ TALK_IMG = {'Living a Careless Life': 'image-block-06.png', 'Just Say Yes': 'ima
 
 def sta_talk_page(page, i, talk, n, thm=None):
     thm = thm or {}
-    """Keynote page: number, title, a Story, Theory, Action overview, the outcomes, an image and who it is for."""
+    """Keynote page: number, title, an overview (Story, Theory, Action order), the outcomes, who it is for, and an image."""
     t, tag, who, aud, para, outs, pc = talk
     cols = ['fuchsia', 'purple', 'teal', 'indigo', 'midgreen', 'brightpurple', 'navy']
     beds = ['light', 'bed-blue', 'bed-green', 'bed-purple']
@@ -461,19 +461,18 @@ def sta_talk_page(page, i, talk, n, thm=None):
               ''.join(f'<li><span class="hx" style="background-image:url({K}/strips/hex-{hc[k]}.png)">{k + 1}</span><b>{e(a)}</b>&nbsp;{e(b)}</li>' for k, (a, b) in enumerate(FIVE_S)) + '</ol>')
     else:
         th = e(th)
-    icons = thm.get('sta_icons') or [A / 'img/tcll' / f'icon-{x}.png' for x in ('story-speech', 'theory-triangle', 'action-chevrons')]
-    rows = ''.join(f'<li><img class="stic" src="{ic}" alt=""><div><b>{lab}</b><p>{txt}</p></div></li>'
-                   for ic, lab, txt in zip(icons, ['Story', 'Theory', 'Action'], [e(st), th, e(ac)]))
+    # Overview written in the Story, Theory, Action order, as plain paragraphs
+    ov = f'<p>{e(st)}</p>' + (f'<div class="ovf">{th}</div>' if th.startswith('<span>') else f'<p>{th}</p>') + f'<p>{e(ac)}</p>'
     lis = ''.join(f'<li><img src="{K}/tick.png" alt="">{e(x)}</li>' for x in outs)
     src = thm['talk_img'][t] if 'talk_img' in thm else (K / TALK_IMG[t] if TALK_IMG[t].startswith('woman') else K / 'tcll2026' / TALK_IMG[t])
     flag = strip('Flagship talk', 'ribbon', 'apple', 'mini') if i == 0 else ''
-    return page(f'''<div class="k3{' k3f' if t == 'Lived Experience Leadership' else ''}"><div class="k3l">
+    return page(f'''<div class="k3{' k3f' if t == 'Lived Experience Leadership' else ''}{' k3lt' if len(t) > 26 else ''}"><div class="k3l">
         <div class="tkh"><span class="tkn" style="background-image:url({K}/strips/hex-{col}.png)">{i + 1}</span>
           <div><span class="tko">Keynote {i + 1} of {len(TALKS)}</span>{flag}</div></div>
-        <h2>{e(t)}</h2><p class="knt">{e(tag)}</p><ul class="sta3">{rows}</ul></div>
+        <h2>{e(t)}</h2><p class="knt">{e(tag)}</p><div class="ov"><h3>Overview</h3>{ov}</div></div>
       <div class="k3r"><img class="k3i" src="{opt(src, 640)}" alt="">
-        <div class="kno" style="{box('midnight')}"><h3>By the end, delegates will</h3><ul>{lis}</ul></div></div></div>
-      <div class="tkw" style="background-image:url({K}/strips/arrowlong-apple.png)"><b>Best for</b>{e(who)}</div>''',
+        <div class="kno" style="{box('midnight')}"><h3>By the end, delegates will</h3><ul>{lis}</ul></div>
+        <div class="kbf" style="{box('teal')}"><h3>Best for</h3><p>{e(who)}</p></div></div></div>''',
       beds[i % 4] + ' tkp2', 'talks', n, t)
 
 def keynotes3(theme=None):
@@ -609,14 +608,17 @@ EXTRA_CSS = '''
 .k3 h2{font-size:50px;line-height:1;margin-bottom:6px}.k3 .knt{font-size:22px;margin-bottom:12px}
 .sta3 li{display:flex;gap:14px;align-items:flex-start;margin-bottom:12px}.stic{width:46px;height:46px;flex:0 0 46px;object-fit:contain}
 .sta3 b{font:400 19px CB;display:block;margin-bottom:2px}.sta3 p{font-size:15px;line-height:1.42}
-.k3f h2{font-size:42px}.k3f .knt{font-size:18px;margin-bottom:8px}.k3f .sta3 li{margin-bottom:6px}.k3f .stic{width:38px;height:38px;flex-basis:38px}.k3f .sta3 p{font-size:14px;line-height:1.35}
+.k3f h2{font-size:42px}.k3lt h2{font-size:38px;white-space:nowrap}.k3f .knt{font-size:18px;margin-bottom:8px}.k3f .sta3 li{margin-bottom:6px}.k3f .stic{width:38px;height:38px;flex-basis:38px}.k3f .sta3 p{font-size:14px;line-height:1.35}
 .fives.s5{margin-top:6px}.fives.s5 li{margin-bottom:3px;font-size:13px;gap:8px}.fives.s5 .hx{flex:0 0 26px;width:26px;height:22px;font-size:12px}.fives.s5 b{font:400 13px CS;display:inline;margin:0}
 .k3r{display:flex;flex-direction:column;gap:12px;margin-top:-30px}
-.k3i{height:215px;width:auto;max-width:100%;align-self:center;object-fit:contain}
+.k3i{height:180px;width:auto;max-width:100%;align-self:center;object-fit:contain}
 .k3r .kno{padding:20px 24px 16px}.k3r .kno h3{font-size:22px;margin:0 0 10px}.k3r .kno li{font-size:15px;margin-bottom:8px}
 .fimg.lsph{top:18px;height:120px;width:170px;max-width:170px;object-fit:cover;clip-path:polygon(6% 0,100% 0,100% 100%,0 94%)}
 .covph{object-fit:cover;clip-path:polygon(10% 0,100% 0,100% 100%,0 96%)}
 .legal.lgn{bottom:44px}
+.ov h3{font-size:22px;margin:4px 0 8px}.k3 .ov p{font-size:18px;line-height:1.5;margin-bottom:12px}
+.ovf{font-size:16px;line-height:1.45;margin-bottom:12px}.ovf .fives.s5 li{font-size:14px}.k3.k3f .ov p{font-size:15.5px;line-height:1.42;margin-bottom:9px}
+.k3r .kbf{padding:16px 24px 18px;color:#fff}.kbf h3{font-size:20px;margin-bottom:4px;color:#fff}.kbf p{font:400 15px/1.4 CS}
 .shnote{position:absolute;left:930px;top:612px;width:300px;font:400 13px/1.35 CS;color:#312b6c}
 '''
 
