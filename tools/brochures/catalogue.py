@@ -604,7 +604,7 @@ EXTRA_CSS = '''
 .tkt{background-size:100% 100%;color:#fff;padding:14px 14px 16px;display:flex;gap:10px;align-items:center}.tkt b{display:block;font:400 16px/1.15 CB}.tkt span{font:400 13px CS}
 .kfd{position:absolute;left:640px;top:130px;width:560px}.kfd li{font-size:20px;margin-bottom:16px}.kfd .hx{flex:0 0 52px;width:52px;height:30px;font-size:16px}
 .kfd .fpg{margin-left:auto;font:400 14px CS;color:#acc90b}
-.k3{display:grid;grid-template-columns:1.25fr 1fr;gap:34px;align-items:start;position:relative}
+.k3{display:grid;grid-template-columns:1.2fr 1fr;gap:70px;align-items:start;position:relative}
 .k3 h2{font-size:50px;line-height:1;margin-bottom:6px}.k3 .knt{font-size:22px;margin-bottom:12px}
 .sta3 li{display:flex;gap:14px;align-items:flex-start;margin-bottom:12px}.stic{width:46px;height:46px;flex:0 0 46px;object-fit:contain}
 .sta3 b{font:400 19px CB;display:block;margin-bottom:2px}.sta3 p{font-size:15px;line-height:1.42}
