@@ -180,7 +180,7 @@ def training():
                 cards += f'''<div class="cc" style="{box('white')}"><span class="ccb" style="{box(cols[(i + s + g) % 6])}"></span>
                   <div class="cct"><span class="hx" style="background-image:url({K}/strips/hex-{hexes[s]}.png)">{k}</span><h3>{e(c['name'])}</h3></div>
                   <p class="cci">{e(what_it_does(c))}</p><p class="ccw"><b>For</b> {e(who)}</p></div>'''
-            body += (f'<h2>{e(gt)}</h2>' if len(groups) == 1 else f'<h3 class="ccg">{e(gt)}</h3>') + f'<div class="ccs" style="grid-template-columns:repeat({max(3, max(len(x[1]) for x in groups))},1fr)">{cards}</div>'
+            body += (f'<h2>{e(gt)}</h2>' if len(groups) == 1 else f'<h3 class="ccg">{e(gt)}</h3>') + f'<div class="ccs" style="grid-template-columns:repeat({4 if max(len(x[1]) for x in groups) == 4 else 3},1fr)">{cards}</div>'
         P.append(page(f'{body}<p class="ccf">Every course has its own page with the full details: thecareleaders.com/training</p>',
                       beds[s] + ' catp' + (' dbl' if len(groups) > 1 else ''), 'courses', num(), ptitle))
     # Two ways to run every course
