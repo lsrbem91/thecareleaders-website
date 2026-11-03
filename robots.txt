@@ -5,4 +5,7 @@ Disallow: /event-details.html
 Disallow: /living-a-careless-life-workbook.html
 Disallow: /assets/docs/keynote-booking-terms.pdf
 Disallow: /assets/docs/training-booking-terms.pdf
+Disallow: /assets/docs/brochures/keynote-brochure.pdf
+Disallow: /assets/docs/brochures/training-brochure.pdf
+Disallow: /assets/docs/brochures/pages/
 Sitemap: https://www.thecareleaders.com/sitemap.xml
