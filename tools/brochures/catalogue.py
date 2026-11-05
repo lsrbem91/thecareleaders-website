@@ -264,7 +264,7 @@ def keynotes():
     items = [('talks', 'The keynotes'), ('get', 'What you get'), ('luke', 'About Luke'), ('fees', 'Fees'), ('book', 'Book')]
     page = make_page(items, 'Keynotes with Luke Rodgers BEM · The Care Leaders Learning')
     P = [cover('Keynotes with Luke Rodgers BEM', 'Keynotes and conference workshops', 'From care leaver. <span class="apple">To care leader.</span>',
-               'Story-led keynotes for conferences, staff days and boards: stories of care from Luke\'s lived experience, the theory behind them and tools your audience can use the next day.',
+               'Story-led keynotes for conferences, staff days and boards. Luke draws on his lived and professional experience to share stories of care, the theory behind them and tools your audience can use the next day.',
                opt(hires('block-2.webp'), 960),
                [('In person or online', 'keynotes of up to 90 minutes', 'or a conference workshop', True),
                 (str(len(TALKS)), 'keynotes', 'or one built for your audience', False), ('4,000+', 'delegates since 2024', 'from 30 to 400 in a room', False)], long=True), '']
@@ -304,7 +304,7 @@ def keynotes():
                            ['The course home on a laptop', 'Every tool works on a phone', 'The workbook, theirs to keep'],
                            'Free for 12 months: the recording and the course', None,
                            'Shown: Tools for Schools. Every keynote has its own online course and workbook.'))
-    P.append(sta_page(page, 'get', num(), 'Stories of care from Luke\'s lived experience, the theory behind them, and tools your audience uses the next day.'))
+    P.append(sta_page(page, 'get', num(), 'Stories of care, the theory behind them, and tools your audience uses the next day.'))
     P.append(luke_page(page, 'luke', num(), 'luke-lga-podium.jpg', 'Luke gives every keynote himself, in person or live online, and stays for questions.',
                        ('You demand bravery and humanity in equal measure.', 'Maggie Atkinson, former Children\'s Commissioner for England'), 'Your speaker'))
     P.append(why_page(page, 'luke', num(), 'Keynotes from someone who has lived in care and has led services.'))
@@ -354,7 +354,7 @@ def keynotes2():
     items = [('talks', 'The keynotes'), ('get', 'What you get'), ('luke', 'About Luke'), ('fees', 'Fees'), ('book', 'Book')]
     page = make_page(items, 'Keynotes with Luke Rodgers BEM · The Care Leaders Learning')
     P = [cover('Keynotes with Luke Rodgers BEM', 'Keynotes and conference workshops', 'From care leaver. <span class="apple">To care leader.</span>',
-               'Story-led keynotes for conferences, staff days and boards: stories of care from Luke\'s lived experience, the theory behind them and tools your audience can use the next day.',
+               'Story-led keynotes for conferences, staff days and boards. Luke draws on his lived and professional experience to share stories of care, the theory behind them and tools your audience can use the next day.',
                opt(hires('block-2.webp'), 960),
                [('In person or online', 'keynotes of up to 90 minutes', 'or a conference workshop', True),
                 (str(len(TALKS)), 'keynotes', 'or one built for your audience', False), ('4,000+', 'delegates since 2024', 'from 30 to 400 in a room', False)], long=True), '']
@@ -385,7 +385,7 @@ def keynotes2():
                            ['The course home on a laptop', 'Every tool works on a phone', 'The workbook, theirs to keep'],
                            'Free for 12 months: the recording and the course', None,
                            'Shown: Tools for Schools. Every keynote has its own online course and workbook.'))
-    P.append(sta_page(page, 'get', num(), 'Stories of care from Luke\'s lived experience, the theory behind them, and tools your audience uses the next day.'))
+    P.append(sta_page(page, 'get', num(), 'Stories of care, the theory behind them, and tools your audience uses the next day.'))
     P.append(divider(page, 3, num(), 'About Luke', 'Who gives the keynote, and why organisations book him.',
                      ['Your speaker: Luke Rodgers BEM', 'Why book Luke'], 'tonal-midnight', img=opt(K / 'tcll2026' / 'image-block-05.png', 620)))
     P.append(luke_page(page, 'luke', num(), 'luke-lga-podium.jpg', 'Luke gives every keynote himself, in person or live online, and stays for questions.',
@@ -411,31 +411,31 @@ def keynotes2():
 # From the keynote overviews in Luke Speaks > General > Bio Info > Luke Speaks Keynotes (and the keynote overview documents).
 STA_TALKS = {
     'Living a Careless Life': (
-        "Luke went into care at 10. He shares stories from his own time in care that are moving and often funny, and that show the moments when one adult and one relationship changed what happened next.",
+        "Stories from inside care that are moving and often funny, and that show the moments when one adult and one relationship changed what happened next.",
         "Two ideas explain how systems shape the way a child is seen. The first is how profiles and referrals are written: too often they describe a child by what went wrong, and placements and school places are lost because of it. The second is the Two Timetables, where school and social care clash around the child, from reviews held in school to how information is shared.",
         "Your audience leaves knowing how to talk with children, read the message in a behaviour and spot the triggers that can take a child back to trauma, and how much one relationship can do."),
     'Just Say Yes': (
-        "Luke shares stories from his time in foster care: what it felt like to be judged by a profile, to be misunderstood and then believed in, and the moments when a foster carer made a life-changing difference. They show how relationships, not labels, create safety.",
+        "Stories from foster care: what it feels like to be judged by a profile, to be misunderstood and then believed in, and the moments when a foster carer makes a life-changing difference. They show how relationships, not labels, create safety.",
         "Attachment and how early relationships shape behaviour, the impact of trauma on brain development and emotional regulation, and the link between behaviour and survival. It explains why traditional approaches to discipline may not work for children in care.",
         "Simple tools carers can use straight away: reframing behaviour through a trauma-informed lens, ways of talking that build trust and calm conflict, making home feel safe and predictable, and responding to hard moments with empathy, not punishment."),
     'The Power of the Profile': (
-        "Luke shares what it was like to read his own file: to be introduced through incident logs, and turned down because of paperwork that did not show who he was.",
+        "Stories of what it is like to read your own file: to be introduced through incident logs, and turned down because of paperwork that did not show who you were.",
         "Trauma-informed storytelling, attachment and the psychology of language. A profile is often built from inherited court reports, incident logs and assessments, so the child is described by what went wrong. This explains how those words shape what a school, carer or panel expects before they meet the child.",
         "Practical ways to write profiles that are honest, balanced and hopeful, reframe behaviour so it reduces fear, and help other professionals say yes through the way information is shared. It also recognises the weight social workers carry when the answer is no."),
     'Tools for Schools': (
-        "Luke shares his own school experiences: what it felt like to be labelled and excluded, and the difference it made when a teacher believed in him. His story helps staff understand the inner world of a child in care.",
+        "Stories from school: what it feels like for a child in care to be labelled and excluded, and the difference it makes when a teacher believes in them. They help staff understand the inner world of a child in care.",
         "Trauma, attachment and child development made relevant to the classroom, so staff understand the why behind the behaviour they see. Most teacher training does not cover trauma or children in care, yet schools are expected to be a critical support.",
         "Tools to respond to trauma-based behaviour without escalating it, build safe learning environments where every child can thrive, and talk with children in care in ways that build trust, not fear."),
     'Lived Experience Leadership': (
-        "Luke shares his own journey from telling his story to leading national work, and what helped at each stage.",
+        "Stories of young people moving from telling their story for the first time to leading the work, and what helped at each stage.",
         None,
         "Leaders map where the young people in their service are on the five stages, match them to roles in service delivery and improvement that fit their stage, and plan how each young person moves on, and who leads next."),
     'From Care Leaver to Care Leader': (
-        "Luke shares his journey from growing up in care to becoming a national leader, speaker and founder. His story shows what is possible for every care-experienced young person.",
+        "Stories of care-experienced people who have gone on to lead, as speakers, founders and leaders in their field. They show what is possible for every care-experienced young person.",
         "How the care system shapes identity, how trauma shapes behaviour, and how getting through hard times builds real leadership skills: adapting, solving problems, reading people and keeping going. Young people are often described by other people\'s words in case notes and plans. This talk helps them tell their own.",
         "Young people reframe their experience as a strength, recognise the skills they already have, and see themselves as people who can lead change in their own lives and beyond."),
     'Be the First Yes': (
-        "Luke shares his own move from care into work, and how one opportunity changed his future.",
+        "Stories of care leavers moving into work, and how one opportunity can change a future.",
         "The barriers care leavers face in getting and keeping work, often without family networks, references or a safety net, and the behavioural science behind stigma, opportunity and belonging. Care leavers are not asking for special treatment. They are asking for a chance.",
         "Clear steps to make recruitment and induction care-aware, offer mentoring and onboarding that helps people stay, and build teams where care-experienced staff can grow."),
 }
@@ -484,7 +484,7 @@ def keynotes3(theme=None):
     items = [('talks', 'The keynotes'), ('get', 'What you get'), ('luke', 'About Luke'), ('fees', 'Fees'), ('book', 'Book')]
     page = make_page(items, 'Keynotes with Luke Rodgers BEM · The Care Leaders Learning')
     P = [cover('Keynotes with Luke Rodgers BEM', 'Keynotes and conference workshops', 'From care leaver. <span class="apple">To care leader.</span>',
-               'Story-led keynotes for conferences, staff days and boards: stories of care from Luke\'s lived experience, the theory behind them and tools your audience can use the next day.',
+               'Story-led keynotes for conferences, staff days and boards. Luke draws on his lived and professional experience to share stories of care, the theory behind them and tools your audience can use the next day.',
                opt(B / 'luke-lga-wide.jpg', 960),
                [('In person or online', 'keynotes of up to 90 minutes', 'or a conference workshop', True),
                 (str(len(TALKS)), 'keynotes', 'or one built for your audience', False), ('4,000+', 'delegates since 2024', 'from 30 to 400 in a room', False)], long=True).replace('class="covimg"', 'class="covimg covph"'), '']
@@ -516,7 +516,7 @@ def keynotes3(theme=None):
                            ['The online course on a laptop', 'Every tool works on a phone', 'The workbook, theirs to keep'],
                            'With every keynote: free for 12 months', None,
                            'Shown: Tools for Schools, one of the 7 keynotes. Every keynote has its own workbook, online course and video.'))
-    P.append(sta_page(page, 'get', num(), 'Stories of care from Luke\'s lived experience, the theory behind them, and tools your audience uses the next day.'))
+    P.append(sta_page(page, 'get', num(), 'Stories of care, the theory behind them, and tools your audience uses the next day.'))
     P.append(divider(page, 3, num(), 'About Luke', 'Who gives the keynote, and why organisations book him.',
                      ['Your speaker: Luke Rodgers BEM', 'Why book Luke'], 'tonal-midnight', dx(3, f'<div class="dvpx">{picto(13)}{picto(1)}{picto(14)}</div>')))
     P.append(luke_page(page, 'luke', num(), 'luke-lga-podium.jpg', 'Luke gives every keynote himself, in person or live online, and stays for questions.',
